@@ -5,81 +5,69 @@ import re
 class BatchSampler:
     def __init__(self, model, src_vocab_char,
                  src_vocab_word, trg_vocab_char,
-                 src_labels_vocab, trg_labels_vocab,
                  trg_gender_vocab):
 
         self.model = model
         self.src_vocab_char = src_vocab_char
         self.src_vocab_word = src_vocab_word
         self.trg_vocab_char = trg_vocab_char
-        self.src_labels_vocab = src_labels_vocab
-        self.trg_labels_vocab = trg_labels_vocab
         self.trg_gender_vocab = trg_gender_vocab
 
     def set_batch(self, batch):
         self.sample_batch = batch
 
-    def get_trg_sentence(self, index):
-        trg_sentence = self.sample_batch['trg_y'][index].cpu().detach().numpy()
-        return self.get_str_sentence(trg_sentence, self.trg_vocab_char)
+    def get_trg_token(self, index):
+        trg_token = self.sample_batch['trg_y'][index].cpu().detach().numpy()
+        return self.get_str(trg_token, self.trg_vocab_char)
 
-    def get_src_sentence(self, index):
-        src_sentence = self.sample_batch['src_char'][index].cpu().detach().numpy()
-        return self.get_str_sentence(src_sentence, self.src_vocab_char)
+    def get_src_token(self, index):
+        src_token = self.sample_batch['src_char'][index].cpu().detach().numpy()
+        return self.get_str(src_token, self.src_vocab_char)
 
-    def get_str_sentence(self, vectorized_sentence, vocab):
-        sentence = []
-        for i in vectorized_sentence:
+    def get_str(self, vectorized_token, vocab):
+        token = []
+        for i in vectorized_token:
             if i == vocab.sos_idx:
                 continue
             elif i == vocab.eos_idx:
                 break
             else:
-                sentence.append(vocab.lookup_index(i))
-        return ''.join(sentence)
+                token.append(vocab.lookup_index(i))
+        return ''.join(token)
 
     def get_trg_gender(self, index):
         trg_gender = self.sample_batch['trg_gender'][index].cpu().detach().numpy().tolist()
         return self.trg_gender_vocab.lookup_index(trg_gender)
 
-    def get_trg_label(self, index):
-        trg_label = self.sample_batch['trg_label'][index].cpu().detach().numpy().tolist()
-        return self.trg_labels_vocab.lookup_index(trg_label)
-
-    def get_src_label(self, index):
-        src_label = self.sample_batch['src_label'][index].cpu().detach().numpy().tolist()
-        return self.src_labels_vocab.lookup_index(src_label)
-
-    def greedy_decode(self, sentence, first_person_only=False,
+    def greedy_decode(self, token, first_person_only=False,
                       add_side_constraints=False, trg_gender=None, max_len=512):
-        # vectorizing the src sentence on the char level and word level
+
+        # vectorizing the src token on the char level and word level
         if add_side_constraints:
             if first_person_only:
-                sc = sentence[:3]
-                sentence = sentence[3:]
+                # TODO: FIX FIRST PERSON SC THING
+                sc = token[:3]
+                token = token[3:]
             else:
-                sc = sentence[:4]
-                sentence = sentence[4:]
+                sc = token[:6]
+                token = token[6:]
 
-        sentence = re.split(r'(\s+)', sentence)
-
-        vectorized_src_sentence_char = [self.src_vocab_char.sos_idx]
-        vectorized_src_sentence_word = [self.src_vocab_word.sos_idx]
+        vectorized_src_token_char = [self.src_vocab_char.sos_idx]
+        vectorized_src_token_word = [self.src_vocab_word.sos_idx]
 
         if add_side_constraints:
-            vectorized_src_sentence_char.append(self.src_vocab_char.lookup_token(sc))
-            vectorized_src_sentence_word.append(self.src_vocab_word.lookup_token(sc))
+            vectorized_src_token_char.append(self.src_vocab_char.lookup_token(sc))
+            vectorized_src_token_word.append(self.src_vocab_word.lookup_token(sc))
 
-        for word in sentence:
-            for c in word:
-                vectorized_src_sentence_char.append(self.src_vocab_char.lookup_token(c))
-                vectorized_src_sentence_word.append(self.src_vocab_word.lookup_token(word))
+        for c in token:
+            vectorized_src_token_char.append(self.src_vocab_char.lookup_token(c))
+            vectorized_src_token_word.append(self.src_vocab_word.lookup_token(token))
 
-        vectorized_src_sentence_word.append(self.src_vocab_word.eos_idx)
-        vectorized_src_sentence_char.append(self.src_vocab_char.eos_idx)
+        vectorized_src_token_word.append(self.src_vocab_word.eos_idx)
+        vectorized_src_token_char.append(self.src_vocab_char.eos_idx)
 
-        # getting sentence length
-        src_sentence_length = [len(vectorized_src_sentence_char)]
+        # getting token length
+        src_token_length = [len(vectorized_src_token_char)]
 
         # vectorizing the trg gender
         if trg_gender:
@@ -89,19 +77,19 @@ class BatchSampler:
             vectorized_trg_gender = None
 
         # converting the lists to tensors
-        vectorized_src_sentence_char = torch.tensor([vectorized_src_sentence_char], dtype=torch.long)
-        vectorized_src_sentence_word = torch.tensor([vectorized_src_sentence_word], dtype=torch.long)
-        src_sentence_length = torch.tensor(src_sentence_length, dtype=torch.long)
+        vectorized_src_token_char = torch.tensor([vectorized_src_token_char], dtype=torch.long)
+        vectorized_src_token_word = torch.tensor([vectorized_src_token_word], dtype=torch.long)
+        src_token_length = torch.tensor(src_token_length, dtype=torch.long)
 
-        # passing the src sentence to the encoder
+        # passing the src sequence to the encoder
         with torch.no_grad():
-            encoder_outputs, encoder_h_t = self.model.encoder(vectorized_src_sentence_char,
-                                                              vectorized_src_sentence_word,
-                                                              src_sentence_length
+            encoder_outputs, encoder_h_t = self.model.encoder(vectorized_src_token_char,
+                                                              vectorized_src_token_word,
+                                                              src_token_length
                                                               )
 
         # creating attention mask
-        attention_mask = self.model.create_mask(vectorized_src_sentence_char, self.src_vocab_char.pad_idx)
+        attention_mask = self.model.create_mask(vectorized_src_token_char, self.src_vocab_char.pad_idx)
 
         # initializing the first decoder_h_t to encoder_h_t
         decoder_h_t = encoder_h_t
@@ -133,5 +121,5 @@ class BatchSampler:
 
                 trg_seqs.append(max_pred)
 
-        str_sentence = self.get_str_sentence(trg_seqs, self.trg_vocab_char)
-        return str_sentence
+        str_token = self.get_str(trg_seqs, self.trg_vocab_char)
+        return str_token

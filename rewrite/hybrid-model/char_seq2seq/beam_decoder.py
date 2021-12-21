@@ -14,7 +14,7 @@ class BeamSearchNode:
             prev_node: the previous node (parent)
             word_idx: the word index
             log_prob: the log probability
-            length: length of decoded sentence
+            length: length of decoded token
         """
         self.h = hidd_state
         self.prevNode = prev_node
@@ -25,7 +25,7 @@ class BeamSearchNode:
     def eval(self, alpha=1):
         reward = 0
         # Add here a function for shaping a reward
-        # the log prob will be normalized by the length of the sentence
+        # the log prob will be normalized by the length of the token
         # as defined by Wu et. al: https://arxiv.org/pdf/1609.08144.pdf
         return self.logp / float(self.leng - 1 + 1e-6) + alpha * reward
         #return self.logp / float(self.leng)**alpha
@@ -44,50 +44,48 @@ class BeamSampler(BatchSampler):
 
         super(BeamSampler, self).__init__(model, src_vocab_char,
                                           src_vocab_word, trg_vocab_char,
-                                          trg_gender_vocab
-                                          )
+                                          trg_gender_vocab)
 
-    def beam_decode(self, sentence, trg_gender=None,
+    def beam_decode(self, token, trg_gender=None,
                     first_person_only=False, add_side_constraints=False,
                     topk=3, beam_width=5, max_len=512):
         """
         Args:
-            sentence: the source sentence
-            topk: number of sentences to generate from beam search. Defaults to 3
+            token: the source token
+            topk: number of tokens to generate from beam search. Defaults to 3
             beam_width: the beam size. If 1, then we do greed search. Defaults to 5
-            max_len: the maximum length of the decoded sentence. Defaults to 512
+            max_len: the maximum length of the decoded token. Defaults to 512
 
         Returns:
-            decoded_sentences: list of tuples. Each tuple is (log_prob, decoded_sentence)
+            decoded_tokens: list of tuples. Each tuple is (log_prob, decoded_token)
         """
 
-        # vectorizing the src sentence on the char level and word level
+        # vectorizing the src token on the char level and word level
         if add_side_constraints:
             if first_person_only:
-                sc = sentence[:3]
-                sentence = sentence[3:]
+                # TODO: FIX FIRST PERSON SC THING
+                sc = token[:3]
+                token = token[3:]
             else:
-                sc = sentence[:4]
-                sentence = sentence[4:]
+                sc = token[:6]
+                token = token[6:]
 
-        sentence = re.split(r'(\s+)', sentence)
-        vectorized_src_sentence_char = [self.src_vocab_char.sos_idx]
-        vectorized_src_sentence_word = [self.src_vocab_word.sos_idx]
+        vectorized_src_token_char = [self.src_vocab_char.sos_idx]
+        vectorized_src_token_word = [self.src_vocab_word.sos_idx]
 
         if add_side_constraints:
-            vectorized_src_sentence_char.append(self.src_vocab_char.lookup_token(sc))
-            vectorized_src_sentence_word.append(self.src_vocab_word.lookup_token(sc))
+            vectorized_src_token_char.append(self.src_vocab_char.lookup_token(sc))
+            vectorized_src_token_word.append(self.src_vocab_word.lookup_token(sc))
 
-        for word in sentence:
-            for c in word:
-                vectorized_src_sentence_char.append(self.src_vocab_char.lookup_token(c))
-                vectorized_src_sentence_word.append(self.src_vocab_word.lookup_token(word))
+        for c in token:
+            vectorized_src_token_char.append(self.src_vocab_char.lookup_token(c))
+            vectorized_src_token_word.append(self.src_vocab_word.lookup_token(token))
 
-        vectorized_src_sentence_word.append(self.src_vocab_word.eos_idx)
-        vectorized_src_sentence_char.append(self.src_vocab_char.eos_idx)
+        vectorized_src_token_word.append(self.src_vocab_word.eos_idx)
+        vectorized_src_token_char.append(self.src_vocab_char.eos_idx)
 
-        # getting sentence length
-        src_sentence_length = [len(vectorized_src_sentence_char)]
+        # getting token length
+        src_token_length = [len(vectorized_src_token_char)]
 
         # vectorizing the trg gender
         if trg_gender:
@@ -97,20 +95,20 @@ class BeamSampler(BatchSampler):
             vectorized_trg_gender = None
 
         # converting the lists to tensors
-        vectorized_src_sentence_char = torch.tensor([vectorized_src_sentence_char], dtype=torch.long)
-        vectorized_src_sentence_word = torch.tensor([vectorized_src_sentence_word], dtype=torch.long)
-        src_sentence_length = torch.tensor(src_sentence_length, dtype=torch.long)
+        vectorized_src_token_char = torch.tensor([vectorized_src_token_char], dtype=torch.long)
+        vectorized_src_token_word = torch.tensor([vectorized_src_token_word], dtype=torch.long)
+        src_token_length = torch.tensor(src_token_length, dtype=torch.long)
 
 
-        # passing the src sentence to the encoder
+        # passing the src token to the encoder
         with torch.no_grad():
-            encoder_outputs, encoder_h_t = self.model.encoder(vectorized_src_sentence_char,
-                                                             vectorized_src_sentence_word,
-                                                             src_sentence_length
+            encoder_outputs, encoder_h_t = self.model.encoder(vectorized_src_token_char,
+                                                             vectorized_src_token_word,
+                                                             src_token_length
                                                              )
 
         # creating attention mask
-        attention_mask = self.model.create_mask(vectorized_src_sentence_char, self.src_vocab_char.pad_idx)
+        attention_mask = self.model.create_mask(vectorized_src_token_char, self.src_vocab_char.pad_idx)
 
         # initializing the first decoder_h_t to encoder_h_t
         decoder_hidden = encoder_h_t
@@ -133,7 +131,7 @@ class BeamSampler(BatchSampler):
         # starting input to the decoder is the <s> token
         decoder_input = torch.LongTensor([self.trg_vocab_char.sos_idx])
 
-        # number of sentences to generate
+        # number of tokens to generate
         endnodes = []
         number_required = min((topk + 1), topk - len(endnodes))
 
@@ -159,10 +157,10 @@ class BeamSampler(BatchSampler):
             decoder_input = n.wordid
             decoder_hidden = n.h
 
-            # if we predict the </s> token, this means we finished decoding a sentence
+            # if we predict the </s> token, this means we finished decoding a token
             if n.wordid.item() == self.trg_vocab_char.eos_idx and n.prevNode != None:
                 endnodes.append((score, n))
-                # if we reached maximum # of sentences required, stop beam search
+                # if we reached maximum # of tokens required, stop beam search
                 if len(endnodes) >= number_required:
                     break
                 else:
@@ -212,20 +210,23 @@ class BeamSampler(BatchSampler):
         endnodes = sorted(endnodes, key=lambda x: x[0])
 
         # decoding
-        #TODO: Decoding currently works for one sentence at a time,
+        #TODO: Decoding currently works for one token at a time,
         #Bashar needs to make it work on the batch
-        decoded_sentences = []
+        decoded_tokens = []
         for score, n in endnodes:
-            decoded_sentence = []
-            decoded_sentence.append(n.wordid.item())
+            decoded_token = []
+            decoded_token.append(n.wordid.item())
             # backtrack 
             while n.prevNode != None:
                 n = n.prevNode
-                decoded_sentence.append(n.wordid.item())
+                decoded_token.append(n.wordid.item())
             # reversing the decoding
-            decoded_sentence = decoded_sentence[::-1]
-            decoded_sentences.append((score, decoded_sentence))
+            decoded_token = decoded_token[::-1]
+            decoded_tokens.append((score, decoded_token))
 
-        str_decoded_sentence = self.get_str_sentence(decoded_sentences[0][1], self.trg_vocab_char)
-        return str_decoded_sentence
+        str_decoded_token = self.get_str(decoded_tokens[0][1], self.trg_vocab_char)
+        str_decoded_tokens = [self.get_str(d_token[1], self.trg_vocab_char)
+                              for d_token in decoded_tokens]
+
+        return str_decoded_tokens
 

@@ -1,11 +1,18 @@
 from utils.data_utils import Dataset
 from cbr import CBR
+from rbr import RBR
+from morph_reinflector import MorphReinflector
+from seq2seq_reinflector import Seq2Seq_Reinflector
 from reinflector import GenderReinflector
 from ranker import Ranker
 from utils.error_analysis import do_error_analysis
 import argparse
 from argparse import Namespace
 import os
+import logging
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 def write_predictions(output_file_dir, output_examples):
     """
@@ -76,6 +83,21 @@ def main():
         help="Whether to use the morphological analyzer and reinflector."
     )
     parser.add_argument(
+        "--use_rbr",
+        action="store_true",
+        help="Whether to use the RBR model."
+    )
+    parser.add_argument(
+        "--use_seq2seq",
+        action="store_true",
+        help="Whether to use the seq2seq model."
+    )
+    parser.add_argument(
+        "--seq2seq_model_path",
+        type=str,
+        help="seq2seq pretrained model path."
+    )
+    parser.add_argument(
         "--inference_mode",
         default="dev",
         required=True,
@@ -102,15 +124,19 @@ def main():
         help="Reinflections output dir."
     )
     parser.add_argument(
+        "--analyze_errors",
+        action="store_true",
+        help="To do error analysis on the outputs or not."
+    )
+    parser.add_argument(
         "--error_analysis_dir",
         type=str,
         default=None,
-        required=True,
         help="error analysis output dir."
     )
 
     args = parser.parse_args()
-    # import pdb; pdb.set_trace()
+
     # We will repeat the reinflection process across the various target genders
     user_genders = (['M', 'F'] if args.first_person_only else
                     ['MM', 'FM', 'MF', 'FF'])
@@ -120,48 +146,69 @@ def main():
                     use_gpu=args.use_gpu)
 
     for target_gender in user_genders:
+        logger.info('\n')
+        logger.info(f'######## {target_gender} Rewriting ########')
+        logger.info('\n')
         # Reading training data
+        # TODO: fix tokens files to remove the empty lines from the end
+        # This will take care of fixing the empty line issue at the end 
+        # of the preds files
         train_dataset = Dataset(src_path=os.path.join(args.data_dir,
                                            'train.arin.tokens'),
                                 tgt_path=os.path.join(args.data_dir,
                                            'train.ar.'+target_gender+'.tokens'))
-
-        print(f'There are {len(train_dataset)} Training Examples')
+        logger.info(f'There are {len(train_dataset)} Training Examples')
 
         if args.inference_mode == "dev":
             # Reading dev data
             dev_dataset = Dataset(src_path=os.path.join(args.data_dir,
-                                             'dev.arin.tokens'),
+                                                        'dev.arin.tokens'),
                                   tgt_path=os.path.join(args.data_dir,
                                              'dev.ar.'+target_gender+'.tokens'),
                                   src_bert_tags_path=args.src_bert_tags_dir)
 
-            print(f'There are {len(dev_dataset)} Dev Examples')
+            logger.info(f'There are {len(dev_dataset)} Dev Examples')
 
         elif args.inference_mode == "test":
             # Reading test data
             test_dataset = Dataset(src_path=os.path.join(args.data_dir,
-                                            'test.arin.tokens'),
-                                   tgt_path=os.path.join(args.data_dir,
-                                            'test.ar.'+target_gender+'.tokens'),
+                                                         'test.arin.tokens'),
                                    src_bert_tags_path=args.src_bert_tags_dir)
 
-            print(f'There are {len(test_dataset)} Test Examples')
+            logger.info(f'There are {len(test_dataset)} Test Examples')
 
         # import pdb; pdb.set_trace()
         if args.use_cbr:
-            print(f'Training CBR model')
+            logger.info(f'Training CBR model for {target_gender} target')
             cbr_model = CBR.build_model(train_dataset,
                                         ngrams=args.cbr_ngram,
                                         backoff=args.cbr_backoff)
         else:
             cbr_model = None
 
+        if args.use_rbr:
+            logger.info(f'Training RBR model for {target_gender} target')
+            rbr_model = RBR.build_model(train_dataset)
+        else:
+            rbr_model = None
+
+        if args.use_morph:
+            morph_reinflector = MorphReinflector(args.morph_db)
+        else:
+            morph_reinflector = None
+
+        if args.use_seq2seq:
+            seq2seq_reinflector = Seq2Seq_Reinflector.from_pretrained(model_path=args.seq2seq_model_path)
+        else:
+            seq2seq_reinflector = None
+
         # Creating a reinflector
         reinflector = GenderReinflector(cbr_model=cbr_model,
-                                       morph_database=args.morph_db,
-                                       ranker=ranker,
-                                       first_person_only=args.first_person_only)
+                                        morph_reinflector=morph_reinflector,
+                                        rbr_model=rbr_model,
+                                        neural_model=seq2seq_reinflector,
+                                        ranker=ranker,
+                                        first_person_only=args.first_person_only)
 
 
         speaker_gender = target_gender[0]
@@ -173,7 +220,9 @@ def main():
                                                listener_gender=listener_gender,
                                                use_cbr=args.use_cbr,
                                                pick_top_mle=args.pick_top_mle,
-                                               use_morph=args.use_morph)
+                                               use_morph=args.use_morph,
+                                               use_rbr=args.use_rbr,
+                                               use_neural=args.use_seq2seq)
 
         elif args.inference_mode == "test":
             candidates = reinflector.reinflect(dataset=test_dataset,
@@ -181,7 +230,9 @@ def main():
                                                listener_gender=listener_gender,
                                                use_cbr=args.use_cbr,
                                                pick_top_mle=args.pick_top_mle,
-                                               use_morph=args.use_morph)
+                                               use_morph=args.use_morph,
+                                               use_rbr=args.use_rbr,
+                                               use_neural=args.use_seq2seq)
 
         # Final selection
         scored_candidates = reinflector.select(candidates)
@@ -191,22 +242,24 @@ def main():
                                           'arin.to.'+target_gender+'.preds'),
                           output_examples=scored_candidates)
 
-        # Auto error analysis
-        if args.inference_mode == "dev":
-            do_error_analysis(dataset=dev_dataset,
-                              reinflections=scored_candidates,
-                              output_dir=os.path.join(args.error_analysis_dir,
-                                           'arin.to.'+target_gender+'.errors'),
-                              speaker_gender=speaker_gender,
-                              listener_gender=listener_gender)
+        # # Auto error analysis
+        if args.analyze_errors:
+            if args.inference_mode == "dev":
+                do_error_analysis(dataset=dev_dataset,
+                                reinflections=scored_candidates,
+                                output_dir=os.path.join(args.error_analysis_dir,
+                                            'arin.to.'+target_gender+'.errors'),
+                                speaker_gender=speaker_gender,
+                                listener_gender=listener_gender)
 
-        elif args.inference_mode == "test":
-            do_error_analysis(dataset=test_dataset,
-                              reinflections=scored_candidates,
-                              output_dir=os.path.join(args.error_analysis_dir,
-                                           'arin.to.'+target_gender+'.errors'),
-                              speaker_gender=speaker_gender,
-                              listener_gender=listener_gender)
+            elif args.inference_mode == "test":
+                do_error_analysis(dataset=test_dataset,
+                                reinflections=scored_candidates,
+                                output_dir=os.path.join(args.error_analysis_dir,
+                                            'arin.to.'+target_gender+'.errors'),
+                                speaker_gender=speaker_gender,
+                                listener_gender=listener_gender)
 
 if __name__ == "__main__":
     main()
+

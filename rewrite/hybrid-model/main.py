@@ -93,6 +93,16 @@ def main():
         help="Whether to use the seq2seq model."
     )
     parser.add_argument(
+        "--top_n_best",
+        type=int,
+        help="Top n decoded sequences from the seq2seq model."
+    )
+    parser.add_argument(
+        "--beam_width",
+        type=int,
+        help="Beam width of the seq2seq model."
+    )
+    parser.add_argument(
         "--seq2seq_model_path",
         type=str,
         help="seq2seq pretrained model path."
@@ -198,7 +208,9 @@ def main():
             morph_reinflector = None
 
         if args.use_seq2seq:
-            seq2seq_reinflector = Seq2Seq_Reinflector.from_pretrained(model_path=args.seq2seq_model_path)
+            seq2seq_reinflector = Seq2Seq_Reinflector.from_pretrained(model_path=args.seq2seq_model_path,
+                                                                      top_n_best=args.top_n_best,
+                                                                      beam_width=args.beam_width)
         else:
             seq2seq_reinflector = None
 

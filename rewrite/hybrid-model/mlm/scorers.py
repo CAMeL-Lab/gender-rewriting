@@ -73,7 +73,7 @@ Model '{model.__class__.__name__}' is not supported by the scorer '{self.__class
         # Hence, we use num_shards = 0 and do gluon's split_data
         batch_sampler = nlp.data.sampler.FixedBucketSampler([sent_tuple[2] for sent_tuple in dataset], batch_size=split_size, ratio=ratio, num_shards=0, shuffle=shuffle)
 
-        logging.info(batch_sampler.stats())
+        # logging.info(batch_sampler.stats())
         dataloader = nlp.data.ShardedDataLoader(dataset, pin_memory=True, batch_sampler=batch_sampler, batchify_fn=self._batchify_fn, num_workers=num_workers, thread_pool=True)
 
         return dataset, batch_sampler, dataloader
@@ -435,7 +435,7 @@ masked_id = {}
         # Hence, we use num_shards = 0 and do gluon's split_data
         batch_sampler = nlp.data.sampler.FixedBucketSampler([sent_tuple[2] for sent_tuple in dataset], batch_size=split_size, ratio=ratio, num_shards=0, shuffle=False)
 
-        logging.info(batch_sampler.stats())
+        # logging.info(batch_sampler.stats())
         dataloader = nlp.data.ShardedDataLoader(dataset, pin_memory=True, batch_sampler=batch_sampler, batchify_fn=batchify_fn, num_workers=num_workers, thread_pool=True)
 
         # Get lengths in tokens (assumes dataset is in order)
@@ -649,7 +649,7 @@ class MLMScorerPT(BaseScorer):
         # Hence, we use num_shards = 0 and do gluon's split_data
         batch_sampler = nlp.data.sampler.FixedBucketSampler([sent_tuple[2] for sent_tuple in dataset], batch_size=split_size, ratio=ratio, num_shards=0, shuffle=False)
 
-        logging.info(batch_sampler.stats())
+        # logging.info(batch_sampler.stats())
 
         # dataloader = nlp.data.ShardedDataLoader(dataset, pin_memory=True, batch_sampler=batch_sampler, batchify_fn=batchify_fn, num_workers=num_workers, thread_pool=True)
         dataloader = nlp.data.ShardedDataLoader(dataset, batch_sampler=batch_sampler, batchify_fn=batchify_fn)
@@ -807,7 +807,7 @@ class MLMBinner(MLMScorer):
         # Hence, we use num_shards = 0 and do gluon's split_data
         batch_sampler = nlp.data.sampler.FixedBucketSampler([sent_tuple[2] for sent_tuple in dataset], batch_size=split_size, ratio=ratio, num_shards=0, shuffle=False)
 
-        logging.info(batch_sampler.stats())
+        # logging.info(batch_sampler.stats())
         dataloader = nlp.data.ShardedDataLoader(dataset, pin_memory=True, batch_sampler=batch_sampler, batchify_fn=batchify_fn, num_workers=num_workers, thread_pool=True)
 
         max_length = 256

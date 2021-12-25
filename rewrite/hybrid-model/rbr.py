@@ -12,21 +12,24 @@ class RBR:
     """
     Rule-based Rewriting
     """
-    def __init__(self, model, verbose_model):
+    def __init__(self, model, counts, pick_top_rule=False,
+                pick_top_tgt_rule=False):
         self.model = model
-        self.verbose_model = verbose_model
+        self.counts = counts
+        self.pick_top_rule = pick_top_rule
+        self.pick_top_tgt_rule = pick_top_tgt_rule
 
     @classmethod
-    def build_model(cls, dataset):
+    def build_model(cls, dataset, pick_top_rule, pick_top_tgt_rule):
         """
         Args:
             - dataset (Dataset obj)
         Returns:
             - rbr model (a rule-based rewriting mode): The rbr model where the
-            keys are either a rule or a tuple of (rule, trg_gender)
+            keys tuples of (rule, tgt_gender)
         """
-        model = dict()
-        verbose_model = defaultdict(set)
+        model = defaultdict(lambda: defaultdict(lambda: 0))
+        counts = dict()
 
         for ex in dataset.input_examples:
             src_tokens = ex.src_tokens
@@ -42,78 +45,157 @@ class RBR:
 
                 if src_token != tgt_token:
                     assert src_token_tag != tgt_token_tag
-                    # TODO: make the shorter word thingy part of the edit dist.
-                    shorter_word = (src_token if len(src_token) <= len(tgt_token)
-                                              else tgt_token)
-                    longer_word = (src_token if shorter_word == tgt_token
-                                             else tgt_token)
 
-                    trg_tag_1 = (src_token_tag if shorter_word == src_token
-                                               else tgt_token_tag)
-                    trg_tag_2 = (tgt_token_tag if shorter_word == src_token
-                                               else src_token_tag)
-
-                    # print(f'Token 1: {shorter_word}')
-                    # print(f'Token 2: {longer_word}')
-                    edit_distance_table = edit_distance(shorter_word,
-                                                        longer_word)
+                    edit_distance_table = edit_distance(src_word=src_token,
+                                                        tgt_word=tgt_token)
                     # print(f'Edit Dist: {edit_distance_table[0][0]}')
                     # print(f'Backtracking:')
-                    alignment = backtrack_dp(edit_distance_table, shorter_word,
-                                             longer_word)
-                    rule = convert_alignment_to_rule(alignment)
-                    r1, r2 = re.sub('X+', 'X', rule[0]), re.sub('X+', 'X', rule[1])
-                    # print(f'Rule: {rule}')
-                    # print(f'Condensed Rule: {(r1, r2)}')
-                    # print('================')
-                    # we will learn rules in both directions (trg_gender, rule)
-                    model[(trg_tag_2, rule[0])] = rule[1]
-                    model[(trg_tag_1, rule[1])] = rule[0]
-                    verbose_model[(rule[0], rule[1])].add((src_token, tgt_token))
-                    verbose_model[(rule[1], rule[0])].add((src_token, tgt_token))
+                    src_align, tgt_align = backtrack_dp(edit_distance_table,
+                                                        src_word=src_token,
+                                                        tgt_word=tgt_token)
 
-        return cls(model, verbose_model)
+                    src_pattern, tgt_pattern = convert_alignment_to_rule((src_align,
+                                                                         tgt_align))
+
+                    # print(f'Rule: {rule}')
+                    # print('================')
+                    # we will learn rules in both directions (tgt_gender, rule)
+                    model[(tgt_token_tag, src_pattern)][tgt_pattern] += 1
+                    # rules counts
+                    counts[(tgt_token_tag, src_pattern)] = (1 +
+                                                            counts.get((tgt_token_tag, src_pattern), 0))
+
+        return cls(model, counts, pick_top_rule, pick_top_tgt_rule)
 
     def __len__(self):
-        return len(self.model)
+        return sum([val for key, val in self.counts.items()])
 
     def __getitem__(self, sw_tg):
-        tgt_forms = list()
+        """
+        Returns generated token(s) based on the matched rules given
+        a source word and a target gender
+
+        Note: we have two forms for rules to pick from:
+            1) pick_top_rule: Selects the (src_pattern, tgt_gender)
+                rule that occured the most in the training data.
+
+            2) pick_top_tgt_rule: Selects the target_pattern that appeared
+                the most for a given (src_pattern, tgt_gender). Because
+                one (src_pattern, tgt_gender) could have multiple target
+                patterns
+
+            We also do not apply any pattern that appeared only 1 during
+            training to reduce noisy outputs.
+        """
+
         tgt_gender, src_word = sw_tg
+        matched_rules = self.match_rule(src_word, tgt_gender)
+
+        if not matched_rules: return None
+
+        generated_tokens = []
+        if self.pick_top_rule:
+            matched_rule = max(matched_rules, key=lambda x: x['rule_freq'])
+            # ignore the matched rules that appear only once
+            if matched_rule['rule_freq'] != 1:
+                if self.pick_top_tgt_rule:
+                    tgt_rule, tgt_rule_freq = max(matched_rule['targets'].items(),
+                                                 key=lambda x: x[1])
+
+                    # ignore target rules that appear only once
+                    if tgt_rule_freq != 1:
+                        generated_token = self.generate_token(tgt_rule,
+                                                        matched_rule['src_word'],
+                                                        matched_rule['source_pattern'])
+                        generated_tokens.append(generated_token)
+
+                else:
+                    generated_tokens = []
+                    for tgt_rule, tgt_rule_freq in matched_rule['targets'].items():
+                        # ignore target rules that appear only once
+                        if tgt_rule_freq == 1: continue
+
+                        generated_token = self.generate_token(tgt_rule,
+                                                        matched_rule['src_word'],
+                                                        matched_rule['source_pattern'])
+                        generated_tokens.append(generated_token)
+
+        else:
+            generated_tokens = []
+            for matched_rule in matched_rules:
+                # ignore the matched rules that appear only once
+                if matched_rule['rule_freq'] == 1: continue
+
+                if self.pick_top_tgt_rule:
+                    tgt_rule, tgt_rule_freq = max(matched_rule['targets'].items(),
+                                                  key=lambda x: x[1])
+                    # ignore target rules that appear only once
+                    if tgt_rule_freq == 1: continue
+
+                    generated_token = self.generate_token(tgt_rule,
+                                                    matched_rule['src_word'],
+                                                    matched_rule['source_pattern'])
+                    generated_tokens.append(generated_token)
+
+                else:
+                    for tgt_rule, tgt_rule_freq in matched_rule['targets'].items():
+                        # ignore target rules that appear only once
+                        if tgt_rule_freq == 1: continue
+                        
+                        generated_token = self.generate_token(tgt_rule,
+                                                        matched_rule['src_word'],
+                                                        matched_rule['source_pattern'])
+                        generated_tokens.append(generated_token)
+
+        return generated_tokens
+
+    def match_rule(self, src_word, tgt_gender):
+        """
+        Returns all the rules that match the src word pattern
+        and the target gender
+        """
+        matched_rules = []
         for rule in self.model:
-            tgt_gender, src_pattern = rule
-            # print(tgt_gender, src_pattern)
-            # constructing a regex from the rule
-            src_pattern = src_pattern.replace('+', '').replace('-','').replace('X', '(.)')
-            # checking if the pattern matches the word we need to rewrite
-            match = re.match(src_pattern, src_word)
+            _, src_pattern = rule
+            pattern = src_pattern.replace('+', '').replace('-','').replace('X', '(.)')
+            match = re.match(pattern, src_word)
 
-            if match and match[0] == src_word:
-                # if there's a match, construct the target regex
-                tgt_pattern = self.model[rule]
-                tgt_pattern = tgt_pattern.replace('+', '').replace('-','')
-                x_count = 1
-                while 'X' in tgt_pattern:
-                    tgt_pattern = tgt_pattern.replace('X', f'\\{x_count}', 1)
-                    x_count += 1
-                # print(rule, tgt_pattern)
-                # generate target words
-                trg_word = re.sub(src_pattern, tgt_pattern, src_word)
-                tgt_forms.append(trg_word)
-                # print(trg_word)
-        return tgt_forms
+            # matching on the pattern and the target gender
+            if match and match[0] == src_word and tgt_gender == rule[0]:
+                matched_rules.append({'src_word': src_word,
+                                      'trg_gender': rule[0],
+                                      'source_pattern': pattern,
+                                      'targets': dict(self.model[rule]),
+                                      'rule_freq': self.counts[rule]})
 
-def edit_distance(str1, str2):
+        return matched_rules
+
+    def generate_token(self, tgt_rule, src_word, src_pattern):
+        """
+        Generates a token given a tgt pattern, src word, and a src pattern
+        """
+        tgt_pattern = tgt_rule.replace('+', '').replace('-','')
+        x_count = 1
+        while 'X' in tgt_pattern:
+            tgt_pattern = tgt_pattern.replace('X', f'\\{x_count}', 1)
+            x_count += 1
+        # generate target words
+        tgt_word = re.sub(src_pattern, tgt_pattern, src_word)
+        return tgt_word
+
+def edit_distance(src_word, tgt_word):
     """
-    Computes the Levenshtein edit distance between str1 and str2.
+    Computes the Levenshtein edit distance between src_word and tgt_word.
     Args:
-        - str1 (str): the first input word.
-        - str2 (str): the second input word.
+        - src_word (str): the source input word.
+        - tgt_word (str): the target input word.
 
     Returns:
         - dp (list of list of int): a matrix of edit distances where dp[0][0]
             contains the smallest edit distance between str1 and str1.
     """
+    str1 = src_word if len(src_word) <= len(tgt_word) else tgt_word
+    str2 = src_word if str1 == tgt_word else tgt_word
     m = len(str1)
     n = len(str2)
     dp = [[0 for _ in range(n + 1)] for _ in range(m + 1)]
@@ -135,59 +217,70 @@ def edit_distance(str1, str2):
 
     return dp
 
-def backtrack_dp(dp, w1, w2):
+def backtrack_dp(dp, src_word, tgt_word):
     """
     Takes a matrix of edit distances and backtracks to create an alignment
     between w1 and w2.
     Args:
         - dp (list of list of int): a matrix of edit distances
-        - w1 (str): the first input word.
-        - w2 (str): the second input word.
+        - src_word (str): the source input word.
+        - tgt_word (str): the target input word.
 
     Returns:
         - alignment (tuple of (str, str)): a tuple of two strings that
             represent the alignment between to go from one word to
             another or vice-versa.
     """
+
+    w1 = src_word if len(src_word) <= len(tgt_word) else tgt_word
+    w2 = src_word if w1 == tgt_word else tgt_word
+
     i, j = 0, 0
-    res1, res2 = "", ""
+    w1_align, w2_align = "", ""
 
     while i < len(w1) and j < len(w2):
         if dp[i][j] == dp[i][j + 1] + 1:
             # print(f'Inserting {w2[j]} in {w1}')
-            res1 += '+'
-            res2 += w2[j]
+            w1_align += '+'
+            w2_align += w2[j]
             j += 1
 
         elif dp[i][j] == dp[i + 1][j] + 1:
             # print(f'Deleting {w1[i]} from {w1}')
-            res1 += w1[i]
-            res2 += '-'
+            w1_align += w1[i]
+            w2_align += '-'
             i += 1
 
         elif dp[i][j] == dp[i + 1][j + 1]:
             # print(f'Copying {w1[i]}')
-            res1 += w1[i]
-            res2 += w2[j]
+            w1_align += w1[i]
+            w2_align += w2[j]
             i += 1
             j += 1
 
         elif dp[i][j] == dp[i + 1][j + 1] + 1:
             # print(f'Subbing {w1[i]} with {w2[j]}')
-            res1 += w1[i]
-            res2 += w2[j]
+            w1_align += w1[i]
+            w2_align += w2[j]
             i += 1
             j += 1
 
-    assert len(res1) <= len(res2)
+    assert len(w1_align) <= len(w2_align)
 
     for k in range(j, len(w2)):
         # print(f'Inserting {w2[k]} in {w1}')
-        res1 += '+'
-        res2 += w2[k]
+        w1_align += '+'
+        w2_align += w2[k]
 
-    assert len(res1) <= len(res2)
-    return res1, res2
+    assert len(w1_align) <= len(w2_align)
+
+    if w1 == src_word and w2 == tgt_word:
+        src_align, tgt_align = w1_align, w2_align
+
+    elif w2 == src_word and w1 == tgt_word:
+        src_align, tgt_align = w2_align, w1_align
+
+    return src_align, tgt_align
 
 def convert_alignment_to_rule(alignment):
     """
@@ -201,17 +294,17 @@ def convert_alignment_to_rule(alignment):
         - rule (tuple of (str, str)): a tuple of two strings that represent
             the rules to convert one word to another or vice-versa.
     """
-    str1, str2 = alignment
-    assert len(str1) == len(str2)
-    rule1 = ""
-    rule2 = ""
-    for i in range(len(str1)):
-        if str1[i] == str2[i]:
-            rule1 += 'X'
-            rule2 += 'X'
+    src_align, tgt_align = alignment
+    assert len(src_align) == len(tgt_align)
+    src_pattern = ""
+    tgt_pattern = ""
+    for i in range(len(src_align)):
+        if src_align[i] == tgt_align[i]:
+            src_pattern += 'X'
+            tgt_pattern += 'X'
         else:
-            rule1 += str1[i]
-            rule2 += str2[i]
+            src_pattern += src_align[i]
+            tgt_pattern += tgt_align[i]
 
-    return (rule1, rule2)
+    return (src_pattern, tgt_pattern)
 

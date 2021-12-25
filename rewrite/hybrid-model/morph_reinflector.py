@@ -3,6 +3,10 @@ from camel_tools.morphology.analyzer import Analyzer
 from camel_tools.morphology.generator import Generator
 from camel_tools.morphology.database import MorphologyDB
 from camel_tools.utils.dediac import dediac_ar
+import logging
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 class MorphReinflector:
     def __init__(self, morph_database):
@@ -38,9 +42,7 @@ class MorphReinflector:
 
         if not analyses:
             logger.info(f'No analyses found for {token}')
-            return {'reinflected_token': token,
-                    'proposals': [],
-                    'proposed_by': 'Analyzer_OOV'}
+            return None
 
         # get the analyses we care about
         filtered_analyses = []
@@ -55,9 +57,7 @@ class MorphReinflector:
         if not filtered_analyses:
             logger.info(f'No analyses match the filtering criteria {tag}'
                         f'for {token}')
-            return {'reinflected_token':token,
-                    'proposals': [],
-                    'proposed_by': 'Analyzer_OOV'}
+            return None
 
         # check if the analyses only include 3rd person
         only_third_per = True if len([ana for ana in filtered_analyses
@@ -112,10 +112,7 @@ class MorphReinflector:
             logger.info(f'No reinflections found for {token} with tag {tag}'
                          f' and target gender {target_gender}')
 
-            return {'reinflected_token': token,
-                    'proposals': [],
-                    'proposed_by': 'Reinflector_OOV'}
-
+            return None
 
         elif len(reinflections) == 1:
             return {'reinflected_token': reinflections[0],

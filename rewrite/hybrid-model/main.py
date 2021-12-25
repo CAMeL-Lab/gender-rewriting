@@ -88,6 +88,16 @@ def main():
         help="Whether to use the RBR model."
     )
     parser.add_argument(
+        "--rbr_top_rule",
+        action="store_true",
+        help="Whether to use the top rule in the RBR model."
+    )
+    parser.add_argument(
+        "--rbr_top_tgt_rule",
+        action="store_true",
+        help="Whether to use the top target rule in the RBR model."
+    )
+    parser.add_argument(
         "--use_seq2seq",
         action="store_true",
         help="Whether to use the seq2seq model."
@@ -198,7 +208,9 @@ def main():
 
         if args.use_rbr:
             logger.info(f'Training RBR model for {target_gender} target')
-            rbr_model = RBR.build_model(train_dataset)
+            rbr_model = RBR.build_model(train_dataset,
+                                        pick_top_rule=args.rbr_top_rule,
+                                        pick_top_tgt_rule=args.rbr_top_tgt_rule)
         else:
             rbr_model = None
 
@@ -208,6 +220,7 @@ def main():
             morph_reinflector = None
 
         if args.use_seq2seq:
+            logger.info(f'Loading the pretrained seq2seq model')
             seq2seq_reinflector = Seq2Seq_Reinflector.from_pretrained(model_path=args.seq2seq_model_path,
                                                                       top_n_best=args.top_n_best,
                                                                       beam_width=args.beam_width)

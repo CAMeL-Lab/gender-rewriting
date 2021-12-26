@@ -56,6 +56,7 @@ def do_error_analysis(dataset, reinflections,
             # getting word-level error stats
             if error_type == "Proposal":
                 pred_tokens = pred_trg_sentence.split()
+                
                 proposed_by_counts += [p for i, p
                                        in enumerate(output_example.proposed_by)
                                        if pred_tokens[i] != ex.tgt_tokens[i]]

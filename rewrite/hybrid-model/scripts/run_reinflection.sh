@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH -p nvidia 
+#SBATCH -p condo
 # use gpus
 #SBATCH --gres=gpu:1
 # memory
@@ -15,18 +15,45 @@ module purge
 
 export REINFLECTION_TYPE=multi_user
 # --first_person_only \
+# --use_seq2seq \
+# --seq2seq_model_path seq2seq_reinflector/saved_models \
+# --top_n_best 5 \
+# --beam_width 10 \
 # --use_morph \
+# --use_cbr \
+# --cbr_ngram 2 \
+# --cbr_backoff \
+# --pick_top_mle \
+# --use_rbr \
+# --rbr_top_tgt_rule \
+# --rbr_top_rule
+
 # /scratch/ba63/gender-identification/CAMeLBERT_MSA/$REINFLECTION_TYPE/checkpoint-500-best/dev_predictions.txt
 # /scratch/ba63/Arabic-Parallel-Gender-Corpus/Arabic-parallel-gender-corpus-v-1.0/
 
+# /scratch/ba63/calima_databases/calima-msa/calima-msa-s31_0.4.2.utf8.db
+# /scratch/ba63/calima_databases/calima-msa/calima-msa-s31_0.4.2.utf8.db.copy-mod
+
+# /scratch/ba63/BERT_models/bert-base-arabic-camelbert-msa
+# /scratch/ba63/mlm_lm/bert-base-arabic-camelbert-msa-mlm
+# /scratch/ba63/mlm_lm/bert-base-arabic-camelbert-msa-mlm-3
+# /scratch/ba63/gender-rewriting/gender-id/CAMeLBERT_MSA/multi_user_with_clitics/models/dev_predictions.txt
 python main.py \
 --data_dir /scratch/ba63/Arabic-Parallel-Gender-Corpus/Arabic-parallel-gender-corpus-v-2.0/data/new_token_data/ \
---morph_db /scratch/ba63/calima_databases/calima-msa/calima-msa-s31_0.4.2.utf8.db \
---bert_model /scratch/ba63/BERT_models/bert-base-arabic-camelbert-msa \
+--morph_db /scratch/ba63/calima_databases/calima-msa/calima-msa-s31_0.4.2.utf8.db.copy-mod \
+--bert_model /scratch/ba63/mlm_lm/bert-base-arabic-camelbert-msa-mlm-3 \
 --src_bert_tags_dir /scratch/ba63/gender-rewriting/gender-id/CAMeLBERT_MSA/multi_user_with_clitics/models/dev_predictions.txt \
 --inference_mode dev \
 --use_cbr \
 --cbr_ngram 2 \
 --cbr_backoff \
---output_dir logs/debugging/multi_user_with_clitics/reinflection/CBR+backoff+all \
---error_analysis_dir logs/debugging/multi_user_with_clitics/error_analysis/CBR+backoff+all
+--use_morph \
+--use_seq2seq \
+--seq2seq_model_path seq2seq_reinflector/saved_models \
+--top_n_best 5 \
+--beam_width 10 \
+--use_gpu \
+--analyze_errors \
+--output_dir logs/multi_user_with_clitics/reinflection/CBR+backoff+all+morph_newdb+mod_per_3rd_generator_mlm3+neural_test \
+--error_analysis_dir logs/multi_user_with_clitics/error_analysis/CBR+backoff+all+morph_newdb+mod_per_3rd_generator_mlm3+neural_test
+

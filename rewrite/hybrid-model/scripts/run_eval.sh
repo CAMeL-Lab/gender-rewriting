@@ -14,8 +14,14 @@
 #SBATCH -o job.%J.out
 #SBATCH -e job.%J.err
 
-export EXPERIMENT=Morph
+export EXPERIMENT=CBR+backoff+all+morph_newdb+mod_per_3rd_generator_mlm3+neural_kann
 export SYSTEM_HYP=logs/multi_user_with_clitics/reinflection/$EXPERIMENT
+
+# removing last empty line from the preds files
+sed -i '$ d' $SYSTEM_HYP/arin.to.MM.preds
+sed -i '$ d' $SYSTEM_HYP/arin.to.FM.preds
+sed -i '$ d' $SYSTEM_HYP/arin.to.MF.preds
+sed -i '$ d' $SYSTEM_HYP/arin.to.FF.preds
 
 # preparing the preds
 cat $SYSTEM_HYP/arin.to.MM.preds $SYSTEM_HYP/arin.to.FM.preds  $SYSTEM_HYP/arin.to.MF.preds  $SYSTEM_HYP/arin.to.FF.preds > $SYSTEM_HYP/$EXPERIMENT.inf

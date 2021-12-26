@@ -1,6 +1,6 @@
 from utils.data_utils import Dataset
 from collections import defaultdict
-import operator
+
 
 def build_ngrams(sentence, pad_right=False, pad_left=False, ngrams=1):
     """
@@ -22,7 +22,7 @@ def build_ngrams(sentence, pad_right=False, pad_left=False, ngrams=1):
 
 class CBR:
     """
-    Corpus-based Reinflecttion
+    Corpus-based Rewriting
     to model P(target_word | source_word, target_word_gender)"""
 
     def __init__(self, model, ngrams, backoff=True):

@@ -2,7 +2,7 @@ from utils.data_utils import Dataset
 from cbr import CBR
 from rbr import RBR
 from morph_reinflector import MorphReinflector
-from seq2seq_reinflector import Seq2Seq_Reinflector
+from seq2seq_reinflector.reinflector import Seq2Seq_Reinflector
 from reinflector import GenderReinflector
 from ranker import Ranker
 from utils.error_analysis import do_error_analysis

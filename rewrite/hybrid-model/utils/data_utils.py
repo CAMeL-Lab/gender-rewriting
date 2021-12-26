@@ -54,11 +54,13 @@ class OutputExample:
         return output
 
 class Dataset:
-    def __init__(self, src_path, tgt_path, src_bert_tags_path=None):
+    def __init__(self, src_path, tgt_path=None, src_bert_tags_path=None):
         """
         Args:
             - src_path (str): dir to gold tagged src tokens.
             - tgt_path (str): dir to gold tagged tgt tokens.
+                              Defaults to None in case we are doing inference
+                              with no labels.
             - src_bert_tags_path (str): dir to bert tagged src tokens.
                                         Defaults to None.
         """
@@ -88,8 +90,14 @@ class Dataset:
                 all_tags.append(sent_tags)
                 sent_tokens = []
                 sent_tags = []
-            else:
+
+            elif len(ex) == 2:
                 token, tag = ex[0], ex[1]
+                sent_tokens.append(token)
+                sent_tags.append(tag)
+
+            elif len(ex) == 1: # if there's no tag during test time
+                token, tag = ex[0], None
                 sent_tokens.append(token)
                 sent_tags.append(tag)
 
@@ -102,12 +110,15 @@ class Dataset:
         # Read and collate src and target data
         src_data = self.get_raw_data(src_path)
         src_tokens, src_tags = self.collate(src_data)
+        assert len(src_tokens) == len(src_tags)
 
-        tgt_data = self.get_raw_data(tgt_path)
-        tgt_tokens, tgt_tags = self.collate(tgt_data)
-
-        assert len(src_tokens) == len(src_tags) == len(tgt_tokens) \
-            == len(tgt_tags)
+        # Read and collate target data if needed
+        if tgt_path:
+            tgt_data = self.get_raw_data(tgt_path)
+            tgt_tokens, tgt_tags = self.collate(tgt_data)
+            assert len(tgt_tokens) == len(tgt_tags)
+        else:
+            tgt_tokens, tgt_tags = None, None
 
         # Read and collate bert src tags if needed
         if src_bert_tags_path:
@@ -122,8 +133,8 @@ class Dataset:
         for i in range(len(src_tokens)):
             ex_src_tokens = src_tokens[i]
             ex_src_tags = src_tags[i]
-            ex_tgt_tokens = tgt_tokens[i]
-            ex_tgt_tags = tgt_tags[i]
+            ex_tgt_tokens = tgt_tokens[i] if tgt_tokens else None
+            ex_tgt_tags = tgt_tags[i] if tgt_tags else None
             ex_src_bert_tags = src_bert_tags[i] if src_bert_tags else None
 
             input_examples.append(InputExample(src_tokens=ex_src_tokens,

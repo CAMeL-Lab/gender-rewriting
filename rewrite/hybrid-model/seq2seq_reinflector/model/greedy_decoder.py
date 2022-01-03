@@ -39,8 +39,8 @@ class BatchSampler:
         trg_gender = self.sample_batch['trg_gender'][index].cpu().detach().numpy().tolist()
         return self.trg_gender_vocab.lookup_index(trg_gender)
 
-    def greedy_decode(self, token, first_person_only=False,
-                      add_side_constraints=False, trg_gender=None, max_len=512):
+    def greedy_decode(self, token, add_side_constraints=False,
+                      trg_gender=None, max_len=512):
 
         # vectorizing the src token on the char level and word level
         if add_side_constraints:

@@ -48,8 +48,7 @@ class BeamSampler(BatchSampler):
         self.beam_width = beam_width
         self.topk = topk
 
-    def beam_decode(self, token, trg_gender=None,
-                    first_person_only=False, add_side_constraints=False,
+    def beam_decode(self, token, trg_gender=None, add_side_constraints=False,
                     max_len=512):
         """
         Args:

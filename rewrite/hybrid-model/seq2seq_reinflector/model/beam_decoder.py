@@ -64,13 +64,8 @@ class BeamSampler(BatchSampler):
 
         # vectorizing the src token on the char level and word level
         if add_side_constraints:
-            if first_person_only:
-                # TODO: FIX FIRST PERSON SC THING
-                sc = token[:3]
-                token = token[3:]
-            else:
-                sc = token[:6]
-                token = token[6:]
+            sc = token[:token.rfind('>')+1]
+            token = token[token.rfind('>')+1:]
 
         vectorized_src_token_char = [self.src_vocab_char.sos_idx]
         vectorized_src_token_word = [self.src_vocab_word.sos_idx]

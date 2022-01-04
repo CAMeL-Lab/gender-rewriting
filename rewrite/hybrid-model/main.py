@@ -79,6 +79,11 @@ def main():
         help="Whether to do MLE reinflection or not"
     )
     parser.add_argument(
+        "--reduce_cbr_noise",
+        action="store_true",
+        help="Whether to ignore cbr rewrite if its the same as the input."
+    )
+    parser.add_argument(
         "--use_morph",
         action="store_true",
         help="Whether to use the morphological analyzer and reinflector."
@@ -139,7 +144,6 @@ def main():
         "--morph_db",
         type=str,
         default=None,
-        required=True,
         help="Path to the anaylzer and reinflector database."
     )
     parser.add_argument(
@@ -264,12 +268,14 @@ def main():
         speaker_gender = target_gender[0]
         listener_gender = None if args.first_person_only else target_gender[1]
 
+
         if args.inference_mode == "dev":
             candidates = reinflector.reinflect(dataset=dev_dataset,
                                                speaker_gender=speaker_gender,
                                                listener_gender=listener_gender,
                                                use_cbr=args.use_cbr,
                                                pick_top_mle=args.pick_top_mle,
+                                               reduce_cbr_noise=args.reduce_cbr_noise,
                                                use_morph=args.use_morph,
                                                use_rbr=args.use_rbr,
                                                use_neural=args.use_seq2seq)
@@ -280,6 +286,7 @@ def main():
                                                listener_gender=listener_gender,
                                                use_cbr=args.use_cbr,
                                                pick_top_mle=args.pick_top_mle,
+                                               reduce_cbr_noise=args.reduce_cbr_noise,
                                                use_morph=args.use_morph,
                                                use_rbr=args.use_rbr,
                                                use_neural=args.use_seq2seq)

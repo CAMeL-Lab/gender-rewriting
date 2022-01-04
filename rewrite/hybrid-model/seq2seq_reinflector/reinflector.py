@@ -35,7 +35,8 @@ class Seq2Seq_Reinflector:
         model = model.to(device)
 
         # loading the vectorizer
-        with open(os.path.join(model_path,'vectorizer.no_morph.json')) as f:
+        # with open(os.path.join(model_path,'vectorizer.no_morph.json')) as f:
+        with open(os.path.join(model_path,'vectorizer.json')) as f:
             vectorizer = Vectorizer.from_serializable(json.load(f))
 
         return cls(model, vectorizer, beam_width, top_n_best)
@@ -55,7 +56,6 @@ class Seq2Seq_Reinflector:
         token_sc = f'<{target_gender}>{token}'
 
         reinflections = self.beam_decoder.beam_decode(token=token_sc,
-                                                      first_person_only=False,
                                                       add_side_constraints=True,
                                                       max_len=512)
 

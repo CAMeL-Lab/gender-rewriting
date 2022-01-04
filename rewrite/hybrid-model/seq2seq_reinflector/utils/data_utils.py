@@ -74,18 +74,20 @@ class RawDataset:
     def get_train_examples(self, data_dir, first_person_only=False):
         """Reads the train examples of the dataset"""
         if first_person_only:
-            return self.create_examples(os.path.join(data_dir, 'joint_model/D-set-train.arin+D-set-train.arin'),
-                                        os.path.join(data_dir, 'joint_model/D-set-train.ar.M+D-set-train.ar.F'))
+            return self.create_examples(os.path.join(data_dir, 'nn_token_data/D-set-train.arin.tokens+D-set-train.arin.tokens.no_B+B.clean'),
+                                        os.path.join(data_dir, 'nn_token_data/D-set-train.ar.M.tokens+D-set-train.ar.F.tokens.no_B+B.clean'))
 
         else:
-            return self.create_examples(os.path.join(data_dir, 'nn_token_data/train.arin.tokens+train.arin.tokens+train.arin.tokens+train.arin.tokens'),
-                                        os.path.join(data_dir, 'nn_token_data/train.ar.MM.tokens+train.ar.FM.tokens+train.ar.MF.tokens+train.ar.FF.tokens'))
+            # return self.create_examples(os.path.join(data_dir, 'nn_token_data/train.arin.tokens+train.arin.tokens+train.arin.tokens+train.arin.tokens'),
+            #                             os.path.join(data_dir, 'nn_token_data/train.ar.MM.tokens+train.ar.FM.tokens+train.ar.MF.tokens+train.ar.FF.tokens'))
+            return self.create_examples(os.path.join(data_dir, 'nn_token_data/train.arin.tokens+train.arin.tokens+train.arin.tokens+train.arin.tokens.no_B+B.clean'),
+                                        os.path.join(data_dir, 'nn_token_data/train.ar.MM.tokens+train.ar.FM.tokens+train.ar.MF.tokens+train.ar.FF.tokens.no_B+B.clean'))
 
     def get_dev_examples(self, data_dir, first_person_only=False):
         """Reads the dev examples of the dataset"""
         if first_person_only:
-            return self.create_examples(os.path.join(data_dir, 'joint_model/D-set-dev.arin+D-set-dev.arin'),
-                                        os.path.join(data_dir, 'joint_model/D-set-dev.ar.M+D-set-dev.ar.F'))
+            return self.create_examples(os.path.join(data_dir, 'nn_token_data/D-set-dev.arin.tokens+D-set-dev.arin.tokens.no_B+B.clean'),
+                                        os.path.join(data_dir, 'nn_token_data/D-set-dev.ar.M.tokens+D-set-dev.ar.F.tokens.no_B+B.clean'))
 
         else:
             return self.create_examples(os.path.join(data_dir, 'nn_token_data/dev.arin.tokens+dev.arin.tokens+dev.arin.tokens+dev.arin.tokens'),
@@ -94,8 +96,8 @@ class RawDataset:
     def get_test_examples(self, data_dir, first_person_only=False):
         """Reads the test examples of the dataset"""
         if first_person_only:
-            return self.create_examples(os.path.join(data_dir, 'joint_model/D-set-test.arin+D-set-test.arin'),
-                                         os.path.join(data_dir, 'joint_model/D-set-test.ar.M+D-set-test.ar.F'))
+            return self.create_examples(os.path.join(data_dir, 'nn_token_data/D-set-test.arin.tokens+D-set-test.arin.tokens.no_B+B.clean'),
+                                         os.path.join(data_dir, 'nn_token_data/D-set-test.ar.M.tokens+D-set-test.ar.F.tokens.no_B+B.clean'))
 
         else:
             return self.create_examples(os.path.join(data_dir, 'nn_token_data/test.arin.tokens+test.arin.tokens+test.arin.tokens+test.arin.tokens'),
@@ -351,7 +353,7 @@ class Vectorizer:
 
         char_level_indices = [self.src_vocab_char.sos_idx]
         word_level_indices = [self.src_vocab_word.sos_idx]
-    
+
         if self.add_side_constraints:
             char_level_indices.append(self.src_vocab_char.lookup_token(f'<{trg_gender}>'))
             word_level_indices.append(self.src_vocab_word.lookup_token(f'<{trg_gender}>'))

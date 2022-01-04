@@ -3,6 +3,7 @@ from cbr import CBR
 from rbr import RBR
 from morph_reinflector import MorphReinflector
 from seq2seq_reinflector.reinflector import Seq2Seq_Reinflector
+# from reinflector_union import GenderReinflector
 from reinflector import GenderReinflector
 from ranker import Ranker
 from utils.error_analysis import do_error_analysis
@@ -118,6 +119,11 @@ def main():
         help="seq2seq pretrained model path."
     )
     parser.add_argument(
+        "--use_data_augmentation",
+        action="store_true",
+        help="To use the augmented data for training or not."
+    )
+    parser.add_argument(
         "--inference_mode",
         default="dev",
         required=True,
@@ -160,6 +166,7 @@ def main():
     # We will repeat the reinflection process across the various target genders
     user_genders = (['M', 'F'] if args.first_person_only else
                     ['MM', 'FM', 'MF', 'FF'])
+                    # ['FF'])
 
     # Creating a ranker
     ranker = Ranker(model_name=args.bert_model,
@@ -173,10 +180,21 @@ def main():
         # TODO: fix tokens files to remove the empty lines from the end
         # This will take care of fixing the empty line issue at the end 
         # of the preds files
-        train_dataset = Dataset(src_path=os.path.join(args.data_dir,
-                                           'train.arin.tokens'),
-                                tgt_path=os.path.join(args.data_dir,
-                                           'train.ar.'+target_gender+'.tokens'))
+
+        if args.use_data_augmentation:
+            train_dataset = Dataset(src_path=os.path.join(args.data_dir,
+                                            'augmented_data',
+                                            'train.arin.tokens.augmented'),
+                                    tgt_path=os.path.join(args.data_dir,
+                                            'augmented_data',
+                                            'CBR_filter_2+backoff+all+morph_newdb+mod_per_3rd_generator+neural_fix_augmented',
+                                            'train.ar.'+target_gender+'.tokens.augmented.new'))
+        else:
+            train_dataset = Dataset(src_path=os.path.join(args.data_dir,
+                                            'train.arin.tokens'),
+                                    tgt_path=os.path.join(args.data_dir,
+                                            'train.ar.'+target_gender+'.tokens'))
+
         logger.info(f'There are {len(train_dataset)} Training Examples')
 
         if args.inference_mode == "dev":
@@ -191,23 +209,30 @@ def main():
 
         elif args.inference_mode == "test":
             # Reading test data
-            test_dataset = Dataset(src_path=os.path.join(args.data_dir,
-                                                         'test.arin.tokens'),
+            # test_dataset = Dataset(src_path=os.path.join(args.data_dir,
+            #                                              'test.arin.tokens'),
+            #                        tgt_path=os.path.join(args.data_dir,
+            #                                  'test.ar.'+target_gender+'.tokens'),
+            #                        src_bert_tags_path=args.src_bert_tags_dir)
+
+            test_dataset = Dataset(src_path='/scratch/ba63/gender-rewriting/raw_openSub/augmentation/test.txt',
                                    src_bert_tags_path=args.src_bert_tags_dir)
+
 
             logger.info(f'There are {len(test_dataset)} Test Examples')
 
-        # import pdb; pdb.set_trace()
         if args.use_cbr:
             logger.info(f'Training CBR model for {target_gender} target')
             cbr_model = CBR.build_model(train_dataset,
                                         ngrams=args.cbr_ngram,
                                         backoff=args.cbr_backoff)
+            # import pdb; pdb.set_trace()
         else:
             cbr_model = None
 
         if args.use_rbr:
             logger.info(f'Training RBR model for {target_gender} target')
+
             rbr_model = RBR.build_model(train_dataset,
                                         pick_top_rule=args.rbr_top_rule,
                                         pick_top_tgt_rule=args.rbr_top_tgt_rule)

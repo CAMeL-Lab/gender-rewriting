@@ -62,9 +62,6 @@ class CBR:
                 for j, tgt_w in enumerate(tgt_tokens):
                     tgt_token_tag = tgt_tokens_tags[j]
                     src_ngram = src_tokens_ngrams[j]
-                    # neglecting person info (1 or 2) if present
-                    # if '1' in tgt_token_tag or '2' in tgt_token_tag:
-                        # tgt_token_tag = tgt_token_tag[1]
                     # we don't care about B tagged words
                     if  tgt_token_tag != 'B+B':
                         # counts of (t_w, s_w, t_g)

@@ -60,8 +60,8 @@ class GenderReinflector:
         return f'{target_word_gender}+{target_clitic_gender}'
 
     def reinflect(self, dataset, speaker_gender, listener_gender=None,
-                  use_cbr=True, pick_top_mle=True, use_morph=True,
-                  use_rbr=True, use_neural=True):
+                  use_cbr=True, pick_top_mle=True, reduce_cbr_noise=True,
+                  use_morph=True, use_rbr=True, use_neural=True):
 
         """
         Args:
@@ -160,7 +160,7 @@ class GenderReinflector:
                                     token_targets = list(cbr_candidates.keys())
                                     # removing the token itself if it appears
                                     # within the targets
-                                    if token in token_targets:
+                                    if reduce_cbr_noise and token in token_targets:
                                         token_targets.remove(token)
                                     candidate_targets.append(token_targets)
                                     proposed_by.append('CBR')
@@ -169,7 +169,7 @@ class GenderReinflector:
                                 # but if the generated option is equal
                                 # to the input token, don't return it and 
                                 # consider the token to be an OOV.
-                                if list(cbr_candidates.keys())[0] == token:
+                                if reduce_cbr_noise and list(cbr_candidates.keys())[0] == token:
                                     is_oov = True
                                 else:
                                     candidate_sentence.append(list(cbr_candidates.keys())[0])

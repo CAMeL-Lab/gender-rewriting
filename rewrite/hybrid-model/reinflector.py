@@ -37,7 +37,7 @@ class GenderReinflector:
                                           listener_gender):
 
         base_word_gender, clitic_gender = tag.split('+')
-        target_word_gender, target_clitic_gender = 'B', 'B'
+        target_word_gender, target_clitic_gender = base_word_gender, clitic_gender
 
         if base_word_gender == '1M' and speaker_gender == '1F':
             target_word_gender = '1F'
@@ -87,6 +87,9 @@ class GenderReinflector:
             # Adding person annotations to be compatible with token annoations
             speaker_gender = '1' + speaker_gender
             listener_gender = '2' + listener_gender
+        else:
+            speaker_gender = '1' + speaker_gender
+            assert listener_gender == None
 
         for i, example in enumerate(dataset):
             src_tokens = example.src_tokens
@@ -112,22 +115,22 @@ class GenderReinflector:
                     tag == f'B+{speaker_gender}' or
                     tag == f'{speaker_gender}+B' or
                     tag == f'{speaker_gender}+{listener_gender}' or
-                    tag == f'{listener_gender}+{speaker_gender}'):
+                    tag == f'{listener_gender}+{speaker_gender}' or
+                    tag == f'{listener_gender}+{listener_gender}' or
+                    tag == f'{speaker_gender}+{speaker_gender}'):
 
                     candidate_sentence.append(token)
                     proposed_by.append('NA')
                     inf_analysis_stats['reg_passes'] += 1
 
                 else:
-                    # import pdb; pdb.set_trace()
-                    # Use person info in the tag to decide the target gender
+                    # Getting the target gender based on the provided
+                    # user preferences and predicted token tag
                     if self.first_person_only:
-                        # TODO: Currently, first person token annotations
-                        # don't include gender clitics
-                        target_gender = speaker_gender
+                        target_gender = self.get_base_and_clitic_target_gender(tag,
+                                                                               listener_gender=None,
+                                                                               speaker_gender=speaker_gender)
                     else:
-                        # target_gender = (speaker_gender[1] if '1' in tag
-                        #                  else listener_gender[1])
                         target_gender = self.get_base_and_clitic_target_gender(tag,
                                                                                listener_gender=listener_gender,
                                                                                speaker_gender=speaker_gender)
@@ -138,13 +141,13 @@ class GenderReinflector:
                     if use_cbr:
                         cbr_candidates = self.cbr_model[(tokens_ngrams[j],
                                                         target_gender)]
+                        inf_analysis_stats['cbr_triggers'] += 1
 
                         if cbr_candidates:
                             # if there are multiple
                             # reinflections and pick_top_mle, get the most
                             # probable reinflection. Otherwise, create a mask
                             # sentence and expand targets
-                            inf_analysis_stats['cbr_triggers'] += 1
                             is_oov = False
                             if len(cbr_candidates) > 1:
                                 if pick_top_mle:
@@ -155,24 +158,30 @@ class GenderReinflector:
                                 else:
                                     candidate_sentence.append('[MASK]')
                                     token_targets = list(cbr_candidates.keys())
+                                    # removing the token itself if it appears
+                                    # within the targets
+                                    if token in token_targets:
+                                        token_targets.remove(token)
                                     candidate_targets.append(token_targets)
                                     proposed_by.append('CBR')
                             else:
                                 # if there is a single reinflection, return it.
-                                candidate_sentence.append(list(cbr_candidates.keys())[0])
-                                proposed_by.append('CBR')
+                                # but if the generated option is equal
+                                # to the input token, don't return it and 
+                                # consider the token to be an OOV.
+                                if list(cbr_candidates.keys())[0] == token:
+                                    is_oov = True
+                                else:
+                                    candidate_sentence.append(list(cbr_candidates.keys())[0])
+                                    proposed_by.append('CBR')
                         else:
                             oov_stats['cbr_oov'] += 1
 
                     # use morph if CBR fail
-                    # or as a stand alone reinflection
+                    # or as a stand alone model
                     if ((use_cbr and use_morph and is_oov) or
                           (use_morph and is_oov)):
-                        # import pdb; pdb.set_trace()
 
-                        # If the reinflection was not observed in the
-                        # training data and use_morph, use camel tools
-                        # morphology
                         inf_analysis_stats['morph_triggers'] += 1
                         morph_res = self.morph_reinflector.reinflect(token,
                                                                      tag,
@@ -192,14 +201,14 @@ class GenderReinflector:
                         else:
                             oov_stats['morph_oov'] += 1
 
-                    # use RBR or morph or CBR (or both) fail
-                    # or as a stand alone reinflection
+                    # use RBR if morph or CBR (or both) fail
+                    # or as a stand alone model
                     if ((use_cbr and use_morph and use_rbr and is_oov) or
                         (use_rbr and is_oov)):
 
-                        # if token == 'منغمسا' and target_gender == '2F+B':
-                        #     import pdb; pdb.set_trace()
-                        rbr_candidates = self.rbr_model[(target_gender, token)]
+                        rbr_candidates = self.rbr_model[(target_gender, token,
+                                                         tag)]
+
                         if rbr_candidates:
                             inf_analysis_stats['rbr_triggers'] += 1
                             is_oov = False
@@ -215,16 +224,15 @@ class GenderReinflector:
                             oov_stats['rbr_oov'] += 1
 
                     # use seq2seq if RBR or morph or CBR (or all) fail
-                    # or as a stand alone reinflection
+                    # or as a stand alone model
                     if ((use_cbr and use_morph and use_rbr and use_neural 
                          and is_oov) or (use_neural and is_oov)):
-                        # if token == 'برفسورة':
-                        #     import pdb; pdb.set_trace()
+
                         neural_candidates = self.neural_model.reinflect(token=token,
                                                                         target_gender=target_gender)
                         inf_analysis_stats['neural_triggers'] += 1
                         is_oov = False
-                        # import pdb; pdb.set_trace()
+
                         if len(neural_candidates) > 1:
                             candidate_sentence.append('[MASK]')
                             candidate_targets.append(neural_candidates)
@@ -275,11 +283,9 @@ class GenderReinflector:
         for i, candidate in enumerate(candidates):
             sentence = ' '.join(candidate.masked_sentence)
             if candidate.targets:
-                # import pdb; pdb.set_trace()
                 scored = self.ranker.fill_and_rank(sentence=sentence,
                                                    targets=candidate.targets)
-                # logger.info(scored)
-                # logger.info('=====================')
+
                 reinflections.append(OutputExample(sentence=scored[0].sentence,
                                                    scored_candidates=scored[1:],
                                                    proposed_by=candidate.proposed_by))

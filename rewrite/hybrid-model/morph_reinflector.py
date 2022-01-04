@@ -56,7 +56,7 @@ class MorphReinflector:
 
         if not filtered_analyses:
             logger.info(f'No analyses match the filtering criteria {tag}'
-                        f'for {token}')
+                        f' for {token}')
             return None
 
         # check if the analyses only include 3rd person

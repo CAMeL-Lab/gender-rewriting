@@ -50,16 +50,12 @@ class BatchSampler:
         src_label = self.sample_batch['src_label'][index].cpu().detach().numpy().tolist()
         return self.src_labels_vocab.lookup_index(src_label)
 
-    def greedy_decode(self, sentence, first_person_only=False,
-                      add_side_constraints=False, trg_gender=None, max_len=512):
+    def greedy_decode(self, sentence, add_side_constraints=False,
+                      trg_gender=None, max_len=512):
         # vectorizing the src sentence on the char level and word level
         if add_side_constraints:
-            if first_person_only:
-                sc = sentence[:3]
-                sentence = sentence[3:]
-            else:
-                sc = sentence[:4]
-                sentence = sentence[4:]
+            sc = sentence[:sentence.rfind('>')+1]
+            sentence = sentence[sentence.rfind('>')+1:]
 
         sentence = re.split(r'(\s+)', sentence)
 

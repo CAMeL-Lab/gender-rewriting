@@ -49,8 +49,7 @@ class BeamSampler(BatchSampler):
                                           trg_gender_vocab
                                           )
 
-    def beam_decode(self, sentence, trg_gender=None,
-                    first_person_only=False, add_side_constraints=False,
+    def beam_decode(self, sentence, trg_gender=None, add_side_constraints=False,
                     topk=3, beam_width=5, max_len=512):
         """
         Args:
@@ -65,12 +64,8 @@ class BeamSampler(BatchSampler):
 
         # vectorizing the src sentence on the char level and word level
         if add_side_constraints:
-            if first_person_only:
-                sc = sentence[:3]
-                sentence = sentence[3:]
-            else:
-                sc = sentence[:4]
-                sentence = sentence[4:]
+            sc = sentence[:sentence.rfind('>')+1]
+            sentence = sentence[sentence.rfind('>')+1:]
 
         sentence = re.split(r'(\s+)', sentence)
         vectorized_src_sentence_char = [self.src_vocab_char.sos_idx]

@@ -417,17 +417,14 @@ def inference(sampler, beam_sampler, dataloader, args):
             trg_gender = None
 
         translated = sampler.greedy_decode(sentence=src,
-                                           first_person_only=args.first_person_only,
                                            add_side_constraints=args.add_side_constraints,
                                            trg_gender=trg_gender)
 
         beam_trans_10 = beam_sampler.beam_decode(sentence=src,
-                                                 first_person_only=args.first_person_only,
                                                  add_side_constraints=args.add_side_constraints,
                                                  trg_gender=trg_gender, topk=1, beam_width=10, max_len=512)
 
         beam_trans_1 = beam_sampler.beam_decode(sentence=src,
-                                                first_person_only=args.first_person_only,
                                                 add_side_constraints=args.add_side_constraints,
                                                 trg_gender=trg_gender, topk=1, beam_width=1, max_len=512)
 
@@ -891,4 +888,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

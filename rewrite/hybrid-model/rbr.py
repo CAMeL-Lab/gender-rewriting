@@ -4,6 +4,8 @@ import copy
 import logging
 import re
 from utils.data_utils import Dataset
+import kenlm
+import math
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -12,12 +14,14 @@ class RBR:
     """
     Rule-based Rewriting
     """
-    def __init__(self, model, counts, pick_top_rule=False,
+    def __init__(self, model, src_patterns_probs, pick_top_rule=False,
                 pick_top_tgt_rule=False):
+
         self.model = model
-        self.counts = counts
+        self.src_patterns_probs = src_patterns_probs
         self.pick_top_rule = pick_top_rule
         self.pick_top_tgt_rule = pick_top_tgt_rule
+        self.lm = kenlm.LanguageModel('delme.bin')
 
     @classmethod
     def build_model(cls, dataset, pick_top_rule, pick_top_tgt_rule):
@@ -28,8 +32,12 @@ class RBR:
             - rbr model (a rule-based rewriting mode): The rbr model where the
             keys tuples of (rule, tgt_gender)
         """
+        rules_tag_src_tgt = defaultdict(lambda: defaultdict(lambda: 0))
+        rules_tag_src = dict()
         model = defaultdict(lambda: defaultdict(lambda: 0))
-        counts = dict()
+        # src_pattrn_probs = dict()
+        src_pattrn_probs = defaultdict(lambda: defaultdict(lambda: 0))
+        src_tags_counts = dict()
 
         for ex in dataset.input_examples:
             src_tokens = ex.src_tokens
@@ -59,18 +67,36 @@ class RBR:
 
                     # print(f'Rule: {rule}')
                     # print('================')
-                    # we will learn rules in both directions (tgt_gender, rule)
-                    model[(tgt_token_tag, src_pattern)][tgt_pattern] += 1
-                    # rules counts
-                    counts[(tgt_token_tag, src_pattern)] = (1 +
-                                                            counts.get((tgt_token_tag, src_pattern), 0))
+                    rules_tag_src_tgt[(tgt_token_tag, src_pattern)][tgt_pattern] += 1
+                    rules_tag_src[(tgt_token_tag, src_pattern)] = 1 + rules_tag_src.get((tgt_token_tag,
+                                                                                         src_pattern), 0)
 
-        return cls(model, counts, pick_top_rule, pick_top_tgt_rule)
+                    src_pattrn_probs[src_pattern][src_token_tag] += 1
+                    src_tags_counts[src_token_tag] = 1 + src_tags_counts.get(src_token_tag, 0)
+
+                    # src_pattrn_probs[src_pattern] = 1 + src_pattrn_probs.get(src_pattern, 0)
+
+            # turning the counts into log probs
+        for tgt_g, src_pttrn in rules_tag_src_tgt:
+            for tgt_pttrn in rules_tag_src_tgt[(tgt_g, src_pttrn)]:
+                model[(tgt_g, src_pttrn)][tgt_pttrn] = math.log10(rules_tag_src_tgt[(tgt_g, src_pttrn)][tgt_pttrn] / 
+                                                              rules_tag_src[(tgt_g, src_pttrn)])
+
+        # count_src_pttrns = sum([v for k, v in src_pattrn_probs.items()])
+        # for src_pttrn in src_pattrn_probs:
+        #     src_pattrn_probs[src_pttrn] = math.log10(src_pattrn_probs[src_pttrn] / count_src_pttrns)
+
+        for src_pttrn in src_pattrn_probs:
+            for src_tag in src_pattrn_probs[src_pttrn]:
+                src_pattrn_probs[src_pttrn][src_tag] = math.log10(src_pattrn_probs[src_pttrn][src_tag] / 
+                                                                  src_tags_counts[src_tag])
+
+        return cls(model, src_pattrn_probs, pick_top_rule, pick_top_tgt_rule)
 
     def __len__(self):
         return sum([val for key, val in self.counts.items()])
 
-    def __getitem__(self, sw_tg):
+    def __getitem__(self, sw_tg_sg):
         """
         Returns generated token(s) based on the matched rules given
         a source word and a target gender
@@ -88,68 +114,73 @@ class RBR:
             training to reduce noisy outputs.
         """
 
-        tgt_gender, src_word = sw_tg
-        matched_rules = self.match_rule(src_word, tgt_gender)
+        tgt_gender, src_word, src_gender = sw_tg_sg
+
+        matched_rules = self.match_rule(src_word, src_gender, tgt_gender)
 
         if not matched_rules: return None
 
-        generated_tokens = []
+        generated_tokens = dict()
+
         if self.pick_top_rule:
-            matched_rule = max(matched_rules, key=lambda x: x['rule_freq'])
-            # ignore the matched rules that appear only once
-            if matched_rule['rule_freq'] != 1:
-                if self.pick_top_tgt_rule:
-                    tgt_rule, tgt_rule_freq = max(matched_rule['targets'].items(),
-                                                 key=lambda x: x[1])
+            matched_rule = max(matched_rules, key=lambda x: x['src_pattern_prob'])
 
-                    # ignore target rules that appear only once
-                    if tgt_rule_freq != 1:
-                        generated_token = self.generate_token(tgt_rule,
-                                                        matched_rule['src_word'],
-                                                        matched_rule['source_pattern'])
-                        generated_tokens.append(generated_token)
+            if self.pick_top_tgt_rule:
+                tgt_rule, tgt_rule_prob = max(matched_rule['targets'].items(),
+                                                key=lambda x: x[1])
 
-                else:
-                    generated_tokens = []
-                    for tgt_rule, tgt_rule_freq in matched_rule['targets'].items():
-                        # ignore target rules that appear only once
-                        if tgt_rule_freq == 1: continue
+                generated_token = self.generate_token(tgt_rule,
+                                                matched_rule['src_word'],
+                                                matched_rule['src_regex'])
 
-                        generated_token = self.generate_token(tgt_rule,
-                                                        matched_rule['src_word'],
-                                                        matched_rule['source_pattern'])
-                        generated_tokens.append(generated_token)
+                log_prob_kenlm = self.lm.score(" ".join(generated_token))
 
-        else:
-            generated_tokens = []
-            for matched_rule in matched_rules:
-                # ignore the matched rules that appear only once
-                if matched_rule['rule_freq'] == 1: continue
+                generated_tokens[generated_token] = log_prob_kenlm + tgt_rule_prob + matched_rule['src_pattern_prob']
 
-                if self.pick_top_tgt_rule:
-                    tgt_rule, tgt_rule_freq = max(matched_rule['targets'].items(),
-                                                  key=lambda x: x[1])
-                    # ignore target rules that appear only once
-                    if tgt_rule_freq == 1: continue
+            else:
+                for tgt_rule, tgt_rule_prob in matched_rule['targets'].items():
 
                     generated_token = self.generate_token(tgt_rule,
                                                     matched_rule['src_word'],
-                                                    matched_rule['source_pattern'])
-                    generated_tokens.append(generated_token)
+                                                    matched_rule['src_regex'])
+
+                    log_prob_kenlm = self.lm.score(" ".join(generated_token))
+
+                    generated_tokens[generated_token] = log_prob_kenlm + tgt_rule_prob + matched_rule['src_pattern_prob']
+
+        else:
+            for matched_rule in matched_rules:
+                # ignore the matched rules that appear only once
+
+                if self.pick_top_tgt_rule:
+                    tgt_rule, tgt_rule_prob = max(matched_rule['targets'].items(),
+                                                key=lambda x: x[1])
+
+                    generated_token = self.generate_token(tgt_rule,
+                                                    matched_rule['src_word'],
+                                                    matched_rule['src_regex'])
+
+                    log_prob_kenlm = self.lm.score(" ".join(generated_token))
+
+                    generated_tokens[generated_token] = log_prob_kenlm + tgt_rule_prob + matched_rule['src_pattern_prob']
 
                 else:
-                    for tgt_rule, tgt_rule_freq in matched_rule['targets'].items():
-                        # ignore target rules that appear only once
-                        if tgt_rule_freq == 1: continue
-                        
+                    for tgt_rule, tgt_rule_prob in matched_rule['targets'].items():
+
                         generated_token = self.generate_token(tgt_rule,
                                                         matched_rule['src_word'],
-                                                        matched_rule['source_pattern'])
-                        generated_tokens.append(generated_token)
+                                                        matched_rule['src_regex'])
 
-        return generated_tokens
+                        log_prob_kenlm = self.lm.score(" ".join(generated_token))
 
-    def match_rule(self, src_word, tgt_gender):
+                        generated_tokens[generated_token] = log_prob_kenlm + tgt_rule_prob + matched_rule['src_pattern_prob']
+
+        scored_words = sorted(generated_tokens.items(), key=lambda x: x[1], reverse=True)
+
+        # return [scored_words[0][0]]
+        return [w[0] for w in scored_words[:3]]
+
+    def match_rule(self, src_word, src_gender, tgt_gender):
         """
         Returns all the rules that match the src word pattern
         and the target gender
@@ -162,11 +193,13 @@ class RBR:
 
             # matching on the pattern and the target gender
             if match and match[0] == src_word and tgt_gender == rule[0]:
+
                 matched_rules.append({'src_word': src_word,
-                                      'trg_gender': rule[0],
-                                      'source_pattern': pattern,
-                                      'targets': dict(self.model[rule]),
-                                      'rule_freq': self.counts[rule]})
+                                    'src_pattern': src_pattern,
+                                    'trg_gender': rule[0],
+                                    'src_regex': pattern,
+                                    'targets': dict(self.model[rule]),
+                                    'src_pattern_prob': self.src_patterns_probs[src_pattern][src_gender]})
 
         return matched_rules
 
@@ -179,6 +212,7 @@ class RBR:
         while 'X' in tgt_pattern:
             tgt_pattern = tgt_pattern.replace('X', f'\\{x_count}', 1)
             x_count += 1
+
         # generate target words
         tgt_word = re.sub(src_pattern, tgt_pattern, src_word)
         return tgt_word

@@ -209,18 +209,27 @@ def main():
                                              'dev.ar.'+target_gender+'.tokens'),
                                   src_bert_tags_path=args.src_bert_tags_dir)
 
+            # dev_dataset = Dataset(src_path=os.path.join(args.data_dir,
+            #                                             'google_MT/dev.google.ar.tokens'),
+            #                       src_bert_tags_path=args.src_bert_tags_dir)
+
             logger.info(f'There are {len(dev_dataset)} Dev Examples')
 
         elif args.inference_mode == "test":
             # Reading test data
+            test_dataset = Dataset(src_path=os.path.join(args.data_dir,
+                                                         'test.arin.tokens'),
+                                   tgt_path=os.path.join(args.data_dir,
+                                             'test.ar.'+target_gender+'.tokens'),
+                                   src_bert_tags_path=args.src_bert_tags_dir)
+
             # test_dataset = Dataset(src_path=os.path.join(args.data_dir,
-            #                                              'test.arin.tokens'),
-            #                        tgt_path=os.path.join(args.data_dir,
-            #                                  'test.ar.'+target_gender+'.tokens'),
+            #                                              'google_MT/test.google.ar.tokens'),
             #                        src_bert_tags_path=args.src_bert_tags_dir)
 
-            test_dataset = Dataset(src_path='/scratch/ba63/gender-rewriting/raw_openSub/augmentation/test.txt',
-                                   src_bert_tags_path=args.src_bert_tags_dir)
+
+            # test_dataset = Dataset(src_path='/scratch/ba63/gender-rewriting/raw_openSub/augmentation/test.txt',
+                                #    src_bert_tags_path=args.src_bert_tags_dir)
 
 
             logger.info(f'There are {len(test_dataset)} Test Examples')

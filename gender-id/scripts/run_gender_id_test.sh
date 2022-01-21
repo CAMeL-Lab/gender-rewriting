@@ -17,12 +17,14 @@ module purge
 # GENDER ID TEST EVAL SCRIPT
 #################################
 
-export DATA_DIR=/scratch/ba63/Arabic-Parallel-Gender-Corpus/Arabic-parallel-gender-corpus-v-1.0/new_token_data/gender_tagger_data
+# export DATA_DIR=/scratch/ba63/Arabic-Parallel-Gender-Corpus/Arabic-parallel-gender-corpus-v-1.0/new_token_data/gender_tagger_data
 # export DATA_DIR=/scratch/ba63/Arabic-Parallel-Gender-Corpus/Arabic-parallel-gender-corpus-v-2.0/gender_tagger_data/new_token_data
 # export DATA_DIR=/scratch/ba63/gender-rewriting/raw_openSub/augmentation
+export DATA_DIR=/scratch/ba63/Arabic-Parallel-Gender-Corpus/Arabic-parallel-gender-corpus-v-2.0/data/new_token_data/google_MT
 export MAX_LENGTH=128
-# export OUTPUT_DIR=/scratch/ba63/gender-rewriting/gender-id/CAMeLBERT_MSA/multi_user_with_clitics/controlled_settings/augmented_models_10_5000_acc
-export OUTPUT_DIR=/scratch/ba63/gender-rewriting/gender-id/CAMeLBERT_MSA/first_person/models_acc
+# export OUTPUT_DIR=/scratch/ba63/gender-rewriting/gender-id/CAMeLBERT_MSA/multi_user_with_clitics/controlled_settings/augmented_models_3_5000_acc/
+# export OUTPUT_DIR=/scratch/ba63/gender-rewriting/gender-id/CAMeLBERT_MSA/first_person/models_acc
+export OUTPUT_DIR=/scratch/ba63/gender-rewriting/gender-id/CAMeLBERT_MSA/multi_user_with_clitics/models/
 export BATCH_SIZE=32
 export SEED=12345
 
@@ -31,7 +33,7 @@ python gender_identifcation.py \
 --data_dir $DATA_DIR \
 --labels $DATA_DIR/labels.txt \
 --model_name_or_path $OUTPUT_DIR \
---output_dir $OUTPUT_DIR \
+--output_dir $OUTPUT_DIR/google_MT \
 --max_seq_length  $MAX_LENGTH \
 --per_device_eval_batch_size $BATCH_SIZE \
 --seed $SEED \

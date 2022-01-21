@@ -14,8 +14,11 @@
 #SBATCH -o job.%J.out
 #SBATCH -e job.%J.err
 
-export EXPERIMENT=CBR+backoff+all+morph_newdb+mod_per_3rd_generator_mlm3+neural_kann
-export SYSTEM_HYP=logs/multi_user_with_clitics/reinflection/$EXPERIMENT
+# export EXPERIMENT=neural
+export EXPERIMENT=CBR_filter+backoff+all+morph_newdb+mod_per_3rd_generator+neural_augmented_id_augmented_test
+# export EXPERIMENT=CBR+backoff+all+morph_newdb+mod_per_3rd_generator+neural_testing
+# export SYSTEM_HYP=logs/multi_user_with_clitics_final/augmentation_exps/reinflection/$EXPERIMENT
+export SYSTEM_HYP=logs/paper_results/multi_user_with_clitics/augmentation/reinflection/$EXPERIMENT
 
 # removing last empty line from the preds files
 sed -i '$ d' $SYSTEM_HYP/arin.to.MM.preds
@@ -31,7 +34,7 @@ python /home/ba63/gender-rewriting/rewrite/hybrid-model/utils/normalize.py --inp
 
 
 export DATA_DIR=/scratch/ba63/Arabic-Parallel-Gender-Corpus/m2_edits/v2.0/
-export DATA_SPLIT=dev
+export DATA_SPLIT=test
 export GOLD_DATA=norm_data/$DATA_SPLIT.ar.MM+$DATA_SPLIT.ar.FM+$DATA_SPLIT.ar.MF+$DATA_SPLIT.ar.FF.norm
 export EDITS_ANNOTATIONS=edits/$DATA_SPLIT.arin+$DATA_SPLIT.arin+$DATA_SPLIT.arin+$DATA_SPLIT.arin.to.$DATA_SPLIT.ar.MM+$DATA_SPLIT.ar.FM+$DATA_SPLIT.ar.MF+$DATA_SPLIT.ar.FF.norm
 export GOLD_ANNOTATION=$DATA_DIR/$EDITS_ANNOTATIONS

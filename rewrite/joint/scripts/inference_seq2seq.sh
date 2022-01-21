@@ -14,24 +14,27 @@ nvidia-smi
 module purge
 
 export DATA_DIR=/scratch/ba63/Arabic-Parallel-Gender-Corpus/Arabic-parallel-gender-corpus-v-2.0/data/
-# export DATA_DIR=/home/ba63/gender-reinflection/data/alhafni
 #  --first_person_only \
 #  --add_side_constraints \
 #  --embed_trg_gender \
 #  --trg_gender_embed_dim 10 \
 #  --embed_trg_gender \
 #  --trg_gender_embed_dim 10 \
-#  --use_morph_features \
-#  --analyzer_db_path /scratch/ba63/calima_databases/calima-msa/calima-msa-s31_0.4.2.utf8.db \
+#  --use_morph_features 
+#  --analyzer_db_path /scratch/ba63/calima_databases/calima-msa/calima-msa-s31_0.4.2.utf8.db.copy-mod \
+
 python main.py \
  --data_dir $DATA_DIR \
- --add_side_constraints \
+ --embed_trg_gender \
+ --trg_gender_embed_dim 10 \
+ --use_morph_features \
+ --analyzer_db_path /scratch/ba63/calima_databases/calima-msa/calima-msa-s31_0.4.2.utf8.db.copy-mod \
  --embed_dim 128 \
  --hidd_dim 256 \
  --num_layers 2 \
  --learning_rate 5e-4 \
  --seed 21 \
- --model_path saved_models/multi_user_side_constraints/joint.pt \
+ --model_path saved_models/multi_user_newdb/joint+morph.pt \
  --do_inference \
  --inference_mode dev \
- --preds_dir logs/reinflection/multi_user_side_constraints/dev.joint
+ --preds_dir logs/reinflection/multi_user_newdb_checking/dev.joint+morph

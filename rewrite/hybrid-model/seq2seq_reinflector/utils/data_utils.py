@@ -78,10 +78,10 @@ class RawDataset:
                                         os.path.join(data_dir, 'nn_token_data/D-set-train.ar.M.tokens+D-set-train.ar.F.tokens.no_B+B.clean'))
 
         else:
-            # return self.create_examples(os.path.join(data_dir, 'nn_token_data/train.arin.tokens+train.arin.tokens+train.arin.tokens+train.arin.tokens'),
-            #                             os.path.join(data_dir, 'nn_token_data/train.ar.MM.tokens+train.ar.FM.tokens+train.ar.MF.tokens+train.ar.FF.tokens'))
+            #  return self.create_examples(os.path.join(data_dir, 'nn_token_data/train.arin.tokens+train.arin.tokens+train.arin.tokens+train.arin.tokens'),
+            #                              os.path.join(data_dir, 'nn_token_data/train.ar.MM.tokens+train.ar.FM.tokens+train.ar.MF.tokens+train.ar.FF.tokens'))
             return self.create_examples(os.path.join(data_dir, 'nn_token_data/train.arin.tokens+train.arin.tokens+train.arin.tokens+train.arin.tokens.no_B+B.clean'),
-                                        os.path.join(data_dir, 'nn_token_data/train.ar.MM.tokens+train.ar.FM.tokens+train.ar.MF.tokens+train.ar.FF.tokens.no_B+B.clean'))
+                                       os.path.join(data_dir, 'nn_token_data/train.ar.MM.tokens+train.ar.FM.tokens+train.ar.MF.tokens+train.ar.FF.tokens.no_B+B.clean'))
 
     def get_dev_examples(self, data_dir, first_person_only=False):
         """Reads the dev examples of the dataset"""

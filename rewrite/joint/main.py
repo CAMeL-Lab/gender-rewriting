@@ -713,6 +713,11 @@ def main():
         help="The path of the saved morphological features."
     )
     parser.add_argument(
+        "--do_early_stopping",
+        action="store_true",
+        help="To do early stopping or not."
+    )
+    parser.add_argument(
         "--preds_dir",
         type=str,
         default=None,
@@ -762,6 +767,9 @@ def main():
         print(gender_embeddings, flush=True)
     else:
         gender_embeddings = None
+
+    if args.do_early_stopping:
+        patience = 0
 
     ENCODER_INPUT_DIM = len(vectorizer.src_vocab_char)
     DECODER_INPUT_DIM = len(vectorizer.trg_vocab_char)
@@ -835,6 +843,13 @@ def main():
             if dev_loss < best_loss:
                 best_loss = dev_loss
                 torch.save(model.state_dict(), args.model_path)
+                if args.do_early_stopping: patience = 0
+
+            elif args.do_early_stopping:
+                patience += 1
+                if patience > 5:
+                    logger.info(f"Dev loss hasn't decreased in {patience} epochs. Stopping training..")
+                    break
 
             scheduler.step(dev_loss)
             logger.info(f'Epoch: {(epoch + 1)}')

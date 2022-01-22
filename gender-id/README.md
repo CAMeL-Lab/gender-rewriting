@@ -15,7 +15,7 @@ To compare with previous work on the single-user rewriting task, we also fine-tu
 
 At the end of the fine-tuning, we pick the best checkpoint based on the overall performance on the gender-rewriting task on the dev set (either APGCv1.0 or APGCv2.0, depending if we're doing single-user or multi-user gender rewriting).<br/>
 
-All of the three fine-tuned models CAMeLBERT models can be found [here]().<br/>
+All of the three fine-tuned models CAMeLBERT models can be found [here](https://drive.google.com/drive/folders/1IxmvY5xrnAq5QXBhKOEK908Z7H5R7uYp?usp=sharing).<br/>
 
 To run the fine-tuning:
 

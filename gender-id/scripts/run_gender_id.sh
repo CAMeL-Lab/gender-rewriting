@@ -22,8 +22,8 @@ export DATA_DIR=/scratch/ba63/Arabic-Parallel-Gender-Corpus/Arabic-parallel-gend
 # export DATA_DIR=/scratch/ba63/gender-rewriting/raw_openSub/augmentation/augmented_data
 export MAX_LENGTH=128
 export BERT_MODEL=/scratch/ba63/BERT_models/bert-base-arabic-camelbert-msa/
-# export OUTPUT_DIR=/scratch/ba63/gender-rewriting/gender-id/CAMeLBERT_MSA/multi_user_with_clitics/models_acc
-export OUTPUT_DIR=/scratch/ba63/gender-rewriting/gender-id/CAMeLBERT_MSA/first_person/models_f1
+export OUTPUT_DIR=/scratch/ba63/gender-rewriting/gender-id/CAMeLBERT_MSA/multi_user_with_clitics/models_acc
+# export OUTPUT_DIR=/scratch/ba63/gender-rewriting/gender-id/CAMeLBERT_MSA/first_person/models_f1
 export BATCH_SIZE=32
 export NUM_EPOCHS=10
 export SAVE_STEPS=500
@@ -51,6 +51,6 @@ python gender_identifcation.py \
 --do_train \
 --do_eval \
 --load_best_model_at_end \
---metric_for_best_model f1_macro \
+--metric_for_best_model acc \
 --overwrite_output_dir \
 --overwrite_cache \

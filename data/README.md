@@ -10,7 +10,7 @@ The data we used to train and evaluate word-level gender identification for the 
 
 ## Gender Rewriting:
 The data we used to train our multi-step gender rewriting systems is in `data/gender_rewriting/apgc-v2.0`.<br/>
-The train.\*.tokens/dev.\*.tokens/test.\*.tokens are identical to train.\*.tokens/dev.\*.tokens/test.\*.tokens that are available with the current release of APGC v2.0.
+The train.\*.tokens/dev.\*.tokens/test.\*.tokens are identical to train.\*.tokens/dev.\*.tokens/test.\*.tokens that are available with the current release of APGC v2.0. Again, The only difference is that the data we provide contains the extended word-level gender annotations (i.e., base word gender + clitic gender). The extenced word-level gender annotations were obtained by using the `utils/clitic_and_form_tagger.ipynb` script.
 
 ### Neural Rewriter Data:
 The data we used to train our out-of-context word-level neural rewriter component is in `gender_rewriting/apgc-v2.0/nn_token_data`. To create this data we did the following:

@@ -14,11 +14,8 @@
 #SBATCH -o job.%J.out
 #SBATCH -e job.%J.err
 
-# export EXPERIMENT=neural
-export EXPERIMENT=CBR_filter+backoff+all+morph_newdb+mod_per_3rd_generator+neural_augmented_id_augmented
-# export EXPERIMENT=CBR+backoff+all+morph_newdb+mod_per_3rd_generator+neural_testing
-# export SYSTEM_HYP=logs/multi_user_with_clitics_final/augmentation_exps/reinflection/$EXPERIMENT
-export SYSTEM_HYP=logs/paper_results_with_mlm_ft_with_seed/augmentation/reinflection/$EXPERIMENT
+export EXPERIMENT=CBR_filter+backoff+all+morph_newdb+mod_per_3rd_generator+neural_augmented_id_augmented_checking
+export SYSTEM_HYP=logs/paper_results_with_mlm_ft/multi_user_with_clitics/augmentation/rewriting/$EXPERIMENT
 
 # removing last empty line from the preds files
 sed -i '$ d' $SYSTEM_HYP/arin.to.MM.preds
@@ -30,7 +27,7 @@ sed -i '$ d' $SYSTEM_HYP/arin.to.FF.preds
 cat $SYSTEM_HYP/arin.to.MM.preds $SYSTEM_HYP/arin.to.FM.preds  $SYSTEM_HYP/arin.to.MF.preds  $SYSTEM_HYP/arin.to.FF.preds > $SYSTEM_HYP/$EXPERIMENT.inf
 
 # normalizing the preds
-python /home/ba63/gender-rewriting/rewrite/hybrid-model/utils/normalize.py --input_file $SYSTEM_HYP/$EXPERIMENT.inf --output_file $SYSTEM_HYP/$EXPERIMENT.inf.norm
+python /home/ba63/gender-rewriting/rewrite/multi-step/utils/normalize.py --input_file $SYSTEM_HYP/$EXPERIMENT.inf --output_file $SYSTEM_HYP/$EXPERIMENT.inf.norm
 
 
 export DATA_DIR=/scratch/ba63/Arabic-Parallel-Gender-Corpus/m2_edits/v2.0/

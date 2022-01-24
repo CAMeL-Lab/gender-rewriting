@@ -156,10 +156,11 @@ python main.py \
  --preds_dir logs/multi_user_side_constraints_newdb_clean_train/dev.joint+morph
  ```
  
- To get the inference on the test set of the `Joint+Side Constraint+Morph` system, you just have to switch the `inference_mode` from dev to test.
+ To get the inference on the test set of the `Joint+Side Constraint+Morph` system, you just have to switch the `inference_mode` from dev to test.</br>
+ The outputs of the joint baseline systems are in `logs/multi_user_newdb_clean_train/` and `logs/multi_user_side_constraints_newdb_clean_train/`. Files ending with .eval have the M<sup>2</sup> and BLEU evaluation scores.
  
  ## Evaluation:
 After running the inference, all of the systems outputs will be in `logs/multi_user_side_constraints_newdb_clean_train` and `logs/multi_user_newdb_clean_train`. `logs/multi_user_newdb_clean_train` has the outputs of the `Joint+Morph` system and `logs/multi_user_side_constraints_newdb_clean_train` has the outputs of both `Joint+Side Constraints` and `Joint+Side Constraints+Morph`. Files ending with `inf` indicate that the inference was done using greedy decoding and files ending with `beam` indicate that the inference was done using beam search.</br>
 
 To run the M<sup>2</sup> scorer and BLEU evaluation, you would need to run `sbatch/run_eval_norm_joint.sh`. Make sure to set the `DECODING` variable to `inf/beam` to switch between evaluating greedy and beam decoding outputs, respectively.</br>
-Note: All of our evaluation was done in Alif/Ya/Ta-Marbuta normalized space using the `utils/normalize.py` script. This script was used to generated the `*norm` files in `logs/*`.
+Note: All of our evaluation was done in Alif/Ya/Ta-Marbuta normalized space using the `utils/normalize.py` script. This script was used to generated the `*norm` files in `logs/*/*`.

@@ -3,14 +3,14 @@
 ## Gender Identification:
 The data we used to train and evaluate the gender identification systems is in `data/gender-id/multi_user`. The train/dev/test.txt files are identical to train.arin.tokens/dev.arin.tokens/test.arin.tokens that are available with the current release of APGC v2.0. The only difference is that the train/dev/test.txt contains the extended word-level gender annotations (i.e., base word gender + clitic gender).
 
-`data/gender-id/multi_user/augmented_data` contains the augmented training data which we used in our augmentation experiments. `data/gender-id/multi_user/google_MT` has the word-level dev and test word-level data from the Google Translate outputs that are part of APGC v2.0 (i.e., dev.google.ar and test.google.ar).
+`data/gender-id/multi_user/augmented_data` contains the augmented training data which we used in our augmentation experiments. `data/gender-id/multi_user/google_MT` has the word-level dev and test data of the Google Translate outputs that are part of APGC v2.0 (i.e., dev.google.ar and test.google.ar).
 
 The data we used to train and evaluate word-level gender identification for the first-person only version of the task is in `data/gender-id/singe_user`.
 
 
 ## Gender Rewriting:
 The data we used to train our multi-step gender rewriting systems is in `data/gender_rewriting/apgc-v2.0`.<br/>
-The train/dev/test.arin.tokens are identical to train.arin.tokens/dev.arin.tokens/test.arin.tokens that are available with the current release of APGC v2.0 (they are also same as the ones we used for to train and evaluation the gender id system).
+The train.\*.tokens/dev.\*.tokens/test.\*.tokens are identical to train.\*.tokens/dev.\*.tokens/test.\*.tokens that are available with the current release of APGC v2.0.
 
 ### Neural Rewriter Data:
 The data we used to train our out-of-context word-level neural rewriter component is in `gender_rewriting/apgc-v2.0/nn_token_data`. To create this data we did the following:

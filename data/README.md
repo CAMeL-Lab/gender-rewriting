@@ -1,1 +1,18 @@
 # Data:
+
+## Gender Identification:
+The data we used to train and evaluate the gender identification systems is in `data/gender-id/multi_user`. The train/dev/test.txt files are identical to train.arin.tokens/dev.arin.tokens/test.arin.tokens that are available with the current release of APGC v2.0. The only difference is that the train/dev/test.txt contains the extended word-level gender annotations (i.e., base word gender + clitic gender).
+
+`data/gender-id/multi_user/augmented_data` contains the augmented training data which we used in our augmentation experiments. `data/gender-id/multi_user/google_MT` has the word-level dev and test word-level data from the Google Translate outputs that are part of APGC v2.0 (i.e., dev.google.ar and test.google.ar).
+
+The data we used to train and evaluate word-level gender identification for the first-person only version of the task is in `data/gender-id/singe_user`.
+
+
+## Gender Rewriting:
+The data we used to train our multi-step gender rewriting systems are in `data/gender_rewriting/apgc-v2.0`.<br/>
+The train/dev/test.arin.tokens are the identical to train.arin.tokens/dev.arin.tokens/test.arin.tokens that are available with the current release of APGC v2.0 (they are also same as the ones we used for to train and evaluation the gender id system).
+
+The data we used to train our out-of-context word-level neural rewriter component is in `data/gender_rewriting/apgc-v2.0/nn_token_data`. To create this data we did the following:
+1) Duplicate `data/gender_rewriting/apgc-v2.0/train.arin.tokens` four times and remove all the tokens that are marked as B+B. This results in `data/gender_rewriting/apgc-v2.0/nn_token_data/train.arin.tokens+train.arin.tokens+train.arin.tokens+train.arin.tokens.words`</br></br>
+2) Concatenate `data/gender_rewriting/apgc-v2.0/train.ar.MM.tokens`, `data/gender_rewriting/apgc-v2.0/train.ar.FM.tokens`, `data/gender_rewriting/apgc-v2.0/train.ar.MF.tokens`, and `data/gender_rewriting/apgc-v2.0/train.ar.FF.tokens` and remove all tokens that are maked as B+B. This results in `data/gender_rewriting/apgc-v2.0/nn_token_data/train.ar.MM.tokens+train.ar.FM.tokens+train.ar.MF.tokens+train.ar.FF.tokens.words` and `data/gender_rewriting/apgc-v2.0/nn_token_data/train.ar.MM.tokens+train.ar.FM.tokens+train.ar.MF.tokens+train.ar.FF.tokens.gender`, where the .words file contains the words and .gender file contains the labels.</br></br>
+3) We repeat steps 2) and 3) to create the same files for the dev and test splits.

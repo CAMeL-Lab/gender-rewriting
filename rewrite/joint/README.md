@@ -114,7 +114,7 @@ python main.py \
  --model_path saved_models/multi_user_newdb_clean_train/joint+morph.pt \
  --do_inference \
  --inference_mode dev \
- --preds_dir logs/reinflection/multi_user_newdb_clean_train/dev.joint+morph
+ --preds_dir logs/multi_user_newdb_clean_train/dev.joint+morph
  ```
  
  ### Joint+Side Constraints:
@@ -132,7 +132,7 @@ python main.py \
  --model_path saved_models/multi_user_side_constraints_newdb_clean_train/joint.pt \
  --do_inference \
  --inference_mode dev \
- --preds_dir logs/reinflection/multi_user_side_constraints_newdb_clean_train/dev.joint
+ --preds_dir logs/multi_user_side_constraints_newdb_clean_train/dev.joint
  ```
  
  
@@ -153,7 +153,7 @@ python main.py \
  --model_path saved_models/multi_user_side_constraints_newdb_clean_train/joint+morph.pt \
  --do_inference \
  --inference_mode dev \
- --preds_dir logs/reinflection/multi_user_side_constraints_newdb_clean_train/dev.joint+morph
+ --preds_dir logs/multi_user_side_constraints_newdb_clean_train/dev.joint+morph
  ```
  
  To get the inference on the test set of the `Joint+Side Constraint+Morph` system, you just have to switch the `inference_mode` from dev to test.

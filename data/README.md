@@ -32,5 +32,3 @@ The data we used to train our sentence-level joint baseline rewriting models are
 3) We repeated steps 2) and 3) to create the same files for the dev and test splits.
 
 The .gender files contains the target genders we are modeling (i.e., MM, FM, MF, and FF).
-
-TODO: Remove the .label files and clean the data_utils.py

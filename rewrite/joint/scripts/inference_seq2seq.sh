@@ -18,8 +18,6 @@ export DATA_DIR=/scratch/ba63/Arabic-Parallel-Gender-Corpus/Arabic-parallel-gend
 #  --add_side_constraints \
 #  --embed_trg_gender \
 #  --trg_gender_embed_dim 10 \
-#  --embed_trg_gender \
-#  --trg_gender_embed_dim 10 \
 #  --use_morph_features 
 #  --analyzer_db_path /scratch/ba63/calima_databases/calima-msa/calima-msa-s31_0.4.2.utf8.db.copy-mod \
 
@@ -36,4 +34,4 @@ python main.py \
  --model_path saved_models/multi_user_side_constraints_newdb_clean_train/joint+morph.pt \
  --do_inference \
  --inference_mode test \
- --preds_dir logs/reinflection/multi_user_side_constraints_newdb_clean_train/test.joint+morph
+ --preds_dir logs/multi_user_side_constraints_newdb_clean_train/test.joint+morph

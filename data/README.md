@@ -31,4 +31,4 @@ The data we used to train our sentence-level joint baseline rewriting models are
 2) Concatenated train.ar.MM, train.ar.FM, train.ar.MF, and train.ar.FF that are part of APGC v2.0 to create `data/gender_rewriting/apgc-v2.0/joint/train.ar.MM+train.ar.FM+train.ar.MF+train.ar.FF`.<br/><br/>
 3) We repeated steps 2) and 3) to create the same files for the dev and test splits.
 
-The .gender files contains the target genders we are modeling (i.e., MM, FM, MF, and FF).
+The .gender files contain the target genders we are modeling (i.e., MM, FM, MF, and FF). The .label files contain the sentence-level labels that are part of APGC v2.0.

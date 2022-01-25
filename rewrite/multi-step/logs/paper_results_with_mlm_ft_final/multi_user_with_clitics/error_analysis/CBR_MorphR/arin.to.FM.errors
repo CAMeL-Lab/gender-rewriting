@@ -1,0 +1,4479 @@
+SRC:		- لا بأس ، أنا أسف أيضا
+TRG:		- لا بأس ، أنا أسفة أيضا
+PRED: 		- لا بأس ، أنا آسفة أيضا
+SRC TAGS:	B+B B+B B+B B+B B+B 1M+B B+B
+TRG TAGS:	B+B B+B B+B B+B B+B 1F+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B 1M+B B+B
+PROPOSED BY:	NA NA NA NA NA CBR NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		رحمك الله إذا لم تقول ما الأمر أليس كذلك ؟
+TRG:		رحمك الله إذا لم تقل ما الأمر أليس كذلك ؟
+PRED: 		رحمك الله إذا لم تقول ما الأمر أليس كذلك ؟
+SRC TAGS:	B+B B+B B+B B+B 2F+B B+B B+B B+B B+B B+B
+TRG TAGS:	B+B B+B B+B B+B 2M+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B 2M+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA NA NA NA NA NA NA NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		انظري ، تريديا أن تكشفي كذب مكتب التحقيقات الفيدرالي للعالم ؟
+TRG:		أنظر ، تريد أن تكشف كذب مكتب التحقيقات الفيدرالي للعالم ؟
+PRED: 		أنظر ، تريديا أن تكشف كذب مكتب التحقيقات الفيدرالي للعالم ؟
+SRC TAGS:	2F+B B+B 2F+B B+B 2F+B B+B B+B B+B B+B B+B B+B
+TRG TAGS:	2M+B B+B 2M+B B+B 2M+B B+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	2F+B B+B B+B B+B 2F+B B+B B+B B+B B+B B+B B+B
+PROPOSED BY:	CBR NA NA NA MorphR NA NA NA NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		لماذا تتصرفين هكذا تجاه مريض ؟
+TRG:		لماذا تتصرفين هكذا تجاه مريض ؟
+PRED: 		لماذا تتصرف هكذا تجاه مريض ؟
+SRC TAGS:	B+B 2M+B B+B B+B B+B B+B
+TRG TAGS:	B+B 2M+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B 2F+B B+B B+B B+B B+B
+PROPOSED BY:	NA CBR NA NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		لماذا تتصرف هكذا تجاه مريض ؟
+TRG:		لماذا تتصرفين هكذا تجاه مريض ؟
+PRED: 		لماذا تتصرف هكذا تجاه مريض ؟
+SRC TAGS:	B+B 2F+B B+B B+B B+B B+B
+TRG TAGS:	B+B 2M+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B 2M+B B+B B+B B+B B+B
+PROPOSED BY:	NA NA NA NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		أليكس ) لست عدوتي في ذلك الوقت ) التي أعرفها
+TRG:		أليكس ) لست عدوي في ذلك الوقت ) الذي أعرفه
+PRED: 		أليكس ) لست عدوتي في ذلك الوقت ) التي أعرفها
+SRC TAGS:	B+B B+B B+B 2F+B B+B B+B B+B B+B 2F+B B+2F
+TRG TAGS:	B+B B+B B+B 2M+B B+B B+B B+B B+B 2M+B B+2M
+PRED SRC TAGS:	B+B B+B B+B 1F+B B+B B+B B+B B+B 1F+B B+B
+PROPOSED BY:	NA NA NA NA NA NA NA NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		أليكس ) لست عدوي في ذلك الوقت ) الذي أعرفه
+TRG:		أليكس ) لست عدوي في ذلك الوقت ) الذي أعرفه
+PRED: 		أليكس ) لست عدوتي في ذلك الوقت ) الذي أعرفه
+SRC TAGS:	B+B B+B B+B 2M+B B+B B+B B+B B+B 2M+B B+2M
+TRG TAGS:	B+B B+B B+B 2M+B B+B B+B B+B B+B 2M+B B+2M
+PRED SRC TAGS:	B+B B+B B+B 1M+B B+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA NA NA MorphR NA NA NA NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		- انا اسف حقا ، أمي
+TRG:		- انا آسفة حقا ، أابي
+PRED: 		- انا آسفة حقا ، أبي
+SRC TAGS:	B+B B+B 1M+B B+B B+B 2F+B
+TRG TAGS:	B+B B+B 1F+B B+B B+B 2M+B
+PRED SRC TAGS:	B+B B+B 1M+B B+B B+B 2F+B
+PROPOSED BY:	NA NA CBR NA NA CBR
+ERROR Type:	Proposal
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		- انا آسفة حقا ، أمي
+TRG:		- انا آسفة حقا ، أابي
+PRED: 		- انا آسفة حقا ، أبي
+SRC TAGS:	B+B B+B 1F+B B+B B+B 2F+B
+TRG TAGS:	B+B B+B 1F+B B+B B+B 2M+B
+PRED SRC TAGS:	B+B B+B 1F+B B+B B+B 2F+B
+PROPOSED BY:	NA NA NA NA NA CBR
+ERROR Type:	Proposal
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		ويدعوننى بالقاتل
+TRG:		ويدعوننى بالقاتلة
+PRED: 		ويدعوني بالقاتل
+SRC TAGS:	B+B 1M+B
+TRG TAGS:	B+B 1F+B
+PRED SRC TAGS:	2F+B B+B
+PROPOSED BY:	MorphR NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		ويدعوننى بالقاتلة
+TRG:		ويدعوننى بالقاتلة
+PRED: 		ويدعوني بالقاتلة
+SRC TAGS:	B+B 1F+B
+TRG TAGS:	B+B 1F+B
+PRED SRC TAGS:	2F+B 1F+B
+PROPOSED BY:	MorphR NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		يا صديقتي لقد أعدت القهوة لك وفعلت هذا بشعرك في كل مكان
+TRG:		يا صديقي لقد اعدت القهوة لك وفعلت هذا بشعرك في كل مكان
+PRED: 		يا صديقي لقد أعدت القهوة لك وفعلت هذا بشعرك في كل مكان
+SRC TAGS:	B+B 2F+B B+B 2F+B B+B B+B B+B B+B B+B B+B B+B B+B
+TRG TAGS:	B+B 2M+B B+B 2M+B B+B B+B B+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B 2F+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA CBR NA NA NA NA NA NA NA NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		لكن أيتها الحاكمة هل ستغلقين تلك القضية بعد القبض على جيو دول فحسب ؟
+TRG:		لكن ايها الحاكم هل ستغلق تلك القضية بعد القبض على جيو دول فحسب ؟
+PRED: 		لكن أيها الحاكم هل ستغلق تلك القضية بعد القبض على جيو دول فحسب ؟
+SRC TAGS:	B+B 2F+B 2F+B B+B 2F+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+TRG TAGS:	B+B 2M+B 2M+B B+B 2M+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B 2F+B 2F+B B+B 2F+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA CBR CBR NA CBR NA NA NA NA NA NA NA NA NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		انظري ، أنا آسفة جدا .
+TRG:		انظر ، أنا آسفة جدا .
+PRED: 		أنظر ، أنا آسفة جدا .
+SRC TAGS:	2F+B B+B B+B 1F+B B+B B+B
+TRG TAGS:	2M+B B+B B+B 1F+B B+B B+B
+PRED SRC TAGS:	2F+B B+B B+B 1F+B B+B B+B
+PROPOSED BY:	CBR NA NA NA NA NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		انظري ، أنا آسف جدا .
+TRG:		انظر ، أنا آسفة جدا .
+PRED: 		أنظر ، أنا آسفة جدا .
+SRC TAGS:	2F+B B+B B+B 1M+B B+B B+B
+TRG TAGS:	2M+B B+B B+B 1F+B B+B B+B
+PRED SRC TAGS:	2F+B B+B B+B 1M+B B+B B+B
+PROPOSED BY:	CBR NA NA CBR NA NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		ألا ترين أني وجدتك بهذه الوسيلة
+TRG:		ألا ترى أني وجدتك بهذه الوسيلة
+PRED: 		الا ترى أني وجدتك بهذه الوسيلة
+SRC TAGS:	B+B 2F+B B+B B+B B+B B+B
+TRG TAGS:	B+B 2M+B B+B B+B B+B B+B
+PRED SRC TAGS:	2F+B 2F+B B+B B+B B+B B+B
+PROPOSED BY:	CBR CBR NA NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		طعام الفتيات مجهز من الأمس . . . هل وضعتيه على الفرن لتسخينه
+TRG:		طعام الفتيات مجهز من الأمس . . . هل وضعته على الفرن لتسخنه
+PRED: 		طعام الفتيات مجهز من الأمس . . . هل وضعته على الفرن لتسخينه
+SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B B+B 2F+B B+B B+B 2F+B
+TRG TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B B+B 2M+B B+B B+B 2M+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B B+B 2F+B B+B B+B B+B
+PROPOSED BY:	NA NA NA NA NA NA NA NA NA CBR NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		- إذا ، سألقاكن على الجانب الآخر .
+TRG:		- إذا ، سألقاكم على الجانب الآخر .
+PRED: 		- إذا ، سألقكم على الجانب الآخر .
+SRC TAGS:	B+B B+B B+B B+2F B+B B+B B+B B+B
+TRG TAGS:	B+B B+B B+B B+2M B+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+2F B+B B+B B+B B+B
+PROPOSED BY:	NA NA NA MorphR NA NA NA NA
+ERROR Type:	Selection
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		مالم تكون نسختك من النزهة هي أن تكوني سلة
+TRG:		مالم تكن نسختك من النزهة هي أن تكون سلة
+PRED: 		مالم تكون نسختك من النزهة هي أن تكون سلة
+SRC TAGS:	B+B 2F+B B+B B+B B+B B+B B+B 2F+B B+B
+TRG TAGS:	B+B 2M+B B+B B+B B+B B+B B+B 2M+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B 2F+B B+B
+PROPOSED BY:	NA NA NA NA NA NA NA CBR NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		مرحبا ، أنا سيندى كامبل ، جارك الجديد
+TRG:		مرحبا ، أنا سيندى كامبل ، جارتك الجديده
+PRED: 		مرحبا ، أنا سيندى كامبل ، جارتك الجديدة
+SRC TAGS:	B+B B+B B+B B+B B+B B+B 1M+B 1M+B
+TRG TAGS:	B+B B+B B+B B+B B+B B+B 1F+B 1F+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B B+B 1M+B 1M+B
+PROPOSED BY:	NA NA NA NA NA NA MorphR CBR
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		مراسل صحيح ، انا مراسل -
+TRG:		مراسل صحيح ، انا مراسلة -
+PRED: 		مراسلة صحيح ، انا مراسلة -
+SRC TAGS:	B+B B+B B+B B+B 1M+B B+B
+TRG TAGS:	B+B B+B B+B B+B 1F+B B+B
+PRED SRC TAGS:	1M+B B+B B+B B+B 1M+B B+B
+PROPOSED BY:	CBR NA NA NA CBR NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		( إعذريني سيدة ( كيرميت - أجل ؟
+TRG:		( إعذرني سيد ( كيرميت - أجل ؟
+PRED: 		( اعذرني سيد ( كيرميت - أجل ؟
+SRC TAGS:	B+B 2F+B 2F+B B+B B+B B+B B+B B+B
+TRG TAGS:	B+B 2M+B 2M+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B 2F+B 2F+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA CBR CBR NA NA NA NA NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		الليلة بأكملها من أجلك سوف تأتين
+TRG:		الليلة بأكملها من أجلك سوف تأتي
+PRED: 		الليلة بأكملها من أجلك سوف تأتى
+SRC TAGS:	B+B B+B B+B B+B B+B 2F+B
+TRG TAGS:	B+B B+B B+B B+B B+B 2M+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B 2F+B
+PROPOSED BY:	NA NA NA NA NA CBR
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		من حسن حظك انه وجدك و احضرك الى هنا و الا لكنت ميتة هناك في الخارج
+TRG:		من حسن حظك انه وجدك و احضرك الى هنا و الا لكنت ميت هناك في الخارج
+PRED: 		من حسن حظك انه وجدك و احضرك الى هنا و الا لكنت ميتا هناك في الخارج
+SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B 2F+B B+B B+B B+B
+TRG TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B 2M+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B 2F+B B+B B+B B+B
+PROPOSED BY:	NA NA NA NA NA NA NA NA NA NA NA NA CBR NA NA NA
+ERROR Type:	Selection
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		- اسمعي ، لدى نصيحة لك
+TRG:		- اسمع ، لدى نصيحة لك
+PRED: 		- إسمع ، لدى نصيحة لك
+SRC TAGS:	B+B 2F+B B+B B+B B+B B+B
+TRG TAGS:	B+B 2M+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B 2F+B B+B B+B B+B B+B
+PROPOSED BY:	NA CBR NA NA NA NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		جالسا أفكر
+TRG:		جالسه أفكر
+PRED: 		جالسة أفكر
+SRC TAGS:	1M+B B+B
+TRG TAGS:	1F+B B+B
+PRED SRC TAGS:	1M+B B+B
+PROPOSED BY:	CBR NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		استمعي الي أنت لديك سعر
+TRG:		استمع الي أنت لديك سعر
+PRED: 		إستمع الي أنت لديك سعر
+SRC TAGS:	2F+B B+B B+B B+B B+B
+TRG TAGS:	2M+B B+B B+B B+B B+B
+PRED SRC TAGS:	2F+B B+B B+B B+B B+B
+PROPOSED BY:	CBR NA NA NA NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		من فيكن لاتزال تخاف الموت ؟
+TRG:		من فيكم لازال يخاف الموت ؟
+PRED: 		من فيكم لايزال يخاف الموت ؟
+SRC TAGS:	B+B B+2F 2F+B 2F+B B+B B+B
+TRG TAGS:	B+B B+2M 2M+B 2M+B B+B B+B
+PRED SRC TAGS:	B+B B+2F 2F+B 2F+B B+B B+B
+PROPOSED BY:	NA CBR MorphR MorphR NA NA
+ERROR Type:	Proposal
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		تفقدي هنا وسأتفقد هناك !
+TRG:		تفقد هنا وسأتفقد هناك !
+PRED: 		أتفقد هنا وسأتفقد هناك !
+SRC TAGS:	2F+B B+B B+B B+B B+B
+TRG TAGS:	2M+B B+B B+B B+B B+B
+PRED SRC TAGS:	2F+B B+B B+B B+B B+B
+PROPOSED BY:	CBR NA NA NA NA
+ERROR Type:	Selection
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		والان سأحظى بخدمة من الفارس الشرير و أنت ستساعدين فى تنفيذ خطتي المحكمة
+TRG:		والان سأحظى بخدمة من الفارس الشرير و أنت ستساعد فى تنفيذ خطتى المحكمة
+PRED: 		والان سأحظى بخدمة من الفارس الشرير و أنت ستساعد فى تنفيذ خطتي المحكمة
+SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B 2F+B B+B B+B 2F+B B+B
+TRG TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B 2M+B B+B B+B 2M+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B 2F+B B+B B+B B+B B+B
+PROPOSED BY:	NA NA NA NA NA NA NA NA CBR NA NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		أعلم أنكما الاثنتان تقيمان حفلا .
+TRG:		أعلم أنكما الاثنان تقيمان حفلا .
+PRED: 		أعلم أنكما الاثنتان تقيمان حفلا .
+SRC TAGS:	B+B B+B 2F+B B+B B+B B+B
+TRG TAGS:	B+B B+B 2M+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA NA NA NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		سادخل إذا اردتيني ان ادخل
+TRG:		سادخل إذا اردتي ان ادخل
+PRED: 		سادخل إذا أردتني ان ادخل
+SRC TAGS:	B+B B+B 2F+B B+B B+B
+TRG TAGS:	B+B B+B 2M+B B+B B+B
+PRED SRC TAGS:	B+B B+B 2F+B B+B B+B
+PROPOSED BY:	NA NA MorphR NA NA
+ERROR Type:	Proposal
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		سادخل إذا اردتي ان ادخل
+TRG:		سادخل إذا اردتي ان ادخل
+PRED: 		سادخل إذا أردت ان ادخل
+SRC TAGS:	B+B B+B 2M+B B+B B+B
+TRG TAGS:	B+B B+B 2M+B B+B B+B
+PRED SRC TAGS:	B+B B+B 2F+B B+B B+B
+PROPOSED BY:	NA NA CBR NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		وانت منغمسة في ذاتك وهم قد طردوني
+TRG:		وانت منغمسا في ذاتك وهم قد طردوني
+PRED: 		وانت منغمسة في ذاتك وهم قد طردوني
+SRC TAGS:	B+B 2F+B B+B B+B B+B B+B B+B
+TRG TAGS:	B+B 2M+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B 2F+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA OOV NA NA NA NA NA
+ERROR Type:	Proposal
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		واحضري أيضا أفضل محارب عندى إلى الجبال
+TRG:		واحضر أيضا أفضل محارب عندى إلى الجبال
+PRED: 		وأحضر أيضا أفضل محارب عندى إلى الجبال
+SRC TAGS:	2F+B B+B B+B B+B B+B B+B B+B
+TRG TAGS:	2M+B B+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	2F+B B+B B+B B+B B+B B+B B+B
+PROPOSED BY:	CBR NA NA NA NA NA NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		أنني إبن الملك
+TRG:		أنني إبنة الملك
+PRED: 		أنني ابنة الملك
+SRC TAGS:	B+B 1M+B B+B
+TRG TAGS:	B+B 1F+B B+B
+PRED SRC TAGS:	B+B 1M+B B+B
+PROPOSED BY:	NA MorphR NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		إنها تحبك يا أمى
+TRG:		إنها تحبك يا أبى
+PRED: 		إنها تحبك يا أبي
+SRC TAGS:	B+B B+B B+B 2F+B
+TRG TAGS:	B+B B+B B+B 2M+B
+PRED SRC TAGS:	B+B B+B B+B 2F+B
+PROPOSED BY:	NA NA NA CBR
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		في 2005 ، لم يكن من الممكن أن تنظري حتى الى الوادي في الوراء هناك انظري ، كان ممتلئ إلى تلك النقطة .
+TRG:		في 2005 ، لم يكن من الممكن أن تنظر حتى الى الوادي في الوراء هناك أنظر ، كان ممتلئ إلى تلك النقطة .
+PRED: 		في 2005 ، لم يكن من الممكن أن تنظر حتى الى الوادي في الوراء هناك انظر ، كان ممتلئ إلى تلك النقطة .
+SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B 2F+B B+B B+B B+B B+B B+B B+B 2F+B B+B B+B B+B B+B B+B B+B B+B
+TRG TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B 2M+B B+B B+B B+B B+B B+B B+B 2M+B B+B B+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B 2F+B B+B B+B B+B B+B B+B B+B 2F+B B+B B+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA NA NA NA NA NA NA NA CBR NA NA NA NA NA NA CBR NA NA NA NA NA NA NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		ما الذي يجعلك متاكدة هكذا ؟
+TRG:		ما الذي يجعلك متاكد هكذا ؟
+PRED: 		ما الذي يجعلك متاكدا هكذا ؟
+SRC TAGS:	B+B B+B B+B 2F+B B+B B+B
+TRG TAGS:	B+B B+B B+B 2M+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B 2F+B B+B B+B
+PROPOSED BY:	NA NA NA CBR NA NA
+ERROR Type:	Selection
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		نويرث " احنى رأسك الى الامام " للتحميل على الاطار
+TRG:		نويرث " احن رأسك الى الامام " للتحميل على الاطار
+PRED: 		نويرث " احنى رأسك الى الامام " للتحميل على الاطار
+SRC TAGS:	B+B B+B 2F+B B+B B+B B+B B+B B+B B+B B+B
+TRG TAGS:	B+B B+B 2M+B B+B B+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B 2F+B B+B B+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA NA OOV NA NA NA NA NA NA NA
+ERROR Type:	Proposal
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		حسنا أنا أسف في النهاية
+TRG:		حسنا أنا أسفة في النهاية
+PRED: 		حسنا أنا آسفة في النهاية
+SRC TAGS:	B+B B+B 1M+B B+B B+B
+TRG TAGS:	B+B B+B 1F+B B+B B+B
+PRED SRC TAGS:	B+B B+B 1M+B B+B B+B
+PROPOSED BY:	NA NA CBR NA NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		وتلك الصور التي صادرتموهن
+TRG:		وتلك الصور التي صادرتموها
+PRED: 		وتلك الصور التي صادرتموهم
+SRC TAGS:	B+B B+B B+B 2F+B
+TRG TAGS:	B+B B+B B+B 2M+B
+PRED SRC TAGS:	B+B B+B B+B B+2F
+PROPOSED BY:	NA NA NA MorphR
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		حلقى بعيدا ، أنتى فى الجنة !
+TRG:		حلق بعيدا ، أنت فى الجنة !
+PRED: 		حلقى بعيدا ، أنت فى الجنة !
+SRC TAGS:	2F+B B+B B+B 2F+B B+B B+B B+B
+TRG TAGS:	2M+B B+B B+B 2M+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B 2F+B B+B B+B B+B
+PROPOSED BY:	NA NA NA CBR NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		ريتشارد أيجو هيوكوك هل لديك شئ تقولينه ؟
+TRG:		ريتشارد أيجو هيوكوك هل لديك شئ تقوله ؟
+PRED: 		ريتشارد أيجو هيوكوك هل لديك شئ تقولة ؟
+SRC TAGS:	B+B B+B B+B B+B B+B B+B 2F+B B+B
+TRG TAGS:	B+B B+B B+B B+B B+B B+B 2M+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B B+B 2F+B B+B
+PROPOSED BY:	NA NA NA NA NA NA CBR NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		بحركة واحدة منه أصبحت مقيدة بالكامل ، أليس كذلك ؟
+TRG:		بحركة واحدة منه أصبحت مقيد بالكامل ، أليس كذلك ؟
+PRED: 		بحركة واحدة منه أصبحت مقيدة بالكامل ، أليس كذلك ؟
+SRC TAGS:	B+B B+B B+B B+B 2F+B B+B B+B B+B B+B B+B
+TRG TAGS:	B+B B+B B+B B+B 2M+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA NA NA NA NA NA NA NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		بحركة واحدة منه أصبحت مقيد بالكامل ، أليس كذلك ؟
+TRG:		بحركة واحدة منه أصبحت مقيد بالكامل ، أليس كذلك ؟
+PRED: 		بحركة واحدة منه أصبحت مقيدة بالكامل ، أليس كذلك ؟
+SRC TAGS:	B+B B+B B+B B+B 2M+B B+B B+B B+B B+B B+B
+TRG TAGS:	B+B B+B B+B B+B 2M+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B 1M+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA NA NA NA CBR NA NA NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		لم اتخل عنك . لقد اخذتي مني .
+TRG:		لم اتخل عنك . لقد اخذتي مني .
+PRED: 		لم اتخل عنك . لقد آخذت مني .
+SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B
+TRG TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B 2F+B B+B B+B
+PROPOSED BY:	NA NA NA NA NA MorphR NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		أريد أن اكون الزبون الأول
+TRG:		أريد أن اكون الزبونة الأول
+PRED: 		أريد أن اكون الزبونة الأولى
+SRC TAGS:	B+B B+B B+B 1M+B B+B
+TRG TAGS:	B+B B+B B+B 1F+B B+B
+PRED SRC TAGS:	B+B B+B B+B 1M+B 1M+B
+PROPOSED BY:	NA NA NA MorphR MorphR
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		أريد أن اكون الزبونة الأول
+TRG:		أريد أن اكون الزبونة الأول
+PRED: 		أريد أن اكون الزبونة الأولى
+SRC TAGS:	B+B B+B B+B 1F+B B+B
+TRG TAGS:	B+B B+B B+B 1F+B B+B
+PRED SRC TAGS:	B+B B+B B+B 1F+B 1M+B
+PROPOSED BY:	NA NA NA NA MorphR
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		قد تخدعيني ، ابقيتي ابنها بعيدا عنها
+TRG:		قد تخدعني ، ابقيت ابنها بعيدا عنها
+PRED: 		قد تخدعني ، أبقيت ابنها بعيدا عنها
+SRC TAGS:	B+B 2F+B B+B 2F+B B+B B+B B+B
+TRG TAGS:	B+B 2M+B B+B 2M+B B+B B+B B+B
+PRED SRC TAGS:	B+B 2F+B B+B 2F+B B+B B+B B+B
+PROPOSED BY:	NA CBR NA MorphR NA NA NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		ارفعي يديك ! ضعي يديك عاليا !
+TRG:		ارفع يديك ! ضع يديك عاليا !
+PRED: 		إرفع يديك ! ضع يديك عاليا !
+SRC TAGS:	2F+B B+B B+B 2F+B B+B B+B B+B
+TRG TAGS:	2M+B B+B B+B 2M+B B+B B+B B+B
+PRED SRC TAGS:	2F+B B+B B+B 2F+B B+B B+B B+B
+PROPOSED BY:	CBR NA NA CBR NA NA NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		الفرصة لتثبت أنك بطلة ولت منذ وقت طويل
+TRG:		الفرصة لتثبت أنك بطلا ولت منذ وقت طويل
+PRED: 		الفرصة لتثبت أنك بطل ولت منذ وقت طويل
+SRC TAGS:	B+B B+B B+B 2F+B B+B B+B B+B B+B
+TRG TAGS:	B+B B+B B+B 2M+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B 2F+B B+B B+B B+B B+B
+PROPOSED BY:	NA NA NA CBR NA NA NA NA
+ERROR Type:	Proposal
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		انا أغلقت بالفعل ، انظري حولك ايتها المغفلة !
+TRG:		انا أغلقت بالفعل ، انظر حولك ايها المغفل !
+PRED: 		انا أغلقت بالفعل ، إنظر حولك ايها المغفل !
+SRC TAGS:	B+B B+B B+B B+B 2F+B B+B 2F+B 2F+B B+B
+TRG TAGS:	B+B B+B B+B B+B 2M+B B+B 2M+B 2M+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B 2F+B B+B 2F+B 2F+B B+B
+PROPOSED BY:	NA NA NA NA CBR NA CBR CBR NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		( أنت إنسانة سيئة ، يا ( سمر .
+TRG:		( أنت إنسان سيئ ، يا ( سمر .
+PRED: 		( أنت إنسان سيء ، يا ( سمر .
+SRC TAGS:	B+B B+B 2F+B 2F+B B+B B+B B+B B+B B+B
+TRG TAGS:	B+B B+B 2M+B 2M+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B 2F+B 2F+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA NA CBR CBR NA NA NA NA NA
+ERROR Type:	Selection
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		لقد كنت مذهلة يا موتل
+TRG:		لقد كنت مذهلا يا موتل
+PRED: 		لقد كنت مذهل يا موتل
+SRC TAGS:	B+B B+B 2F+B B+B B+B
+TRG TAGS:	B+B B+B 2M+B B+B B+B
+PRED SRC TAGS:	B+B B+B 2F+B B+B B+B
+PROPOSED BY:	NA NA CBR NA NA
+ERROR Type:	Proposal
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		كنت سيدا لك ذات يوم
+TRG:		كنت سيدة لك ذات يوم
+PRED: 		كنت سيدا لك ذات يوم
+SRC TAGS:	B+B 1M+B B+B B+B B+B
+TRG TAGS:	B+B 1F+B B+B B+B B+B
+PRED SRC TAGS:	B+B 1M+B B+B B+B B+B
+PROPOSED BY:	NA OOV NA NA NA
+ERROR Type:	Proposal
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		لماذا عليك أن تكوني رائعة جدا
+TRG:		لماذا عليك أن تكون رائعا جدا
+PRED: 		لماذا عليك أن تكون رائع جدا
+SRC TAGS:	B+B B+B B+B 2F+B 2F+B B+B
+TRG TAGS:	B+B B+B B+B 2M+B 2M+B B+B
+PRED SRC TAGS:	B+B B+B B+B 2F+B 2F+B B+B
+PROPOSED BY:	NA NA NA CBR CBR NA
+ERROR Type:	Proposal
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		لذا يجب أن ترتاحي من ذلك التوتر إفعلي أشياء تجعل مسترخية
+TRG:		لذا يجب أن ترتاح من ذلك التوتر إفعل أشياء تجعل مسترخيا
+PRED: 		لذا يجب أن ترتاح من ذلك التوتر إفعل أشياء تجعل مسترخية
+SRC TAGS:	B+B B+B B+B 2F+B B+B B+B B+B 2F+B B+B B+B 2F+B
+TRG TAGS:	B+B B+B B+B 2M+B B+B B+B B+B 2M+B B+B B+B 2M+B
+PRED SRC TAGS:	B+B B+B B+B 2F+B B+B B+B B+B 2F+B B+B B+B B+B
+PROPOSED BY:	NA NA NA MorphR NA NA NA CBR NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		اخبرى فون انه يحتاج الى تهيئتك .
+TRG:		اخبر فون انه يحتاج الى تهيئتك .
+PRED: 		اخبرى فون انه يحتاج الى تهيئتك .
+SRC TAGS:	2F+B B+B B+B B+B B+B B+B B+B
+TRG TAGS:	2M+B B+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA NA NA NA NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		هيا ، أيتها المستذئبة أمسكت بحقيبتها ، إسحبيني
+TRG:		هيا ، أيها المستذئب أمسكت بحقيبتها ، إسحبني
+PRED: 		هيا ، أيها المستذئبة أمسكت بحقيبتها ، إسحبني
+SRC TAGS:	B+B B+B 2F+B 2F+B B+B B+B B+B 2F+B
+TRG TAGS:	B+B B+B 2M+B 2M+B B+B B+B B+B 2M+B
+PRED SRC TAGS:	B+B B+B 2F+B 2F+B 2F+B B+B B+B 2F+B
+PROPOSED BY:	NA NA CBR OOV MorphR NA NA CBR
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		اتصلن إذا إحتجتن لتوصيلة
+TRG:		اتصلوا إذا إحتجتم لتوصيلة
+PRED: 		اتصلوا إذا احتجتم لتوصيلة
+SRC TAGS:	2F+B B+B 2F+B B+B
+TRG TAGS:	2M+B B+B 2M+B B+B
+PRED SRC TAGS:	2F+B B+B 2F+B B+B
+PROPOSED BY:	MorphR NA MorphR NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		هل تحتاجنني يوميا ؟
+TRG:		هل تحتاجونني يوميا ؟
+PRED: 		هل تحتاجوني يوميا ؟
+SRC TAGS:	B+B 2F+B B+B B+B
+TRG TAGS:	B+B 2M+B B+B B+B
+PRED SRC TAGS:	B+B 2F+B B+B B+B
+PROPOSED BY:	NA CBR NA NA
+ERROR Type:	Proposal
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		أتريدين أن تكوني همجية طوال حياتي أو ترغبين أن تكوني فائزة ؟
+TRG:		أتريد أن تكون همجي طوال حياتي أو ترغب أن تكون فائزا ؟
+PRED: 		أتريد أن تكون همجي طوال حياتي أو ترغب أن تكون فائز ؟
+SRC TAGS:	2F+B B+B 2F+B 2F+B B+B B+B B+B 2F+B B+B 2F+B 2F+B B+B
+TRG TAGS:	2M+B B+B 2M+B 2M+B B+B B+B B+B 2M+B B+B 2M+B 2M+B B+B
+PRED SRC TAGS:	2F+B B+B 2F+B 2F+B B+B B+B B+B 2F+B B+B 2F+B 2F+B B+B
+PROPOSED BY:	CBR NA CBR MorphR NA NA NA CBR NA CBR MorphR NA
+ERROR Type:	Selection
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		يبدو لي انكما انتما الاثنتان الوحيدتان اللتان كانتا معها خلال السنوات الماضية
+TRG:		يبدو لي انكما انتما الاثنان الوحيدان اللذان كانا معها خلال السنوات الماضية
+PRED: 		يبدو لي انكما انتما الاثنان الوحيدان اللذان كانتا معها خلال السنوات الماضية
+SRC TAGS:	B+B B+B B+B B+B 2F+B 2F+B 2F+B 2F+B B+B B+B B+B B+B
+TRG TAGS:	B+B B+B B+B B+B 2M+B 2M+B 2M+B 2M+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B 2F+B 2F+B 2F+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA NA NA NA CBR MorphR MorphR NA NA NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		كمدعي عام الآن
+TRG:		كمدعي عام الآن
+PRED: 		كمدعية عامة الآن
+SRC TAGS:	B+B B+B B+B
+TRG TAGS:	B+B B+B B+B
+PRED SRC TAGS:	1M+B 1M+B B+B
+PROPOSED BY:	MorphR MorphR NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		إنه أمر إلزامي أن تبقين في الداخل وتظلن تحت الحجر الصحي الكامل .
+TRG:		إنه أمر إلزامي أن تبقون في الداخل وتظلون تحت الحجر الصحي الكامل .
+PRED: 		إنه أمر إلزامي أن تبقوا في الداخل وتظلن تحت الحجر الصحي الكامل .
+SRC TAGS:	B+B B+B B+B B+B 2F+B B+B B+B 2F+B B+B B+B B+B B+B B+B
+TRG TAGS:	B+B B+B B+B B+B 2M+B B+B B+B 2M+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B 2F+B B+B B+B 2F+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA NA NA NA CBR NA NA OOV NA NA NA NA NA
+ERROR Type:	Proposal
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		إنني الرجل الذي سألته
+TRG:		إنني المرأة التي سألتها
+PRED: 		إنني الإمرأة التي سألتها
+SRC TAGS:	B+B 1M+B 1M+B B+1M
+TRG TAGS:	B+B 1F+B 1F+B B+1F
+PRED SRC TAGS:	B+B 1M+B 1M+B B+1M
+PROPOSED BY:	NA CBR CBR MorphR
+ERROR Type:	Selection
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		والمبتغى هو أن تكون أول الواصلين ، لتحصل على نقاط إضافية من نقاط " الأم المثالية " ، لأن الأمهات الأخريات يعرفن أنك " أم مثالية "
+TRG:		والمبتغى هو أن تكون أول الواصلين ، لتحصل على نقاط إضافية من نقاط " الأم المثالية " ، لأن الأمهات الأخريات يعرفن أنك " أم مثالية "
+PRED: 		والمبتغى هو أن تكون أول الواصلين ، لتحصل على نقاط إضافية من نقاط " الأم المثالية " ، لأن الأمهات الأخريات يعرفن أنك " أب مثالي "
+SRC TAGS:	B+B B+B B+B 2M+B B+B 2M+B B+B 2M+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+TRG TAGS:	B+B B+B B+B 2M+B B+B 2M+B B+B 2M+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B 2M+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B 2F+B 2F+B B+B
+PROPOSED BY:	NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA CBR CBR NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		والمبتغى هو أن تكوني أول الواصلات ، لتحصلي على نقاط إضافية من نقاط " الأم المثالية " ، لأن الأمهات الأخريات يعرفن أنك " أم مثالية "
+TRG:		والمبتغى هو أن تكون أول الواصلين ، لتحصل على نقاط إضافية من نقاط " الأم المثالية " ، لأن الأمهات الأخريات يعرفن أنك " أم مثالية "
+PRED: 		والمبتغى هو أن تكون أول الواصلات ، لتحصل على نقاط إضافية من نقاط " الأب المثالي " ، لأن الأمهات الأخريات يعرفن أنك " أب مثالي "
+SRC TAGS:	B+B B+B B+B 2F+B B+B 2F+B B+B 2F+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+TRG TAGS:	B+B B+B B+B 2M+B B+B 2M+B B+B 2M+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B 2F+B B+B B+B B+B 2F+B B+B B+B B+B B+B B+B B+B 2F+B 2F+B B+B B+B B+B B+B B+B B+B B+B B+B 2F+B 2F+B B+B
+PROPOSED BY:	NA NA NA CBR NA NA NA CBR NA NA NA NA NA NA CBR MorphR NA NA NA NA NA NA NA NA CBR CBR NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		- أنتي سائقة سيئة
+TRG:		- أنت سائق سيئ
+PRED: 		- أنت سائق سيء
+SRC TAGS:	B+B 2F+B 2F+B 2F+B
+TRG TAGS:	B+B 2M+B 2M+B 2M+B
+PRED SRC TAGS:	B+B 2F+B 2F+B 2F+B
+PROPOSED BY:	NA CBR MorphR CBR
+ERROR Type:	Selection
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		لماذا اخذتن ابننا ؟
+TRG:		لماذا اخذتم ابننا ؟
+PRED: 		لماذا أخذتم ابننا ؟
+SRC TAGS:	B+B 2F+B B+B B+B
+TRG TAGS:	B+B 2M+B B+B B+B
+PRED SRC TAGS:	B+B 2F+B B+B B+B
+PROPOSED BY:	NA MorphR NA NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		لكن اسمعي هذه مشكلتي أنا
+TRG:		لكن اسمع هذه مشكلتي أنا
+PRED: 		لكن إسمع هذه مشكلتي أنا
+SRC TAGS:	B+B 2F+B B+B B+B B+B
+TRG TAGS:	B+B 2M+B B+B B+B B+B
+PRED SRC TAGS:	B+B 2F+B B+B B+B B+B
+PROPOSED BY:	NA CBR NA NA NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		( كالي توريس ) ، أفضل ملكة .
+TRG:		( كالي توريس ) ، أفضل ملكة .
+PRED: 		( كالي توريس ) ، أفضل ملك .
+SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B
+TRG TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B B+B 2F+B B+B
+PROPOSED BY:	NA NA NA NA NA NA CBR NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		هل أحداكن متفاجئة مثلي أنني الشخص الوحيد في هذه الغرفة الذي ليس لديه شريط فيديو جنسي ؟
+TRG:		هل أحدكم متفاجيء مثلي أنني الشخص الوحيد في هذه الغرفة الذي ليس لديه شريط فيديو جنسي ؟
+PRED: 		هل أحدكم متفاجئة مثلي أنني الشخص الوحيد في هذه الغرفة الذي ليس لديه شريط فيديو جنسي ؟
+SRC TAGS:	B+B 2F+2F 2F+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+TRG TAGS:	B+B 2M+2M 2M+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B 2F+2F 2F+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA CBR OOV NA NA NA NA NA NA NA NA NA NA NA NA NA NA
+ERROR Type:	Proposal
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		بأنك سهلة الآن ؟
+TRG:		بأنك سهل الآن ؟
+PRED: 		بأنك سهلا الآن ؟
+SRC TAGS:	B+B 2F+B B+B B+B
+TRG TAGS:	B+B 2M+B B+B B+B
+PRED SRC TAGS:	B+B 2F+B B+B B+B
+PROPOSED BY:	NA MorphR NA NA
+ERROR Type:	Selection
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		الرئيس لم يبقى مطولا ليس وأنتن هنا
+TRG:		الرئيس لم يبقى مطولا ليس وأنتم هنا
+PRED: 		الرئيس لم يبقى مطولا ليس وانتم هنا
+SRC TAGS:	B+B B+B B+B B+B B+B 2F+B B+B
+TRG TAGS:	B+B B+B B+B B+B B+B 2M+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B 2F+B B+B
+PROPOSED BY:	NA NA NA NA NA CBR NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		بذلت قصارى جهدي فقط كرجل شرطة ياباني .
+TRG:		بذلت قصارى جهدي فقط كامرأة شرطة يابانية .
+PRED: 		بذلت قصارى جهدي فقط كرجل شرطة ياباني .
+SRC TAGS:	B+B B+B B+B B+B 1M+B B+B 1M+B B+B
+TRG TAGS:	B+B B+B B+B B+B 1F+B B+B 1F+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA NA NA NA NA NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		انسي أمر أن تكون كهربائية ، لا يمكنك حتى تخطي المرتبة العاشرة للرياضيات .
+TRG:		انس أمر أن تكون كهربائيا ، لا يمكنك حتى تخطي المرتبة العاشرة للرياضيات .
+PRED: 		انسى أمر أن تكون كهربائية ، لا يمكنك حتى تخطي المرتبة العاشرة للرياضيات .
+SRC TAGS:	2F+B B+B B+B B+B 2F+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+TRG TAGS:	2M+B B+B B+B B+B 2M+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	2F+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+PROPOSED BY:	CBR NA NA NA NA NA NA NA NA NA NA NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		ليومين ، ولم تخبري احدا اتعلمين ، فقط اخبرينا
+TRG:		ليومين ، ولم تخبر أحدا أتعلم ، فقط أخبرنا
+PRED: 		ليومين ، ولم تخبر احدا أتعلم ، فقط اخبرنا
+SRC TAGS:	B+B B+B B+B 2F+B 2F+B 2F+B B+B B+B 2F+B
+TRG TAGS:	B+B B+B B+B 2M+B 2M+B 2M+B B+B B+B 2M+B
+PRED SRC TAGS:	B+B B+B B+B 2F+B B+B 2F+B B+B B+B 2F+B
+PROPOSED BY:	NA NA NA CBR NA CBR NA NA CBR
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		كيف تراني أصبح طبيبا إن كنت سأشعر بالغثيان كلما رأيت سهما بمؤخرة أحدهم ؟
+TRG:		كيف تراني أصبح طبيبا إن كنت سأشعر بالغثيان كلما رأيت سهما بمؤخرة أحدهم ؟
+PRED: 		كيف تراني أصبح طبيبة إن كنت سأشعر بالغثيان كلما رأيت سهما بمؤخرة أحدهم ؟
+SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+TRG TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B 2M+B B+B 1M+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA NA NA CBR NA NA NA NA NA NA NA NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		بعضكن قد تجد نفسها غير قادرة على التوفيق بين معتقدات إيميلي روز أو معتقدات المتهم مع معتقداته الخاصة
+TRG:		بعضكم قد يجد نفسه غير قادرا على التوفيق بين معتقدات إيميلي روز أو معتقدات المتهم مع معتقداته الخاصة
+PRED: 		بعضكم قد يجد نفسها غير قادرة على التوفيق بين معتقدات إيميلي روز أو معتقدات المتهم مع معتقداته الخاصة
+SRC TAGS:	B+2F B+B 2F+B B+2F B+B 2F+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+TRG TAGS:	B+2M B+B 2M+B B+2M B+B 2M+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+2F B+B 2F+B 2F+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+PROPOSED BY:	CBR NA MorphR OOV NA NA NA NA NA NA NA NA NA NA NA NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		حسن سيدتي . يبدو أنك تقيمين حفلا رائعا هنا
+TRG:		حسن سيدي . يبدو أنك تقيم حفلا رائعا هنا
+PRED: 		حسن سيدى . يبدو أنك تقيم حفلا رائعا هنا
+SRC TAGS:	B+B 2F+B B+B B+B B+B 2F+B B+B B+B B+B
+TRG TAGS:	B+B 2M+B B+B B+B B+B 2M+B B+B B+B B+B
+PRED SRC TAGS:	B+B 2F+B B+B B+B B+B 2F+B B+B B+B B+B
+PROPOSED BY:	NA CBR NA NA NA CBR NA NA NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		لو حللت مشكلة ( تشيب ) لك ، هل تعديني بالذهاب في موعد غرامي معي الليلة ورؤية فيلم ( بكسار ) ؟
+TRG:		لو حللت مشكلة ( تشيب ) لك ، هل تعديني بالذهاب في موعد غرامي معي الليلة ورؤية فيلم ( بكسار ) ؟
+PRED: 		لو حللت مشكلة ( تشيب ) لك ، هل تعدني بالذهاب في موعد غرامي معي الليلة ورؤية فيلم ( بكسار ) ؟
+SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B B+B 2M+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+TRG TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B B+B 2M+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B B+B 2F+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA NA NA NA NA NA NA NA NA CBR NA NA NA NA NA NA NA NA NA NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		لو حللت مشكلة ( تشيب ) لك ، هل تعدينني بالذهاب في موعد غرامي معي الليلة ورؤية فيلم ( بكسار ) ؟
+TRG:		لو حللت مشكلة ( تشيب ) لك ، هل تعديني بالذهاب في موعد غرامي معي الليلة ورؤية فيلم ( بكسار ) ؟
+PRED: 		لو حللت مشكلة ( تشيب ) لك ، هل تعدني بالذهاب في موعد غرامي معي الليلة ورؤية فيلم ( بكسار ) ؟
+SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B B+B 2F+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+TRG TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B B+B 2M+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B B+B 2F+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA NA NA NA NA NA NA NA NA CBR NA NA NA NA NA NA NA NA NA NA NA NA
+ERROR Type:	Proposal
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		أرجوكي لا تركلي خلف مقعدي يا كريستال آسف
+TRG:		أرجوك لا تركل خلف مقعدي يا كريستال آسفه
+PRED: 		أرجوك لا تركل خلف مقعدي يا كريستال آسفة
+SRC TAGS:	B+2F B+B 2F+B B+B B+B B+B B+B 1M+B
+TRG TAGS:	B+2M B+B 2M+B B+B B+B B+B B+B 1F+B
+PRED SRC TAGS:	B+2F B+B 2F+B B+B B+B B+B B+B 1M+B
+PROPOSED BY:	CBR NA MorphR NA NA NA NA CBR
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		أرجوك لا تركل خلف مقعدي يا كريستال آسف
+TRG:		أرجوك لا تركل خلف مقعدي يا كريستال آسفه
+PRED: 		أرجوك لا تركل خلف مقعدي يا كريستال آسفة
+SRC TAGS:	B+2M B+B 2M+B B+B B+B B+B B+B 1M+B
+TRG TAGS:	B+2M B+B 2M+B B+B B+B B+B B+B 1F+B
+PRED SRC TAGS:	B+B B+B 2M+B B+B B+B B+B B+B 1M+B
+PROPOSED BY:	NA NA NA NA NA NA NA CBR
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		انتي تقومين بغلطه يا كيت قادمه
+TRG:		انت تقوم بغلطه يا كيت قادمه
+PRED: 		أنت تقوم بغلطه يا كيت قادما
+SRC TAGS:	2F+B 2F+B B+B B+B B+B B+B
+TRG TAGS:	2M+B 2M+B B+B B+B B+B B+B
+PRED SRC TAGS:	2F+B 2F+B B+B B+B B+B 2F+B
+PROPOSED BY:	CBR CBR NA NA NA MorphR
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		أفعلي ما عليك فعله .
+TRG:		افعل ما عليك فعله .
+PRED: 		أفعل ما عليك فعله .
+SRC TAGS:	2F+B B+B B+B B+B B+B
+TRG TAGS:	2M+B B+B B+B B+B B+B
+PRED SRC TAGS:	2F+B B+B B+B B+B B+B
+PROPOSED BY:	CBR NA NA NA NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		اعلم وانا قلق من هذا
+TRG:		اعلم وانا قلق من هذا
+PRED: 		اعلم وانا قلقة من هذا
+SRC TAGS:	B+B B+B B+B B+B B+B
+TRG TAGS:	B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B 1M+B B+B B+B
+PROPOSED BY:	NA NA CBR NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		أنا برفسور ، وأنت ربة بيت
+TRG:		أنا برفسورة ، وأنت رب بيت
+PRED: 		أنا برفسور ، وأنت رب بيت
+SRC TAGS:	B+B 1M+B B+B B+B 2F+B B+B
+TRG TAGS:	B+B 1F+B B+B B+B 2M+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B 2F+B B+B
+PROPOSED BY:	NA NA NA NA CBR NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		أنا برفسور ، وأنت رب بيت
+TRG:		أنا برفسورة ، وأنت رب بيت
+PRED: 		أنا برفسور ، وأنت رب بيت
+SRC TAGS:	B+B 1M+B B+B B+B 2M+B B+B
+TRG TAGS:	B+B 1F+B B+B B+B 2M+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B 2M+B B+B
+PROPOSED BY:	NA NA NA NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		شيء ما يوحي إلي أنك لست هنا لتعملي بوابة
+TRG:		شيء ما يوحي إلي أنك لست هنا لتعمل بوابا
+PRED: 		شيء ما يوحي إلي أنك لست هنا لتعمل بوابة
+SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B 2F+B 2F+B
+TRG TAGS:	B+B B+B B+B B+B B+B B+B B+B 2M+B 2M+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B 2F+B B+B
+PROPOSED BY:	NA NA NA NA NA NA NA MorphR NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		إنه ليس فتى عشوائي قابلته فى بار الذى أصبح الأب لطفلتك
+TRG:		إنها ليست فتاة عشوائية قابلتها فى بار التى أصبحت الأم لطفلتك
+PRED: 		إنه ليس فتى عشوائي قابلته فى بار الذى أصبح الأب لطفلتك
+SRC TAGS:	B+2M 2F+B 2F+B 2F+B B+2M B+B B+B 2F+B 2F+B 2F+B B+B
+TRG TAGS:	B+2F 2M+B 2M+B 2M+B B+2F B+B B+B 2M+B 2M+B 2M+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA NA NA NA NA NA NA NA NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		وانا كنت الفتى الخجول
+TRG:		وانا كنت الفتاة الخجوله
+PRED: 		وانا كنت الفتاة الخجولة
+SRC TAGS:	B+B B+B 1M+B 1M+B
+TRG TAGS:	B+B B+B 1F+B 1F+B
+PRED SRC TAGS:	B+B B+B 1M+B 1M+B
+PROPOSED BY:	NA NA CBR MorphR
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		فهمت ، أنت آسفة إتكئي للخلف لا يمكنني رؤية المرآه الجانبية
+TRG:		فهمت ، أنت آسف إتكئ للخلف لا يمكنني رؤية المرآه الجانبية
+PRED: 		فهمت ، أنت آسفة اتكئ للخلف لا يمكنني رؤية المرآه الجانبية
+SRC TAGS:	B+B B+B B+B 2F+B 2F+B B+B B+B B+B B+B B+B B+B
+TRG TAGS:	B+B B+B B+B 2M+B 2M+B B+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B 1F+B 2F+B B+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA NA NA NA MorphR NA NA NA NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		لكنت طلبتي دعمي . .
+TRG:		لكنت طلبت دعمي . .
+PRED: 		لكنت طلبتي دعمي . .
+SRC TAGS:	B+B 2F+B B+B B+B B+B
+TRG TAGS:	B+B 2M+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B
+PROPOSED BY:	NA NA NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		انتظري ، ألديك تذكرة للمرور ؟
+TRG:		انتظر ، ألديك تذكرة للمرور ؟
+PRED: 		إنتظر ، ألديك تذكرة للمرور ؟
+SRC TAGS:	2F+B B+B B+B B+B B+B B+B
+TRG TAGS:	2M+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	2F+B B+B B+B B+B B+B B+B
+PROPOSED BY:	CBR NA NA NA NA NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		و لكن أنا أسف بكمية كبيرة من التواضع . . .
+TRG:		و لكن أنا أسفة بكمية كبيرة من التواضع . . .
+PRED: 		و لكن أنا آسفة بكمية كبيرة من التواضع . . .
+SRC TAGS:	B+B B+B B+B 1M+B B+B B+B B+B B+B B+B B+B B+B
+TRG TAGS:	B+B B+B B+B 1F+B B+B B+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B 1M+B B+B B+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA NA NA CBR NA NA NA NA NA NA NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		غادرن الآن ، وانجين بحياتكن !
+TRG:		غادروا الآن ، وانجوا بحياتكم !
+PRED: 		غادروا الآن ، وأنجوا بحياتكم !
+SRC TAGS:	2F+B B+B B+B 2F+B B+2F B+B
+TRG TAGS:	2M+B B+B B+B 2M+B B+2M B+B
+PRED SRC TAGS:	2F+B B+B B+B 2F+B B+2F B+B
+PROPOSED BY:	CBR NA NA MorphR MorphR NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		وإعبثي بي
+TRG:		وإعبث بي
+PRED: 		واعبث بي
+SRC TAGS:	2F+B B+B
+TRG TAGS:	2M+B B+B
+PRED SRC TAGS:	2F+B B+B
+PROPOSED BY:	MorphR NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		! أيتها المنتقمات ، أعطنني ملحمة
+TRG:		! أيها المنتقمين ، أعطوني ملحمة
+PRED: 		! أيها المنتقمون ، أعطوني ملحمة
+SRC TAGS:	B+B 2F+B 2F+B B+B 2F+B B+B
+TRG TAGS:	B+B 2M+B 2M+B B+B 2M+B B+B
+PRED SRC TAGS:	B+B 2F+B 2F+B B+B 2F+B B+B
+PROPOSED BY:	NA CBR MorphR NA CBR NA
+ERROR Type:	Selection
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		مارى ، ماذا إذا قال شخص هذا الكلام عنكى
+TRG:		مارى ، ماذا إذا قال شخص هذا الكلام عنك
+PRED: 		مارى ، ماذا إذا قال شخص هذا الكلام عنكى
+SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B 2F+B
+TRG TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B 2M+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B 2F+B
+PROPOSED BY:	NA NA NA NA NA NA NA NA OOV
+ERROR Type:	Proposal
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		أنت يا برنسيسة
+TRG:		انت يا برنس
+PRED: 		أنت يا برنسيسة
+SRC TAGS:	2F+B B+B 2F+B
+TRG TAGS:	2M+B B+B 2M+B
+PRED SRC TAGS:	B+B B+B 2F+B
+PROPOSED BY:	NA NA OOV
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		أنا فقط قابلت ( سايمون ) أو من تقولن إنه هو منذ بضعة أسابيع فقط أنا بالكاد أعرفه
+TRG:		أنا فقط قابلت ( سايمون ) أو من تقولون إنه هو منذ بضعة أسابيع فقط أنا بالكاد أعرفه
+PRED: 		أنا فقط قابلت ( سايمون ) أو من تقولوا إنه هو منذ بضعة أسابيع فقط أنا بالكاد أعرفه
+SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B 2F+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+TRG TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B 2M+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B 2F+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA NA NA NA NA NA NA NA CBR NA NA NA NA NA NA NA NA NA
+ERROR Type:	Proposal
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		كونك متعبة لا يعني لك أن تحتلي الطريق
+TRG:		كونك متعب لا يعن لك أن تحتل الطريق
+PRED: 		كونك متعبا لا يعني لك أن تحتل الطريق
+SRC TAGS:	B+B 2F+B B+B 2F+B B+B B+B 2F+B B+B
+TRG TAGS:	B+B 2M+B B+B 2M+B B+B B+B 2M+B B+B
+PRED SRC TAGS:	B+B 2F+B B+B B+B B+B B+B 2F+B B+B
+PROPOSED BY:	NA CBR NA NA NA NA MorphR NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		حسنا ، أنت ريحي بالأحرى فوق على الأرضية ؟
+TRG:		حسنا ، أنت ريح بالأحرى فوق على الأرضية ؟
+PRED: 		حسنا ، أنت ريحي بالأحرى فوق على الأرضية ؟
+SRC TAGS:	B+B B+B B+B 2F+B B+B B+B B+B B+B B+B
+TRG TAGS:	B+B B+B B+B 2M+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA NA NA NA NA NA NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		- انا لازلت لا اطيقكي . الله و الشرطه
+TRG:		- انا لازلت لا اطيقك . الله و الشرطه
+PRED: 		- انا لازلت لا اطيقكي . الله و الشرطه
+SRC TAGS:	B+B B+B B+B B+B B+2F B+B B+B B+B B+B
+TRG TAGS:	B+B B+B B+B B+B B+2M B+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA NA NA NA NA NA NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		- بخلافك - اسمعي
+TRG:		- بخلافك - اسمع
+PRED: 		- بخلافك - إسمع
+SRC TAGS:	B+B B+B B+B 2F+B
+TRG TAGS:	B+B B+B B+B 2M+B
+PRED SRC TAGS:	B+B B+B B+B 2F+B
+PROPOSED BY:	NA NA NA CBR
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		. . حسنا ، لكن انظري انظري إلى أمي
+TRG:		. . حسنا ، لكن انظر انظر إلى أبي
+PRED: 		. . حسنا ، لكن انظر إنظر إلى أمي
+SRC TAGS:	B+B B+B B+B B+B B+B 2F+B 2F+B B+B 2F+B
+TRG TAGS:	B+B B+B B+B B+B B+B 2M+B 2M+B B+B 2M+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B 2F+B 2F+B B+B B+B
+PROPOSED BY:	NA NA NA NA NA CBR CBR NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		حسنا ، ( جي جي ) ، أنا من يمكنك الأعتماد عليه
+TRG:		حسنا ، ( جي جي ) ، أنا من يمكنك الأعتماد عليه
+PRED: 		حسنا ، ( جي جي ) ، أنا من يمكنك الأعتماد عليها
+SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+TRG TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+1M
+PROPOSED BY:	NA NA NA NA NA NA NA NA NA NA NA CBR
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		فأنا أشعر بالأسف لأنك أخترت أن تقومي بعملة
+TRG:		فأنا أشعر بالأسف لأنك أخترت أن تقم بعملة
+PRED: 		فأنا أشعر بالأسف لأنك أخترت أن تقوم بعملة
+SRC TAGS:	B+B B+B B+B B+B B+B B+B 2F+B B+B
+TRG TAGS:	B+B B+B B+B B+B B+B B+B 2M+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B B+B 2F+B B+B
+PROPOSED BY:	NA NA NA NA NA NA CBR NA
+ERROR Type:	Proposal
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		عفوا ، ايتها المحشورة ، علي بتقديم الطلب .
+TRG:		عفوا ، ايها المحشور ، علي بتقديم الطلب .
+PRED: 		عفوا ، ايها المحشورة ، علي بتقديم الطلب .
+SRC TAGS:	B+B B+B 2F+B 2F+B B+B B+B B+B B+B B+B
+TRG TAGS:	B+B B+B 2M+B 2M+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B 2F+B 2F+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA NA CBR OOV NA NA NA NA NA
+ERROR Type:	Proposal
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		هاي ، هدئي من روعك لا أريد إخبار الجميع ، أننى أفسدت عفة أخو ( إلينا ) الصغير .
+TRG:		هاي ، هديء من روعك لا أريد إخبار الجميع ، أننى أفسدت عفة أخو ( إلينا ) الصغير .
+PRED: 		هاي ، هدأ من روعك لا أريد إخبار الجميع ، أننى أفسدت عفة أخو ( إلينا ) الصغير .
+SRC TAGS:	B+B B+B 2F+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+TRG TAGS:	B+B B+B 2M+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B 2F+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA NA CBR NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA
+ERROR Type:	Proposal
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		هل صرت غريبة ؟
+TRG:		هل صرت غريبة ؟
+PRED: 		هل صرت غريبا ؟
+SRC TAGS:	B+B B+B 1F+B B+B
+TRG TAGS:	B+B B+B 1F+B B+B
+PRED SRC TAGS:	B+B B+B 2F+B B+B
+PROPOSED BY:	NA NA CBR NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		هل صرت غريبا ؟
+TRG:		هل صرت غريبة ؟
+PRED: 		هل صرت غريبا ؟
+SRC TAGS:	B+B B+B 1M+B B+B
+TRG TAGS:	B+B B+B 1F+B B+B
+PRED SRC TAGS:	B+B B+B 2M+B B+B
+PROPOSED BY:	NA NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		سررت بلقائكن ، جميعكن .
+TRG:		سررت بلقائكم ، جميعا .
+PRED: 		سررت بلقائكم ، جميعكم .
+SRC TAGS:	B+B B+2F B+B 2F+B B+B
+TRG TAGS:	B+B B+2M B+B 2M+B B+B
+PRED SRC TAGS:	B+B B+2F B+B B+2F B+B
+PROPOSED BY:	NA CBR NA CBR NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		من ملاحقة إلى الأخرى ، انا معجب به
+TRG:		من ملاحقة إلى الأخرى ، انا معجبة به
+PRED: 		من ملاحقة إلى الأخرى ، انا معجبة بها
+SRC TAGS:	B+B B+B B+B B+B B+B B+B 1M+B B+B
+TRG TAGS:	B+B B+B B+B B+B B+B B+B 1F+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B B+B 1M+B B+1M
+PROPOSED BY:	NA NA NA NA NA NA CBR MorphR
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		من ملاحقة إلى الأخرى ، انا معجبة به
+TRG:		من ملاحقة إلى الأخرى ، انا معجبة به
+PRED: 		من ملاحقة إلى الأخرى ، انا معجبة بها
+SRC TAGS:	B+B B+B B+B B+B B+B B+B 1F+B B+B
+TRG TAGS:	B+B B+B B+B B+B B+B B+B 1F+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B B+B 1F+B B+1M
+PROPOSED BY:	NA NA NA NA NA NA NA MorphR
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		اريدك ان تكتبي كلمات هذه الاغنيه ثم اديها كما لو انك تمثلي مشهد ، حسنا ؟
+TRG:		اريدك ان تكتب كلمات هذه الاغنيه ثم ادها كما لو انك تمثل مشهد ، حسنا ؟
+PRED: 		اريدك ان تكتب كلمات هذه الاغنيه ثم اديها كما لو انك تمثل مشهد ، حسنا ؟
+SRC TAGS:	B+B B+B 2F+B B+B B+B B+B B+B 2F+B B+B B+B B+B 2F+B B+B B+B B+B B+B
+TRG TAGS:	B+B B+B 2M+B B+B B+B B+B B+B 2M+B B+B B+B B+B 2M+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B 2F+B B+B B+B B+B B+B B+B B+B B+B B+B 2F+B B+B B+B B+B B+B
+PROPOSED BY:	NA NA CBR NA NA NA NA NA NA NA NA CBR NA NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		إننى أشعر بالحياة تتدفق فى عروقى يا تيلك كما لو كنت شابا . .
+TRG:		إننى أشعر بالحياة تتدفق فى عروقى يا تيلك كما لو كنت شابة . .
+PRED: 		إننى أشعر بالحياة تتدفق فى عروقى يا تيلك كما لو كنت شابا . .
+SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B 1M+B B+B B+B
+TRG TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B 1F+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B 2M+B B+B B+B
+PROPOSED BY:	NA NA NA NA NA NA NA NA NA NA NA NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		إننى أشعر بالحياة تتدفق فى عروقى يا تيلك كما لو كنت شابة . .
+TRG:		إننى أشعر بالحياة تتدفق فى عروقى يا تيلك كما لو كنت شابة . .
+PRED: 		إننى أشعر بالحياة تتدفق فى عروقى يا تيلك كما لو كنت شاب . .
+SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B 1F+B B+B B+B
+TRG TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B 1F+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B 2F+B B+B B+B
+PROPOSED BY:	NA NA NA NA NA NA NA NA NA NA NA CBR NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		منذ 3 سنوات ، لقد اقتحمتي منزل حبيبك السابق وعندما استيقظ ، فقد كنتي واقفة هناك تحملين سكين
+TRG:		منذ 3 سنوات ، لقد اقتحمت منزل حبيبك السابق وعندما استيقظ ، فقد كنت واقف هناك تحمل سكين
+PRED: 		منذ 3 سنوات ، لقد اقتحمت منزل حبيبك السابق وعندما استيقظ ، فقد كنت واقفا هناك تحمل سكين
+SRC TAGS:	B+B B+B B+B B+B B+B 2F+B B+B B+B B+B B+B B+B B+B B+B 2F+B 2F+B B+B 2F+B B+B
+TRG TAGS:	B+B B+B B+B B+B B+B 2M+B B+B B+B B+B B+B B+B B+B B+B 2M+B 2M+B B+B 2M+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B 2F+B B+B B+B B+B B+B B+B B+B B+B 2F+B 2F+B B+B 2F+B B+B
+PROPOSED BY:	NA NA NA NA NA MorphR NA NA NA NA NA NA NA CBR CBR NA CBR NA
+ERROR Type:	Selection
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		منذ 3 سنوات ، لقد اقتحمت منزل حبيبك السابق وعندما استيقظ ، فقد كنت واقف هناك تحمل سكين
+TRG:		منذ 3 سنوات ، لقد اقتحمت منزل حبيبك السابق وعندما استيقظ ، فقد كنت واقف هناك تحمل سكين
+PRED: 		منذ 3 سنوات ، لقد اقتحمت منزل حبيبك السابق وعندما استيقظ ، فقد كنت واقفة هناك تحمل سكين
+SRC TAGS:	B+B B+B B+B B+B B+B 2M+B B+B B+B B+B B+B B+B B+B B+B 2M+B 2M+B B+B 2M+B B+B
+TRG TAGS:	B+B B+B B+B B+B B+B 2M+B B+B B+B B+B B+B B+B B+B B+B 2M+B 2M+B B+B 2M+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B 1M+B B+B B+B B+B
+PROPOSED BY:	NA NA NA NA NA NA NA NA NA NA NA NA NA NA CBR NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		جو ، اصغي لقد قلت ما عندك
+TRG:		جو ، اصغ لقد قلت ما عندك
+PRED: 		جو ، أصغ لقد قلت ما عندك
+SRC TAGS:	B+B B+B 2F+B B+B B+B B+B B+B
+TRG TAGS:	B+B B+B 2M+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B 2F+B B+B B+B B+B B+B
+PROPOSED BY:	NA NA CBR NA NA NA NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		تبا ! - أنا مصاب باللابؤرية أيضا .
+TRG:		تبا ! - أنا مصاب باللابؤرية أيضا .
+PRED: 		تبا ! - أنا مصابة باللابؤرية أيضا .
+SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B
+TRG TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B 1M+B B+B B+B B+B
+PROPOSED BY:	NA NA NA NA CBR NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		أجل ، سأغطيك من هنا - تعالي معي ، يا صاحبتي -
+TRG:		أجل ، سأغطيك من هنا - تعال معي ، يا صاحبي -
+PRED: 		أجل ، سأغطيك من هنا - تعال معي ، يا صاح -
+SRC TAGS:	B+B B+B B+B B+B B+B B+B 2F+B B+B B+B B+B 2F+B B+B
+TRG TAGS:	B+B B+B B+B B+B B+B B+B 2M+B B+B B+B B+B 2M+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B B+B 2F+B B+B B+B B+B 2F+B B+B
+PROPOSED BY:	NA NA NA NA NA NA CBR NA NA NA CBR NA
+ERROR Type:	Selection
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		أطلعيني .
+TRG:		أطلعني .
+PRED: 		اطلعني .
+SRC TAGS:	2F+B B+B
+TRG TAGS:	2M+B B+B
+PRED SRC TAGS:	2F+B B+B
+PROPOSED BY:	MorphR NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		إذا ( أنجيلا ) ، ألم تري أي أحد في غرفتك هذا الصباح ؟
+TRG:		إذا ( أنجيلا ) ، ألم ترى أي أحد في غرفتك هذا الصباح ؟
+PRED: 		إذا ( أنجيلا ) ، ألم تر أي أحد في غرفتك هذا الصباح ؟
+SRC TAGS:	B+B B+B B+B B+B B+B B+B 2F+B B+B B+B B+B B+B B+B B+B B+B
+TRG TAGS:	B+B B+B B+B B+B B+B B+B 2M+B B+B B+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B B+B 2F+B B+B B+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA NA NA NA NA NA CBR NA NA NA NA NA NA NA
+ERROR Type:	Selection
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		القنابل في المكان أخبريني متى
+TRG:		القنابل في المكان أخبرني متى
+PRED: 		القنابل في المكان اخبرني متى
+SRC TAGS:	B+B B+B B+B 2F+B B+B
+TRG TAGS:	B+B B+B B+B 2M+B B+B
+PRED SRC TAGS:	B+B B+B B+B 2F+B B+B
+PROPOSED BY:	NA NA NA CBR NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		- هيا عزيزتي أريد أن أعيش حياتي
+TRG:		- هيا عزيزي أريد أن أعيش حياتي
+PRED: 		- هيا عزيزى أريد أن أعيش حياتي
+SRC TAGS:	B+B B+B 2F+B B+B B+B B+B B+B
+TRG TAGS:	B+B B+B 2M+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B 2F+B B+B B+B B+B B+B
+PROPOSED BY:	NA NA CBR NA NA NA NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		اسمعي ، هل أنت بخير ؟
+TRG:		اسمع ، هل أنت بخير ؟
+PRED: 		إسمع ، هل أنت بخير ؟
+SRC TAGS:	2F+B B+B B+B B+B B+B B+B
+TRG TAGS:	2M+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	2F+B B+B B+B B+B B+B B+B
+PROPOSED BY:	CBR NA NA NA NA NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		أحضري لي ولاعة
+TRG:		أحضر لي ولاعة
+PRED: 		احضر لي ولاعة
+SRC TAGS:	2F+B B+B B+B
+TRG TAGS:	2M+B B+B B+B
+PRED SRC TAGS:	2F+B B+B B+B
+PROPOSED BY:	CBR NA NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		لا ، لا يمزقن عينيك !
+TRG:		لا ، لا يمزقوا عينيك !
+PRED: 		لا ، لا يمزقن عينيك !
+SRC TAGS:	B+B B+B B+B 2F+B B+B B+B
+TRG TAGS:	B+B B+B B+B 2M+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA NA NA NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		أيتها القائدة اتصلي بقواتك
+TRG:		ايها القائد اتصل بقواتك
+PRED: 		أيها القائد أتصل بقواتك
+SRC TAGS:	2F+B 2F+B 2F+B B+B
+TRG TAGS:	2M+B 2M+B 2M+B B+B
+PRED SRC TAGS:	2F+B 2F+B 2F+B B+B
+PROPOSED BY:	CBR CBR CBR NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		الهاتف المحمول الذي إستخدمتيه لتصوير البطل المقنع . . .
+TRG:		الهاتف المحمول الذي إستخدمته لتصوير البطل المقنع . . .
+PRED: 		الهاتف المحمول الذي استخدمته لتصوير البطل المقنع . . .
+SRC TAGS:	B+B B+B B+B 2F+B B+B B+B B+B B+B B+B B+B
+TRG TAGS:	B+B B+B B+B 2M+B B+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B 2F+B B+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA NA NA MorphR NA NA NA NA NA NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		ليس إن كنت سوداء . .
+TRG:		ليس إن كنت أسودا . .
+PRED: 		ليس إن كنت سوداء . .
+SRC TAGS:	B+B B+B B+B 2F+B B+B B+B
+TRG TAGS:	B+B B+B B+B 2M+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B 2F+B B+B B+B
+PROPOSED BY:	NA NA NA OOV NA NA
+ERROR Type:	Proposal
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		حلت الأزمة أخبرينى عن رفيقها
+TRG:		حلت الأزمة أخبرنى عن رفيقها
+PRED: 		حلت الأزمة أخبرني عن رفيقها
+SRC TAGS:	B+B B+B 2F+B B+B B+B
+TRG TAGS:	B+B B+B 2M+B B+B B+B
+PRED SRC TAGS:	B+B B+B 2F+B B+B B+B
+PROPOSED BY:	NA NA CBR NA NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		" انتى الوحيدة التى أراها أمام عيني فى كل مكان يا حبيبتى "
+TRG:		" انت الوحيد الذي أراه أمام عيني فى كل مكان يا حبيبي "
+PRED: 		" أنت الوحيد الذى أراها أمام عيني فى كل مكان يا حبيبى "
+SRC TAGS:	B+B 2F+B 2F+B 2F+B B+2F B+B B+B B+B B+B B+B B+B 2F+B B+B
+TRG TAGS:	B+B 2M+B 2M+B 2M+B B+2M B+B B+B B+B B+B B+B B+B 2M+B B+B
+PRED SRC TAGS:	B+B 2F+B 2F+B 2F+B 2F+B B+B B+B B+B B+B B+B B+B 2F+B B+B
+PROPOSED BY:	NA CBR CBR CBR OOV NA NA NA NA NA NA CBR NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		إصمدي ( تشاك ) سأخرجك من هنا
+TRG:		إصمد ( تشاك ) سأخرجك من هنا
+PRED: 		اصمد ( تشاك ) سأخرجك من هنا
+SRC TAGS:	2F+B B+B B+B B+B B+B B+B B+B
+TRG TAGS:	2M+B B+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	2F+B B+B B+B B+B B+B B+B B+B
+PROPOSED BY:	MorphR NA NA NA NA NA NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		- أي أنه في وقت الزواج كنت عذراء
+TRG:		- أي أنه في وقت الزواج كنت عذري
+PRED: 		- أي أنه في وقت الزواج كنت عذراء
+SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B 2F+B
+TRG TAGS:	B+B B+B B+B B+B B+B B+B B+B 2M+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B 1F+B
+PROPOSED BY:	NA NA NA NA NA NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		اعتقد ان سمعتك كامرأة قانون خرافة و المختلقة من ضوضاء رؤوس العناوين بواسطة السيد ( سويدام ) ، وكيلك الإعلامي هناك
+TRG:		اعتقد ان سمعتك كرجل قانون خرافة و المختلقة من ضوضاء رؤوس العناوين بواسطة السيد ( سويدام ) ، وكيلك الإعلامي هناك
+PRED: 		اعتقد ان سمعتك كامرأة قانون خرافة و المختلقة من ضوضاء رؤوس العناوين بواسطة السيد ( سويدام ) ، وكيلك الإعلامي هناك
+SRC TAGS:	B+B B+B B+B 2F+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+TRG TAGS:	B+B B+B B+B 2M+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B 2F+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA NA NA OOV NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA
+ERROR Type:	Proposal
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		جيد ، يمكنك أن تريها درجاتك .
+TRG:		جيد ، يمكنك أن تريها درجاتك .
+PRED: 		جيد ، يمكنك أن تراها درجاتك .
+SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B
+TRG TAGS:	B+B B+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B 2F+B B+B B+B
+PROPOSED BY:	NA NA NA NA CBR NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		هيا ، اخرجي إنه ابنك يا بارفيز -
+TRG:		هيا ، أخرج إنه ابنك يا بارفيز -
+PRED: 		هيا ، اخرج إنه ابنك يا بارفيز -
+SRC TAGS:	B+B B+B 2F+B B+B B+B B+B B+B B+B
+TRG TAGS:	B+B B+B 2M+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B 2F+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA NA CBR NA NA NA NA NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		أنا شاب رأس مالي في ظل إقتصاد منهار رأيت فرصة وذهبت إليها
+TRG:		أنا شابة رأس مالية في ظل إقتصاد منهار رأيت فرصة وذهبت إليها
+PRED: 		أنا شاب رأس مالي في ظل إقتصاد منهار رأيت فرصة وذهبت إليها
+SRC TAGS:	B+B 1M+B B+B 1M+B B+B B+B B+B B+B B+B B+B B+B B+B
+TRG TAGS:	B+B 1F+B B+B 1F+B B+B B+B B+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B 1M+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA OOV NA NA NA NA NA NA NA NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		أيمكنكن وضعها في مكان آخر مثل خلف مقاعدكن ؟
+TRG:		أيمكنكم وضعها في مكان آخر مثل خلف مقاعدكم ؟
+PRED: 		أيمكنكن وضعها في مكان آخر مثل خلف مقاعدكم ؟
+SRC TAGS:	B+2F B+B B+B B+B B+B B+B B+B B+2F B+B
+TRG TAGS:	B+2M B+B B+B B+B B+B B+B B+B B+2M B+B
+PRED SRC TAGS:	B+2F B+B B+B B+B B+B B+B B+B B+2F B+B
+PROPOSED BY:	OOV NA NA NA NA NA NA CBR NA
+ERROR Type:	Proposal
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		أنا سأجرب ، أتجربي أنت أبضا ؟
+TRG:		أنا سأجرب ، أتجرب أنت أبضا ؟
+PRED: 		أنا سأجرب ، أتجربي أنت أبضا ؟
+SRC TAGS:	B+B B+B B+B 2F+B B+B B+B B+B
+TRG TAGS:	B+B B+B B+B 2M+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B 2F+B B+B B+B B+B
+PROPOSED BY:	NA NA NA OOV NA NA NA
+ERROR Type:	Proposal
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		" انتى قاتلتى "
+TRG:		" انت قاتلت "
+PRED: 		" أنت قاتلي "
+SRC TAGS:	B+B 2F+B 2F+B B+B
+TRG TAGS:	B+B 2M+B 2M+B B+B
+PRED SRC TAGS:	B+B 2F+B 2F+B B+B
+PROPOSED BY:	NA CBR MorphR NA
+ERROR Type:	Selection
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		إجلبي لي وعاء من الفنيلا الفرنسية وبعض البسكويت وستكون مثل أخر يوم العطلة
+TRG:		إجلب لي وعاء من الفنيلا الفرنسية وبعض البسكويت وستكون مثل أخر يوم العطلة
+PRED: 		اجلب لي وعاء من الفنيلا الفرنسية وبعض البسكويت وستكون مثل أخر يوم العطلة
+SRC TAGS:	2F+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+TRG TAGS:	2M+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	2F+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+PROPOSED BY:	CBR NA NA NA NA NA NA NA NA NA NA NA NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		فقط أذهب الى ما كنت ذاهب ألية
+TRG:		فقط أذهب الى ما كنت ذاهب ألية
+PRED: 		فقط أذهب الى ما كنت ذاهبة ألية
+SRC TAGS:	B+B 2M+B B+B B+B B+B 2M+B 2M+B
+TRG TAGS:	B+B 2M+B B+B B+B B+B 2M+B 2M+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B 1M+B B+B
+PROPOSED BY:	NA NA NA NA NA CBR NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		فقط اذهبي الى ما كنت ذاهبة إليه
+TRG:		فقط أذهب الى ما كنت ذاهب ألية
+PRED: 		فقط اذهب الى ما كنت ذاهب إليه
+SRC TAGS:	B+B 2F+B B+B B+B B+B 2F+B 2F+B
+TRG TAGS:	B+B 2M+B B+B B+B B+B 2M+B 2M+B
+PRED SRC TAGS:	B+B 2F+B B+B B+B B+B 2F+B B+B
+PROPOSED BY:	NA CBR NA NA NA CBR NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		. . عندما كنت غائبة
+TRG:		. . عندما كنت غائب
+PRED: 		. . عندما كنت غائبا
+SRC TAGS:	B+B B+B B+B B+B 2F+B
+TRG TAGS:	B+B B+B B+B B+B 2M+B
+PRED SRC TAGS:	B+B B+B B+B B+B 2F+B
+PROPOSED BY:	NA NA NA NA MorphR
+ERROR Type:	Selection
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		- مامي ، أنا خائفة !
+TRG:		- بابي ، أنا خائفة !
+PRED: 		- مامي ، أنا خائفة !
+SRC TAGS:	B+B 2F+B B+B B+B 1F+B B+B
+TRG TAGS:	B+B 2M+B B+B B+B 1F+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B 1F+B B+B
+PROPOSED BY:	NA NA NA NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		- مامي ، أنا خائف !
+TRG:		- بابي ، أنا خائفة !
+PRED: 		- مامي ، أنا خائفة !
+SRC TAGS:	B+B 2F+B B+B B+B 1M+B B+B
+TRG TAGS:	B+B 2M+B B+B B+B 1F+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B 1M+B B+B
+PROPOSED BY:	NA NA NA NA CBR NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		اعرف عزيزتي انه شيئ جميل
+TRG:		اعرف عزيزي انه شيئ جميل
+PRED: 		اعرف عزيزى انه شيئ جميل
+SRC TAGS:	B+B 2F+B B+B B+B B+B
+TRG TAGS:	B+B 2M+B B+B B+B B+B
+PRED SRC TAGS:	B+B 2F+B B+B B+B B+B
+PROPOSED BY:	NA CBR NA NA NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		- هل تنوين الوقوف والقتال ؟
+TRG:		- هل تنوون الوقوف والقتال ؟
+PRED: 		- هل تنوي الوقوف والقتال ؟
+SRC TAGS:	B+B B+B 2F+B B+B B+B B+B
+TRG TAGS:	B+B B+B 2M+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B 2F+B B+B B+B B+B
+PROPOSED BY:	NA NA CBR NA NA NA
+ERROR Type:	Proposal
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		ويجب أن تسقطيهم وهناك رجل
+TRG:		ويجب ان تسقطهم وهناك رجل
+PRED: 		ويجب أن تسقطهم وهناك رجل
+SRC TAGS:	B+B 2F+B 2F+B B+B B+B
+TRG TAGS:	B+B 2M+B 2M+B B+B B+B
+PRED SRC TAGS:	B+B B+B 2F+B B+B B+B
+PROPOSED BY:	NA NA MorphR NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		ليس امرا مهما تعرفن الا ان كنتن تعتقدن الخروج مع لاعب محترف هو امر مهم
+TRG:		ليس امرا مهما تعرفون الا ان كنتم تعتقدون الخروج مع لاعب محترف هو امر مهم
+PRED: 		ليس امرا مهما تعرفوا الا ان كنتم تعتقدون الخروج مع لاعب محترف هو امر مهم
+SRC TAGS:	B+B B+B B+B 2F+B B+B B+B 2F+B 2F+B B+B B+B B+B B+B B+B B+B B+B
+TRG TAGS:	B+B B+B B+B 2M+B B+B B+B 2M+B 2M+B B+B B+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B 2F+B B+B B+B 2F+B 2F+B B+B B+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA NA NA CBR NA NA CBR CBR NA NA NA NA NA NA NA
+ERROR Type:	Selection
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		إنه الهدف الأول الذي أعطيت مسؤوليته لي منذ مجيئي إلى هنا لذا توليه بسرعة وهدوء للمندوب السامي
+TRG:		إنه الهدف الأول الذي أعطيت مسؤوليته لي منذ مجيئي إلى هنا لذا توله بسرعة وهدوء للمندوب السامي
+PRED: 		إنه الهدف الأول الذي أعطيت مسؤوليته لي منذ مجيئي إلى هنا لذا توليه بسرعة وهدوء للمندوب السامي
+SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B 2F+B B+B B+B B+B B+B
+TRG TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B 2M+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		قلت أغلقنها !
+TRG:		قلت أغلقوها !
+PRED: 		قلت اغلقوها !
+SRC TAGS:	B+B 2F+B B+B
+TRG TAGS:	B+B 2M+B B+B
+PRED SRC TAGS:	B+B 2F+B B+B
+PROPOSED BY:	NA MorphR NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		( يمكنني أن أرى ما تعنيين ، يا ( هانت لكن . . . ( غري ) محقة
+TRG:		( يمكنني أن أرى ما تعني ، يا ( هانت لكن . . . ( غري ) محقة
+PRED: 		( يمكنني أن أرى ما تعنيين ، يا ( هانت لكن . . . ( غري ) محقة
+SRC TAGS:	B+B B+B B+B B+B B+B 2F+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+TRG TAGS:	B+B B+B B+B B+B B+B 2M+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B 2F+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA NA NA NA NA OOV NA NA NA NA NA NA NA NA NA NA NA NA
+ERROR Type:	Proposal
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		أنا مستعدة لتسليم قوات الحاكم المتبقية لكن والسيطرة على الحصن وبنادقه وخزائنه وإطلاق السراح غير المشروط لأسراكن كل شيء
+TRG:		أنا مستعدة لتسليم قوات الحاكم المتبقية لكم والسيطرة على الحصن وبنادقه وخزائنه وإطلاق السراح غير المشروط لأسراكم كل شيء
+PRED: 		أنا مستعدة لتسليم قوات الحاكم المتبقية لكم والسيطرة على الحصن وبنادقه وخزائنه وإطلاق السراح غير المشروط لأساراكم كل شيء
+SRC TAGS:	B+B 1F+B B+B B+B B+B B+B B+2F B+B B+B B+B B+B B+B B+B B+B B+B B+B B+2F B+B B+B
+TRG TAGS:	B+B 1F+B B+B B+B B+B B+B B+2M B+B B+B B+B B+B B+B B+B B+B B+B B+B B+2M B+B B+B
+PRED SRC TAGS:	B+B 1F+B B+B B+B B+B B+B B+2F B+B B+B B+B B+B B+B B+B B+B B+B B+B B+2F B+B B+B
+PROPOSED BY:	NA NA NA NA NA NA CBR NA NA NA NA NA NA NA NA NA MorphR NA NA
+ERROR Type:	Selection
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		أنا مستعد لتسليم قوات الحاكم المتبقية لكن والسيطرة على الحصن وبنادقه وخزائنه وإطلاق السراح غير المشروط لأسراكن كل شيء
+TRG:		أنا مستعدة لتسليم قوات الحاكم المتبقية لكم والسيطرة على الحصن وبنادقه وخزائنه وإطلاق السراح غير المشروط لأسراكم كل شيء
+PRED: 		أنا مستعدة لتسليم قوات الحاكم المتبقية لكم والسيطرة على الحصن وبنادقه وخزائنه وإطلاق السراح غير المشروط لأساراكم كل شيء
+SRC TAGS:	B+B 1M+B B+B B+B B+B B+B B+2F B+B B+B B+B B+B B+B B+B B+B B+B B+B B+2F B+B B+B
+TRG TAGS:	B+B 1F+B B+B B+B B+B B+B B+2M B+B B+B B+B B+B B+B B+B B+B B+B B+B B+2M B+B B+B
+PRED SRC TAGS:	B+B 1M+B B+B B+B B+B B+B B+2F B+B B+B B+B B+B B+B B+B B+B B+B B+B B+2F B+B B+B
+PROPOSED BY:	NA CBR NA NA NA NA CBR NA NA NA NA NA NA NA NA NA MorphR NA NA
+ERROR Type:	Selection
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		كيف حالكن يا سيدات ؟
+TRG:		كيف حالكم يا سادة ؟
+PRED: 		كيف حالكم يا رجال ؟
+SRC TAGS:	B+B B+2F B+B 2F+B B+B
+TRG TAGS:	B+B B+2M B+B 2M+B B+B
+PRED SRC TAGS:	B+B B+2F B+B 2F+B B+B
+PROPOSED BY:	NA MorphR NA CBR NA
+ERROR Type:	Proposal
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		سعيد بلقائك
+TRG:		سعيده بلقائك
+PRED: 		سعيدة بلقائك
+SRC TAGS:	1M+B B+B
+TRG TAGS:	1F+B B+B
+PRED SRC TAGS:	1M+B B+B
+PROPOSED BY:	CBR NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		( هيلين بيولي ) آتية غدا ، أتعرفينها ؟
+TRG:		( هيلين بيولي ) آتية غدا ، أتعرفها ؟
+PRED: 		( هيلين بيولي ) آتية غدا ، أتعرفينها ؟
+SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B 2F+B B+B
+TRG TAGS:	B+B B+B B+B B+B B+B B+B B+B 2M+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B 2F+B B+B
+PROPOSED BY:	NA NA NA NA NA NA NA OOV NA
+ERROR Type:	Proposal
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		كوني جيدة يبدو أنك قد أسست لهذا
+TRG:		كن جيد يبدو أنك قد أسست لهذا
+PRED: 		كن جيدا يبدو أنك قد أسست لهذا
+SRC TAGS:	2F+B 2F+B B+B B+B B+B B+B B+B
+TRG TAGS:	2M+B 2M+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	2F+B 2F+B B+B B+B B+B B+B B+B
+PROPOSED BY:	CBR CBR NA NA NA NA NA
+ERROR Type:	Proposal
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		- كنت أريد الحضور مبكرا لكن . . .
+TRG:		- كنت أريد الحضور مبكرة لكن . . .
+PRED: 		- كنت أريد الحضور مبكرا لكن . . .
+SRC TAGS:	B+B B+B B+B B+B 1M+B B+B B+B B+B B+B
+TRG TAGS:	B+B B+B B+B B+B 1F+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA NA NA NA NA NA NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		سام ، هيا ، أنت ستكونين متأخرة عن . . .
+TRG:		سام ، هيا ، أنت ستكون متأخرا عن . . .
+PRED: 		سام ، هيا ، أنت ستكون متأخر عن . . .
+SRC TAGS:	B+B B+B B+B B+B B+B 2F+B 2F+B B+B B+B B+B B+B
+TRG TAGS:	B+B B+B B+B B+B B+B 2M+B 2M+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B 2F+B 2F+B B+B B+B B+B B+B
+PROPOSED BY:	NA NA NA NA NA CBR CBR NA NA NA NA
+ERROR Type:	Proposal
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		ألا تستطيعين تمييزى ؟
+TRG:		ألا تستطيع تمييزى ؟
+PRED: 		الا تستطيع تمييزى ؟
+SRC TAGS:	B+B 2F+B B+B B+B
+TRG TAGS:	B+B 2M+B B+B B+B
+PRED SRC TAGS:	2F+B 2F+B B+B B+B
+PROPOSED BY:	CBR CBR NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		أنا لن أكون مقلق عنه لو كنت مكانك .
+TRG:		أنا لن أكون مقلق عنه لو كنت مكانك .
+PRED: 		أنا لن أكون مقلقة عنه لو كنت مكانك .
+SRC TAGS:	B+B B+B B+B 2M+B B+B B+B B+B B+B B+B
+TRG TAGS:	B+B B+B B+B 2M+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B 1M+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA NA NA MorphR NA NA NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		أنا لن أكون مقلقة عنه لو كنت مكانك .
+TRG:		أنا لن أكون مقلق عنه لو كنت مكانك .
+PRED: 		أنا لن أكون مقلقة عنه لو كنت مكانك .
+SRC TAGS:	B+B B+B B+B 2F+B B+B B+B B+B B+B B+B
+TRG TAGS:	B+B B+B B+B 2M+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B 1F+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA NA NA NA NA NA NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		لا ، ولكن في داخلك أنت لازلت صيدلانية ، ياغودا
+TRG:		لا ، ولكن في داخلك أنت لازلت صيدلانيا ، ياغودا
+PRED: 		لا ، ولكن في داخلك أنت لازلت صيدلاني ، ياغودا
+SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B 2F+B B+B B+B
+TRG TAGS:	B+B B+B B+B B+B B+B B+B B+B 2M+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B 2F+B B+B B+B
+PROPOSED BY:	NA NA NA NA NA NA NA MorphR NA NA
+ERROR Type:	Selection
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		ألم تقولي شىء بخصوص الحصول على المال
+TRG:		الم تقل شىء بخصوص الحصول على المال
+PRED: 		ألم تقل شىء بخصوص الحصول على المال
+SRC TAGS:	2F+B 2F+B B+B B+B B+B B+B B+B
+TRG TAGS:	2M+B 2M+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B 2F+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA CBR NA NA NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		هل تمازحينى ؟
+TRG:		هل تمازحنى ؟
+PRED: 		هل تمازحني ؟
+SRC TAGS:	B+B 2F+B B+B
+TRG TAGS:	B+B 2M+B B+B
+PRED SRC TAGS:	B+B 2F+B B+B
+PROPOSED BY:	NA MorphR NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		وأنا واثقة أنكن لو تعرفتن على ( كولين ) تعجبان به بقدر ما أفعل .
+TRG:		وأنا واثقة أنكم لو تعرفتم على ( كولين ) تعجبان به بقدر ما أفعل .
+PRED: 		وأنا واثقة أنكم لو تعرفتم على ( كولين ) يعجبا به بقدر ما أفعل .
+SRC TAGS:	B+B 1F+B B+2F B+B 2F+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+TRG TAGS:	B+B 1F+B B+2M B+B 2M+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B 1F+B B+2F B+B 2F+B B+B B+B B+B B+B 2F+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA NA CBR NA MorphR NA NA NA NA MorphR NA NA NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		وأنا واثق أنكن لو تعرفتن على ( كولين ) تعجبان به بقدر ما أفعل .
+TRG:		وأنا واثقة أنكم لو تعرفتم على ( كولين ) تعجبان به بقدر ما أفعل .
+PRED: 		وأنا واثقة أنكم لو تعرفتم على ( كولين ) يعجبا به بقدر ما أفعل .
+SRC TAGS:	B+B 1M+B B+2F B+B 2F+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+TRG TAGS:	B+B 1F+B B+2M B+B 2M+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B 1M+B B+2F B+B 2F+B B+B B+B B+B B+B 2F+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA CBR CBR NA MorphR NA NA NA NA MorphR NA NA NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		لو ظننت أن التخلص من كل الترخيم من عباراتك يجعل حجتك أكثر شرعية أنت مخطئة
+TRG:		لو ظننت أن التخلص من كل الترخيم من عباراتك يجعل حجتك أكثر شرعيه أنت مخطىء
+PRED: 		لو ظننت أن التخلص من كل الترخيم من عباراتك يجعل حجتك أكثر شرعية أنت مخطئ
+SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B 2F+B B+B 2F+B
+TRG TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B 2M+B B+B 2M+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B 2F+B
+PROPOSED BY:	NA NA NA NA NA NA NA NA NA NA NA NA NA NA CBR
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		ذلك محض هراء ، كان بالإمكان أن تؤذي أحدهم .
+TRG:		ذلك محض هراء ، كان بالإمكان أن تؤذي أحدهم .
+PRED: 		ذلك محض هراء ، كان بالإمكان أن تؤذى أحدهم .
+SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+TRG TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B 2F+B B+B B+B
+PROPOSED BY:	NA NA NA NA NA NA NA MorphR NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		- انا البادئ ، لا يجب ان تطردي جينيس
+TRG:		- انا البادئ ، لا يجب ان تطرد جينيس
+PRED: 		- انا البادئة ، لا يجب ان تطرد جينيس
+SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B 2F+B B+B
+TRG TAGS:	B+B B+B B+B B+B B+B B+B B+B 2M+B B+B
+PRED SRC TAGS:	B+B B+B 1M+B B+B B+B B+B B+B 2F+B B+B
+PROPOSED BY:	NA NA MorphR NA NA NA NA MorphR NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		- انا البادئ ، لا يجب ان تطرد جينيس
+TRG:		- انا البادئ ، لا يجب ان تطرد جينيس
+PRED: 		- انا البادئة ، لا يجب ان تطرد جينيس
+SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B 2M+B B+B
+TRG TAGS:	B+B B+B B+B B+B B+B B+B B+B 2M+B B+B
+PRED SRC TAGS:	B+B B+B 1M+B B+B B+B B+B B+B 2M+B B+B
+PROPOSED BY:	NA NA MorphR NA NA NA NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		انا البروفسور . . د غرتزكي
+TRG:		انا البروفسورة . . د غرتزكي
+PRED: 		انا البروفيسور . . د غرتزكي
+SRC TAGS:	B+B 1M+B B+B B+B B+B B+B
+TRG TAGS:	B+B 1F+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B 1M+B B+B B+B B+B B+B
+PROPOSED BY:	NA MorphR NA NA NA NA
+ERROR Type:	Proposal
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		- إكتشفن رجاءا ما حصل لي فعلا " . "
+TRG:		- إكتشفوا رجاءا ما حصل لي فعلا " . "
+PRED: 		- اكتشفوا رجاءا ما حصل لي فعلا " . "
+SRC TAGS:	B+B 2F+B B+B B+B B+B B+B B+B B+B B+B B+B
+TRG TAGS:	B+B 2M+B B+B B+B B+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B 2F+B B+B B+B B+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA MorphR NA NA NA NA NA NA NA NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		حسنا ، اريدك ان تبدئي العد العكسي من
+TRG:		حسنا ، اريدك ان تبدا العد العكسي من
+PRED: 		حسنا ، اريدك ان تبدأ العد العكسي من
+SRC TAGS:	B+B B+B B+B B+B 2F+B B+B B+B B+B
+TRG TAGS:	B+B B+B B+B B+B 2M+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B 2F+B B+B B+B B+B
+PROPOSED BY:	NA NA NA NA CBR NA NA NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		. هذه محادثه . أنت كنت لا تصغي
+TRG:		. هذه محادثه . أنت كنت لا تصغ
+PRED: 		. هذه محادثه . أنت كنت لا تصغي
+SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B 2F+B
+TRG TAGS:	B+B B+B B+B B+B B+B B+B B+B 2M+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B 2M+B
+PROPOSED BY:	NA NA NA NA NA NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		جدتى ، ماذا تظنين نفسك فاعلة انزلي هنا الان .
+TRG:		جدى ، ماذا تظن نفسك فاعلا انزل هنا الان .
+PRED: 		جدي ، ماذا تظن نفسك فاعلا انزل هنا الان .
+SRC TAGS:	2F+B B+B B+B 2F+B B+B 2F+B 2F+B B+B B+B B+B
+TRG TAGS:	2M+B B+B B+B 2M+B B+B 2M+B 2M+B B+B B+B B+B
+PRED SRC TAGS:	2F+B B+B B+B 2F+B B+B 2F+B 2F+B B+B B+B B+B
+PROPOSED BY:	MorphR NA NA CBR NA CBR CBR NA NA NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		اذهبي ، عمك قي نهاية الطريق
+TRG:		اذهب ، عمك قي نهاية الطريق
+PRED: 		إذهب ، عمك قي نهاية الطريق
+SRC TAGS:	2F+B B+B B+B B+B B+B B+B
+TRG TAGS:	2M+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	2F+B B+B B+B B+B B+B B+B
+PROPOSED BY:	CBR NA NA NA NA NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		عذرا ، جنرالة موهنكي .
+TRG:		عذرا ، جنرال موهنكي .
+PRED: 		عذرا ، جنرالة موهنكي .
+SRC TAGS:	B+B B+B 2F+B B+B B+B
+TRG TAGS:	B+B B+B 2M+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B
+PROPOSED BY:	NA NA NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		أعترفى ، لقد أفلت بجريمة القتل ،
+TRG:		اعترف ، لقد أفلت بجريمة القتل ،
+PRED: 		أعترفى ، لقد أفلت بجريمة القتل ،
+SRC TAGS:	2F+B B+B B+B B+B B+B B+B B+B
+TRG TAGS:	2M+B B+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA NA NA NA NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		ابتعدي عني يا غبية - أنا آسف -
+TRG:		ابتعد عني يا غبي - أنا آسفة -
+PRED: 		ابتعد عني يا غبى - أنا آسفة -
+SRC TAGS:	2F+B B+B B+B 2F+B B+B B+B 1M+B B+B
+TRG TAGS:	2M+B B+B B+B 2M+B B+B B+B 1F+B B+B
+PRED SRC TAGS:	2F+B B+B B+B 2F+B B+B B+B 1M+B B+B
+PROPOSED BY:	CBR NA NA CBR NA NA CBR NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		ابتعدي عني يا غبية - أنا آسفة -
+TRG:		ابتعد عني يا غبي - أنا آسفة -
+PRED: 		ابتعد عني يا غبى - أنا آسفة -
+SRC TAGS:	2F+B B+B B+B 2F+B B+B B+B 1F+B B+B
+TRG TAGS:	2M+B B+B B+B 2M+B B+B B+B 1F+B B+B
+PRED SRC TAGS:	2F+B B+B B+B 2F+B B+B B+B 1F+B B+B
+PROPOSED BY:	CBR NA NA CBR NA NA NA NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		ها أنت يا لاعقة القضيب اللعينة
+TRG:		ها أنت يا لاعق القضيب اللعين
+PRED: 		ها أنت يا لاعقة القضيب اللعين
+SRC TAGS:	B+B B+B B+B 2F+B B+B 2F+B
+TRG TAGS:	B+B B+B B+B 2M+B B+B 2M+B
+PRED SRC TAGS:	B+B B+B B+B 2F+B B+B 2F+B
+PROPOSED BY:	NA NA NA OOV NA CBR
+ERROR Type:	Proposal
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		أستلقي التحية على ( تيري ) ؟
+TRG:		أستلقي التحية على ( تيري ) ؟
+PRED: 		استلق التحية على ( تيري ) ؟
+SRC TAGS:	2M+B B+B B+B B+B B+B B+B B+B
+TRG TAGS:	2M+B B+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	2F+B B+B B+B B+B B+B B+B B+B
+PROPOSED BY:	MorphR NA NA NA NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		أستلقين التحية على ( تيري ) ؟
+TRG:		أستلقي التحية على ( تيري ) ؟
+PRED: 		استلقوا التحية على ( تيري ) ؟
+SRC TAGS:	2F+B B+B B+B B+B B+B B+B B+B
+TRG TAGS:	2M+B B+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	2F+B B+B B+B B+B B+B B+B B+B
+PROPOSED BY:	MorphR NA NA NA NA NA NA
+ERROR Type:	Proposal
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		من المثير أن تكوني مجرمة ، أليس كذلك ؟
+TRG:		من المثير أن تكون مجرما ، أليس كذلك ؟
+PRED: 		من المثير أن تكون مجرم ، أليس كذلك ؟
+SRC TAGS:	B+B B+B B+B 2F+B 2F+B B+B B+B B+B B+B
+TRG TAGS:	B+B B+B B+B 2M+B 2M+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B 2F+B 2F+B B+B B+B B+B B+B
+PROPOSED BY:	NA NA NA CBR CBR NA NA NA NA
+ERROR Type:	Proposal
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		ولكن عليك ان تتذكري أنت لم تريدي .
+TRG:		ولكن عليك ان تتذكر أنت لم تريد .
+PRED: 		ولكن عليك ان تتذكر أنت لم ترد .
+SRC TAGS:	B+B B+B B+B 2F+B B+B B+B 2F+B B+B
+TRG TAGS:	B+B B+B B+B 2M+B B+B B+B 2M+B B+B
+PRED SRC TAGS:	B+B B+B B+B 2F+B B+B B+B 2F+B B+B
+PROPOSED BY:	NA NA NA CBR NA NA CBR NA
+ERROR Type:	Selection
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		كحاجب ، فإن ذلك شغلي مساندة القانون
+TRG:		كحاجبة ، فإن ذلك شغلي مساندة القانون
+PRED: 		كحاجب ، فإن ذلك شغلي مساندة القانون
+SRC TAGS:	1M+B B+B B+B B+B B+B B+B B+B
+TRG TAGS:	1F+B B+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	1M+B B+B B+B B+B B+B B+B B+B
+PROPOSED BY:	OOV NA NA NA NA NA NA
+ERROR Type:	Proposal
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		أكلمك لاحقا انتظري " براين "
+TRG:		أكلمك لاحقا انتظر " براين "
+PRED: 		أكلمك لاحقا إنتظر " براين "
+SRC TAGS:	B+B B+B 2F+B B+B B+B B+B
+TRG TAGS:	B+B B+B 2M+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B 2F+B B+B B+B B+B
+PROPOSED BY:	NA NA CBR NA NA NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		. . . مهلا ، لست شرطية
+TRG:		. . . مهلا ، لست شرطيا
+PRED: 		. . . مهلا ، لست شرطية
+SRC TAGS:	B+B B+B B+B B+B B+B B+B 2F+B
+TRG TAGS:	B+B B+B B+B B+B B+B B+B 2M+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B B+B 1F+B
+PROPOSED BY:	NA NA NA NA NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		. . . مهلا ، لست شرطيا
+TRG:		. . . مهلا ، لست شرطيا
+PRED: 		. . . مهلا ، لست شرطية
+SRC TAGS:	B+B B+B B+B B+B B+B B+B 2M+B
+TRG TAGS:	B+B B+B B+B B+B B+B B+B 2M+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B B+B 1M+B
+PROPOSED BY:	NA NA NA NA NA NA CBR
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		كاسي ، هل قطعتي القناة الصفراوية المشتركة ؟
+TRG:		كاسي ، هل قطعت القناة الصفراوية المشتركة ؟
+PRED: 		كاسي ، هل قطعتي القناة الصفراوية المشتركة ؟
+SRC TAGS:	B+B B+B B+B 2F+B B+B B+B B+B B+B
+TRG TAGS:	B+B B+B B+B 2M+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA NA NA NA NA NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		انظري بنفسك
+TRG:		انظر بنفسك
+PRED: 		إنظر بنفسك
+SRC TAGS:	2F+B B+B
+TRG TAGS:	2M+B B+B
+PRED SRC TAGS:	2F+B B+B
+PROPOSED BY:	CBR NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		أنا أعلم ، أنا حقا - - الرجال ، أنا فقط قائلا انها الحمار هو حجم ولاية تكساس .
+TRG:		أنا أعلم ، أنا حقا - - الرجال ، أنا فقط قائلا انها الحمار هو حجم ولاية تكساس .
+PRED: 		أنا أعلم ، أنا حقا - - الرجال ، أنا فقط قائلة انها الحمار هو حجم ولاية تكساس .
+SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+TRG TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B 1M+B B+B B+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA NA NA NA NA NA NA NA NA NA NA MorphR NA NA NA NA NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		أعربي عن نفسك !
+TRG:		أعرب عن نفسك !
+PRED: 		اعرب عن نفسك !
+SRC TAGS:	2F+B B+B B+B B+B
+TRG TAGS:	2M+B B+B B+B B+B
+PRED SRC TAGS:	2F+B B+B B+B B+B
+PROPOSED BY:	MorphR NA NA NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		أحتاجك لمعالجة الحقن وأنا المقابل
+TRG:		أحتاجك لمعالجة الحقن وأنا المقابل
+PRED: 		أحتاجك لمعالجة الحقن وأنا المقابلة
+SRC TAGS:	B+B B+B B+B B+B B+B
+TRG TAGS:	B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B 1M+B
+PROPOSED BY:	NA NA NA NA MorphR
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		لماذا ترتدين هذا الزى ؟
+TRG:		لماذا ترتدى هذا الزى ؟
+PRED: 		لماذا ترتدي هذا الزى ؟
+SRC TAGS:	B+B 2F+B B+B B+B B+B
+TRG TAGS:	B+B 2M+B B+B B+B B+B
+PRED SRC TAGS:	B+B 2F+B B+B B+B B+B
+PROPOSED BY:	NA CBR NA NA NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		يجب أن أكون الخطة لا ، أنا الطيار
+TRG:		يجب أن أكون الخطة لا ، أنا الطيار
+PRED: 		يجب أن أكون الخطة لا ، أنا الطيارة
+SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B
+TRG TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B 1M+B
+PROPOSED BY:	NA NA NA NA NA NA NA MorphR
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		لكنك لم تستجيبي
+TRG:		لكنك لم تستجيب
+PRED: 		لكنك لم تستجب
+SRC TAGS:	B+B B+B 2F+B
+TRG TAGS:	B+B B+B 2M+B
+PRED SRC TAGS:	B+B B+B 2F+B
+PROPOSED BY:	NA NA MorphR
+ERROR Type:	Selection
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		طومسون يريدك أن تبحثين تتواصلين مع العملاء ، تعدين مرافعاته
+TRG:		طومسون يريدك أن تبحث تتواصل مع العملاء ، تعد مرافعاته
+PRED: 		طومسون يريدك أن تبحث تتواصل مع العملاء ، تعدى مرافعاته
+SRC TAGS:	B+B B+B B+B 2F+B 2F+B B+B B+B B+B 2F+B B+B
+TRG TAGS:	B+B B+B B+B 2M+B 2M+B B+B B+B B+B 2M+B B+B
+PRED SRC TAGS:	B+B B+B B+B 2F+B 2F+B B+B B+B B+B 2F+B B+B
+PROPOSED BY:	NA NA NA CBR CBR NA NA NA MorphR NA
+ERROR Type:	Selection
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		- جيد ، إنتظريني بالأسفل
+TRG:		- جيد ، إنتظرني بالأسفل
+PRED: 		- جيد ، انتظرني بالأسفل
+SRC TAGS:	B+B B+B B+B 2F+B B+B
+TRG TAGS:	B+B B+B B+B 2M+B B+B
+PRED SRC TAGS:	B+B B+B B+B 2F+B B+B
+PROPOSED BY:	NA NA NA MorphR NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		آسف على إقحامك قبل أن تكوني مستعدة
+TRG:		آسفة على إقحامك قبل أن تكن مستعدا
+PRED: 		آسفة على إقحامك قبل أن تكون مستعدا
+SRC TAGS:	1M+B B+B B+B B+B B+B 2F+B 2F+B
+TRG TAGS:	1F+B B+B B+B B+B B+B 2M+B 2M+B
+PRED SRC TAGS:	1M+B B+B B+B B+B B+B 2F+B 2F+B
+PROPOSED BY:	CBR NA NA NA NA CBR CBR
+ERROR Type:	Proposal
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		آسفة على إقحامك قبل أن تكوني مستعدة
+TRG:		آسفة على إقحامك قبل أن تكن مستعدا
+PRED: 		آسفة على إقحامك قبل أن تكون مستعدا
+SRC TAGS:	1F+B B+B B+B B+B B+B 2F+B 2F+B
+TRG TAGS:	1F+B B+B B+B B+B B+B 2M+B 2M+B
+PRED SRC TAGS:	1F+B B+B B+B B+B B+B 2F+B 2F+B
+PROPOSED BY:	NA NA NA NA NA CBR CBR
+ERROR Type:	Proposal
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		أعلم حبيبتي ، لكن ليس بهذه البساطة .
+TRG:		أعلم حبيبي ، لكن ليس بهذه البساطة .
+PRED: 		أعلم حبيبتي ، لكن ليس بهذه البساطة .
+SRC TAGS:	B+B 2F+B B+B B+B B+B B+B B+B B+B
+TRG TAGS:	B+B 2M+B B+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA NA NA NA NA NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		اماه ، هذا الأمر ليس عني
+TRG:		أبتاه ، هذا الأمر ليس عني
+PRED: 		ابتاه ، هذا الأمر ليس عني
+SRC TAGS:	2F+B B+B B+B B+B B+B B+B
+TRG TAGS:	2M+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	2F+B B+B B+B B+B B+B B+B
+PROPOSED BY:	CBR NA NA NA NA NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		تذكري لو أنفجر الجهاز ستكونين معرضة
+TRG:		تذكر لو أنفجر الجهاز ستكون معرضا
+PRED: 		تذكر لو أنفجر الجهاز ستكون معرض
+SRC TAGS:	2F+B B+B B+B B+B 2F+B 2F+B
+TRG TAGS:	2M+B B+B B+B B+B 2M+B 2M+B
+PRED SRC TAGS:	2F+B B+B B+B B+B 2F+B 2F+B
+PROPOSED BY:	CBR NA NA NA CBR CBR
+ERROR Type:	Proposal
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		أشياء سرقتيها
+TRG:		أشياء سرقتها
+PRED: 		أشياء سرقتيها
+SRC TAGS:	B+B 2F+B
+TRG TAGS:	B+B 2M+B
+PRED SRC TAGS:	B+B B+B
+PROPOSED BY:	NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		أبتعدن عني .
+TRG:		أبتعدوا عني .
+PRED: 		ابتعدوا عني .
+SRC TAGS:	2F+B B+B B+B
+TRG TAGS:	2M+B B+B B+B
+PRED SRC TAGS:	2F+B B+B B+B
+PROPOSED BY:	MorphR NA NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		هل أنت حزينة بسبب الطلاق ؟
+TRG:		هل أنت حزين بسبب الطلاق ؟
+PRED: 		هل أنت حزينا بسبب الطلاق ؟
+SRC TAGS:	B+B B+B 2F+B B+B B+B B+B
+TRG TAGS:	B+B B+B 2M+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B 2F+B B+B B+B B+B
+PROPOSED BY:	NA NA CBR NA NA NA
+ERROR Type:	Proposal
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		أريدك أن تعرفي أين يحتجزونه ، وتأخذيني إليه .
+TRG:		أريدك أن تعرف أين يحتجزونه ، وتأخذني إليه .
+PRED: 		أريدك أن تعرف أين يحتجزونه ، وتأخذيني إليه .
+SRC TAGS:	B+B B+B 2F+B B+B B+B B+B 2F+B B+B B+B
+TRG TAGS:	B+B B+B 2M+B B+B B+B B+B 2M+B B+B B+B
+PRED SRC TAGS:	B+B B+B 2F+B B+B B+B B+B 2F+B B+B B+B
+PROPOSED BY:	NA NA CBR NA NA NA OOV NA NA
+ERROR Type:	Proposal
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		ألم ترتابي لكونك صادقت أحدهم بسرعة كبيرة ؟
+TRG:		ألم ترتاب لكونك صادقت أحدهم بسرعة كبيرة ؟
+PRED: 		ألم ترتب لكونك صادقت أحدهم بسرعة كبيرة ؟
+SRC TAGS:	B+B 2F+B B+B B+B B+B B+B B+B B+B
+TRG TAGS:	B+B 2M+B B+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B 2F+B B+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA MorphR NA NA NA NA NA NA
+ERROR Type:	Selection
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		اظنك حمقاء نوعا ما .
+TRG:		اظنك احمق نوعا ما .
+PRED: 		اظنك أحمق نوعا ما .
+SRC TAGS:	B+B 2F+B B+B B+B B+B
+TRG TAGS:	B+B 2M+B B+B B+B B+B
+PRED SRC TAGS:	B+B 2F+B B+B B+B B+B
+PROPOSED BY:	NA CBR NA NA NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		كنت مغرم بك بشدة ، ثقتك ، جمالك . . . أنثوتك الغير مبتذلة
+TRG:		كنت مغرمة بك بشدة ، ثقتك ، جمالك . . . رجولتك الغير مبتذلة
+PRED: 		كنت مغرمة بك بشدة ، ثقتك ، جمالك . . . أنثوتك الغير مبتذلة
+SRC TAGS:	B+B 1M+B B+B B+B B+B B+B B+B B+B B+B B+B B+B 2F+B B+B B+B
+TRG TAGS:	B+B 1F+B B+B B+B B+B B+B B+B B+B B+B B+B B+B 2M+B B+B B+B
+PRED SRC TAGS:	B+B 1M+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA CBR NA NA NA NA NA NA NA NA NA NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		كنت مغرمة بك بشدة ، ثقتك ، جمالك . . . أنثوتك الغير مبتذلة
+TRG:		كنت مغرمة بك بشدة ، ثقتك ، جمالك . . . رجولتك الغير مبتذلة
+PRED: 		كنت مغرمة بك بشدة ، ثقتك ، جمالك . . . أنثوتك الغير مبتذلة
+SRC TAGS:	B+B 1F+B B+B B+B B+B B+B B+B B+B B+B B+B B+B 2F+B B+B B+B
+TRG TAGS:	B+B 1F+B B+B B+B B+B B+B B+B B+B B+B B+B B+B 2M+B B+B B+B
+PRED SRC TAGS:	B+B 1F+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA NA NA NA NA NA NA NA NA NA NA NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		أعذريني ، هل تودى ممارسة الجنس معي ؟
+TRG:		أعذرني ، هل تود ممارسة الجنس معي ؟
+PRED: 		اعذرني ، هل تود ممارسة الجنس معي ؟
+SRC TAGS:	2F+B B+B B+B 2F+B B+B B+B B+B B+B
+TRG TAGS:	2M+B B+B B+B 2M+B B+B B+B B+B B+B
+PRED SRC TAGS:	2F+B B+B B+B 2F+B B+B B+B B+B B+B
+PROPOSED BY:	CBR NA NA CBR NA NA NA NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		هل تعلمين ماذا أقترح عليك ؟ ألقي نظرة على نفسك في المرآة لأنك فوضى
+TRG:		هل تعلم ماذا أقترح عليك ؟ ألق نظرة على نفسك في المرآة لأنك فوضى
+PRED: 		هل تعلم ماذا أقترح عليك ؟ ألق نظرة على نفسك في المرآة لأنك فوض
+SRC TAGS:	B+B 2F+B B+B B+B B+B B+B 2F+B B+B B+B B+B B+B B+B B+B B+B
+TRG TAGS:	B+B 2M+B B+B B+B B+B B+B 2M+B B+B B+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B 2F+B B+B B+B B+B B+B 2F+B B+B B+B B+B B+B B+B B+B 2F+B
+PROPOSED BY:	NA CBR NA NA NA NA CBR NA NA NA NA NA NA MorphR
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		قودي أنت
+TRG:		قود أنت
+PRED: 		قد أنت
+SRC TAGS:	2F+B B+B
+TRG TAGS:	2M+B B+B
+PRED SRC TAGS:	2F+B B+B
+PROPOSED BY:	CBR NA
+ERROR Type:	Proposal
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		قوليها بتركيز أشد . . .
+TRG:		قولها بتركيز أشد . . .
+PRED: 		قلها بتركيز أشد . . .
+SRC TAGS:	2F+B B+B B+B B+B B+B B+B
+TRG TAGS:	2M+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	2F+B B+B B+B B+B B+B B+B
+PROPOSED BY:	CBR NA NA NA NA NA
+ERROR Type:	Proposal
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		أجري العملية كأني عاشرت اي شخص
+TRG:		أجر العملية كأني عاشرت اي شخص
+PRED: 		أجري العملية كأني عاشرت اي شخص
+SRC TAGS:	2F+B B+B B+B B+B B+B B+B
+TRG TAGS:	2M+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA NA NA NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		فقط أنت كنت متأخرة
+TRG:		فقط أنت كنت متأخرا
+PRED: 		فقط أنت كنت متأخر
+SRC TAGS:	B+B B+B B+B 2F+B
+TRG TAGS:	B+B B+B B+B 2M+B
+PRED SRC TAGS:	B+B B+B B+B 2F+B
+PROPOSED BY:	NA NA NA CBR
+ERROR Type:	Proposal
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		ما الذي يؤهلك لأن تكوني صيدلانية في قسم الطوارئ ؟
+TRG:		ما الذي يؤهلك لأن تكون صيدلاني في قسم الطوارئ ؟
+PRED: 		ما الذي يؤهلك لأن تكون صيدلانيا في قسم الطوارئ ؟
+SRC TAGS:	B+B B+B B+B B+B 2F+B 2F+B B+B B+B B+B B+B
+TRG TAGS:	B+B B+B B+B B+B 2M+B 2M+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B 2F+B 2F+B B+B B+B B+B B+B
+PROPOSED BY:	NA NA NA NA CBR MorphR NA NA NA NA
+ERROR Type:	Selection
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		توقفي عن التذمر وأنزلي لإسفل خلال دقيقتين
+TRG:		توقف عن التذمر وأنزل لإسفل خلال دقيقتين
+PRED: 		توقف عن التذمر وانزل لإسفل خلال دقيقتين
+SRC TAGS:	2F+B B+B B+B 2F+B B+B B+B B+B
+TRG TAGS:	2M+B B+B B+B 2M+B B+B B+B B+B
+PRED SRC TAGS:	2F+B B+B B+B 2F+B B+B B+B B+B
+PROPOSED BY:	CBR NA NA MorphR NA NA NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		لقد استرجعتهم لن أنسى أبدا كم كنت مثيرة
+TRG:		لقد استرجعتهم لن أنسى أبدا كم كنت مثير
+PRED: 		لقد استرجعتهم لن أنسى أبدا كم كنت مثيرة
+SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B 2F+B
+TRG TAGS:	B+B B+B B+B B+B B+B B+B B+B 2M+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B 1F+B
+PROPOSED BY:	NA NA NA NA NA NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		لقد استرجعتهم لن أنسى أبدا كم كنت مثير
+TRG:		لقد استرجعتهم لن أنسى أبدا كم كنت مثير
+PRED: 		لقد استرجعتهم لن أنسى أبدا كم كنت مثيرة
+SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B 2M+B
+TRG TAGS:	B+B B+B B+B B+B B+B B+B B+B 2M+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B 1M+B
+PROPOSED BY:	NA NA NA NA NA NA NA CBR
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		لأنني أخوك الكبير
+TRG:		لأنني أختك الكبيرة
+PRED: 		لأنني أخوك الكبيرة
+SRC TAGS:	B+B 1M+B 1M+B
+TRG TAGS:	B+B 1F+B 1F+B
+PRED SRC TAGS:	B+B 1M+B 1M+B
+PROPOSED BY:	NA OOV CBR
+ERROR Type:	Proposal
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		( روني ) ، أعلم إنك لست سعيد للغاية ، لكن كزميل أعزب ، أدرك جيدا إنك سوف تعاود قدراتك ، ليس بسبب ذكائك أو حسن مظهرك ،
+TRG:		( روني ) ، أعلم إنك لست سعيد للغاية ، لكن كزميلة عزباء ، أدرك جيدا إنك سوف تعاود قدراتك ، ليس بسبب ذكائك أو حسن مظهرك ،
+PRED: 		( روني ) ، أعلم إنك لست سعيد للغاية ، لكن كزميل أعزب ، أدرك جيدا إنك سوف تعاود قدراتك ، ليس بسبب ذكائك أو حسن مظهرك ،
+SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B 2M+B B+B B+B B+B 1M+B 1M+B B+B B+B B+B B+B B+B 2M+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+TRG TAGS:	B+B B+B B+B B+B B+B B+B B+B 2M+B B+B B+B B+B 1F+B 1F+B B+B B+B B+B B+B B+B 2M+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B 2M+B B+B B+B B+B 2M+B 2M+B B+B B+B B+B B+B B+B 2M+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		( روني ) ، أعلم إنك لست سعيد للغاية ، لكن كزميلة عزباء ، أدرك جيدا إنك سوف تعاود قدراتك ، ليس بسبب ذكائك أو حسن مظهرك ،
+TRG:		( روني ) ، أعلم إنك لست سعيد للغاية ، لكن كزميلة عزباء ، أدرك جيدا إنك سوف تعاود قدراتك ، ليس بسبب ذكائك أو حسن مظهرك ،
+PRED: 		( روني ) ، أعلم إنك لست سعيد للغاية ، لكن كزميل أعزب ، أدرك جيدا إنك سوف تعاود قدراتك ، ليس بسبب ذكائك أو حسن مظهرك ،
+SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B 2M+B B+B B+B B+B 1F+B 1F+B B+B B+B B+B B+B B+B 2M+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+TRG TAGS:	B+B B+B B+B B+B B+B B+B B+B 2M+B B+B B+B B+B 1F+B 1F+B B+B B+B B+B B+B B+B 2M+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B 2M+B B+B B+B B+B 2F+B 2F+B B+B B+B B+B B+B B+B 2M+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA NA NA NA NA NA NA NA NA NA NA MorphR MorphR NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		( روني ) ، أعلم إنك لست سعيدة للغاية ، لكن كزميل أعزب ، أدرك جيدا إنك سوف تعاودين قدراتك ، ليس بسبب ذكائك أو حسن مظهرك ،
+TRG:		( روني ) ، أعلم إنك لست سعيد للغاية ، لكن كزميلة عزباء ، أدرك جيدا إنك سوف تعاود قدراتك ، ليس بسبب ذكائك أو حسن مظهرك ،
+PRED: 		( روني ) ، أعلم إنك لست سعيدا للغاية ، لكن كزميل أعزب ، أدرك جيدا إنك سوف تعاود قدراتك ، ليس بسبب ذكائك أو حسن مظهرك ،
+SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B 2F+B B+B B+B B+B 1M+B 1M+B B+B B+B B+B B+B B+B 2F+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+TRG TAGS:	B+B B+B B+B B+B B+B B+B B+B 2M+B B+B B+B B+B 1F+B 1F+B B+B B+B B+B B+B B+B 2M+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B 2F+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B 2F+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA NA NA NA NA NA NA CBR NA NA NA NA NA NA NA NA NA NA MorphR NA NA NA NA NA NA NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		( روني ) ، أعلم إنك لست سعيدة للغاية ، لكن كزميلة عزباء ، أدرك جيدا إنك سوف تعاودين قدراتك ، ليس بسبب ذكائك أو حسن مظهرك ،
+TRG:		( روني ) ، أعلم إنك لست سعيد للغاية ، لكن كزميلة عزباء ، أدرك جيدا إنك سوف تعاود قدراتك ، ليس بسبب ذكائك أو حسن مظهرك ،
+PRED: 		( روني ) ، أعلم إنك لست سعيدا للغاية ، لكن كزميل أعزب ، أدرك جيدا إنك سوف تعاود قدراتك ، ليس بسبب ذكائك أو حسن مظهرك ،
+SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B 2F+B B+B B+B B+B 1F+B 1F+B B+B B+B B+B B+B B+B 2F+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+TRG TAGS:	B+B B+B B+B B+B B+B B+B B+B 2M+B B+B B+B B+B 1F+B 1F+B B+B B+B B+B B+B B+B 2M+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B 2F+B B+B B+B B+B 2F+B 2F+B B+B B+B B+B B+B B+B 2F+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA NA NA NA NA NA NA CBR NA NA NA MorphR MorphR NA NA NA NA NA MorphR NA NA NA NA NA NA NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		لذا منذ متى وأتت تتحدثين معه ؟
+TRG:		لذا منذ متى وأنت تتحدث معه ؟
+PRED: 		لذا منذ متى وأتت تتحدث معه ؟
+SRC TAGS:	B+B B+B B+B 2F+B 2F+B B+B B+B
+TRG TAGS:	B+B B+B B+B 2M+B 2M+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B 2F+B B+B B+B
+PROPOSED BY:	NA NA NA NA CBR NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		. إصعدن إلى السيارة . سوف ألحقكن
+TRG:		. إصعدوا إلى السيارة . سوف ألحقكم
+PRED: 		. اصعدوا إلى السيارة . سوف ألحقكم
+SRC TAGS:	B+B 2F+B B+B B+B B+B B+B B+2F
+TRG TAGS:	B+B 2M+B B+B B+B B+B B+B B+2M
+PRED SRC TAGS:	B+B 2F+B B+B B+B B+B B+B B+2F
+PROPOSED BY:	NA MorphR NA NA NA NA MorphR
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		أنت فعلا تبدو كالغبية ، و إن يكن ؟
+TRG:		أنت فعلا تبدو كالغبي ، و إن يكن ؟
+PRED: 		أنت فعلا يبدو كالغبي ، و إن يكن ؟
+SRC TAGS:	B+B B+B B+B 2F+B B+B B+B B+B B+B B+B
+TRG TAGS:	B+B B+B B+B 2M+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B 2F+B 2F+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA NA CBR MorphR NA NA NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		- الآن ، سيري بالممر وكأنه يومك المميز .
+TRG:		- الآن ، سير بالممر وكأنه يومك المميز .
+PRED: 		- الآن ، سر بالممر وكأنه يومك المميز .
+SRC TAGS:	B+B B+B B+B 2F+B B+B B+B B+B B+B B+B
+TRG TAGS:	B+B B+B B+B 2M+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B 2F+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA NA NA CBR NA NA NA NA NA
+ERROR Type:	Proposal
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		إن كانت لديك معلومات أخرى أخبريني بها ملازمة
+TRG:		إن كانت لديك معلومات أخرى أخبرني بها ملازم
+PRED: 		إن كانت لديك معلومات أخرى أخبرني بها ملازمة
+SRC TAGS:	B+B B+B B+B B+B B+B 2F+B B+B 2F+B
+TRG TAGS:	B+B B+B B+B B+B B+B 2M+B B+B 2M+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B 2F+B B+B B+B
+PROPOSED BY:	NA NA NA NA NA CBR NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		أستعترفين أنك . . .
+TRG:		أستعترف أنك . . .
+PRED: 		أستعترفين أنك . . .
+SRC TAGS:	2F+B B+B B+B B+B B+B
+TRG TAGS:	2M+B B+B B+B B+B B+B
+PRED SRC TAGS:	2F+B B+B B+B B+B B+B
+PROPOSED BY:	OOV NA NA NA NA
+ERROR Type:	Proposal
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		أتخشين بأن تخسري شقتك الجميلة ؟
+TRG:		أتخشى بأن تخسر شقتك الجميلة ؟
+PRED: 		أتخشين بأن تخسر شقتك الجميلة ؟
+SRC TAGS:	2F+B B+B 2F+B B+B B+B B+B
+TRG TAGS:	2M+B B+B 2M+B B+B B+B B+B
+PRED SRC TAGS:	2F+B B+B 2F+B B+B B+B B+B
+PROPOSED BY:	OOV NA CBR NA NA NA
+ERROR Type:	Proposal
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		كوني اتعلمين من هذا ؟
+TRG:		كوني أتعلم من هذا ؟
+PRED: 		كن أتعلم من هذا ؟
+SRC TAGS:	B+B 2F+B B+B B+B B+B
+TRG TAGS:	B+B 2M+B B+B B+B B+B
+PRED SRC TAGS:	2F+B 2F+B B+B B+B B+B
+PROPOSED BY:	CBR CBR NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		، اعتبريه رمزا لفجرا جديد ونهايتك
+TRG:		، أعتبره رمزا لفجرا جديد ونهايتك
+PRED: 		، اعتبره رمزا لفجرا جديد ونهايتك
+SRC TAGS:	B+B 2F+B B+B B+B B+B B+B
+TRG TAGS:	B+B 2M+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B 2F+B B+B B+B B+B B+B
+PROPOSED BY:	NA MorphR NA NA NA NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		وبمعنى آخر إذا استطعت أن تريهم إذا يستطيعون أن يروك فكوني حذرة
+TRG:		وبمعنى آخر إذا استطعت أن تراهم إذا يستطيعون أن يروك فكن حذرا
+PRED: 		وبمعنى آخر إذا استطعت أن تريهم إذا يستطيعون أن يروك فكن حذرا
+SRC TAGS:	B+B B+B B+B B+B B+B 2F+B B+B B+B B+B B+B 2F+B 2F+B
+TRG TAGS:	B+B B+B B+B B+B B+B 2M+B B+B B+B B+B B+B 2M+B 2M+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B 2F+B B+B B+B B+B B+B 2F+B 2F+B
+PROPOSED BY:	NA NA NA NA NA MorphR NA NA NA NA MorphR CBR
+ERROR Type:	Selection
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		- تعرفي ، أنا أبوها .
+TRG:		- تعرف ، أنا أمها .
+PRED: 		- تعرف ، أنا آبياتها .
+SRC TAGS:	B+B 2F+B B+B B+B 1M+B B+B
+TRG TAGS:	B+B 2M+B B+B B+B 1F+B B+B
+PRED SRC TAGS:	B+B 2F+B B+B B+B 1M+B B+B
+PROPOSED BY:	NA CBR NA NA MorphR NA
+ERROR Type:	Proposal
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		- تعرف ، أنا أبوها .
+TRG:		- تعرف ، أنا أمها .
+PRED: 		- تعرف ، أنا آبياتها .
+SRC TAGS:	B+B 2M+B B+B B+B 1M+B B+B
+TRG TAGS:	B+B 2M+B B+B B+B 1F+B B+B
+PRED SRC TAGS:	B+B 2M+B B+B B+B 1M+B B+B
+PROPOSED BY:	NA NA NA NA MorphR NA
+ERROR Type:	Proposal
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		الشرطة ستغيير الامور ببساطة وتجعلك تبدين أنك إمرأة سيئة
+TRG:		الشرطة ستغيير الامور ببساطة وتجعلك تبدو أنك رجل سيئ
+PRED: 		الشرطة ستغيير الامور ببساطة وتجعلك تبدو أنك رجل سيء
+SRC TAGS:	B+B B+B B+B B+B B+B 2F+B B+B 2F+B 2F+B
+TRG TAGS:	B+B B+B B+B B+B B+B 2M+B B+B 2M+B 2M+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B 2F+B B+B 2F+B 2F+B
+PROPOSED BY:	NA NA NA NA NA CBR NA CBR CBR
+ERROR Type:	Selection
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		- ماكان عليك بأن تكوني خشنة جدا هكذا .
+TRG:		- ماكان عليك بأن تكون خشن جدا هكذا .
+PRED: 		- ماكان عليك بأن تكون خشنا جدا هكذا .
+SRC TAGS:	B+B B+B B+B B+B 2F+B 2F+B B+B B+B B+B
+TRG TAGS:	B+B B+B B+B B+B 2M+B 2M+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B 2F+B 2F+B B+B B+B B+B
+PROPOSED BY:	NA NA NA NA CBR MorphR NA NA NA
+ERROR Type:	Selection
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		انا لست متأكدا من هذا أيتها المفتشة .
+TRG:		انا لست متأكدة من هذا ايها المفتش .
+PRED: 		انا لست متأكدة من هذا أيها المفتش .
+SRC TAGS:	B+B B+B 1M+B B+B B+B 2F+B 2F+B B+B
+TRG TAGS:	B+B B+B 1F+B B+B B+B 2M+B 2M+B B+B
+PRED SRC TAGS:	B+B B+B 1M+B B+B B+B 2F+B 2F+B B+B
+PROPOSED BY:	NA NA CBR NA NA CBR CBR NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		انا لست متأكدة من هذا أيتها المفتشة .
+TRG:		انا لست متأكدة من هذا ايها المفتش .
+PRED: 		انا لست متأكدة من هذا أيها المفتش .
+SRC TAGS:	B+B B+B 1F+B B+B B+B 2F+B 2F+B B+B
+TRG TAGS:	B+B B+B 1F+B B+B B+B 2M+B 2M+B B+B
+PRED SRC TAGS:	B+B B+B 1F+B B+B B+B 2F+B 2F+B B+B
+PROPOSED BY:	NA NA NA NA NA CBR CBR NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		- ابعدي يداك . . . . .
+TRG:		- أبعد يداك . . . . .
+PRED: 		- ابعد يداك . . . . .
+SRC TAGS:	B+B 2F+B B+B B+B B+B B+B B+B B+B
+TRG TAGS:	B+B 2M+B B+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B 2F+B B+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA CBR NA NA NA NA NA NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		ه . أ . غ . أ . م ، " هل أنت غبية أم ماذا ؟ "
+TRG:		ه . أ . غ . أ . م ، " هل أنت غبى أم ماذا ؟ "
+PRED: 		ه . أ . غ . أ . م ، " هل أنت غبي أم ماذا ؟ "
+SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B 2F+B B+B B+B B+B B+B
+TRG TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B 2M+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B 2F+B B+B B+B B+B B+B
+PROPOSED BY:	NA NA NA NA NA NA NA NA NA NA NA NA NA CBR NA NA NA NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		إذا إبقي هنا
+TRG:		إذا ابق هنا
+PRED: 		إذا إبق هنا
+SRC TAGS:	B+B 2F+B B+B
+TRG TAGS:	B+B 2M+B B+B
+PRED SRC TAGS:	B+B 2F+B B+B
+PROPOSED BY:	NA CBR NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		أنت خجولة نوعا ما
+TRG:		أنت خجولا نوعا ما
+PRED: 		أنت خجول نوعا ما
+SRC TAGS:	B+B 2F+B B+B B+B
+TRG TAGS:	B+B 2M+B B+B B+B
+PRED SRC TAGS:	B+B 2F+B B+B B+B
+PROPOSED BY:	NA CBR NA NA
+ERROR Type:	Proposal
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		- لماذا لا تأتى معى ؟
+TRG:		- لماذا لا تأتين معى ؟
+PRED: 		- لماذا لا تأتى معى ؟
+SRC TAGS:	B+B B+B B+B 2F+B B+B B+B
+TRG TAGS:	B+B B+B B+B 2M+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B 2M+B B+B B+B
+PROPOSED BY:	NA NA NA NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		- لماذا لا تأتين معى ؟
+TRG:		- لماذا لا تأتين معى ؟
+PRED: 		- لماذا لا تأتي معى ؟
+SRC TAGS:	B+B B+B B+B 2M+B B+B B+B
+TRG TAGS:	B+B B+B B+B 2M+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B 2F+B B+B B+B
+PROPOSED BY:	NA NA NA CBR NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		سونيا ) وستجعلكن تلتفن حول اصبعها )
+TRG:		سونيا ) وستجعلكم تلتفون حول اصبعها )
+PRED: 		سونيا ) وستجعلكم تلتفن حول اصبعها )
+SRC TAGS:	B+B B+B B+2F 2F+B B+B B+B B+B
+TRG TAGS:	B+B B+B B+2M 2M+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+2F 2F+B B+B B+B B+B
+PROPOSED BY:	NA NA MorphR OOV NA NA NA
+ERROR Type:	Proposal
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		اوكي ، متى الكابتن قال لك ، ستمثلين انك متفاجئة .
+TRG:		اوكي ، متى الكابتن قال لك ، ستمثل انك متفاجئ .
+PRED: 		اوكي ، متى الكابتن قال لك ، ستمثل انك متفاجئة .
+SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B 2F+B B+B 2F+B B+B
+TRG TAGS:	B+B B+B B+B B+B B+B B+B B+B 2M+B B+B 2M+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B 2F+B B+B 2F+B B+B
+PROPOSED BY:	NA NA NA NA NA NA NA CBR NA OOV NA
+ERROR Type:	Proposal
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		. لقد احضرنا بعض الطعام لكن يكفيكن لبضع ايام
+TRG:		. لقد احضرنا بعض الطعام لكم يكفيكم لبضع ايام
+PRED: 		. لقد احضرنا بعض الطعام لكن يكفيكم لبضع ايام
+SRC TAGS:	B+B B+B B+B B+B B+B B+2F B+2F B+B B+B
+TRG TAGS:	B+B B+B B+B B+B B+B B+2M B+2M B+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B B+B B+2F B+B B+B
+PROPOSED BY:	NA NA NA NA NA NA MorphR NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		أهلا ، أنه أنا .
+TRG:		أهلا ، أنها أنا .
+PRED: 		أهلا ، إنها أنا .
+SRC TAGS:	B+B B+B B+1M B+B B+B
+TRG TAGS:	B+B B+B B+1F B+B B+B
+PRED SRC TAGS:	B+B B+B 1M+1M B+B B+B
+PROPOSED BY:	NA NA CBR NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		- أريدك فقط أن تبقي رأيك متفتحا لحضارات أخرى
+TRG:		- أريدك فقط أن تبقين رأيك متفتحا لحضارات أخرى
+PRED: 		- أريدك فقط أن تبقي رأيك متفتحا لحضارات أخرى
+SRC TAGS:	B+B B+B B+B B+B 2F+B B+B B+B B+B B+B
+TRG TAGS:	B+B B+B B+B B+B 2M+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA NA NA NA NA NA NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		- أريدك فقط أن تبقين رأيك متفتحا لحضارات أخرى
+TRG:		- أريدك فقط أن تبقين رأيك متفتحا لحضارات أخرى
+PRED: 		- أريدك فقط أن تبقوا رأيك متفتحا لحضارات أخرى
+SRC TAGS:	B+B B+B B+B B+B 2M+B B+B B+B B+B B+B
+TRG TAGS:	B+B B+B B+B B+B 2M+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B 2F+B B+B B+B B+B B+B
+PROPOSED BY:	NA NA NA NA CBR NA NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		هل تري ذلك ، في الايام القديمة
+TRG:		هل تري ذلك ، في الايام القديمة
+PRED: 		هل ترى ذلك ، في الايام القديمة
+SRC TAGS:	B+B 2M+B B+B B+B B+B B+B B+B
+TRG TAGS:	B+B 2M+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B 2F+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA CBR NA NA NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		هل ترين ذلك ، في الايام القديمة
+TRG:		هل تري ذلك ، في الايام القديمة
+PRED: 		هل ترى ذلك ، في الايام القديمة
+SRC TAGS:	B+B 2F+B B+B B+B B+B B+B B+B
+TRG TAGS:	B+B 2M+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B 2F+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA CBR NA NA NA NA NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		لأكون مرافقك ؟
+TRG:		لأكون مرافقك ؟
+PRED: 		لأكون مرافقتك ؟
+SRC TAGS:	B+B B+B B+B
+TRG TAGS:	B+B B+B B+B
+PRED SRC TAGS:	B+B 1M+B B+B
+PROPOSED BY:	NA MorphR NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		أسمعي أعطيني الهاتف .
+TRG:		أسمع أعطني الهاتف .
+PRED: 		اسمع اعطيني الهاتف .
+SRC TAGS:	2F+B 2F+B B+B B+B
+TRG TAGS:	2M+B 2M+B B+B B+B
+PRED SRC TAGS:	2F+B 2F+B B+B B+B
+PROPOSED BY:	CBR CBR NA NA
+ERROR Type:	Proposal
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		انه غير مهتم سوف تشترين خاتم آخر
+TRG:		انه غير مهتم سوف تشتري خاتم آخر
+PRED: 		انه غير مهتم سوف تشترى خاتم آخر
+SRC TAGS:	B+B B+B B+B B+B 2F+B B+B B+B
+TRG TAGS:	B+B B+B B+B B+B 2M+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B 2F+B B+B B+B
+PROPOSED BY:	NA NA NA NA CBR NA NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		" مارشال " ، أنت ستخوضين أكبر شجار في حياتك يجب أن تكوني مستعدة ، يجب أن تكوني قاسية
+TRG:		" مارشال " ، أنت ستخوض أكبر شجار في حياتك يجب أن تكون مستعدا ، يجب أن تكون قاس
+PRED: 		" مارشال " ، أنت ستخوض أكبر شجار في حياتك يجب أن تكون مستعدا ، يجب أن تكون قاسيا
+SRC TAGS:	B+B B+B B+B B+B B+B 2F+B B+B B+B B+B B+B B+B B+B 2F+B 2F+B B+B B+B B+B 2F+B 2F+B
+TRG TAGS:	B+B B+B B+B B+B B+B 2M+B B+B B+B B+B B+B B+B B+B 2M+B 2M+B B+B B+B B+B 2M+B 2M+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B 2F+B B+B B+B B+B B+B B+B B+B 2F+B 2F+B B+B B+B B+B 2F+B 2F+B
+PROPOSED BY:	NA NA NA NA NA MorphR NA NA NA NA NA NA CBR CBR NA NA NA CBR CBR
+ERROR Type:	Proposal
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		تروقينني أيضا
+TRG:		تروقني أيضا
+PRED: 		ترقني أيضا
+SRC TAGS:	2F+B B+B
+TRG TAGS:	2M+B B+B
+PRED SRC TAGS:	2F+B B+B
+PROPOSED BY:	MorphR NA
+ERROR Type:	Selection
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		- انت لا تستطيعين أن .
+TRG:		- انت لا يستطيع أن .
+PRED: 		- انت لا تستطيع أن .
+SRC TAGS:	B+B B+B B+B 2F+B B+B B+B
+TRG TAGS:	B+B B+B B+B 2M+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B 2F+B B+B B+B
+PROPOSED BY:	NA NA NA CBR NA NA
+ERROR Type:	Proposal
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		سأكره نفسي على هذا السؤال لكن ، كيف تشفين مرضا لا شفاء منه ؟
+TRG:		سأكره نفسي على هذا السؤال لكن ، كيف تشفي مرضا لا شفاء منه ؟
+PRED: 		سأكره نفسي على هذا السؤال لكن ، كيف تشفى مرضا لا شفاء منه ؟
+SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B 2F+B B+B B+B B+B B+B B+B
+TRG TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B 2M+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B 2F+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA NA NA NA NA NA NA NA CBR NA NA NA NA NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		لا تخبريني أنك لست جائعة .
+TRG:		لا تخبرني أنك لست جائع .
+PRED: 		لا تخبرني أنك لست جائعا .
+SRC TAGS:	B+B 2F+B B+B B+B 2F+B B+B
+TRG TAGS:	B+B 2M+B B+B B+B 2M+B B+B
+PRED SRC TAGS:	B+B 2F+B B+B B+B 2F+B B+B
+PROPOSED BY:	NA CBR NA NA CBR NA
+ERROR Type:	Proposal
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		- آمل أن تكوني سعيدة
+TRG:		- آمل أن تكون سعيد
+PRED: 		- آمل أن تكون سعيدا
+SRC TAGS:	B+B B+B B+B 2F+B 2F+B
+TRG TAGS:	B+B B+B B+B 2M+B 2M+B
+PRED SRC TAGS:	B+B B+B B+B 2F+B 2F+B
+PROPOSED BY:	NA NA NA CBR CBR
+ERROR Type:	Selection
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		قابليها في الخارج إن أردت
+TRG:		قابليها في الخارج إن أردت
+PRED: 		قابلها في الخارج إن أردت
+SRC TAGS:	B+B B+B B+B B+B B+B
+TRG TAGS:	B+B B+B B+B B+B B+B
+PRED SRC TAGS:	2F+B B+B B+B B+B B+B
+PROPOSED BY:	MorphR NA NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		وان كنت اعرف بانكن لن تقتلننى ، فكيف ستهددننى كى اعطيكن اياه ؟
+TRG:		وان كنت اعرف بانكم لن تقتلونى ، فكيف ستهددوننى كى اعطيكم اياه ؟
+PRED: 		وان كنت اعرف بأنكم لن تقتلوني ، فكيف ستهددونني كى أعطيكم اياه ؟
+SRC TAGS:	B+B B+B B+B B+2F B+B 2F+B B+B B+B 2F+B B+B B+2F B+B B+B
+TRG TAGS:	B+B B+B B+B B+2M B+B 2M+B B+B B+B 2M+B B+B B+2M B+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+2F B+B 2F+B B+B B+B 2F+B B+B B+2F B+B B+B
+PROPOSED BY:	NA NA NA MorphR NA MorphR NA NA MorphR NA MorphR NA NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		( مرحبا ، إنه ، أنا عند ( ديف " " ألعب البوكر ، وإني أربح إنظري ، لعلمك فقط "
+TRG:		( مرحبا ، إنه ، أنا عند ( ديف " " ألعب البوكر ، وإني أربح إنظر ، لعلمك فقط "
+PRED: 		( مرحبا ، إنه ، أنا عند ( ديف " " ألعب البوكر ، وإني أربح انظر ، لعلمك فقط "
+SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B 2F+B B+B B+B B+B B+B
+TRG TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B 2M+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B 2F+B B+B B+B B+B B+B
+PROPOSED BY:	NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA CBR NA NA NA NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		لتجبرنى على أن أترك المنزل ، أليس كذلك ؟ لكى تستطيعين أن تنقذي العالم
+TRG:		لتجبرنى على أن أترك المنزل ، أليس كذلك ؟ لكى تستطيع أن تنقذ العالم
+PRED: 		ليجبرني على أن أترك المنزل ، أليس كذلك ؟ لكى تستطيع أن تنقذ العالم
+SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B 2F+B B+B 2F+B B+B
+TRG TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B 2M+B B+B 2M+B B+B
+PRED SRC TAGS:	2F+B B+B B+B B+B B+B B+B B+B B+B B+B B+B 2F+B B+B 2F+B B+B
+PROPOSED BY:	MorphR NA NA NA NA NA NA NA NA NA CBR NA MorphR NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		قلت املئيه لنا ، يا سافلة
+TRG:		قلت املئه لنا ، يا سافل
+PRED: 		قلت املأه لنا ، يا سافل
+SRC TAGS:	B+B 2F+B B+B B+B B+B 2F+B
+TRG TAGS:	B+B 2M+B B+B B+B B+B 2M+B
+PRED SRC TAGS:	B+B 2F+B B+B B+B B+B 2F+B
+PROPOSED BY:	NA CBR NA NA NA CBR
+ERROR Type:	Proposal
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		من الجيد عودتك يا سيدتي
+TRG:		من الجيد عودتك يا سيدى
+PRED: 		من الجيد عودتك يا سيدي
+SRC TAGS:	B+B B+B B+B B+B 2F+B
+TRG TAGS:	B+B B+B B+B B+B 2M+B
+PRED SRC TAGS:	B+B B+B B+B B+B 2F+B
+PROPOSED BY:	NA NA NA NA CBR
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		عودن للقائي عندما تحلن الأمر
+TRG:		عودوا للقائي عندما تحلون الأمر
+PRED: 		عودوا للقائي عندما تحيلون الأمر
+SRC TAGS:	2F+B B+B B+B 2F+B B+B
+TRG TAGS:	2M+B B+B B+B 2M+B B+B
+PRED SRC TAGS:	2F+B B+B B+B 2F+B B+B
+PROPOSED BY:	CBR NA NA MorphR NA
+ERROR Type:	Proposal
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		أعطيني حصتك من الكنز ، وستأخذين القرن
+TRG:		أعطني حصتك من الكنز ، وستأخذ القرن
+PRED: 		اعطني حصتك من الكنز ، وستأخذ القرن
+SRC TAGS:	2F+B B+B B+B B+B B+B 2F+B B+B
+TRG TAGS:	2M+B B+B B+B B+B B+B 2M+B B+B
+PRED SRC TAGS:	2F+B B+B B+B B+B B+B 2F+B B+B
+PROPOSED BY:	CBR NA NA NA NA MorphR NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		وانت من تسدي إليها النصح ؟
+TRG:		وانت من تسدي إليها النصح ؟
+PRED: 		وانت من تسد إليها النصح ؟
+SRC TAGS:	B+B B+B 2M+B B+B B+B B+B
+TRG TAGS:	B+B B+B 2M+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B 2F+B B+B B+B B+B
+PROPOSED BY:	NA NA CBR NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		ربما من كثرة تركيزك على كيفية تصورك الناس لكي لم تعودي تعرفي نفسك
+TRG:		ربما من كثرة تركيزك على كيفية تصورك الناس لكي لم تعود تعرف نفسك
+PRED: 		ربما من كثرة تركيزك على كيفية تصورك الناس لكي لم تعد تعرف نفسك
+SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B 2F+B 2F+B B+B
+TRG TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B 2M+B 2M+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B 2F+B 2F+B B+B
+PROPOSED BY:	NA NA NA NA NA NA NA NA NA NA CBR CBR NA
+ERROR Type:	Selection
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		، أريد منك الإتصال بمشرحة مقاطعة كمبرلاند إعرفي ما إذا كانو قد انتهوا من تشريح ويل بالينت حتى الان
+TRG:		، أريد منك الإتصال بمشرحة مقاطعة كمبرلاند إعرف ما إذا كانو قد انتهوا من تشريح ويل بالينت حتى الان
+PRED: 		، أريد منك الإتصال بمشرحة مقاطعة كمبرلاند اعرف ما إذا كانو قد انتهوا من تشريح ويل بالينت حتى الان
+SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B 2F+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+TRG TAGS:	B+B B+B B+B B+B B+B B+B B+B 2M+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B 2F+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA NA NA NA NA NA NA MorphR NA NA NA NA NA NA NA NA NA NA NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		شاذة
+TRG:		شاذا
+PRED: 		شاذ
+SRC TAGS:	2F+B
+TRG TAGS:	2M+B
+PRED SRC TAGS:	2F+B
+PROPOSED BY:	CBR
+ERROR Type:	Selection
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		انا متأكد ، كل كلمه فيه هي الحقيقة
+TRG:		انا متأكدة ، كل كلمه فيه هي الحقيقة
+PRED: 		انا متأكده ، كل كلمه فيه هي الحقيقة
+SRC TAGS:	B+B 1M+B B+B B+B B+B B+B B+B B+B
+TRG TAGS:	B+B 1F+B B+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B 1M+B B+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA CBR NA NA NA NA NA NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		. . . . أنا لا آت إلى مقر عملك و أصفع ال
+TRG:		. . . . أنا لا آت إلى مقر عملك و أصفع ال
+PRED: 		. . . . أنا لا آتية إلى مقر عملك و أصفع ال
+SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+TRG TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B B+B 1M+B B+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA NA NA NA NA NA MorphR NA NA NA NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		محرر ياسيدي ، سمعت أن لديك سيارة جديدة
+TRG:		محررة ياسيدي ، سمعت أن لديك سيارة جديدة
+PRED: 		محرر ياسيدي ، سمعت أن لديك سيارة جديدة
+SRC TAGS:	1M+B 2M+B B+B B+B B+B B+B B+B B+B
+TRG TAGS:	1F+B 2M+B B+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B 2M+B B+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA NA NA NA NA NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		محرر ياسيدتي ، سمعت أن لديك سيارة جديدة
+TRG:		محررة ياسيدي ، سمعت أن لديك سيارة جديدة
+PRED: 		محرر ياسيدي ، سمعت أن لديك سيارة جديدة
+SRC TAGS:	1M+B 2F+B B+B B+B B+B B+B B+B B+B
+TRG TAGS:	1F+B 2M+B B+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B 2F+B B+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA CBR NA NA NA NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		هذا أنا
+TRG:		هذه أنا
+PRED: 		هذا أنا
+SRC TAGS:	1M+B B+B
+TRG TAGS:	1F+B B+B
+PRED SRC TAGS:	B+B B+B
+PROPOSED BY:	NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		هل تقوين بذلك من خلال مدرستك ؟
+TRG:		هل تقوي بذلك من خلال مدرستك ؟
+PRED: 		هل تقوى بذلك من خلال مدرستك ؟
+SRC TAGS:	B+B 2F+B B+B B+B B+B B+B B+B
+TRG TAGS:	B+B 2M+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B 2F+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA MorphR NA NA NA NA NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		- و هل ترين دائما جدتك ( إيميلى ) ؟
+TRG:		- و هل ترى دائما جدتك ( إيميلى ) ؟
+PRED: 		- و هل ترون دائما جدتك ( إيميلى ) ؟
+SRC TAGS:	B+B B+B B+B 2F+B B+B B+B B+B B+B B+B B+B
+TRG TAGS:	B+B B+B B+B 2M+B B+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B 2F+B B+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA NA NA CBR NA NA NA NA NA NA
+ERROR Type:	Selection
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		حسنا ، ترتبت علي مشاكل عدة لأحل لك مشكلة الفستان هذا وأظن على الأقل أني أستحق أن أراك مرتديته
+TRG:		حسنا ، ترتبت علي مشاكل عدة لأحل لك مشكلة الفستان هذا وأظن على الأقل أني أستحق أن أراك مرتديه
+PRED: 		حسنا ، ترتبت علي مشاكل عدة لأحل لك مشكلة الفستان هذا وأظن على الأقل أني أستحق أن أراك مرتديته
+SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B 2F+B
+TRG TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B 2M+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B 2F+B
+PROPOSED BY:	NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA OOV
+ERROR Type:	Proposal
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		انتظري لا أستطيع ذلك
+TRG:		انتظر لا أستطيع ذلك
+PRED: 		إنتظر لا أستطيع ذلك
+SRC TAGS:	2F+B B+B B+B B+B
+TRG TAGS:	2M+B B+B B+B B+B
+PRED SRC TAGS:	2F+B B+B B+B B+B
+PROPOSED BY:	CBR NA NA NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		ولكن ، تعلمين ، هذا ليس أنا
+TRG:		ولكن ، تعلم ، هذه ليست أنا
+PRED: 		ولكن ، تعلم ، هذا ليس أنا
+SRC TAGS:	B+B B+B 2F+B B+B 1M+B 1M+B B+B
+TRG TAGS:	B+B B+B 2M+B B+B 1F+B 1F+B B+B
+PRED SRC TAGS:	B+B B+B 2F+B B+B B+B B+B B+B
+PROPOSED BY:	NA NA CBR NA NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		ولكن ، تعلم ، هذا ليس أنا
+TRG:		ولكن ، تعلم ، هذه ليست أنا
+PRED: 		ولكن ، تعلم ، هذا ليس أنا
+SRC TAGS:	B+B B+B 2M+B B+B 1M+B 1M+B B+B
+TRG TAGS:	B+B B+B 2M+B B+B 1F+B 1F+B B+B
+PRED SRC TAGS:	B+B B+B 2M+B B+B B+B B+B B+B
+PROPOSED BY:	NA NA NA NA NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		ولم اتراجع لانك مرتبطه جيدا بشخص يحميكى .
+TRG:		ولم اتراجع لانك مرتبط جيدا بشخص يحميك .
+PRED: 		ولم اتراجع لانك مرتبطا جيدا بشخص يحميكى .
+SRC TAGS:	B+B B+B B+B 2F+B B+B B+B 2F+B B+B
+TRG TAGS:	B+B B+B B+B 2M+B B+B B+B 2M+B B+B
+PRED SRC TAGS:	B+B B+B B+B 2F+B B+B B+B 2F+B B+B
+PROPOSED BY:	NA NA NA MorphR NA NA OOV NA
+ERROR Type:	Proposal
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		اتركي الأمر وحسب يا أمي ، لديك أمور أهم من مقابلة الوغد ( براين سبير )
+TRG:		اترك الأمر وحسب يا أبتي ، لديك أمور أهم من مقابلة الوغد ( براين سبير )
+PRED: 		اترك الأمر وحسب يا أبي ، لديك أمور أهم من مقابلة الوغد ( براين سبير )
+SRC TAGS:	B+2F B+B B+B B+B 2F+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+TRG TAGS:	B+2M B+B B+B B+B 2M+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+2F B+B B+B B+B 2F+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+PROPOSED BY:	CBR NA NA NA CBR NA NA NA NA NA NA NA NA NA NA NA
+ERROR Type:	Selection
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		إذا جعلتمنني رئيسة ،
+TRG:		إذا جعلتموني رئيسة ،
+PRED: 		إذا جعلتمنني رئيسة ،
+SRC TAGS:	B+B 2F+B 1F+B B+B
+TRG TAGS:	B+B 2M+B 1F+B B+B
+PRED SRC TAGS:	B+B 2F+B 1F+B B+B
+PROPOSED BY:	NA OOV NA NA
+ERROR Type:	Proposal
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		إذا جعلتمنني رئيسا ،
+TRG:		إذا جعلتموني رئيسة ،
+PRED: 		إذا جعلتمنني رئيسة ،
+SRC TAGS:	B+B 2F+B 1M+B B+B
+TRG TAGS:	B+B 2M+B 1F+B B+B
+PRED SRC TAGS:	B+B 2F+B 1M+B B+B
+PROPOSED BY:	NA OOV MorphR NA
+ERROR Type:	Proposal
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		أنت تنحني للخلف لمساعده " الناس يا " تشك
+TRG:		أنت تنحنى للخلف لمساعده " الناس يا " تشك
+PRED: 		أنت تنحني للخلف لمساعده " الناس يا " تشك
+SRC TAGS:	B+B 2F+B B+B B+B B+B B+B B+B B+B B+B
+TRG TAGS:	B+B 2M+B B+B B+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B 2M+B B+B B+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA NA NA NA NA NA NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		اللعنة تعالي ، لا تريدي أن تتورطي مع القانون
+TRG:		اللعنة تعال ، لا تريد ان تتورط مع القانون
+PRED: 		اللعنة تعالى ، لا تريد أن تتورط مع القانون
+SRC TAGS:	B+B 2F+B B+B B+B 2F+B 2F+B 2F+B B+B B+B
+TRG TAGS:	B+B 2M+B B+B B+B 2M+B 2M+B 2M+B B+B B+B
+PRED SRC TAGS:	B+B 2F+B B+B B+B 2F+B B+B 2F+B B+B B+B
+PROPOSED BY:	NA CBR NA NA CBR NA MorphR NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		أنا بمنتصف عمل ما ، اتفهمين ؟
+TRG:		أنا بمنتصف عمل ما ، اتفهم ؟
+PRED: 		أنا بمنتصف عمل ما ، اتفهمين ؟
+SRC TAGS:	B+B B+B B+B B+B B+B 2F+B B+B
+TRG TAGS:	B+B B+B B+B B+B B+B 2M+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B 2F+B B+B
+PROPOSED BY:	NA NA NA NA NA OOV NA
+ERROR Type:	Proposal
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		شعر أخضر ألم ترينها ؟
+TRG:		شعر أخضر ألم تروها ؟
+PRED: 		شعر أخضر ألم تراها ؟
+SRC TAGS:	B+B B+B B+B 2F+B B+B
+TRG TAGS:	B+B B+B B+B 2M+B B+B
+PRED SRC TAGS:	B+B B+B B+B 2F+B B+B
+PROPOSED BY:	NA NA NA CBR NA
+ERROR Type:	Proposal
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		لقد حاولت ، لكن ليست تلك النقطة الاساسية ، انني قلق . . كما تعلمين ان ، انتي تعلمين . .
+TRG:		لقد حاولت ، لكن ليست تلك النقطة الاساسية ، انني قلقة . . كما تعلم ان ، أنت تعلم . .
+PRED: 		لقد حاولت ، لكن ليست تلك النقطة الاساسية ، انني قلقة . . كما تعلم ان ، انت تعلم . .
+SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B 1M+B B+B B+B B+B 2F+B B+B B+B 2F+B 2F+B B+B B+B
+TRG TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B 1F+B B+B B+B B+B 2M+B B+B B+B 2M+B 2M+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B 1M+B B+B B+B B+B 2F+B B+B B+B 2F+B 2F+B B+B B+B
+PROPOSED BY:	NA NA NA NA NA NA NA NA NA NA CBR NA NA NA CBR NA NA CBR CBR NA NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		لقد حاولت ، لكن ليست تلك النقطة الاساسية ، انني قلقة . . كما تعلمين ان ، انتي تعلمين . .
+TRG:		لقد حاولت ، لكن ليست تلك النقطة الاساسية ، انني قلقة . . كما تعلم ان ، أنت تعلم . .
+PRED: 		لقد حاولت ، لكن ليست تلك النقطة الاساسية ، انني قلقة . . كما تعلم ان ، انت تعلم . .
+SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B 1F+B B+B B+B B+B 2F+B B+B B+B 2F+B 2F+B B+B B+B
+TRG TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B 1F+B B+B B+B B+B 2M+B B+B B+B 2M+B 2M+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B 1F+B B+B B+B B+B 2F+B B+B B+B 2F+B 2F+B B+B B+B
+PROPOSED BY:	NA NA NA NA NA NA NA NA NA NA NA NA NA NA CBR NA NA CBR CBR NA NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		من أجل الحصول على قرض ائتماني ، تحتاجين لأن تكوني موظفة لحساب شركة مؤمنة من قبل شركة تأمين كبرى .
+TRG:		من أجل الحصول على قرض ائتماني ، تحتاج لأن تكون موظفا لحساب شركة مؤمنة من قبل شركة تأمين كبرى .
+PRED: 		من أجل الحصول على قرض ائتماني ، تحتاج لأن تكون موظف لحساب شركة مؤمنة من قبل شركة تأمين كبرى .
+SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B 2F+B B+B 2F+B 2F+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+TRG TAGS:	B+B B+B B+B B+B B+B B+B B+B 2M+B B+B 2M+B 2M+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B 2F+B B+B 2F+B 2F+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA NA NA NA NA NA NA CBR NA CBR CBR NA NA NA NA NA NA NA NA NA
+ERROR Type:	Proposal
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		اخترقت رصاصة الجدار وقتلت ابنتي بينما كانت نائما
+TRG:		اخترقت رصاصة الجدار وقتلت ابنتي بينما كانت نائمة
+PRED: 		اخترقت رصاصة الجدار وقتلت ابنتي بينما كانت نائما
+SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B 1M+B
+TRG TAGS:	B+B B+B B+B B+B B+B B+B B+B 1F+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA NA NA NA NA NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		إذهبى إلى غرفتك
+TRG:		إذهب إلى غرفتك
+PRED: 		اذهب إلى غرفتك
+SRC TAGS:	2F+B B+B B+B
+TRG TAGS:	2M+B B+B B+B
+PRED SRC TAGS:	2F+B B+B B+B
+PROPOSED BY:	MorphR NA NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		اذهبي الى تحت العربة
+TRG:		اذهب الى تحت العربة
+PRED: 		أذهب الى تحت العربة
+SRC TAGS:	2F+B B+B B+B B+B
+TRG TAGS:	2M+B B+B B+B B+B
+PRED SRC TAGS:	2F+B B+B B+B B+B
+PROPOSED BY:	CBR NA NA NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		ألا تعتقدين أن هذا هو ما كان يريده والدك
+TRG:		ألا تعتقد أن هذا هو ما كان يريده والدك
+PRED: 		الا تعتقد أن هذا هو ما كان يريده والدك
+SRC TAGS:	B+B 2F+B B+B B+B B+B B+B B+B B+B B+B
+TRG TAGS:	B+B 2M+B B+B B+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	2F+B 2F+B B+B B+B B+B B+B B+B B+B B+B
+PROPOSED BY:	CBR CBR NA NA NA NA NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		صادقة ، أنا لا أعرف ، امرأة .
+TRG:		صادق ، أنا لا أعرف ، رجل .
+PRED: 		صادقة ، أنا لا أعرف ، رجل .
+SRC TAGS:	2F+B B+B B+B B+B B+B B+B 2F+B B+B
+TRG TAGS:	2M+B B+B B+B B+B B+B B+B 2M+B B+B
+PRED SRC TAGS:	1F+B B+B B+B B+B B+B B+B 2F+B B+B
+PROPOSED BY:	NA NA NA NA NA NA CBR NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		- هل ترينني بهذا الشكل ؟
+TRG:		- هل تراني بهذا الشكل ؟
+PRED: 		- هل تريني بهذا الشكل ؟
+SRC TAGS:	B+B B+B 2F+B B+B B+B B+B
+TRG TAGS:	B+B B+B 2M+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B 2F+B B+B B+B B+B
+PROPOSED BY:	NA NA CBR NA NA NA
+ERROR Type:	Proposal
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		ولقد كنت هاجرا للصلاة وغير مستحق لمودتك وحبك
+TRG:		ولقد كنت هاجرة للصلاة وغير مستحقة لمودتك وحبك
+PRED: 		ولقد كنت هاجرتا للصلاة وغير مستحقة لمودتك وحبك
+SRC TAGS:	B+B B+B 1M+B B+B B+B 1M+B B+B B+B
+TRG TAGS:	B+B B+B 1F+B B+B B+B 1F+B B+B B+B
+PRED SRC TAGS:	B+B B+B 1M+B B+B B+B 1M+B B+B B+B
+PROPOSED BY:	NA NA MorphR NA NA MorphR NA NA
+ERROR Type:	Proposal
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		لا لا احتاج خاطبة لكن 00
+TRG:		لا لا احتاج خاطبة لكن 00
+PRED: 		لا لا احتاج خاطبة لكم 00
+SRC TAGS:	B+B B+B B+B B+B B+B B+B
+TRG TAGS:	B+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+2F B+B
+PROPOSED BY:	NA NA NA NA CBR NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		وأحضرن لي ( سارة تانكريدي )
+TRG:		وأحضروا لي ( سارة تانكريدي )
+PRED: 		واحضروا لي ( سارة تانكريدي )
+SRC TAGS:	2F+B B+B B+B B+B B+B B+B
+TRG TAGS:	2M+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	2F+B B+B B+B B+B B+B B+B
+PROPOSED BY:	MorphR NA NA NA NA NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		أرجوكي أخبريني انه هناك دليل حتمى
+TRG:		ارجوك إخبرنى انه هناك دليل حتمى
+PRED: 		أرجوك أخبرنى انه هناك دليل حتمى
+SRC TAGS:	2F+2F 2F+B B+B B+B B+B B+B
+TRG TAGS:	2M+2M 2M+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+2F 2F+B B+B B+B B+B B+B
+PROPOSED BY:	CBR CBR NA NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		أي حق لديك لتتهمين دائما ؟
+TRG:		أي حق لديك لتتهم دائما ؟
+PRED: 		أي حق لديك لتتهمين دائما ؟
+SRC TAGS:	B+B B+B B+B 2F+B B+B B+B
+TRG TAGS:	B+B B+B B+B 2M+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B 2F+B B+B B+B
+PROPOSED BY:	NA NA NA OOV NA NA
+ERROR Type:	Proposal
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		- أوه ، إلهتي .
+TRG:		- أوه ، الهي .
+PRED: 		- أوه ، إلهي .
+SRC TAGS:	B+B B+B B+B 2F+B B+B
+TRG TAGS:	B+B B+B B+B 2M+B B+B
+PRED SRC TAGS:	B+B B+B B+B 2F+B B+B
+PROPOSED BY:	NA NA NA CBR NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		لا أرغب فى ان اكون فظا لكننى بخير .
+TRG:		لا أرغب فى ان اكون فظه لكننى بخير .
+PRED: 		لا أرغب فى ان اكون فظة لكننى بخير .
+SRC TAGS:	B+B B+B B+B B+B B+B 1M+B B+B B+B B+B
+TRG TAGS:	B+B B+B B+B B+B B+B 1F+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B 1M+B B+B B+B B+B
+PROPOSED BY:	NA NA NA NA NA MorphR NA NA NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		آمل أني مخطئة ، إن كنت وقعي على الاوراق
+TRG:		آمل أني مخطئة ، إن كنت وقعي على الاوراق
+PRED: 		آمل أني مخطئة ، إن كنت وقع على الاوراق
+SRC TAGS:	B+B B+B 1F+B B+B B+B B+B B+B B+B B+B
+TRG TAGS:	B+B B+B 1F+B B+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B 1F+B B+B B+B B+B 2F+B B+B B+B
+PROPOSED BY:	NA NA NA NA NA NA CBR NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		آمل أني مخطئ ، إن كنت وقعي على الاوراق
+TRG:		آمل أني مخطئة ، إن كنت وقعي على الاوراق
+PRED: 		آمل أني مخطئة ، إن كنت وقع على الاوراق
+SRC TAGS:	B+B B+B 1M+B B+B B+B B+B B+B B+B B+B
+TRG TAGS:	B+B B+B 1F+B B+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B 1M+B B+B B+B B+B 2F+B B+B B+B
+PROPOSED BY:	NA NA CBR NA NA NA CBR NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		أنا متفأجئ أن لا يعمل مهبل من قبعات القنينة .
+TRG:		أنا متفأجئة أن لا يعمل مهبل من قبعات القنينة .
+PRED: 		أنا متفأجئ أن لا يعمل مهبل من قبعات القنينة .
+SRC TAGS:	B+B 1M+B B+B B+B B+B B+B B+B B+B B+B B+B
+TRG TAGS:	B+B 1F+B B+B B+B B+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B 1M+B B+B B+B B+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA OOV NA NA NA NA NA NA NA NA
+ERROR Type:	Proposal
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		لا ، أنا آسف لقد كنت في السوق
+TRG:		لا ، أنا آسفه لقد كنت في السوق
+PRED: 		لا ، أنا آسفة لقد كنت في السوق
+SRC TAGS:	B+B B+B B+B 1M+B B+B B+B B+B B+B
+TRG TAGS:	B+B B+B B+B 1F+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B 1M+B B+B B+B B+B B+B
+PROPOSED BY:	NA NA NA CBR NA NA NA NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		أردت أن اكون مسؤولا عن طاولة قمار في كازينو هندي
+TRG:		أردت أن اكون مسؤلة عن طاولة قمار في كازينو هندي
+PRED: 		أردت أن اكون مسؤولة عن طاولة قمار في كازينو هندي
+SRC TAGS:	B+B B+B B+B 1M+B B+B B+B B+B B+B B+B B+B
+TRG TAGS:	B+B B+B B+B 1F+B B+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B 1M+B B+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA NA NA CBR NA NA NA NA NA NA
+ERROR Type:	Proposal
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		آسف فقط ذعرت
+TRG:		أسفة فقط ذعرت
+PRED: 		آسفة فقط ذعرت
+SRC TAGS:	1M+B B+B B+B
+TRG TAGS:	1F+B B+B B+B
+PRED SRC TAGS:	1M+B B+B B+B
+PROPOSED BY:	CBR NA NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		سأكون عريسا أصلع
+TRG:		سأكون عروسة صلعاء
+PRED: 		سأكون عريسا أصلع
+SRC TAGS:	B+B 1M+B 1M+B
+TRG TAGS:	B+B 1F+B 1F+B
+PRED SRC TAGS:	B+B 1M+B B+B
+PROPOSED BY:	NA OOV NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		أنا حزم أشيائي .
+TRG:		أنا حزمة أشيائي .
+PRED: 		أنا حزم أشيائي .
+SRC TAGS:	B+B 1M+B B+B B+B
+TRG TAGS:	B+B 1F+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B
+PROPOSED BY:	NA NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		أجل ، لست حقا من من الفتيات اللاتي تتحدثن عن أخلائهم كثيرا أرى ذلك ،
+TRG:		أجل ، لست حقا من من الفتيات اللاتي تتحدثن عن أخلائهم كثيرا أرى ذلك ،
+PRED: 		أجل ، لست حقا من من الفتيات اللاتي تتحدثون عن أخلائهم كثيرا أرى ذلك ،
+SRC TAGS:	B+B B+B B+B B+B B+B B+B 1F+B 1F+B 1F+B B+B B+B B+B B+B B+B B+B
+TRG TAGS:	B+B B+B B+B B+B B+B B+B 1F+B 1F+B 1F+B B+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B B+B 1F+B 1F+B 2F+B B+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA NA NA NA NA NA NA NA CBR NA NA NA NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		أجل ، لست حقا من من الفتيان الذين يتحدثون عن أخلائهم كثيرا أرى ذلك ،
+TRG:		أجل ، لست حقا من من الفتيات اللاتي تتحدثن عن أخلائهم كثيرا أرى ذلك ،
+PRED: 		أجل ، لست حقا من من الفتيتان الذين يتحدثون عن أخلائهم كثيرا أرى ذلك ،
+SRC TAGS:	B+B B+B B+B B+B B+B B+B 1M+B 1M+B 1M+B B+B B+B B+B B+B B+B B+B
+TRG TAGS:	B+B B+B B+B B+B B+B B+B 1F+B 1F+B 1F+B B+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B B+B 1M+B B+B B+B B+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA NA NA NA NA NA MorphR NA NA NA NA NA NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		اننى أرمل منذ 5 سنوات وقد كنت زوجا جيدا
+TRG:		اننى ارملة منذ 5 سنوات وقد كنت زوجة جيدة
+PRED: 		اننى ارملة منذ 5 سنوات وقد كنت زوجا جيدة
+SRC TAGS:	B+B 1M+B B+B B+B B+B B+B B+B 1M+B 1M+B
+TRG TAGS:	B+B 1F+B B+B B+B B+B B+B B+B 1F+B 1F+B
+PRED SRC TAGS:	B+B 1M+B B+B B+B B+B B+B B+B 1M+B 1M+B
+PROPOSED BY:	NA CBR NA NA NA NA NA OOV CBR
+ERROR Type:	Proposal
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		أكلته في حوالي ساعة وصرت مريضا حقا وملقى
+TRG:		أكلته في حوالي ساعة وصرت مريضة حقا وملقاة
+PRED: 		أكلته في حوالي ساعة وصرت مريضة حقا وملقية
+SRC TAGS:	B+B B+B B+B B+B B+B 1M+B B+B 1M+B
+TRG TAGS:	B+B B+B B+B B+B B+B 1F+B B+B 1F+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B 1M+B B+B 1M+B
+PROPOSED BY:	NA NA NA NA NA CBR NA MorphR
+ERROR Type:	Selection
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		ربما أنا أعمى ، لكن دماغي تدرب ليسمع لأي فلم ، و يعلم بالتحديد ماذا يحدث على الشاشة
+TRG:		ربما أنا عمياء ، لكن دماغي تدرب ليسمع لأي فلم ، و يعلم بالتحديد ماذا يحدث على الشاشة
+PRED: 		ربما أنا عمياءا ، لكن دماغي تدرب ليسمع لأي فلم ، و يعلم بالتحديد ماذا يحدث على الشاشة
+SRC TAGS:	B+B B+B 1M+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+TRG TAGS:	B+B B+B 1F+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B 1M+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA NA CBR NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA
+ERROR Type:	Proposal
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		- ( إننى مشغول قليلا يا ( دايف -
+TRG:		- ( إننى مشغوله قليلا يا ( دايف -
+PRED: 		- ( إننى مشغولة قليلا يا ( دايف -
+SRC TAGS:	B+B B+B B+B 1M+B B+B B+B B+B B+B B+B
+TRG TAGS:	B+B B+B B+B 1F+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B 1M+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA NA NA CBR NA NA NA NA NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		أن لقيط أين ولدت ؟
+TRG:		أن لقيطة أين ولدت ؟
+PRED: 		أن لقيط أين ولدت ؟
+SRC TAGS:	B+B 1M+B B+B B+B B+B
+TRG TAGS:	B+B 1F+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B
+PROPOSED BY:	NA NA NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		حسنا ، لقد كنت متورط لدقيقه
+TRG:		حسنا ، لقد كنت متورطة لدقيقه
+PRED: 		حسنا ، لقد كنت متورطه لدقيقه
+SRC TAGS:	B+B B+B B+B B+B 1M+B B+B
+TRG TAGS:	B+B B+B B+B B+B 1F+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B 1M+B B+B
+PROPOSED BY:	NA NA NA NA CBR NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		انا اسف ، أنا فقط . . .
+TRG:		انا آسفة ، أنا فقط . . .
+PRED: 		انا اسفة ، أنا فقط . . .
+SRC TAGS:	B+B 1M+B B+B B+B B+B B+B B+B B+B
+TRG TAGS:	B+B 1F+B B+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B 1M+B B+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA CBR NA NA NA NA NA NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		أنا ممثل أفلام رعاة البقر -
+TRG:		أنا ممثلة لأفلام رعاة البقر -
+PRED: 		أنا ممثلة أفلام رعاة البقر -
+SRC TAGS:	B+B 1M+B 1M+B B+B B+B B+B
+TRG TAGS:	B+B 1F+B 1F+B B+B B+B B+B
+PRED SRC TAGS:	B+B 1M+B B+B B+B B+B B+B
+PROPOSED BY:	NA CBR NA NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		انتظري حتى أخبر زوجتي بأن الرجل الذي تظنه أفضل مني ليس كذلك
+TRG:		انتظر حتى أخبر زوجتي بأن الرجل الذي تظنه أفضل مني ليس كذلك
+PRED: 		إنتظر حتى أخبر زوجتي بأن الرجل الذي تظنه أفضل مني ليس كذلك
+SRC TAGS:	2F+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+TRG TAGS:	2M+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	2F+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+PROPOSED BY:	CBR NA NA NA NA NA NA NA NA NA NA NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		كان ذلك كله سوء فهم ، فقد كنت أتصرف كوغد
+TRG:		كان ذلك كله سوء فهم ، فقد كنت أتصرف كوغدة
+PRED: 		كان ذلك كله سوء فهم ، فقد كنت أتصرف كوغد
+SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B B+B 1M+B
+TRG TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B B+B 1F+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA NA NA NA NA NA NA NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		لقد كان أنا حسنا
+TRG:		لقد كانت أنا حسنا
+PRED: 		لقد كان أنا حسنا
+SRC TAGS:	B+B 1M+B B+B B+B
+TRG TAGS:	B+B 1F+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B
+PROPOSED BY:	NA NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		كنت مصدوم كما لوكنت منوم مغناطيسيا جاهز لفعل . . . أي شيء يطلبونه مني
+TRG:		كنت مصدومة كما لوكنت منومة مغناطيسيا جاهزة لفعل . . . أي شيء يطلبونه مني
+PRED: 		كنت مصدومة كما لوكنت منومة مغناطيسيا جاهز لفعل . . . أي شيء يطلبونه مني
+SRC TAGS:	B+B 1M+B B+B B+B 1M+B B+B 1M+B B+B B+B B+B B+B B+B B+B B+B B+B
+TRG TAGS:	B+B 1F+B B+B B+B 1F+B B+B 1F+B B+B B+B B+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B 1M+B B+B B+B 1M+B B+B 2M+B B+B B+B B+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA CBR NA NA MorphR NA NA NA NA NA NA NA NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		بالتأكيد ، انا آسف
+TRG:		بالتأكيد ، انا آسفة
+PRED: 		بالتأكيد ، انا اسفة
+SRC TAGS:	B+B B+B B+B 1M+B
+TRG TAGS:	B+B B+B B+B 1F+B
+PRED SRC TAGS:	B+B B+B B+B 1M+B
+PROPOSED BY:	NA NA NA CBR
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		جاهز ، الآن علي أن أنتظر خلال عشر دقائق سيجهز
+TRG:		جاهزة ، الآن علي أن أنتظر خلال عشر دقائق سيجهز
+PRED: 		جاهز ، الآن علي أن أنتظر خلال عشر دقائق سيجهز
+SRC TAGS:	1M+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+TRG TAGS:	1F+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA NA NA NA NA NA NA NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		جاهزة ، الآن علي أن أنتظر خلال عشر دقائق سيجهز
+TRG:		جاهزة ، الآن علي أن أنتظر خلال عشر دقائق سيجهز
+PRED: 		جاهز ، الآن علي أن أنتظر خلال عشر دقائق سيجهز
+SRC TAGS:	1F+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+TRG TAGS:	1F+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	2F+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+PROPOSED BY:	CBR NA NA NA NA NA NA NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		وانا متقبل لكل الإقتراحات
+TRG:		وانا متقبلة لكل الإقتراحات
+PRED: 		وانا متقبل لكل الإقتراحات
+SRC TAGS:	B+B 1M+B B+B B+B
+TRG TAGS:	B+B 1F+B B+B B+B
+PRED SRC TAGS:	B+B 1M+B B+B B+B
+PROPOSED BY:	NA OOV NA NA
+ERROR Type:	Proposal
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		انظري ، أنا أتساءل . . .
+TRG:		انظر ، أنا أتساءل . . .
+PRED: 		أنظر ، أنا أتساءل . . .
+SRC TAGS:	2F+B B+B B+B B+B B+B B+B B+B
+TRG TAGS:	2M+B B+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	2F+B B+B B+B B+B B+B B+B B+B
+PROPOSED BY:	CBR NA NA NA NA NA NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		لا تشي بي .
+TRG:		لا تش بي .
+PRED: 		لا تشي بي .
+SRC TAGS:	B+B 2F+B B+B B+B
+TRG TAGS:	B+B 2M+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B
+PROPOSED BY:	NA NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		أنا يمكن موثوق مع سرا كبيرا .
+TRG:		أنا يمكن موثوقة مع سرا كبيرا .
+PRED: 		أنا يمكن موثوق مع سرا كبيرا .
+SRC TAGS:	B+B B+B 1M+B B+B B+B B+B B+B
+TRG TAGS:	B+B B+B 1F+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA NA NA NA NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		انظري ، أريد إستعادة حياتي فحسب
+TRG:		إنظر ، أريد إستعادة حياتي فحسب
+PRED: 		أنظر ، أريد إستعادة حياتي فحسب
+SRC TAGS:	2F+B B+B B+B B+B B+B B+B
+TRG TAGS:	2M+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	2F+B B+B B+B B+B B+B B+B
+PROPOSED BY:	CBR NA NA NA NA NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		ومضرب جديدة لذلك أنا لست معتاد عليه
+TRG:		ومضرب جديدة لذلك أنا لست معتاد عليه
+PRED: 		ومضرب جديدة لذلك أنا لست معتادة عليه
+SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B
+TRG TAGS:	B+B B+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B 1M+B B+B
+PROPOSED BY:	NA NA NA NA NA CBR NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		أسرعي انا عندي مشاوير واجد
+TRG:		اسرع انا عندي مشاوير واجد
+PRED: 		أسرع انا عندي مشاوير واجد
+SRC TAGS:	2F+B B+B B+B B+B B+B
+TRG TAGS:	2M+B B+B B+B B+B B+B
+PRED SRC TAGS:	2F+B B+B B+B B+B B+B
+PROPOSED BY:	CBR NA NA NA NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		العمل من المنزل اليوم ، بعد ذلك ، أعطي ؟
+TRG:		العمل من المنزل اليوم ، بعد ذلك ، أعطي ؟
+PRED: 		العمل من المنزل اليوم ، بعد ذلك ، أعط ؟
+SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+TRG TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B 2F+B B+B
+PROPOSED BY:	NA NA NA NA NA NA NA NA CBR NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		كنت فقط ذاهب لشرب البيرة ومشاهدة الفيلم على جهاز الكمبيوتر المحمول لكن بعد ذلك رأيت الجثه ، لقد انقلبت ، وهربت
+TRG:		كنت فقط ذاهب لشرب البيرة ومشاهدة الفيلم على جهاز الكمبيوتر المحمول لكن بعد ذلك رأيت الجثه ، لقد انقلبت ، وهربت
+PRED: 		كنت فقط ذاهبة لشرب البيرة ومشاهدة الفيلم على جهاز الكمبيوتر المحمول لكن بعد ذلك رأيت الجثه ، لقد انقلبت ، وهربت
+SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+TRG TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B 1M+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA NA CBR NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		أخبريني لو أن هناك مشكلة
+TRG:		أخبرني لو أن هناك مشكلة
+PRED: 		اخبرني لو أن هناك مشكلة
+SRC TAGS:	2F+B B+B B+B B+B B+B
+TRG TAGS:	2M+B B+B B+B B+B B+B
+PRED SRC TAGS:	2F+B B+B B+B B+B B+B
+PROPOSED BY:	CBR NA NA NA NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		علي القول أننا لسنا مندهشين من عثورنا عليه هنا . . .
+TRG:		علي القول أننا لسنا مندهشين من عثورنا عليه هنا . . .
+PRED: 		علي القول أننا لسنا مندهشتين من عثورنا عليه هنا . . .
+SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+TRG TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B 1M+B B+B B+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA NA NA NA MorphR NA NA NA NA NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		رجاء ، دعيني احاول مره اخرى
+TRG:		رجاء ، دعني احاول مره اخرى
+PRED: 		رجاء ، دعنى احاول مره اخرى
+SRC TAGS:	B+B B+B 2F+B B+B B+B B+B
+TRG TAGS:	B+B B+B 2M+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B 2F+B B+B B+B B+B
+PROPOSED BY:	NA NA CBR NA NA NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		إصغي ، ( جوليا ) وأنا وعلى الأرجح ( آيزدور ) ، سنتناول العشاء هنا لذا من يدري ؟
+TRG:		أصغ ، ( جوليا ) وأنا وعلى الأرجح ( آيزدور ) ، سنتناول العشاء هنا لذا من يدري ؟
+PRED: 		إصغ ، ( جوليا ) وأنا وعلى الأرجح ( آيزدور ) ، سنتناول العشاء هنا لذا من يدري ؟
+SRC TAGS:	2F+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+TRG TAGS:	2M+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	2F+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+PROPOSED BY:	CBR NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		لقد طلبوا منى أن أتدرب على الإدارة أو مدير عام . .
+TRG:		لقد طلبوا منى أن أتدرب على الإدارة أو مديرة عام . .
+PRED: 		لقد طلبوا منى أن أتدرب على الإدارة أو مدير عام . .
+SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B 1M+B B+B B+B B+B
+TRG TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B 1F+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA NA NA NA NA NA NA NA NA NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		حذرا ، يا أصدقائي ، لا تتحرك .
+TRG:		حذرا ، يا أصدقائي ، لا تتحرك .
+PRED: 		حذرة ، يا أصدقائي ، لا تتحرك .
+SRC TAGS:	B+B B+B B+B 2M+B B+B B+B 2M+B B+B
+TRG TAGS:	B+B B+B B+B 2M+B B+B B+B 2M+B B+B
+PRED SRC TAGS:	1M+B B+B B+B 2M+B B+B B+B B+2M B+B
+PROPOSED BY:	CBR NA NA NA NA NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		حذرا ، يا صديقاتي ، لا تتحركن .
+TRG:		حذرا ، يا أصدقائي ، لا تتحرك .
+PRED: 		حذرة ، يا اصدقائي ، لا تتحركم .
+SRC TAGS:	B+B B+B B+B 2F+B B+B B+B 2F+B B+B
+TRG TAGS:	B+B B+B B+B 2M+B B+B B+B 2M+B B+B
+PRED SRC TAGS:	1M+B B+B B+B 2F+B B+B B+B B+2F B+B
+PROPOSED BY:	CBR NA NA CBR NA NA MorphR NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		مارتي ) اهدئي لقد رأيتهم ) ويمكنني أن أرى قدوم ( ميمي ) زوجتك
+TRG:		مارتي ) إهدأ لقد رأيتهم ) ويمكنني أن أرى قدوم ( ميمي ) زوجتك
+PRED: 		مارتي ) اهدأ لقد رأيتهم ) ويمكنني أن أرى قدوم ( ميمي ) زوجتك
+SRC TAGS:	B+B B+B 2F+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+TRG TAGS:	B+B B+B 2M+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B 2F+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA NA CBR NA NA NA NA NA NA NA NA NA NA NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		على جثتي سيدتي
+TRG:		على جثتي سيدي
+PRED: 		على جثتي سيدتي
+SRC TAGS:	B+B B+B 2F+B
+TRG TAGS:	B+B B+B 2M+B
+PRED SRC TAGS:	B+B B+B B+B
+PROPOSED BY:	NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		امهليني ثانية وسأعود
+TRG:		أمهلني ثانية وسأعود
+PRED: 		امهلني ثانية وسأعود
+SRC TAGS:	2F+B B+B B+B
+TRG TAGS:	2M+B B+B B+B
+PRED SRC TAGS:	2F+B B+B B+B
+PROPOSED BY:	MorphR NA NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		هذا بنتي هانا .
+TRG:		هذا بنتي هانا .
+PRED: 		هذا إبني هانا .
+SRC TAGS:	B+B B+B B+B B+B
+TRG TAGS:	B+B B+B B+B B+B
+PRED SRC TAGS:	B+B 2F+B B+B B+B
+PROPOSED BY:	NA CBR NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		. اسأليه أن يقبل أطفالى من أجلى
+TRG:		. إسأله أن يقبل أطفالى من أجلى
+PRED: 		. اسأله أن يقبل أطفالى من أجلى
+SRC TAGS:	B+B 2F+B B+B B+B B+B B+B B+B
+TRG TAGS:	B+B 2M+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B 2F+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA CBR NA NA NA NA NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		حسنا ، انظري إلى .
+TRG:		حسنا ، انظر إلى .
+PRED: 		حسنا ، إنظر إلى .
+SRC TAGS:	B+B B+B 2F+B B+B B+B
+TRG TAGS:	B+B B+B 2M+B B+B B+B
+PRED SRC TAGS:	B+B B+B 2F+B B+B B+B
+PROPOSED BY:	NA NA CBR NA NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		أنا شرطي . . . وهناك شرطي قد قتل . . . بسبب فمي الكبير .
+TRG:		أنا شرطية . . . وهناك شرطية قد قتل . . . بسبب فمي الكبير .
+PRED: 		أنا شرطية . . . وهناك شرطي قد قتل . . . بسبب فمي الكبير .
+SRC TAGS:	B+B 1M+B B+B B+B B+B B+B 1M+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+TRG TAGS:	B+B 1F+B B+B B+B B+B B+B 1F+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B 1M+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA CBR NA NA NA NA NA NA NA NA NA NA NA NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		انا من قام بوضع الرهان ، أتذكرين ؟
+TRG:		انا من قام بوضع الرهان ، اتذكر ؟
+PRED: 		انا من قام بوضع الرهان ، أتذكر ؟
+SRC TAGS:	B+B B+B B+B B+B B+B B+B 2F+B B+B
+TRG TAGS:	B+B B+B B+B B+B B+B B+B 2M+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B B+B 2F+B B+B
+PROPOSED BY:	NA NA NA NA NA NA CBR NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		لو كنت فتى و كان على اختيار شاب ، بدون شئ جيد فى المقابل كثيف الشعر و مواطن ناضج صلب لكنت اخترت " ماتياس بوبكين " فى كل مرة
+TRG:		لو كنت فتاة و كان على اختيار شاب ، بدون شئ جيد فى المقابل كثيف الشعر و مواطن ناضج صلب لكنت اخترت " ماتياس بوبكين " فى كل مرة
+PRED: 		لو كنت فتى و كان على اختيار شاب ، بدون شئ جيد فى المقابل كثيف الشعر و مواطن ناضج صلب لكنت اخترت " ماتياس بوبكين " فى كل مرة
+SRC TAGS:	B+B B+B 1M+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+TRG TAGS:	B+B B+B 1F+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B 2M+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		. كنت متأكد من انى سوف احصل على ذلك . الشىءالذى يجعل كل شخص يتكلم عنه
+TRG:		. كنت متاكده من انى سوف احصل على ذلك . الشىءالذى يجعل كل شخص يتكلم عنه
+PRED: 		. كنت متأكدة من انى سوف احصل على ذلك . الشىءالذى يجعل كل شخص يتكلم عنه
+SRC TAGS:	B+B B+B 1M+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+TRG TAGS:	B+B B+B 1F+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B 1M+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA NA CBR NA NA NA NA NA NA NA NA NA NA NA NA NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		اضافه الى هذا فأن شقيق " دان " " فرانك " فى طريقه الى هنا الان
+TRG:		اضافه الى هذا فأن شقيقة " دان " " فرانك " فى طريقه الى هنا الان
+PRED: 		اضافه الى هذا فأن شقيق " دان " " فرانك " فى طريقه الى هنا الان
+SRC TAGS:	B+B B+B B+B B+B 1M+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+TRG TAGS:	B+B B+B B+B B+B 1F+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		هيا ، قولى اسمه أريد أن أسمع اسمه
+TRG:		هيا ، قل اسمه أريد أن أسمع اسمه
+PRED: 		هيا ، قولى اسمه أريد أن أسمع اسمه
+SRC TAGS:	B+B B+B 2F+B B+B B+B B+B B+B B+B
+TRG TAGS:	B+B B+B 2M+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA NA NA NA NA NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		أيتها السلحفاة ، أعطيني هذا عندما تنتهين .
+TRG:		أيها السلحفاة ، اعطني هذا عندما تنتهي .
+PRED: 		أيها السلحفاة ، أعطني هذا عندما تنتهي .
+SRC TAGS:	2F+B B+B B+B 2F+B B+B B+B 2F+B B+B
+TRG TAGS:	2M+B B+B B+B 2M+B B+B B+B 2M+B B+B
+PRED SRC TAGS:	2F+B 2F+B B+B 2F+B B+B B+B 2F+B B+B
+PROPOSED BY:	CBR OOV NA CBR NA NA MorphR NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		فكوني مطمئنة بأني سأنزل على رأسه مزيدا من المعاناة .
+TRG:		فكن مطمئنا بأني سأنزل على رأسه مزيدا من المعاناة .
+PRED: 		فكوني مطمئنة بأني سأنزل على رأسه مزيدا من المعاناة .
+SRC TAGS:	2F+B 2F+B B+B B+B B+B B+B B+B B+B B+B B+B
+TRG TAGS:	2M+B 2M+B B+B B+B B+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B 1F+B B+B B+B B+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA NA NA NA NA NA NA NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		! أبعدنه عني !
+TRG:		! أبعدوه عني !
+PRED: 		! ابعدوه عني !
+SRC TAGS:	B+B 2F+B B+B B+B
+TRG TAGS:	B+B 2M+B B+B B+B
+PRED SRC TAGS:	B+B 2F+B B+B B+B
+PROPOSED BY:	NA MorphR NA NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		تفهمنني المحلي مكتب الشريف .
+TRG:		تفهموني المحلي مكتب الشريف .
+PRED: 		تفهمونني المحلي مكتب الشريف .
+SRC TAGS:	2F+B B+B B+B B+B B+B
+TRG TAGS:	2M+B B+B B+B B+B B+B
+PRED SRC TAGS:	2F+B B+B B+B B+B B+B
+PROPOSED BY:	CBR NA NA NA NA
+ERROR Type:	Proposal
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		" أحبني ، اشتهيني . "
+TRG:		" أحبني ، اشتهيني . "
+PRED: 		" أحبني ، اشتهني . "
+SRC TAGS:	B+B 2M+B B+B B+B B+B B+B
+TRG TAGS:	B+B 2M+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B 2M+B B+B 2F+B B+B B+B
+PROPOSED BY:	NA NA NA MorphR NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		" أحبيني ، اشتهيني . "
+TRG:		" أحبني ، اشتهيني . "
+PRED: 		" احبني ، اشتهني . "
+SRC TAGS:	B+B 2F+B B+B B+B B+B B+B
+TRG TAGS:	B+B 2M+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B 2F+B B+B 2F+B B+B B+B
+PROPOSED BY:	NA MorphR NA MorphR NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		معذره يا سيدات . . . قبل ايقافه
+TRG:		معذره يا ساده . . . قبل ايقافه
+PRED: 		معذره يا رجال . . . قبل ايقافه
+SRC TAGS:	B+B B+B 2F+B B+B B+B B+B B+B B+B
+TRG TAGS:	B+B B+B 2M+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B 2F+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA NA CBR NA NA NA NA NA
+ERROR Type:	Proposal
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		أذهبي معه فحسب
+TRG:		اذهب معه فحسب
+PRED: 		أذهب معه فحسب
+SRC TAGS:	2F+B B+B B+B
+TRG TAGS:	2M+B B+B B+B
+PRED SRC TAGS:	2F+B B+B B+B
+PROPOSED BY:	CBR NA NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		انتظري ، لدي مخطوط كتاب كان سينشره ( سوريش )
+TRG:		انتظر ، لدي مخطوط كتاب كان سينشره ( سوريش )
+PRED: 		إنتظر ، لدي مخطوط كتاب كان سينشره ( سوريش )
+SRC TAGS:	2F+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+TRG TAGS:	2M+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	2F+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+PROPOSED BY:	CBR NA NA NA NA NA NA NA NA NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		يا إلهتي
+TRG:		يا الهي
+PRED: 		يا إلهي
+SRC TAGS:	B+B 2F+B
+TRG TAGS:	B+B 2M+B
+PRED SRC TAGS:	B+B 2F+B
+PROPOSED BY:	NA CBR
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		استمعي ، دعيني أري ( آرتشي ) المكان ، حسنا ؟
+TRG:		استمع ، دعني أري ( آرتشي ) المكان ، حسنا ؟
+PRED: 		أستمع ، دعني أري ( آرتشي ) المكان ، حسنا ؟
+SRC TAGS:	2F+B B+B 2F+B B+B B+B B+B B+B B+B B+B B+B B+B
+TRG TAGS:	2M+B B+B 2M+B B+B B+B B+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	2F+B B+B 2F+B B+B B+B B+B B+B B+B B+B B+B B+B
+PROPOSED BY:	CBR NA CBR NA NA NA NA NA NA NA NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		أعتذر لعدم كوني الأب . المفترض أن أكونه
+TRG:		أعتذر لعدم كوني الأم . المفترض أن أكونها
+PRED: 		أعتذر لعدم كوني الأب . المفترض أن أكونها
+SRC TAGS:	B+B B+B B+B 1M+B B+B B+B B+B B+1M
+TRG TAGS:	B+B B+B B+B 1F+B B+B B+B B+B B+1F
+PRED SRC TAGS:	B+B B+B B+B 1M+B B+B B+B B+B B+1M
+PROPOSED BY:	NA NA NA OOV NA NA NA CBR
+ERROR Type:	Proposal
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		هذا يذكرني بشيء ، لا تقولي
+TRG:		هذا يذكرني بشيء ، لا تقول
+PRED: 		هذا يذكرني بشيء ، لا تقل
+SRC TAGS:	B+B B+B B+B B+B B+B 2F+B
+TRG TAGS:	B+B B+B B+B B+B B+B 2M+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B 2F+B
+PROPOSED BY:	NA NA NA NA NA CBR
+ERROR Type:	Selection
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		يا إلهي ! أعتقد أنها ( أنا فارس )
+TRG:		يا إلهي ! أعتقد أنها ( أنا فارس )
+PRED: 		يا إلهي ! أعتقد أنها ( أنا فارسة )
+SRC TAGS:	B+B 2M+B B+B B+B B+B B+B B+B B+B B+B
+TRG TAGS:	B+B 2M+B B+B B+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B 2M+B B+B B+B B+B B+B B+B 1M+B B+B
+PROPOSED BY:	NA NA NA NA NA NA NA MorphR NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		يا إلهتي ! أعتقد أنها ( أنا فارس )
+TRG:		يا إلهي ! أعتقد أنها ( أنا فارس )
+PRED: 		يا إلهي ! أعتقد أنها ( أنا فارسة )
+SRC TAGS:	B+B 2F+B B+B B+B B+B B+B B+B B+B B+B
+TRG TAGS:	B+B 2M+B B+B B+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B 2F+B B+B B+B B+1F B+B B+B 1M+B B+B
+PROPOSED BY:	NA CBR NA NA NA NA NA MorphR NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		أعطيني هذا
+TRG:		أعطيني هذا
+PRED: 		أعطني هذا
+SRC TAGS:	2M+B B+B
+TRG TAGS:	2M+B B+B
+PRED SRC TAGS:	2F+B B+B
+PROPOSED BY:	CBR NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		أعطني هذا
+TRG:		أعطيني هذا
+PRED: 		أعطني هذا
+SRC TAGS:	2F+B B+B
+TRG TAGS:	2M+B B+B
+PRED SRC TAGS:	2M+B B+B
+PROPOSED BY:	NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		انها تمر بنفس الظروف التي امر بها انا الفرق الوحيد انها لاتعلم بها
+TRG:		انها تمر بنفس الظروف التي امر بها انا الفرق الوحيد انها لاتعلم بها
+PRED: 		انها تمر بنفس الظروف التي امر بها انا الفرق الوحيدة انها لاتعلم بها
+SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+TRG TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B B+B 1M+B B+B B+B B+B
+PROPOSED BY:	NA NA NA NA NA NA NA NA NA CBR NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		وقد قال لي انا ملهمه .
+TRG:		وقد قال لي انا ملهمته .
+PRED: 		وقد قال لي انا ملهمه .
+SRC TAGS:	B+B B+B B+B B+B 1M+B B+B
+TRG TAGS:	B+B B+B B+B B+B 1F+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B 1F+B B+B
+PROPOSED BY:	NA NA NA NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		" عزيزتي " ستانلى
+TRG:		" عزيزى " ستانلى
+PRED: 		" عزيزي " ستانلى
+SRC TAGS:	B+B 2F+B B+B B+B
+TRG TAGS:	B+B 2M+B B+B B+B
+PRED SRC TAGS:	B+B 2F+B B+B B+B
+PROPOSED BY:	NA CBR NA NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		أنظري ، أنا أيضا لدي أمر لأقوم به
+TRG:		انظر ، أنا أيضا لدي أمر لأقوم به
+PRED: 		أنظر ، أنا أيضا لدي أمر لأقوم به
+SRC TAGS:	2F+B B+B B+B B+B B+B B+B B+B B+B
+TRG TAGS:	2M+B B+B B+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	2F+B B+B B+B B+B B+B B+B B+B B+B
+PROPOSED BY:	CBR NA NA NA NA NA NA NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		حيوانات منويه - أعطيني قليلا
+TRG:		حيوانات منويه - اعطنى قليلا
+PRED: 		حيوانات منويه - أعطني قليلا
+SRC TAGS:	B+B B+B B+B 2F+B B+B
+TRG TAGS:	B+B B+B B+B 2M+B B+B
+PRED SRC TAGS:	B+B B+B B+B 2F+B B+B
+PROPOSED BY:	NA NA NA CBR NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		أوصليني ب ( ديفيد مورهاوس )
+TRG:		أوصلني ب ( ديفيد مورهاوس )
+PRED: 		اوصلني ب ( ديفيد مورهاوس )
+SRC TAGS:	2F+B B+B B+B B+B B+B B+B
+TRG TAGS:	2M+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	2F+B B+B B+B B+B B+B B+B
+PROPOSED BY:	MorphR NA NA NA NA NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		لقد عرفت كلتاهما
+TRG:		لقد عرفت كلتاهما
+PRED: 		لقد عرفت كلاهما
+SRC TAGS:	B+B B+B B+B
+TRG TAGS:	B+B B+B B+B
+PRED SRC TAGS:	B+B B+B 2F+B
+PROPOSED BY:	NA NA MorphR
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		أترين . . . مازلت احمقا
+TRG:		أترى . . . مازلت حمقاء
+PRED: 		أترى . . . مازلت احمقا
+SRC TAGS:	2F+B B+B B+B B+B B+B 1M+B
+TRG TAGS:	2M+B B+B B+B B+B B+B 1F+B
+PRED SRC TAGS:	2F+B B+B B+B B+B B+B 1M+B
+PROPOSED BY:	CBR NA NA NA NA OOV
+ERROR Type:	Proposal
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		أترى . . . مازلت احمقا
+TRG:		أترى . . . مازلت حمقاء
+PRED: 		أترى . . . مازلت احمقا
+SRC TAGS:	2M+B B+B B+B B+B B+B 1M+B
+TRG TAGS:	2M+B B+B B+B B+B B+B 1F+B
+PRED SRC TAGS:	2M+B B+B B+B B+B B+B 1M+B
+PROPOSED BY:	NA NA NA NA NA OOV
+ERROR Type:	Proposal
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		انا اسفة هل رايتي اصبحت هجومية ؟
+TRG:		انا اسفة هل رأيت اصبحت هجومية ؟
+PRED: 		انا اسفة هل رأيت اصبحت هجومي ؟
+SRC TAGS:	B+B 1F+B B+B 2F+B B+B 1F+B B+B
+TRG TAGS:	B+B 1F+B B+B 2M+B B+B 1F+B B+B
+PRED SRC TAGS:	B+B 1F+B B+B 2F+B B+B 2F+B B+B
+PROPOSED BY:	NA NA NA MorphR NA MorphR NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		انا اسفة هل رأيت اصبحت هجومية ؟
+TRG:		انا اسفة هل رأيت اصبحت هجومية ؟
+PRED: 		انا اسفة هل رأيت اصبحت هجومي ؟
+SRC TAGS:	B+B 1F+B B+B 2M+B B+B 1F+B B+B
+TRG TAGS:	B+B 1F+B B+B 2M+B B+B 1F+B B+B
+PRED SRC TAGS:	B+B 1F+B B+B B+B B+B 2F+B B+B
+PROPOSED BY:	NA NA NA NA NA MorphR NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		قل لى سيدى يا ملعون
+TRG:		قل لى سيدتى يا ملعون
+PRED: 		قل لى سيدى يا ملعون
+SRC TAGS:	2M+B B+B 1M+B B+B 2M+B
+TRG TAGS:	2M+B B+B 1F+B B+B 2M+B
+PRED SRC TAGS:	2M+B B+B 2M+B B+B 2M+B
+PROPOSED BY:	NA NA NA NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		قولي لى سيدى يا ملعونة
+TRG:		قل لى سيدتى يا ملعون
+PRED: 		قل لى سيدى يا ملعون
+SRC TAGS:	2F+B B+B 1M+B B+B 2F+B
+TRG TAGS:	2M+B B+B 1F+B B+B 2M+B
+PRED SRC TAGS:	2F+B B+B B+B B+B 2F+B
+PROPOSED BY:	CBR NA NA NA MorphR
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		قولي لى سيدتى يا ملعونة
+TRG:		قل لى سيدتى يا ملعون
+PRED: 		قل لى سيدى يا ملعون
+SRC TAGS:	2F+B B+B 1F+B B+B 2F+B
+TRG TAGS:	2M+B B+B 1F+B B+B 2M+B
+PRED SRC TAGS:	2F+B B+B 2F+B B+B 2F+B
+PROPOSED BY:	CBR NA CBR NA MorphR
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+==========================
+Counter({'CBR': 38, 'OOV': 33, 'MorphR': 9})

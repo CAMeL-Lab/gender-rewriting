@@ -166,6 +166,7 @@ def main():
     )
 
     args = parser.parse_args()
+    logger.info(args)
 
     # We will repeat the rewriting process across the various target genders
     user_genders = (['M', 'F'] if args.first_person_only else

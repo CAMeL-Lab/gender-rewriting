@@ -38,3 +38,6 @@ The data we used to train our multi-step gender rewriting system on the first-pe
 
 ## M<sup>2</sup> Scorer Edits:
 The gold M<sup>2</sup> word-level annotations which we used to evaluate our systems are in `m2_edits/`. The files in `m2_edits/[v1.0|v2.0]/edits/` were created by suing the `m2_edits/create_m2_edits.sh` script.
+
+## MLM Fine-tuning:
+We used `mlm/train.txt` and `mlm/dev.txt` to fine-tune CAMeLBERT MSA on the MLM task. The train and dev data are identical to the ones train.arin and dev.arin that are available as part of APGCv2.0.

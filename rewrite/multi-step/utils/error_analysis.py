@@ -6,20 +6,20 @@ from camel_tools.utils.normalize import (
 )
 from collections import Counter
 
-def do_error_analysis(dataset, reinflections,
+def do_error_analysis(dataset, gender_alts,
                       output_dir,
                       speaker_gender='NA',
                       listener_gender='NA'):
     """
     Args:
         - dataset (Dataset object)
-        - reinflections (list of OutputExample objects)
+        - gender_alts (list of OutputExample objects)
         - output_dir (str)
     """
     out_file = open(output_dir, mode='w')
     proposed_by_counts = []
     for i, ex in enumerate(dataset):
-        output_example = reinflections[i]
+        output_example = gender_alts[i]
 
         pred_trg_sentence = output_example.sentence
         proposed_by = ' '.join(output_example.proposed_by)
@@ -33,8 +33,8 @@ def do_error_analysis(dataset, reinflections,
 
         # We only care about the error analysis if there's a mistake
         # The mistake could be due to four possibilities:
-        # 1) tagging error; 2) reinflection proposal error (morph or CBR);
-        # 3) reinflection selection error (mlm scorer);
+        # 1) tagging error; 2) rewriting proposal error (morphR, CBR, neuraR);
+        # 3) rewriting selection error (mlm scorer);
         # 4) normalization
         if pred_trg_sentence != gold_trg_sentence:
             if gold_src_tags != src_bert_tags:

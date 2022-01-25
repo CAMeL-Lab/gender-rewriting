@@ -3,7 +3,7 @@ This repo contains code to reproduce the results in our paper [User-Centric Gend
 
 
 ## Requirements:
-The code was written for python>=3.7 and pytorch 1.5.1, although newer versions of pytorch might work just fine. You will need a few additional packages. Here's how you can set up the environment using conda (assuming you have conda and cuda installed):
+The code was written for python>=3.7, pytorch 1.5.1, and transformers 4.11.3. You will need a few additional packages. Here's how you can set up the environment using conda (assuming you have conda and cuda installed):
 ```bash
 git clone https://github.com/balhafni/XXXX.git
 cd XXXX

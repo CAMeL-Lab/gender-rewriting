@@ -1,10 +1,10 @@
 from utils.data_utils import Dataset
 from cbr import CBR
 from rbr import RBR
-from morph_reinflector import MorphReinflector
-from seq2seq_reinflector.reinflector import Seq2Seq_Reinflector
+from morph_rewriter import MorphRewriter
+from neural_rewriter.rewriter import NeuralRewriter
 # from reinflector_union import GenderReinflector
-from reinflector import GenderReinflector
+from rewriter import GenderRewriter
 from ranker import Ranker
 from utils.error_analysis import do_error_analysis
 import argparse
@@ -55,7 +55,7 @@ def main():
     parser.add_argument(
         "--first_person_only",
         action="store_true",
-        help="Whether to do first person or multi-user reinflection."
+        help="Whether to do first person or multi-user rewriting."
     )
     parser.add_argument(
         "--use_cbr",
@@ -76,7 +76,7 @@ def main():
     parser.add_argument(
         "--pick_top_mle",
         action="store_true",
-        help="Whether to do MLE reinflection or not"
+        help="Whether to do MLE rewriting or not for CBR."
     )
     parser.add_argument(
         "--reduce_cbr_noise",
@@ -86,7 +86,7 @@ def main():
     parser.add_argument(
         "--use_morph",
         action="store_true",
-        help="Whether to use the morphological analyzer and reinflector."
+        help="Whether to use MorphR or not."
     )
     parser.add_argument(
         "--use_rbr",
@@ -106,7 +106,7 @@ def main():
     parser.add_argument(
         "--use_seq2seq",
         action="store_true",
-        help="Whether to use the seq2seq model."
+        help="Whether to use NeuralR or not."
     )
     parser.add_argument(
         "--top_n_best",
@@ -144,14 +144,14 @@ def main():
         "--morph_db",
         type=str,
         default=None,
-        help="Path to the anaylzer and reinflector database."
+        help="Path to the anaylzer and generator database."
     )
     parser.add_argument(
         "--output_dir",
         type=str,
         default=None,
         required=True,
-        help="Reinflections output dir."
+        help="Generated sentences output dir."
     )
     parser.add_argument(
         "--analyze_errors",
@@ -167,7 +167,7 @@ def main():
 
     args = parser.parse_args()
 
-    # We will repeat the reinflection process across the various target genders
+    # We will repeat the rewriting process across the various target genders
     user_genders = (['M', 'F'] if args.first_person_only else
                     ['MM', 'FM', 'MF', 'FF'])
                     # ['FF'])
@@ -253,25 +253,25 @@ def main():
             rbr_model = None
 
         if args.use_morph:
-            morph_reinflector = MorphReinflector(args.morph_db)
+            morphR = MorphRewriter(args.morph_db)
         else:
-            morph_reinflector = None
+            morphR = None
 
         if args.use_seq2seq:
-            logger.info(f'Loading the pretrained seq2seq model')
-            seq2seq_reinflector = Seq2Seq_Reinflector.from_pretrained(model_path=args.seq2seq_model_path,
-                                                                      top_n_best=args.top_n_best,
-                                                                      beam_width=args.beam_width)
+            logger.info(f'Loading the pretrained neural rewriter model')
+            neuralR = NeuralRewriter.from_pretrained(model_path=args.seq2seq_model_path,
+                                                     top_n_best=args.top_n_best,
+                                                     beam_width=args.beam_width)
         else:
-            seq2seq_reinflector = None
+            neuralR = None
 
-        # Creating a reinflector
-        reinflector = GenderReinflector(cbr_model=cbr_model,
-                                        morph_reinflector=morph_reinflector,
-                                        rbr_model=rbr_model,
-                                        neural_model=seq2seq_reinflector,
-                                        ranker=ranker,
-                                        first_person_only=args.first_person_only)
+        # Creating a rewriter
+        rewriter = GenderRewriter(cbr_model=cbr_model,
+                                  morph_rewriter=morphR,
+                                  rbr_model=rbr_model,
+                                  neural_rewriter=neuralR,
+                                  ranker=ranker,
+                                  first_person_only=args.first_person_only)
 
 
         speaker_gender = target_gender[0]
@@ -279,29 +279,29 @@ def main():
 
 
         if args.inference_mode == "dev":
-            candidates = reinflector.reinflect(dataset=dev_dataset,
-                                               speaker_gender=speaker_gender,
-                                               listener_gender=listener_gender,
-                                               use_cbr=args.use_cbr,
-                                               pick_top_mle=args.pick_top_mle,
-                                               reduce_cbr_noise=args.reduce_cbr_noise,
-                                               use_morph=args.use_morph,
-                                               use_rbr=args.use_rbr,
-                                               use_neural=args.use_seq2seq)
+            candidates = rewriter.rewrite(dataset=dev_dataset,
+                                        speaker_gender=speaker_gender,
+                                        listener_gender=listener_gender,
+                                        use_cbr=args.use_cbr,
+                                        pick_top_mle=args.pick_top_mle,
+                                        reduce_cbr_noise=args.reduce_cbr_noise,
+                                        use_morph=args.use_morph,
+                                        use_rbr=args.use_rbr,
+                                        use_neural=args.use_seq2seq)
 
         elif args.inference_mode == "test":
-            candidates = reinflector.reinflect(dataset=test_dataset,
-                                               speaker_gender=speaker_gender,
-                                               listener_gender=listener_gender,
-                                               use_cbr=args.use_cbr,
-                                               pick_top_mle=args.pick_top_mle,
-                                               reduce_cbr_noise=args.reduce_cbr_noise,
-                                               use_morph=args.use_morph,
-                                               use_rbr=args.use_rbr,
-                                               use_neural=args.use_seq2seq)
+            candidates = rewriter.rewrite(dataset=test_dataset,
+                                        speaker_gender=speaker_gender,
+                                        listener_gender=listener_gender,
+                                        use_cbr=args.use_cbr,
+                                        pick_top_mle=args.pick_top_mle,
+                                        reduce_cbr_noise=args.reduce_cbr_noise,
+                                        use_morph=args.use_morph,
+                                        use_rbr=args.use_rbr,
+                                        use_neural=args.use_seq2seq)
 
         # Final selection
-        scored_candidates = reinflector.select(candidates)
+        scored_candidates = rewriter.select(candidates)
 
         # Writing predictions
         write_predictions(output_file_dir=os.path.join(args.output_dir,
@@ -312,7 +312,7 @@ def main():
         if args.analyze_errors:
             if args.inference_mode == "dev":
                 do_error_analysis(dataset=dev_dataset,
-                                reinflections=scored_candidates,
+                                gender_alts=scored_candidates,
                                 output_dir=os.path.join(args.error_analysis_dir,
                                             'arin.to.'+target_gender+'.errors'),
                                 speaker_gender=speaker_gender,
@@ -320,7 +320,7 @@ def main():
 
             elif args.inference_mode == "test":
                 do_error_analysis(dataset=test_dataset,
-                                reinflections=scored_candidates,
+                                gender_alts=scored_candidates,
                                 output_dir=os.path.join(args.error_analysis_dir,
                                             'arin.to.'+target_gender+'.errors'),
                                 speaker_gender=speaker_gender,

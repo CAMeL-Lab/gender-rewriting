@@ -22,7 +22,7 @@ To run the fine-tuning:
 ```bash
 export DATA_DIR=/path/to/data
 export MAX_LENGTH=128
-export BERT_MODEL=path/to/pretrained_model/ \ # Or huggingface model id 
+export BERT_MODEL=path/to/pretrained_model/ # Or huggingface model id 
 export OUTPUT_DIR=/path/to/output_dir
 export BATCH_SIZE=32
 export NUM_EPOCHS=10 # or 3 for mutli-user gender id augmented 

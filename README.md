@@ -1,4 +1,4 @@
-# User-Centric Gender Rewriting:
+# User-Centric Gender Rewriting
 This repo contains code to reproduce the results in our paper [User-Centric Gender Rewriting](https://www.aclweb.org/anthology/XXXX).
 
 

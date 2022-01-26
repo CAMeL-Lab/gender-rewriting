@@ -2,7 +2,7 @@
 
 
 The data we use to train and evaluate the joint baselines can be found [here](https://github.com/balhafni/gender-rewriting/tree/master/data/rewrite/apgc-v2.0/joint). 
-To train the various joint baseline gender rewriting models we describe in our paper, you would need to run `scripts/train_seq2seq.py`. Here are the settings we used to train the three variants of the joint baselines we present in our paper: <br/>
+To train the various joint baseline gender rewriting models we describe in our paper, you would need to run [scripts/train_seq2seq.sh](scripts/train_seq2seq.sh). Here are the settings we used to train the three variants of the joint baselines we present in our paper: <br/>
 
 ### Joint+Morph:
 
@@ -91,10 +91,10 @@ python main.py \
  
 ```
 
-The joint baseline Joint+Morph pretraine model can be found in `saved_models/multi_user_newdb_clean_train`. The two joint baselines that uses side constraints (i.e., joint+side constraints and joint+side constraints+morph) can be found in  `saved_models/multi_user_side_constraints_newdb_clean_train`.
+The joint baseline Joint+Morph pretraine model can be found in [saved_models/multi_user_newdb_clean_train](saved_models/multi_user_newdb_clean_train). The two joint baselines that uses side constraints (i.e., joint+side constraints and joint+side constraints+morph) can be found in  [saved_models/multi_user_side_constraints_newdb_clean_train](saved_models/multi_user_side_constraints_newdb_clean_train).
 
 ## Infernece:
-For inference, you would need to run `scripts/inference_seq2seq.sh`. Here are the inference settings we used to get the outputs of our three baseline systems:
+For inference, you would need to run [scripts/inference_seq2seq.sh](scripts/inference_seq2seq.sh). Here are the inference settings we used to get the outputs of our three baseline systems:
 
 ### Joint+Morph:
 ```bash
@@ -156,11 +156,11 @@ python main.py \
  --preds_dir logs/multi_user_side_constraints_newdb_clean_train/dev.joint+morph
  ```
  
- To get the inference on the test set of the `Joint+Side Constraint+Morph` system, you just have to switch the `inference_mode` from dev to test.</br>
- The outputs of the joint baseline systems are in `logs/multi_user_newdb_clean_train/` and `logs/multi_user_side_constraints_newdb_clean_train/`. Files ending with .eval have the M<sup>2</sup> and BLEU evaluation scores.
+ To get the inference on the test set of the **Joint+Side Constraint+Morph** system, you just have to switch the `inference_mode` from dev to test.</br>
+ The outputs of the joint baseline systems are in [logs/multi_user_newdb_clean_train/](logs/multi_user_newdb_clean_train/) and [logs/multi_user_side_constraints_newdb_clean_train/](logs/multi_user_side_constraints_newdb_clean_train/). Files ending with .eval have the M<sup>2</sup> and BLEU evaluation scores.
  
  ## Evaluation:
-After running the inference, all of the systems outputs will be in `logs/multi_user_side_constraints_newdb_clean_train` and `logs/multi_user_newdb_clean_train`. `logs/multi_user_newdb_clean_train` has the outputs of the `Joint+Morph` system and `logs/multi_user_side_constraints_newdb_clean_train` has the outputs of both `Joint+Side Constraints` and `Joint+Side Constraints+Morph`. Files ending with `inf` indicate that the inference was done using greedy decoding and files ending with `beam` indicate that the inference was done using beam search.</br>
+After running the inference, all of the systems outputs will be in [logs/multi_user_side_constraints_newdb_clean_train](logs/multi_user_side_constraints_newdb_clean_train) and [logs/multi_user_newdb_clean_train](logs/multi_user_newdb_clean_train). [logs/multi_user_newdb_clean_train](logs/multi_user_newdb_clean_train) has the outputs of the **Joint+Morph** system and [logs/multi_user_side_constraints_newdb_clean_train](logs/multi_user_side_constraints_newdb_clean_train) has the outputs of both **Joint+Side Constraints** and **Joint+Side Constraints+Morph**. Files ending with `inf` indicate that the inference was done using greedy decoding and files ending with `beam` indicate that the inference was done using beam search.</br>
 
-To run the M<sup>2</sup> scorer and BLEU evaluation, you would need to run `sbatch/run_eval_norm_joint.sh`. Make sure to set the `DECODING` variable to `inf/beam` to switch between evaluating greedy and beam decoding outputs, respectively.</br>
-Note: All of our evaluation was done in Alif/Ya/Ta-Marbuta normalized space using the `utils/normalize.py` script. This script was used to generated the `*norm` files in `logs/*/*`.
+To run the M<sup>2</sup> scorer and BLEU evaluation, you would need to run [sbatch/run_eval_norm_joint.sh](sbatch/run_eval_norm_joint.sh). Make sure to set the `DECODING` variable to `inf/beam` to switch between evaluating greedy and beam decoding outputs, respectively.</br>
+Note: All of our evaluation was done in Alif/Ya/Ta-Marbuta normalized space using the [utils/normalize.py](utils/normalize.py) script. This script was used to generated the `*norm` files in `logs/*/*`.

@@ -1,9 +1,9 @@
 # Multi-step Gender Rewriting:
 
 ### Generating Gender Alternatives:
-To generate gender alternatives for the target users preferences we model (i.e., MM, FM, MF, FF), you would need to run `scripts/run_rewriting.sh`. This script generates files for each target user preference. It also generates an error analysis report indicating the cases where the model failed to generate a correct output. It is very important to note that for this step to work, the predicted word-level gender labels must be provided. The word-level gender predictions can be obtained from [here](https://drive.google.com/drive/folders/1vEkuhP4zW4PqEPd3u5F8LD5AH6Xnb5_m?usp=sharing); where `dev_predictions.txt` has the word-level predictions on the dev set and `test_predictions.txt` has the word-level predicitons on the test set of APGCv2.0. The fine-tuned BERT model (CAMeLBERT MSA) we use for selection is [here](https://drive.google.com/drive/folders/1WnJXhLxexrwlCNrG8mxpY-5schKMrmp-?usp=sharing)<br/>
+To generate gender alternatives for the target users preferences we model (i.e., MM, FM, MF, FF), you would need to run [scripts/run_rewriting.sh](scripts/run_rewriting.sh). This script generates files for each target user preference. It also generates an error analysis report indicating the cases where the model failed to generate a correct output. It is very important to note that for this step to work, the predicted word-level gender labels must be provided. The word-level gender predictions can be obtained from [here](https://drive.google.com/drive/folders/1vEkuhP4zW4PqEPd3u5F8LD5AH6Xnb5_m?usp=sharing); where `dev_predictions.txt` has the word-level predictions on the dev set and `test_predictions.txt` has the word-level predicitons on the test set of APGCv2.0. The fine-tuned BERT model (CAMeLBERT MSA) we use for selection is [here](https://drive.google.com/drive/folders/1WnJXhLxexrwlCNrG8mxpY-5schKMrmp-?usp=sharing)<br/>
 
-The `scripts/run_rewriting.sh` script has all the parameters needed to replicate the experiments we report in our paper. All of these parameters are self-explanatory and more details on them can be found in [main.py](https://github.com/balhafni/gender-rewriting/blob/master/rewrite/multi-step/main.py). Here's an example on how to run the **GID + CorpusR >> MorphR >> NeuralR + Selection** (i.e., the best performing system) on the dev set:
+The [scripts/run_rewriting.sh](scripts/run_rewriting.sh) script has all the parameters needed to replicate the experiments we report in our paper. All of these parameters are self-explanatory and more details on them can be found in [main.py](https://github.com/balhafni/gender-rewriting/blob/master/rewrite/multi-step/main.py). Here's an example on how to run the **GID + CorpusR >> MorphR >> NeuralR + Selection** (i.e., the best performing system) on the dev set:
 
 ```bash
 python main.py \
@@ -52,14 +52,14 @@ python main.py \
 --error_analysis_dir logs/paper_results_with_mlm_ft_final/single_user/error_analysis/CBR_MorphR_NeuralR_test
 ```
 
-The gender rewriting outputs and eval scores of the various systems we report on in our paper can be found in `logs/paper_results_with_mlm_ft_final/multi_user_with_clitics/rewriting/` and their corresponding error analyses can be found in `logs/paper_results_with_mlm_ft_final/multi_user_with_clitics/error_analysis/`.<br/>
+The gender rewriting outputs and eval scores of the various systems we report on in our paper can be found in [logs/paper_results_with_mlm_ft_final/multi_user_with_clitics/rewriting/](logs/paper_results_with_mlm_ft_final/multi_user_with_clitics/rewriting/) and their corresponding error analyses can be found in [logs/paper_results_with_mlm_ft_final/multi_user_with_clitics/error_analysis/](logs/paper_results_with_mlm_ft_final/multi_user_with_clitics/error_analysis/).<br/>
 
-We also did some experiments to demonstrate the effectiveness of using the fine-tuned CAMeLBERT MSA model instead of the generic one for our selection component. The gender rewriting outputs and eval scores of the experiments *without* doing any MLM fine-tuning can be found in `logs/paper_results_no_mlm_ft_final/rewriting`.
+We also did some experiments to demonstrate the effectiveness of using the fine-tuned CAMeLBERT MSA model instead of the generic one for our selection component. The gender rewriting outputs and eval scores of the experiments *without* doing any MLM fine-tuning can be found in [logs/paper_results_no_mlm_ft_final/rewriting](logs/paper_results_no_mlm_ft_final/rewriting).
 
-The outputs of the first-person only task can be found in `logs/paper_results_with_mlm_ft_final/single_user/rewriting/`.
+The outputs of the first-person only task can be found in [logs/paper_results_with_mlm_ft_final/single_user/rewriting/](logs/paper_results_with_mlm_ft_final/single_user/rewriting/).
 
 ### Augmentation Experiments:
-Replecating the augmentation experiments is also straight forward and done using the `scripts/run_rewriting.sh` script. Here's an example on how to get the outputs of the **GID<sub>Aug</sub> + CorpusR >> MorphR >> NeuralR<sub>Aug</sub> + Selection** system on the dev set of APGC v2.0:
+Replecating the augmentation experiments is also straight forward and done using the [scripts/run_rewriting.sh](scripts/run_rewriting.sh) script. Here's an example on how to get the outputs of the **GID<sub>Aug</sub> + CorpusR >> MorphR >> NeuralR<sub>Aug</sub> + Selection** system on the dev set of APGC v2.0:
 
 ```bash
 python main.py \
@@ -83,11 +83,11 @@ python main.py \
 --error_analysis_dir logs/paper_results_with_mlm_ft_final/multi_user_with_clitics/augmentation/error_analysis/CBR_MorphR_NeuralR_aug_id_aug
 ```
 
-The outputs of the various systems we report on in our augmentation experiments can be found in `logs/paper_results_with_mlm_ft_final/multi_user_with_clitics/augmentation/rewriting` and their error analyses in ` logs/paper_results_with_mlm_ft_final/multi_user_with_clitics/augmentation/error_analysis/`.
+The outputs of the various systems we report on in our augmentation experiments can be found in [logs/paper_results_with_mlm_ft_final/multi_user_with_clitics/augmentation/rewriting](logs/paper_results_with_mlm_ft_final/multi_user_with_clitics/augmentation/rewriting) and their error analyses in [logs/paper_results_with_mlm_ft_final/multi_user_with_clitics/augmentation/error_analysis/](logs/paper_results_with_mlm_ft_final/multi_user_with_clitics/augmentation/error_analysis/).
 
 
 ### Post-Editing Machine Translation Output:
-Getting the post-edited Google Translate output is also done using the `scripts/run_rewriting.sh` script. The predicted word-level labels of the Google Translate outputs are available [here](https://drive.google.com/drive/folders/1ZyOj1fb3UX527THm2_0LUGLoQyTpFYO2?usp=sharing).</br>
+Getting the post-edited Google Translate output is also done using the [scripts/run_rewriting.sh](scripts/run_rewriting.sh) script. The predicted word-level labels of the Google Translate outputs are available [here](https://drive.google.com/drive/folders/1ZyOj1fb3UX527THm2_0LUGLoQyTpFYO2?usp=sharing).</br>
 Here's how to run our best augmented system (**GID<sub>Aug</sub> + CorpusR >> MorphR >> NeuralR<sub>Aug</sub> + Selection**) on the Google Translate output of the test set of APGCv2.0:
 
 ```bash
@@ -110,9 +110,9 @@ python main.py \
 --output_dir logs/paper_results_with_mlm_ft_final/multi_user_with_clitics/MT/CBR_MorphR_NeuralR_aug_id_aug_test
 ```
 
-The post-edited MT output for our best system can be found in `logs/paper_results_with_mlm_ft_final/multi_user_with_clitics/MT/`
+The post-edited MT output for our best system can be found in [logs/paper_results_with_mlm_ft_final/multi_user_with_clitics/MT/](logs/paper_results_with_mlm_ft_final/multi_user_with_clitics/MT/)
 
 ## Evaluation:
-Running the M<sup>2</sup> scorer and BLEU evaluations for gender-rewriting is done through the `script/run_eval.sh` script. You probably need to change the `EXPERIMENT` parameter to point the right outputs directory.</br>
+Running the M<sup>2</sup> scorer and BLEU evaluations for gender-rewriting is done through the [scripts/run_eval.sh](scripts/run_eval.sh) script. You probably need to change the `EXPERIMENT` parameter to point the right outputs directory.</br>
 
-For the post-editing MT experiments, we run BLEU evaluation across the four target corpora (i.e., MM, FM, MF, FF) of APGVv2.0. This is done through the `script/bleu_eval.sh` script.
+For the post-editing MT experiments, we run BLEU evaluation across the four target corpora (i.e., MM, FM, MF, FF) of APGVv2.0. This is done through the [scripts/bleu_eval.sh](scripts/bleu_eval.sh) script.

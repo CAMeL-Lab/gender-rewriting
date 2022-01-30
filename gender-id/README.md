@@ -9,13 +9,13 @@ Note: All the fine-tuning experiments were done using Hugging Face's `transforme
 
 We fine-tune CAMeLBERT on the training split APGC v2.0 for multi-user gender idenfitication. The data used to fine-tune CAMeLBERT for multi-user word-level gender identification is [here](https://github.com/balhafni/gender-rewriting/tree/master/data/gender-id/multi_user).<br/>
 
-We also fine-tuned CAMeLBERT on the augmented data of APGC v2.0 multi-user gender idenfitication as reported in our paper. The augmented training data we used is [here](https://github.com/balhafni/gender-rewriting/tree/master/data/gender-id/multi_user/augmented_data). 
+We also fine-tuned CAMeLBERT on the augmented data of APGC v2.0 as reported in our paper. The augmented training data we used is [here](https://github.com/balhafni/gender-rewriting/tree/master/data/gender-id/multi_user/augmented_data). 
 
 To compare with previous work on the single-user rewriting task, we also fine-tune CAMeLBERT MSA on the training split of APGCv1.0. The data we used for the single-user word-level gender identification is [here](https://github.com/balhafni/gender-rewriting/tree/master/data/gender-id/single_user).
 
 At the end of the fine-tuning, we pick the best checkpoint based on the overall performance on the gender-rewriting task on the dev set (either APGCv1.0 or APGCv2.0, depending if we're doing single-user or multi-user gender rewriting).<br/>
 
-All of the three fine-tuned models CAMeLBERT models can be found [here](https://drive.google.com/drive/folders/1IxmvY5xrnAq5QXBhKOEK908Z7H5R7uYp?usp=sharing).<br/>
+All of the three fine-tuned models CAMeLBERT models (multi-user, augmented multi-user, and single-user) can be found [here](https://drive.google.com/drive/folders/1IxmvY5xrnAq5QXBhKOEK908Z7H5R7uYp?usp=sharing).<br/>
 
 To run the fine-tuning:
 

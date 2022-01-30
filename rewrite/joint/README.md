@@ -91,7 +91,7 @@ python main.py \
  
 ```
 
-The joint baseline Joint+Morph pretraine model can be found in [saved_models/multi_user_newdb_clean_train](saved_models/multi_user_newdb_clean_train). The two joint baselines that uses side constraints (i.e., joint+side constraints and joint+side constraints+morph) can be found in  [saved_models/multi_user_side_constraints_newdb_clean_train](saved_models/multi_user_side_constraints_newdb_clean_train).
+The joint baseline Joint+Morph pretrained model can be found in [saved_models/multi_user_newdb_clean_train](saved_models/multi_user_newdb_clean_train). The two joint baselines that uses side constraints (i.e., joint+side constraints and joint+side constraints+morph) can be found in  [saved_models/multi_user_side_constraints_newdb_clean_train](saved_models/multi_user_side_constraints_newdb_clean_train).
 
 ## Infernece:
 For inference, you would need to run [scripts/inference_seq2seq.sh](scripts/inference_seq2seq.sh). Here are the inference settings we used to get the outputs of our three baseline systems:
@@ -162,5 +162,5 @@ python main.py \
  ## Evaluation:
 After running the inference, all of the systems outputs will be in [logs/multi_user_side_constraints_newdb_clean_train](logs/multi_user_side_constraints_newdb_clean_train) and [logs/multi_user_newdb_clean_train](logs/multi_user_newdb_clean_train). [logs/multi_user_newdb_clean_train](logs/multi_user_newdb_clean_train) has the outputs of the **Joint+Morph** system and [logs/multi_user_side_constraints_newdb_clean_train](logs/multi_user_side_constraints_newdb_clean_train) has the outputs of both **Joint+Side Constraints** and **Joint+Side Constraints+Morph**. Files ending with `inf` indicate that the inference was done using greedy decoding and files ending with `beam` indicate that the inference was done using beam search.</br>
 
-To run the M<sup>2</sup> scorer and BLEU evaluation, you would need to run [sbatch/run_eval_norm_joint.sh](sbatch/run_eval_norm_joint.sh). Make sure to set the `DECODING` variable to `inf/beam` to switch between evaluating greedy and beam decoding outputs, respectively.</br>
+To run the M<sup>2</sup> scorer and BLEU evaluation, you would need to run [sbatch/run_eval_norm_joint.sh](sbatch/run_eval_norm_joint.sh). Make sure to set the `DECODING` variable to `inf or beam` to switch between evaluating greedy and beam decoding outputs, respectively.</br>
 Note: All of our evaluation was done in Alif/Ya/Ta-Marbuta normalized space using the [utils/normalize.py](utils/normalize.py) script. This script was used to generated the `*norm` files in `logs/*/*`.

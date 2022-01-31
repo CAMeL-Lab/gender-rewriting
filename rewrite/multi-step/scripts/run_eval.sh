@@ -18,10 +18,10 @@ export EXPERIMENT=CBR_MorphR_NeuralR_aug_id_aug_test
 export SYSTEM_HYP=logs/paper_results_with_mlm_ft_final/multi_user_with_clitics/augmentation/rewriting/$EXPERIMENT
 
 # removing last empty line from the preds files
-sed -i '$ d' $SYSTEM_HYP/arin.to.MM.preds
-sed -i '$ d' $SYSTEM_HYP/arin.to.FM.preds
-sed -i '$ d' $SYSTEM_HYP/arin.to.MF.preds
-sed -i '$ d' $SYSTEM_HYP/arin.to.FF.preds
+# sed -i '$ d' $SYSTEM_HYP/arin.to.MM.preds
+# sed -i '$ d' $SYSTEM_HYP/arin.to.FM.preds
+# sed -i '$ d' $SYSTEM_HYP/arin.to.MF.preds
+# sed -i '$ d' $SYSTEM_HYP/arin.to.FF.preds
 
 # preparing the preds
 cat $SYSTEM_HYP/arin.to.MM.preds $SYSTEM_HYP/arin.to.FM.preds  $SYSTEM_HYP/arin.to.MF.preds  $SYSTEM_HYP/arin.to.FF.preds > $SYSTEM_HYP/$EXPERIMENT.inf

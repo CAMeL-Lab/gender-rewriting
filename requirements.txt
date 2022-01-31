@@ -3,3 +3,4 @@ transformers==4.11.3
 sacrebleu==2.0.0
 camel-tools==1.2.0
 gluonnlp
+mxnet

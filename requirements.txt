@@ -2,3 +2,4 @@ torch==1.5.1
 transformers==4.11.3
 sacrebleu==2.0.0
 camel-tools==1.2.0
+gluonnlp

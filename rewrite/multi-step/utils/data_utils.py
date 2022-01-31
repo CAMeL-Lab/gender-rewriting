@@ -102,8 +102,8 @@ class Dataset:
                 sent_tags.append(tag)
 
         # adding the last sentence info
-        all_tokens.append(sent_tokens)
-        all_tags.append(sent_tags)
+        # all_tokens.append(sent_tokens)
+        # all_tags.append(sent_tags)
         return all_tokens, all_tags
 
     def create_dataset(self, src_path, tgt_path, src_bert_tags_path):

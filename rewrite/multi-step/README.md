@@ -95,7 +95,7 @@ python main.py \
 --data_dir /scratch/ba63/Arabic-Parallel-Gender-Corpus/Arabic-parallel-gender-corpus-v-2.0/data/new_token_data/ \
 --morph_db /scratch/ba63/calima_databases/calima-msa/calima-msa-s31_0.4.2.utf8.db.copy-mod \
 --bert_model /scratch/ba63/mlm_lm/bert-base-arabic-camelbert-msa-mlm \
---gender_id_model /scratch/ba63/gender-rewriting/gender-id/CAMeLBERT_MSA/multi_user_with_clitics/controlled_settings/augmented_models_3_5000_acc/google_MT \
+--gender_id_model /scratch/ba63/gender-rewriting/gender-id/CAMeLBERT_MSA/multi_user_with_clitics/controlled_settings/augmented_models_3_5000_acc \
 --inference_mode test \
 --use_cbr \
 --cbr_ngram 2 \

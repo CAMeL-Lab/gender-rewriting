@@ -3,6 +3,7 @@ from cbr import CBR
 from rbr import RBR
 from morph_rewriter import MorphRewriter
 from neural_rewriter.rewriter import NeuralRewriter
+from gender_identifier import GenderIdentifier
 # from reinflector_union import GenderReinflector
 from rewriter import GenderRewriter
 from ranker import Ranker
@@ -38,11 +39,11 @@ def main():
         help="The data dir. Should contain the src and trg files."
     )
     parser.add_argument(
-        "--src_bert_tags_dir",
+        "--gender_id_model",
         default=None,
         type=str,
         required=True,
-        help="The predicted bert tags for the src tokens for dev or test sets."
+        help="Path to the fine-tuned gender identification model."
     )
     parser.add_argument(
         "--bert_model",
@@ -168,10 +169,14 @@ def main():
     args = parser.parse_args()
     logger.info(args)
 
+    # Creating the gender identifier
+    gender_identifier = GenderIdentifier(model_path=args.gender_id_model,
+                                         single_user=args.first_person_only,
+                                         use_gpu=args.use_gpu)
+
     # We will repeat the rewriting process across the various target genders
     user_genders = (['M', 'F'] if args.first_person_only else
                     ['MM', 'FM', 'MF', 'FF'])
-                    # ['FF'])
 
     # Creating a ranker
     ranker = Ranker(model_name=args.bert_model,
@@ -181,11 +186,8 @@ def main():
         logger.info('\n')
         logger.info(f'######## {target_gender} Rewriting ########')
         logger.info('\n')
-        # Reading training data
-        # TODO: fix tokens files to remove the empty lines from the end
-        # This will take care of fixing the empty line issue at the end 
-        # of the preds files
 
+        # Reading training data
         if args.use_data_augmentation:
             train_dataset = Dataset(src_path=os.path.join(args.data_dir,
                                             'augmented_data',
@@ -207,12 +209,10 @@ def main():
             dev_dataset = Dataset(src_path=os.path.join(args.data_dir,
                                                         'dev.arin.tokens'),
                                   tgt_path=os.path.join(args.data_dir,
-                                             'dev.ar.'+target_gender+'.tokens'),
-                                  src_bert_tags_path=args.src_bert_tags_dir)
+                                             'dev.ar.'+target_gender+'.tokens'))
 
             # dev_dataset = Dataset(src_path=os.path.join(args.data_dir,
-            #                                             'google_MT/dev.google.ar.tokens'),
-            #                       src_bert_tags_path=args.src_bert_tags_dir)
+            #                                             'google_MT/dev.google.ar.tokens'))
 
             logger.info(f'There are {len(dev_dataset)} Dev Examples')
 
@@ -221,16 +221,13 @@ def main():
             test_dataset = Dataset(src_path=os.path.join(args.data_dir,
                                                          'test.arin.tokens'),
                                    tgt_path=os.path.join(args.data_dir,
-                                             'test.ar.'+target_gender+'.tokens'),
-                                   src_bert_tags_path=args.src_bert_tags_dir)
+                                             'test.ar.'+target_gender+'.tokens'))
 
             # test_dataset = Dataset(src_path=os.path.join(args.data_dir,
-            #                                              'google_MT/test.google.ar.tokens'),
-            #                        src_bert_tags_path=args.src_bert_tags_dir)
+            #                                              'google_MT/test.google.ar.tokens'))
 
 
-            # test_dataset = Dataset(src_path='/scratch/ba63/gender-rewriting/raw_openSub/augmentation/test.txt',
-            #                        src_bert_tags_path=args.src_bert_tags_dir)
+            # test_dataset = Dataset(src_path='/scratch/ba63/gender-rewriting/raw_openSub/augmentation/test.txt')
 
 
             logger.info(f'There are {len(test_dataset)} Test Examples')
@@ -240,7 +237,6 @@ def main():
             cbr_model = CBR.build_model(train_dataset,
                                         ngrams=args.cbr_ngram,
                                         backoff=args.cbr_backoff)
-            # import pdb; pdb.set_trace()
         else:
             cbr_model = None
 
@@ -272,6 +268,7 @@ def main():
                                   rbr_model=rbr_model,
                                   neural_rewriter=neuralR,
                                   ranker=ranker,
+                                  gender_identifier=gender_identifier,
                                   first_person_only=args.first_person_only)
 
 
@@ -309,7 +306,7 @@ def main():
                                           'arin.to.'+target_gender+'.preds'),
                           output_examples=scored_candidates)
 
-        # # Auto error analysis
+        # Auto error analysis
         if args.analyze_errors:
             if args.inference_mode == "dev":
                 do_error_analysis(dataset=dev_dataset,

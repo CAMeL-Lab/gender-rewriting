@@ -24,12 +24,12 @@ def do_error_analysis(dataset, gender_alts,
         pred_trg_sentence = output_example.sentence
         proposed_by = ' '.join(output_example.proposed_by)
         scored_candidates = output_example.scored_candidates
+        pred_src_gen_tags = ' '.join(output_example.pred_src_gen_tags)
 
         gold_src_sentence = ' '.join(ex.src_tokens)
         gold_src_tags = ' '.join(ex.src_tags)
         gold_trg_sentence = ' '.join(ex.tgt_tokens)
         gold_trg_tags = ' '.join(ex.tgt_tags)
-        src_bert_tags = ' '.join(ex.src_bert_tags)
 
         # We only care about the error analysis if there's a mistake
         # The mistake could be due to four possibilities:
@@ -37,7 +37,7 @@ def do_error_analysis(dataset, gender_alts,
         # 3) rewriting selection error (mlm scorer);
         # 4) normalization
         if pred_trg_sentence != gold_trg_sentence:
-            if gold_src_tags != src_bert_tags:
+            if gold_src_tags != pred_src_gen_tags:
                 error_type = 'Tagging'
             else:
                 # Check for normalization
@@ -66,7 +66,7 @@ def do_error_analysis(dataset, gender_alts,
             out_file.write(f"PRED: \t\t{pred_trg_sentence}\n")
             out_file.write(f"SRC TAGS:\t{gold_src_tags}\n")
             out_file.write(f"TRG TAGS:\t{gold_trg_tags}\n")
-            out_file.write(f"PRED SRC TAGS:\t{src_bert_tags}\n")
+            out_file.write(f"PRED SRC TAGS:\t{pred_src_gen_tags}\n")
             out_file.write(f"PROPOSED BY:\t{proposed_by}\n")
             out_file.write(f"ERROR Type:\t{error_type}\n")
             out_file.write(f"SPEAKER TRG GEN:\t{speaker_gender}\n")

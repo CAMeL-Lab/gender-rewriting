@@ -9,6 +9,7 @@ logger = logging.getLogger(__name__)
 class GenderRewriter:
 
     def __init__(self, cbr_model, morph_rewriter, rbr_model, neural_rewriter,
+                 gender_identifier,
                  ranker=None,
                  first_person_only=False):
         """
@@ -28,6 +29,7 @@ class GenderRewriter:
         self.cbr_model = cbr_model
         self.morph_rewriter = morph_rewriter
         self.ranker = ranker
+        self.gender_identifier = gender_identifier
         self.rbr_model = rbr_model
         self.neural_rewriter = neural_rewriter
         self.first_person_only = first_person_only
@@ -91,7 +93,7 @@ class GenderRewriter:
 
         for i, example in enumerate(dataset):
             src_tokens = example.src_tokens
-            pred_tags = example.src_bert_tags
+            pred_tags = self.gender_identifier.predict_sentence(src_tokens)
 
             # building ngrams for the CBR model if needed
             if use_cbr:
@@ -246,6 +248,7 @@ class GenderRewriter:
                         proposed_by.append('OOV')
 
             candidates.append(Candidate(masked_sentence=candidate_sentence,
+                              pred_src_gen_tags=pred_tags,
                               targets=candidate_targets,
                               proposed_by=proposed_by))
 
@@ -280,17 +283,20 @@ class GenderRewriter:
         gender_alts = []
         for i, candidate in enumerate(candidates):
             sentence = ' '.join(candidate.masked_sentence)
+
             if candidate.targets:
                 scored = self.ranker.fill_and_rank(sentence=sentence,
                                                    targets=candidate.targets)
 
                 gender_alts.append(OutputExample(sentence=scored[0].sentence,
-                                                   scored_candidates=scored[1:],
-                                                   proposed_by=candidate.proposed_by))
+                                    scored_candidates=scored[1:],
+                                    pred_src_gen_tags=candidate.pred_src_gen_tags,
+                                    proposed_by=candidate.proposed_by))
             else:
                 gender_alts.append(OutputExample(sentence=sentence,
-                                                   scored_candidates=None,
-                                                   proposed_by=candidate.proposed_by))
+                                scored_candidates=None,
+                                pred_src_gen_tags=candidate.pred_src_gen_tags,
+                                proposed_by=candidate.proposed_by))
 
         return gender_alts
 

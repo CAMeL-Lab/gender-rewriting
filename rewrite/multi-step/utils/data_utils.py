@@ -2,22 +2,18 @@ import copy
 import json
 
 class InputExample:
-    def __init__(self, src_tokens, src_tags, tgt_tokens, tgt_tags,
-                 src_bert_tags=None):
+    def __init__(self, src_tokens, src_tags, tgt_tokens, tgt_tags):
         """
         Args:
             - src_tokens (list of str): The source tokens.
             - src_tags (list of str): The gender tags for each source token.
             - tgt_token (list of str): The target tokens.
             - tgt_tags (list of str): The gender tags for each target token.
-            - src_bert_tags (list of str): The src bert-tagger src gender tags.
-                                           Defaults to None.
         """
         self.src_tokens = src_tokens
         self.src_tags = src_tags
         self.tgt_tokens = tgt_tokens
         self.tgt_tags = tgt_tags
-        self.src_bert_tags = src_bert_tags
 
     def __repr__(self):
         return str(self.to_json_str())
@@ -30,17 +26,21 @@ class InputExample:
         return output
 
 class OutputExample:
-    def __init__(self, sentence, proposed_by, scored_candidates=None):
+    def __init__(self, sentence, proposed_by, pred_src_gen_tags,
+                 scored_candidates=None):
         """
         Args:
             - sentence (str): The output sentence.
-            - proposed_by (list): morph or cbr or oov. This is used for
+            - proposed_by (list): morph, cbr, neural or oov. This is used for
                                   error analysis.
+            - pred_src_gen_tags (list): Predicted word-level source gender
+                                        tags. This is used for error analysis.
             - scored_candidates(list): list of scored candidates objects.
                                        This is used for error analysis
         """
         self.sentence = sentence
         self.scored_candidates = scored_candidates
+        self.pred_src_gen_tags = pred_src_gen_tags
         self.proposed_by = proposed_by
 
     def __repr__(self):
@@ -54,18 +54,15 @@ class OutputExample:
         return output
 
 class Dataset:
-    def __init__(self, src_path, tgt_path=None, src_bert_tags_path=None):
+    def __init__(self, src_path, tgt_path=None):
         """
         Args:
             - src_path (str): dir to gold tagged src tokens.
             - tgt_path (str): dir to gold tagged tgt tokens.
                               Defaults to None in case we are doing inference
                               with no labels.
-            - src_bert_tags_path (str): dir to bert tagged src tokens.
-                                        Defaults to None.
         """
-        self.input_examples = self.create_dataset(src_path, tgt_path,
-                                                  src_bert_tags_path)
+        self.input_examples = self.create_dataset(src_path, tgt_path)
 
     def get_raw_data(self, data_dir):
         with open(data_dir, encoding='utf8', mode='r') as f:
@@ -106,7 +103,7 @@ class Dataset:
         # all_tags.append(sent_tags)
         return all_tokens, all_tags
 
-    def create_dataset(self, src_path, tgt_path, src_bert_tags_path):
+    def create_dataset(self, src_path, tgt_path):
         # Read and collate src and target data
         src_data = self.get_raw_data(src_path)
         src_tokens, src_tags = self.collate(src_data)
@@ -120,14 +117,6 @@ class Dataset:
         else:
             tgt_tokens, tgt_tags = None, None
 
-        # Read and collate bert src tags if needed
-        if src_bert_tags_path:
-            bert_preds_data = self.get_raw_data(src_bert_tags_path)
-            _, src_bert_tags = self.collate(bert_preds_data)
-            assert len(src_bert_tags) == len(src_tokens)
-        else:
-            src_bert_tags = None
-
         # Creating input examples
         input_examples = []
         for i in range(len(src_tokens)):
@@ -135,13 +124,11 @@ class Dataset:
             ex_src_tags = src_tags[i]
             ex_tgt_tokens = tgt_tokens[i] if tgt_tokens else None
             ex_tgt_tags = tgt_tags[i] if tgt_tags else None
-            ex_src_bert_tags = src_bert_tags[i] if src_bert_tags else None
 
             input_examples.append(InputExample(src_tokens=ex_src_tokens,
                                                src_tags=ex_src_tags,
                                                tgt_tokens=ex_tgt_tokens,
-                                               tgt_tags=ex_tgt_tags,
-                                               src_bert_tags=ex_src_bert_tags))
+                                               tgt_tags=ex_tgt_tags))
 
         return input_examples
 
@@ -152,16 +139,20 @@ class Dataset:
         return self.input_examples[idx]
 
 class Candidate:
-    def __init__(self, masked_sentence, targets, proposed_by):
+    def __init__(self, masked_sentence, targets, pred_src_gen_tags,
+                 proposed_by):
         """
         Args:
             - masked_sentence (list of str): Mutli-masked sentence
             - targets (list of list of str): Proposals to fill.
-            - proposed_by (list): morph or cbr or oov. This is used for
+            - pred_src_gen_tags (list): Predicted word-level source gender
+                                        tags. This is used for error analysis.
+            - proposed_by (list): morph, cbr, neural or oov. This is used for
                                   error analysis.
         """
         self.masked_sentence = masked_sentence
         self.targets = targets
+        self.pred_src_gen_tags = pred_src_gen_tags
         self.proposed_by = proposed_by
 
     def __repr__(self):

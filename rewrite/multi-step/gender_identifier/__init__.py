@@ -266,6 +266,8 @@ class GenderIdentifier:
         self.single_user = single_user
         self.device = ('cuda' if use_gpu and torch.cuda.is_available()
                        else 'cpu')
+        self.model.to(self.device)
+        self.model.eval()
 
     @staticmethod
     def labels():
@@ -333,8 +335,6 @@ class GenderIdentifier:
         preds = None
         sent_ids = None
 
-        self.model.to(self.device)
-        self.model.eval()
         with torch.no_grad():
             for batch in data_loader:
                 batch = {k: v.to(self.device) for k, v in batch.items()}

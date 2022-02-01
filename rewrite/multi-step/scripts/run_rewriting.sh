@@ -32,20 +32,10 @@ module purge
 # /scratch/ba63/BERT_models/bert-base-arabic-camelbert-msa
 # /scratch/ba63/mlm_lm/bert-base-arabic-camelbert-msa-mlm
 
-# /scratch/ba63/gender-rewriting/gender-id/CAMeLBERT_MSA/multi_user_with_clitics/models/dev_predictions.txt
-# /scratch/ba63/gender-rewriting/gender-id/CAMeLBERT_MSA/multi_user_with_clitics/controlled_settings/augmented_models_3_5000_acc/dev_predictions.txt
+# /scratch/ba63/gender-rewriting/gender-id/CAMeLBERT_MSA/multi_user_with_clitics/models
+# /scratch/ba63/gender-rewriting/gender-id/CAMeLBERT_MSA/multi_user_with_clitics/controlled_settings/augmented_models_3_5000_acc
 
-#/scratch/ba63/gender-rewriting/gender-id/CAMeLBERT_MSA/multi_user_with_clitics/models/test_predictions.txt
-# /scratch/ba63/gender-rewriting/gender-id/CAMeLBERT_MSA/multi_user_with_clitics/controlled_settings/augmented_models_3_5000_acc/test_predictions.txt
-
-# /scratch/ba63/gender-rewriting/gender-id/CAMeLBERT_MSA/single_user/models_acc/dev_predictions.txt
-# /scratch/ba63/gender-rewriting/gender-id/CAMeLBERT_MSA/single_user/models_acc/test_predictions.txt
-
-# /scratch/ba63/gender-rewriting/gender-id/CAMeLBERT_MSA/multi_user_with_clitics/models/google_MT/dev_predictions.txt
-# /scratch/ba63/gender-rewriting/gender-id/CAMeLBERT_MSA/multi_user_with_clitics/controlled_settings/augmented_models_3_5000_acc/google_MT/dev_predictions.txt
-
-# /scratch/ba63/gender-rewriting/gender-id/CAMeLBERT_MSA/multi_user_with_clitics/models/google_MT/test_predictions.txt
-# /scratch/ba63/gender-rewriting/gender-id/CAMeLBERT_MSA/multi_user_with_clitics/controlled_settings/augmented_models_3_5000_acc/google_MT/test_predictions.txt
+# /scratch/ba63/gender-rewriting/gender-id/CAMeLBERT_MSA/single_user/models_acc
 
 # /scratch/ba63/Arabic-Parallel-Gender-Corpus/Arabic-parallel-gender-corpus-v-1.0/new_token_data/
 
@@ -53,7 +43,7 @@ python main.py \
 --data_dir /scratch/ba63/Arabic-Parallel-Gender-Corpus/Arabic-parallel-gender-corpus-v-2.0/data/new_token_data/ \
 --morph_db /scratch/ba63/calima_databases/calima-msa/calima-msa-s31_0.4.2.utf8.db.copy-mod \
 --bert_model /scratch/ba63/mlm_lm/bert-base-arabic-camelbert-msa-mlm \
---src_bert_tags_dir /scratch/ba63/gender-rewriting/gender-id/CAMeLBERT_MSA/multi_user_with_clitics/controlled_settings/augmented_models_3_5000_acc/test_predictions.txt \
+--gender_id_model /scratch/ba63/gender-rewriting/gender-id/CAMeLBERT_MSA/multi_user_with_clitics/controlled_settings/augmented_models_3_5000_acc \
 --inference_mode test \
 --use_cbr \
 --cbr_ngram 2 \

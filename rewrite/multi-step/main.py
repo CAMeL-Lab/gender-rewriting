@@ -12,6 +12,8 @@ import argparse
 from argparse import Namespace
 import os
 import logging
+import json
+
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -83,6 +85,11 @@ def main():
         "--reduce_cbr_noise",
         action="store_true",
         help="Whether to ignore cbr rewrite if its the same as the input."
+    )
+    parser.add_argument(
+        "--save_cbr_model",
+        action="store_true",
+        help="Whether to cache the cbr model or not."
     )
     parser.add_argument(
         "--use_morph",
@@ -237,6 +244,12 @@ def main():
             cbr_model = CBR.build_model(train_dataset,
                                         ngrams=args.cbr_ngram,
                                         backoff=args.cbr_backoff)
+
+            if args.save_cbr_model:
+                with open(os.path.join(args.output_dir,
+                          'cbr.arin.'+target_gender), 'w') as f:
+                    json.dump(cbr_model.to_serializable(), f,
+                              ensure_ascii=False)
         else:
             cbr_model = None
 

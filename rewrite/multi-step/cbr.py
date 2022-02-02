@@ -93,3 +93,12 @@ class CBR:
 
     def __len__(self):
         return len(self.model)
+
+    def to_serializable(self):
+        return {'model': {str(k): v for k, v in self.model.items()},
+                'ngrams': self.ngrams,
+                'backoff': self.backoff}
+
+    @classmethod
+    def from_serializable(cls, contents):
+        return cls(**contents)

@@ -1,6 +1,6 @@
 from utils.data_utils import Dataset
 from collections import defaultdict
-
+import json
 
 def build_ngrams(sentence, pad_right=False, pad_left=False, ngrams=1):
     """
@@ -102,3 +102,10 @@ class CBR:
     @classmethod
     def from_serializable(cls, contents):
         return cls(**contents)
+
+    @staticmethod
+    def load_model(model_path):
+        with open(model_path) as f:
+            return CBR.from_serializable(json.load(f))
+
+

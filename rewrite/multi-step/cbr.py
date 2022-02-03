@@ -107,5 +107,3 @@ class CBR:
     def load_model(model_path):
         with open(model_path) as f:
             return CBR.from_serializable(json.load(f))
-
-

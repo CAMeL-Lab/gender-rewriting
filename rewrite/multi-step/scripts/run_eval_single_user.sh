@@ -17,10 +17,6 @@
 export EXPERIMENT=CBR_MorphR_NeuralR_test_checking
 export SYSTEM_HYP=logs/paper_results_with_mlm_ft_final/single_user/rewriting/$EXPERIMENT
 
-# removing last empty line from the preds files
-# sed -i '$ d' $SYSTEM_HYP/arin.to.M.preds
-# sed -i '$ d' $SYSTEM_HYP/arin.to.F.preds
-
 # preparing the preds
 cat $SYSTEM_HYP/arin.to.M.preds $SYSTEM_HYP/arin.to.F.preds > $SYSTEM_HYP/$EXPERIMENT.inf
 

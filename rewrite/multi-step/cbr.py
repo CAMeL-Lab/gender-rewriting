@@ -96,20 +96,6 @@ class CBR:
 
     @staticmethod
     def load_model(model_path):
-<<<<<<< Updated upstream
-        with open(model_path) as f:
-            return CBR.from_serializable(json.load(f))
-<<<<<<< Updated upstream
-=======
-=======
-<<<<<<< HEAD
         with open(model_path, 'rb') as f:
             return pickle.load(f)
 
-
-=======
-        with open(model_path) as f:
-            return CBR.from_serializable(json.load(f))
->>>>>>> 30d2fcca84636ef52a45675e8e5d97f646e35d4c
->>>>>>> Stashed changes
->>>>>>> Stashed changes

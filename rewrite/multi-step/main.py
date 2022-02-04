@@ -12,8 +12,7 @@ import argparse
 from argparse import Namespace
 import os
 import logging
-import json
-
+import dill as pickle
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -247,9 +246,8 @@ def main():
 
             if args.save_cbr_model:
                 with open(os.path.join(args.output_dir,
-                          'cbr.arin.'+target_gender), 'w') as f:
-                    json.dump(cbr_model.to_serializable(), f,
-                              ensure_ascii=False)
+                          'cbr.arin.'+target_gender+'.pkl'), 'wb') as f:
+                    pickle.dump(cbr_model, f)
         else:
             cbr_model = None
 

@@ -1,6 +1,6 @@
 from utils.data_utils import Dataset
 from collections import defaultdict
-import json
+import dill as pickle
 
 def build_ngrams(sentence, pad_right=False, pad_left=False, ngrams=1):
     """
@@ -94,16 +94,22 @@ class CBR:
     def __len__(self):
         return len(self.model)
 
-    def to_serializable(self):
-        return {'model': {str(k): v for k, v in self.model.items()},
-                'ngrams': self.ngrams,
-                'backoff': self.backoff}
-
-    @classmethod
-    def from_serializable(cls, contents):
-        return cls(**contents)
-
     @staticmethod
     def load_model(model_path):
+<<<<<<< Updated upstream
         with open(model_path) as f:
             return CBR.from_serializable(json.load(f))
+<<<<<<< Updated upstream
+=======
+=======
+<<<<<<< HEAD
+        with open(model_path, 'rb') as f:
+            return pickle.load(f)
+
+
+=======
+        with open(model_path) as f:
+            return CBR.from_serializable(json.load(f))
+>>>>>>> 30d2fcca84636ef52a45675e8e5d97f646e35d4c
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes

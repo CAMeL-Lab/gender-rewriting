@@ -14,7 +14,7 @@
 #SBATCH -o job.%J.out
 #SBATCH -e job.%J.err
 
-export EXPERIMENT=CBR_MorphR_NeuralR_test
+export EXPERIMENT=CBR_MorphR_NeuralR_test_checking
 export SYSTEM_HYP=logs/paper_results_with_mlm_ft_final/single_user/rewriting/$EXPERIMENT
 
 # removing last empty line from the preds files
@@ -28,7 +28,7 @@ cat $SYSTEM_HYP/arin.to.M.preds $SYSTEM_HYP/arin.to.F.preds > $SYSTEM_HYP/$EXPER
 python /home/ba63/gender-rewriting/rewrite/multi-step/utils/normalize.py --input_file $SYSTEM_HYP/$EXPERIMENT.inf --output_file $SYSTEM_HYP/$EXPERIMENT.inf.norm
 
 
-export DATA_DIR=/scratch/ba63/Arabic-Parallel-Gender-Corpus/m2_edits/v1.0/
+export DATA_DIR=/home/ba63/gender-rewriting/data/m2_edits/v1.0/
 export DATA_SPLIT=test
 export GOLD_DATA=norm_data/D-set-$DATA_SPLIT.ar.M+D-set-$DATA_SPLIT.ar.F.norm
 export EDITS_ANNOTATIONS=edits/$DATA_SPLIT.arin+$DATA_SPLIT.arin.to.$DATA_SPLIT.ar.M+$DATA_SPLIT.ar.F.norm

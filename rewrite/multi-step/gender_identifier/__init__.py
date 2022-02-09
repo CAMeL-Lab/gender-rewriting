@@ -326,7 +326,7 @@ class GenderIdentifier:
         test_dataset = TokenClassificationDataset(sentences=sentences,
                                         tokenizer=self.tokenizer,
                                         labels=list(self.labels_map.values()),
-                                        max_seq_length=256)
+                                        max_seq_length=128)
 
         data_loader = DataLoader(test_dataset, batch_size=batch_size,
                                  shuffle=False, drop_last=False)

@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH -p condo
+#SBATCH -p nvidia
 # use gpus
 #SBATCH --gres=gpu:1
 # memory
@@ -35,7 +35,7 @@ python main.py \
  --data_dir $DATA_DIR \
  --add_side_constraints \
  --analyzer_db_path /scratch/ba63/calima_databases/calima-msa/calima-msa-s31_0.4.2.utf8.db.copy-mod \
- --vectorizer_path saved_models/augmented_fix_mlm_with_seed/vectorizer.json \
+ --vectorizer_path saved_models/augmented_fix/vectorizer.json \
  --cache_files \
  --num_train_epochs 50 \
  --embed_dim 128 \

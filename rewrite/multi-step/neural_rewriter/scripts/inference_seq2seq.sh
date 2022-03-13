@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH -p condo 
+#SBATCH -p nvidia
 # use gpus
 #SBATCH --gres=gpu:1
 # memory

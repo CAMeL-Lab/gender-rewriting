@@ -14,7 +14,7 @@
 #SBATCH -o job.%J.out
 #SBATCH -e job.%J.err
 
-export EXPERIMENT=CBR_MorphR_NeuralR_test_checking
+export EXPERIMENT=CBR_MorphR_NeuralR_test
 export SYSTEM_HYP=logs/paper_results_with_mlm_ft_final/single_user/rewriting/$EXPERIMENT
 
 # preparing the preds

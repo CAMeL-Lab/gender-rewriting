@@ -13,11 +13,10 @@
 nvidia-smi
 module purge
 
-export TRAIN_DATA_FILE=/scratch/ba63/Arabic-Parallel-Gender-Corpus/Arabic-parallel-gender-corpus-v-2.0/data/joint_model/mlm_data/train.txt
-# export TRAIN_DATA_FILE=/scratch/ba63/gender-rewriting/raw_openSub/augmentation/augmented_data/mlm_data/train.txt
-export DEV_DATA_FILE=/scratch/ba63/Arabic-Parallel-Gender-Corpus/Arabic-parallel-gender-corpus-v-2.0/data/joint_model/mlm_data/dev.txt
+export TRAIN_DATA_FILE=/home/ba63/gender-rewriting/data/mlm/train.txt
+export DEV_DATA_FILE=/home/ba63/gender-rewriting/data/mlm/dev.txt
 export MODEL=/scratch/ba63/BERT_models/bert-base-arabic-camelbert-msa
-export OUTPUT_DIR=/scratch/ba63/mlm_lm/bert-base-arabic-camelbert-msa-mlm
+export OUTPUT_DIR=/scratch/ba63/gender-rewriting/mlm_lm/bert-base-arabic-camelbert-msa-mlm-88
 
 python run_mlm_no_trainer.py \
 --model_name_or_path $MODEL \
@@ -28,4 +27,5 @@ python run_mlm_no_trainer.py \
 --per_device_eval_batch_size 32 \
 --line_by_line True \
 --overwrite_cache True \
+--seed 88 \
 --output_dir $OUTPUT_DIR

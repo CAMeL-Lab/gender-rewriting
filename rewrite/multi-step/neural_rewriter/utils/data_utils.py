@@ -90,8 +90,8 @@ class RawDataset:
                                         os.path.join(data_dir, 'nn_token_data/D-set-dev.ar.M.tokens+D-set-dev.ar.F.tokens.no_B+B.clean'))
 
         else:
-            return self.create_examples(os.path.join(data_dir, 'nn_token_data/dev.arin.tokens+dev.arin.tokens+dev.arin.tokens+dev.arin.tokens'),
-                                        os.path.join(data_dir, 'nn_token_data/dev.ar.MM.tokens+dev.ar.FM.tokens+dev.ar.MF.tokens+dev.ar.FF.tokens'))
+            return self.create_examples(os.path.join(data_dir, 'nn_token_data/dev.arin.tokens+dev.arin.tokens+dev.arin.tokens+dev.arin.tokens.no_B+B.clean'),
+                                        os.path.join(data_dir, 'nn_token_data/dev.ar.MM.tokens+dev.ar.FM.tokens+dev.ar.MF.tokens+dev.ar.FF.tokens.no_B+B.clean'))
 
     def get_test_examples(self, data_dir, first_person_only=False):
         """Reads the test examples of the dataset"""
@@ -100,8 +100,8 @@ class RawDataset:
                                          os.path.join(data_dir, 'nn_token_data/D-set-test.ar.M.tokens+D-set-test.ar.F.tokens.no_B+B.clean'))
 
         else:
-            return self.create_examples(os.path.join(data_dir, 'nn_token_data/test.arin.tokens+test.arin.tokens+test.arin.tokens+test.arin.tokens'),
-                                        os.path.join(data_dir, 'nn_token_data/test.ar.MM.tokens+test.ar.FM.tokens+test.ar.MF.tokens+test.ar.FF.tokens'))
+            return self.create_examples(os.path.join(data_dir, 'nn_token_data/test.arin.tokens+test.arin.tokens+test.arin.tokens+test.arin.tokens.no_B+B.clean'),
+                                        os.path.join(data_dir, 'nn_token_data/test.ar.MM.tokens+test.ar.FM.tokens+test.ar.MF.tokens+test.ar.FF.tokens.no_B+B.clean'))
 
 class Vocabulary:
     """Base vocabulary class"""

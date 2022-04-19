@@ -17,23 +17,22 @@ module purge
 ################################
 # GENDER ID FINE-TUNING SCRIPT
 ################################
-export DATA_DIR=/scratch/ba63/Arabic-Parallel-Gender-Corpus/Arabic-parallel-gender-corpus-v-1.0/new_token_data/gender_tagger_data
-# export DATA_DIR=/scratch/ba63/Arabic-Parallel-Gender-Corpus/Arabic-parallel-gender-corpus-v-2.0/gender_tagger_data/new_token_data
-# export DATA_DIR=/scratch/ba63/gender-rewriting/raw_openSub/augmentation/augmented_data
+# export DATA_DIR=/home/ba63/gender-rewriting/data/gender-id/single_user
+# export DATA_DIR=/home/ba63/gender-rewriting/data/gender-id/multi_user/
+export DATA_DIR=/home/ba63/gender-rewriting/data/gender-id/multi_user/augmented_data
 export MAX_LENGTH=128
 export BERT_MODEL=/scratch/ba63/BERT_models/bert-base-arabic-camelbert-msa/
-export OUTPUT_DIR=/scratch/ba63/gender-rewriting/gender-id/CAMeLBERT_MSA/multi_user_with_clitics/models_acc
+# export OUTPUT_DIR=/scratch/ba63/gender-rewriting/gender-id/CAMeLBERT_MSA/camera_ready/single_user/models_f1
+export OUTPUT_DIR=/scratch/ba63/gender-rewriting/gender-id/CAMeLBERT_MSA/camera_ready/multi_user_with_clitics/augmented_models/5000/models_f1
 # export OUTPUT_DIR=/scratch/ba63/gender-rewriting/gender-id/CAMeLBERT_MSA/single_user/models_f1
-export BATCH_SIZE=32
-export NUM_EPOCHS=10
-export SAVE_STEPS=500
-export EVAL_STEPS=500
-export SEED=12345
 
-# --load_best_model_at_end \
-# --metric_for_best_model f1_macro \
-# --eval_steps $EVAL_STEPS \
-# --evaluation_strategy steps \
+export BATCH_SIZE=32
+export NUM_EPOCHS=3
+# export SAVE_STEPS=500
+# export EVAL_STEPS=500
+export SAVE_STEPS=5000
+export EVAL_STEPS=5000
+export SEED=12345
 
 python gender_identifcation.py \
 --data_dir $DATA_DIR \
@@ -51,6 +50,6 @@ python gender_identifcation.py \
 --do_train \
 --do_eval \
 --load_best_model_at_end \
---metric_for_best_model acc \
+--metric_for_best_model f1_macro \
 --overwrite_output_dir \
 --overwrite_cache \

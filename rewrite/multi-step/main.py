@@ -143,6 +143,11 @@ def main():
         help="Whether to do inference on the dev or test sets."
     )
     parser.add_argument(
+        "--post_edit_MT",
+        action="store_true",
+        help="Whether to run MT post-editing or not."
+    )
+    parser.add_argument(
         "--use_gpu",
         action="store_true",
         help="Whether to use a GPU or not."
@@ -196,12 +201,10 @@ def main():
         # Reading training data
         if args.use_data_augmentation:
             train_dataset = Dataset(src_path=os.path.join(args.data_dir,
-                                            'augmented_data',
                                             'train.arin.tokens.augmented'),
                                     tgt_path=os.path.join(args.data_dir,
-                                            'augmented_data',
-                                            'CBR_filter_2+backoff+all+morph_newdb+mod_per_3rd_generator+neural_fix_augmented',
-                                            'train.ar.'+target_gender+'.tokens.augmented.new'))
+                                            'train.ar.'+target_gender+'.tokens.augmented'))
+
         else:
             train_dataset = Dataset(src_path=os.path.join(args.data_dir,
                                             'train.arin.tokens'),
@@ -212,27 +215,29 @@ def main():
 
         if args.inference_mode == "dev":
             # Reading dev data
-            dev_dataset = Dataset(src_path=os.path.join(args.data_dir,
-                                                        'dev.arin.tokens'),
-                                  tgt_path=os.path.join(args.data_dir,
+            if args.post_edit_MT:
+                dev_dataset = Dataset(src_path=os.path.join(args.data_dir,
+                                        'google_MT/dev.google.ar.tokens'))
+
+            else:
+                dev_dataset = Dataset(src_path=os.path.join(args.data_dir,
+                                                           'dev.arin.tokens'),
+                                      tgt_path=os.path.join(args.data_dir,
                                              'dev.ar.'+target_gender+'.tokens'))
 
-            # dev_dataset = Dataset(src_path=os.path.join(args.data_dir,
-            #                                             'google_MT/dev.google.ar.tokens'))
 
             logger.info(f'There are {len(dev_dataset)} Dev Examples')
 
         elif args.inference_mode == "test":
             # Reading test data
-            test_dataset = Dataset(src_path=os.path.join(args.data_dir,
-                                                         'test.arin.tokens'),
-                                   tgt_path=os.path.join(args.data_dir,
-                                             'test.ar.'+target_gender+'.tokens'))
-
-            # test_dataset = Dataset(src_path=os.path.join(args.data_dir,
-            #                                              'google_MT/test.google.ar.tokens'))
-
-
+            if args.post_edit_MT:
+                test_dataset = Dataset(src_path=os.path.join(args.data_dir,
+                                                            'google_MT/test.google.ar.tokens'))
+            else:
+                test_dataset = Dataset(src_path=os.path.join(args.data_dir,
+                                                            'test.arin.tokens'),
+                                    tgt_path=os.path.join(args.data_dir,
+                                                'test.ar.'+target_gender+'.tokens'))
             # test_dataset = Dataset(src_path='/scratch/ba63/gender-rewriting/raw_openSub/augmentation/test.txt')
 
 

@@ -46,7 +46,7 @@ python gender_identifcation.py \
 --do_train \
 --do_eval \
 --load_best_model_at_end \
---metric_for_best_model f1_macro \ # or acc for multi-user augmented and single-user gender id
+--metric_for_best_model f1_macro \
 --overwrite_output_dir \
 --overwrite_cache \
 ```

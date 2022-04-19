@@ -13,7 +13,6 @@ class Encoder(nn.Module):
                  decoder_hidd_dim,
                  num_layers,
                  morph_embeddings=None,
-                 fasttext_embeddings=None,
                  char_padding_idx=0,
                  word_padding_idx=0,
                  dropout=0):
@@ -21,9 +20,6 @@ class Encoder(nn.Module):
         super(Encoder, self).__init__()
         morph_embeddings_dim = 0
         self.morph_embedding_layer = None
-
-        fasttext_embeddings_dim = 0
-        self.fasttext_embedding_layer = None
 
         self.char_embedding_layer = nn.Embedding(input_dim,
                                                  char_embed_dim,
@@ -34,11 +30,7 @@ class Encoder(nn.Module):
                                                                       padding_idx=word_padding_idx)
             morph_embeddings_dim = morph_embeddings.shape[1]
 
-        if fasttext_embeddings is not None:
-            self.fasttext_embedding_layer = nn.Embedding.from_pretrained(fasttext_embeddings)
-            fasttext_embeddings_dim = fasttext_embeddings.shape[1]
-
-        self.rnn = nn.GRU(input_size=char_embed_dim + morph_embeddings_dim + fasttext_embeddings_dim,
+        self.rnn = nn.GRU(input_size=char_embed_dim + morph_embeddings_dim,
                           hidden_size=encoder_hidd_dim,
                           num_layers=num_layers,
                           batch_first=True,
@@ -59,14 +51,6 @@ class Encoder(nn.Module):
 
             embedded_seqs = torch.cat((embedded_seqs, embedded_word_seqs_morph), dim=2)
             # embedded_seqs shape: [batch_size, max_src_seq_len, char_embed_dim + morph_embeddings_dim]
-
-        # Add fasttext embeddings to the char embeddings if needed
-        if self.fasttext_embedding_layer is not None:
-            embedded_word_seqs_ft = self.fasttext_embedding_layer(word_src_seqs)
-            # embedded_word_seqs_ft shape: [batch_size, max_src_seq_len, fasttext_embeddings_dim]
-
-            embedded_seqs = torch.cat((embedded_seqs, embedded_word_seqs_ft), dim=2)
-            # embedded_seqs shape: [batch_size, max_src_seq_len, char_embed_dim + fasttext_embeddings_dim]
 
         # packing the embedded_seqs
         packed_embedded_seqs = pack_padded_sequence(embedded_seqs, src_seqs_lengths, batch_first=True)
@@ -210,7 +194,7 @@ class Seq2Seq(nn.Module):
                  decoder_input_dim, decoder_embed_dim,
                  decoder_hidd_dim, decoder_num_layers,
                  decoder_output_dim,
-                 morph_embeddings=None, fasttext_embeddings=None,
+                 morph_embeddings=None,
                  gender_embeddings=None,
                  embed_trg_gender=False, gender_input_dim=0,
                  gender_embed_dim=0, char_src_padding_idx=0,
@@ -225,7 +209,6 @@ class Seq2Seq(nn.Module):
                                decoder_hidd_dim=decoder_hidd_dim,
                                num_layers=encoder_num_layers,
                                morph_embeddings=morph_embeddings,
-                               fasttext_embeddings=fasttext_embeddings,
                                char_padding_idx=char_src_padding_idx,
                                word_padding_idx=word_src_padding_idx,
                                dropout=dropout)
@@ -323,3 +306,25 @@ class Seq2Seq(nn.Module):
         # attention_scores_total shape: [batch_size, trg_seq_len, src_seq_len]
 
         return predictions, decoder_attention_scores
+
+    def serialize_model_args(self):
+        return {'encoder_input_dim': self.encoder.input_dim,
+                'encoder_embed_dim': self.encoder.char_embed_dim,
+                'encoder_hidd_dim': self.encoder.encoder_hidd_dim,
+                'encoder_num_layers': self.encoder.num_layers,
+                'decoder_input_dim': self.decoder.input_dim,
+                'decoder_embed_dim': self.decoder.char_embed_dim,
+                'decoder_hidd_dim': self.decoder.decoder_hidd_dim,
+                'decoder_num_layers': self.decoder.num_layers,
+                'decoder_output_dim': self.decoder.output_dim,
+                'morph_embeddings':  self.encoder.morph_embeddings,
+                'gender_embeddings':  self.decoder.gender_embeddings,
+                'embed_trg_gender': self.decoder.embed_trg_gender,
+                'gender_input_dim': self.decoder.gender_input_dim,
+                'gender_embed_dim': self.decoder.gender_embed_dim,
+                'char_src_padding_idx': self.encoder.char_src_padding_idx,
+                'word_src_padding_idx': self.encoder.word_src_padding_idx,
+                'trg_padding_idx': self.decoder.padding_idx,
+                'dropout': self.encoder.dropout,
+                'trg_sos_idx': self.decoder.trg_sos_idx
+                }

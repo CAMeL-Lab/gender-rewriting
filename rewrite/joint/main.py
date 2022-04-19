@@ -4,7 +4,7 @@ from torch.utils.data import Dataset, DataLoader
 import torch.optim as optim
 from torch.nn.utils.rnn import pad_sequence
 from torch.nn.utils import clip_grad_norm_
-from utils.data_utils import RawDataset, MorphFeaturizer, create_gender_embeddings
+from utils.data_utils import RawDataset, MorphFeaturizer
 from utils.data_utils import Vocabulary, SeqVocabulary
 from utils.metrics import accuracy
 import json
@@ -12,7 +12,6 @@ import random
 import re
 import numpy as np
 import argparse
-from gensim.models import KeyedVectors
 from seq2seq import Seq2Seq
 from greedy_decoder import BatchSampler
 from beam_decoder import BeamSampler
@@ -247,7 +246,8 @@ class MT_Dataset(Dataset):
 
     def save_vectorizer(self, vec_path):
         with open(vec_path, 'w') as f:
-            return json.dump(self.vectorizer.to_serializable(), f, ensure_ascii=False)
+            return json.dump(self.vectorizer.to_serializable(), f,
+                             ensure_ascii=False)
 
     def set_split(self, split):
         self.split = split
@@ -281,7 +281,8 @@ class Collator:
 
     def __call__(self, batch):
         # Sorting the batch by src seqs length in descending order
-        sorted_batch = sorted(batch, key=lambda x: x['src_char'].shape[0], reverse=True)
+        sorted_batch = sorted(batch, key=lambda x: x['src_char'].shape[0],
+                              reverse=True)
 
         src_char_seqs = [x['src_char'] for x in sorted_batch]
         src_word_seqs = [x['src_word'] for x in sorted_batch]
@@ -295,11 +296,15 @@ class Collator:
         trg_seqs_genders = [x['trg_gender'] for x in sorted_batch]
         lengths = [len(seq) for seq in src_char_seqs]
 
-        padded_src_char_seqs = pad_sequence(src_char_seqs, batch_first=True, padding_value=self.char_src_pad_idx)
-        padded_src_word_seqs = pad_sequence(src_word_seqs, batch_first=True, padding_value=self.word_src_pad_idx)
+        padded_src_char_seqs = pad_sequence(src_char_seqs, batch_first=True,
+                                            padding_value=self.char_src_pad_idx)
+        padded_src_word_seqs = pad_sequence(src_word_seqs, batch_first=True,
+                                            padding_value=self.word_src_pad_idx)
 
-        padded_trg_x_seqs = pad_sequence(trg_x_seqs, batch_first=True, padding_value=self.char_trg_pad_idx)
-        padded_trg_y_seqs = pad_sequence(trg_y_seqs, batch_first=True, padding_value=self.char_trg_pad_idx)
+        padded_trg_x_seqs = pad_sequence(trg_x_seqs, batch_first=True,
+                                         padding_value=self.char_trg_pad_idx)
+        padded_trg_y_seqs = pad_sequence(trg_y_seqs, batch_first=True,
+                                         padding_value=self.char_trg_pad_idx)
 
         lengths = torch.tensor(lengths, dtype=torch.long)
         src_seqs_labels = torch.tensor(src_seqs_labels, dtype=torch.long)
@@ -517,23 +522,6 @@ def get_morph_features(args, data, word_vocab):
     morph_embeddings = morph_featurizer.create_morph_embeddings(word_vocab)
     return morph_embeddings
 
-def load_fasttext_embeddings(args, vocab):
-    set_seed(args.seed, args.use_cuda)
-    fasttext_wv = KeyedVectors.load(args.fasttext_embeddings_kv_path, mmap='r')
-    pretrained_embeddings = torch.zeros((len(vocab), fasttext_wv.vector_size), dtype=torch.float32)
-    oov = 0
-    unks = list()
-    for word, index in vocab.token_to_idx.items():
-        if word in fasttext_wv.vocab:
-            pretrained_embeddings[index] = torch.tensor(fasttext_wv[word], dtype=torch.float32)
-        else:
-            oov += 1
-            unks.append(word)
-
-    print(f'# Vocab not in the Embeddings: {oov}', flush=True)
-    print(unks, flush=True)
-    return pretrained_embeddings
-
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument(
@@ -675,17 +663,6 @@ def main():
         help="Whether to use morphological features or not."
     )
     parser.add_argument(
-        "--use_fasttext_embeddings",
-        action="store_true",
-        help="Whether to use fasttext embeddings or not."
-    )
-    parser.add_argument(
-        "--fasttext_embeddings_kv_path",
-        type=str,
-        default=None,
-        help="The path to the pretrained fasttext embeddings keyedvectors."
-    )
-    parser.add_argument(
         "--add_side_constraints",
         action="store_true",
         help="To use side constraints or not."
@@ -694,11 +671,6 @@ def main():
         "--embed_trg_gender",
         action="store_true",
         help="Whether to embed the target gender or not."
-    )
-    parser.add_argument(
-        "--one_hot_trg_gender",
-        action="store_true",
-        help="Whether to embed the target gender in a zero hot fashion."
     )
     parser.add_argument(
         "--analyzer_db_path",
@@ -737,7 +709,6 @@ def main():
         dataset = MT_Dataset.load_data_and_create_vectorizer(data_dir=args.data_dir,
                                                              first_person_only=args.first_person_only,
                                                              add_side_constraints=args.add_side_constraints)
-    # import pdb; pdb.set_trace()
 
     vectorizer = dataset.get_vectorizer()
 
@@ -754,20 +725,6 @@ def main():
     else:
         morph_embeddings = None
 
-    if args.use_fasttext_embeddings:
-        logger.info(f'Loading FastText Embeddings...')
-        fasttext_embeddings = load_fasttext_embeddings(args, vectorizer.src_vocab_word)
-    else:
-        fasttext_embeddings = None
-
-    if args.one_hot_trg_gender:
-        logger.info(f'Creating one hot gender embeddings...')
-        gender_embeddings = create_gender_embeddings(vectorizer.trg_gender_vocab)
-        print(vectorizer.trg_gender_vocab.token_to_idx, flush=True)
-        print(gender_embeddings, flush=True)
-    else:
-        gender_embeddings = None
-
     if args.do_early_stopping:
         patience = 0
 
@@ -780,30 +737,38 @@ def main():
     TRG_PAD_INDEX = vectorizer.trg_vocab_char.pad_idx
     TRG_SOS_INDEX = vectorizer.trg_vocab_char.sos_idx
 
+    models_config = {'encoder_input_dim': ENCODER_INPUT_DIM,
+                    'encoder_embed_dim': args.embed_dim,
+                    'encoder_hidd_dim': args.hidd_dim,
+                    'encoder_num_layers': args.num_layers,
+                    'decoder_input_dim': DECODER_INPUT_DIM,
+                    'decoder_embed_dim': args.embed_dim,
+                    'decoder_hidd_dim': args.hidd_dim,
+                    'decoder_num_layers': args.num_layers,
+                    'decoder_output_dim': DECODER_OUTPUT_DIM,
+                    'morph_embeddings': morph_embeddings,
+                    'embed_trg_gender': args.embed_trg_gender,
+                    'gender_input_dim': DECODER_TRG_GEN_INPUT_DIM,
+                    'gender_embed_dim': args.trg_gender_embed_dim,
+                    'char_src_padding_idx': CHAR_SRC_PAD_INDEX,
+                    'word_src_padding_idx': WORD_SRC_PAD_INDEX,
+                    'trg_padding_idx': TRG_PAD_INDEX,
+                    'trg_sos_idx': TRG_SOS_INDEX,
+                    'dropout': args.dropout
+                    }
 
-    model = Seq2Seq(encoder_input_dim=ENCODER_INPUT_DIM,
-                    encoder_embed_dim=args.embed_dim,
-                    encoder_hidd_dim=args.hidd_dim,
-                    encoder_num_layers=args.num_layers,
-                    decoder_input_dim=DECODER_INPUT_DIM,
-                    decoder_embed_dim=args.embed_dim,
-                    decoder_hidd_dim=args.hidd_dim,
-                    decoder_num_layers=args.num_layers,
-                    decoder_output_dim=DECODER_OUTPUT_DIM,
-                    morph_embeddings=morph_embeddings,
-                    fasttext_embeddings=fasttext_embeddings,
-                    embed_trg_gender=args.embed_trg_gender,
-                    gender_input_dim=DECODER_TRG_GEN_INPUT_DIM,
-                    gender_embed_dim=args.trg_gender_embed_dim,
-                    gender_embeddings=gender_embeddings,
-                    char_src_padding_idx=CHAR_SRC_PAD_INDEX,
-                    word_src_padding_idx=WORD_SRC_PAD_INDEX,
-                    trg_padding_idx=TRG_PAD_INDEX,
-                    trg_sos_idx=TRG_SOS_INDEX,
-                    dropout=args.dropout)
+    model = Seq2Seq(**models_config)
+
+    # saving the model's args
+    with open(args.model_path.replace('pt', 'config.json'), 'w') as f:
+        # TODO: find a better way to handle serializing tensors
+        if morph_embeddings != None:
+            models_config['morph_embeddings'] = True
+        json.dump(models_config, f)
 
     # Optimizer
-    optimizer = optim.Adam(model.parameters(), lr=args.learning_rate, weight_decay=args.weight_decay)
+    optimizer = optim.Adam(model.parameters(), lr=args.learning_rate,
+                           weight_decay=args.weight_decay)
     # Loss function
     criterion = nn.CrossEntropyLoss(ignore_index=TRG_PAD_INDEX)
     # lr scheduler
@@ -816,7 +781,6 @@ def main():
 
     model = model.to(device)
 
-    # import pdb; pdb.set_trace()
 
     if args.do_train:
         logger.info('Training...')
@@ -829,14 +793,19 @@ def main():
 
         for epoch in range(args.num_train_epochs):
             dataset.set_split('train')
-            dataloader = DataLoader(dataset, shuffle=True, batch_size=args.batch_size, collate_fn=collator, drop_last=True)
+            dataloader = DataLoader(dataset, shuffle=True, batch_size=args.batch_size,
+                                    collate_fn=collator, drop_last=False)
 
-            train_loss = train(model, dataloader, optimizer, criterion, device, teacher_forcing_prob=teacher_forcing_prob, clip_grad=clip_grad)
+            train_loss = train(model, dataloader, optimizer, criterion, device,
+                               teacher_forcing_prob=teacher_forcing_prob,
+                               clip_grad=clip_grad)
             train_losses.append(train_loss)
 
             dataset.set_split('dev')
-            dataloader = DataLoader(dataset, shuffle=True, batch_size=args.batch_size, collate_fn=collator, drop_last=True)
-            dev_loss = evaluate(model, dataloader, criterion, device, teacher_forcing_prob=0)
+            dataloader = DataLoader(dataset, shuffle=True, batch_size=args.batch_size,
+                                    collate_fn=collator, drop_last=False)
+            dev_loss = evaluate(model, dataloader, criterion, device,
+                                teacher_forcing_prob=0)
             dev_losses.append(dev_loss)
 
             #save best model
@@ -856,8 +825,12 @@ def main():
             logger.info(f'\tTrain Loss: {train_loss:.4f}   |   Dev Loss: {dev_loss:.4f}')
 
     if args.do_train and args.visualize_loss:
-        plt.plot(range(1, 1 + args.num_train_epochs), np.asarray(train_losses), 'b-', color='blue', label='Training')
-        plt.plot(range(1, 1 + args.num_train_epochs), np.asarray(dev_losses), 'b-', color='orange', label='Evaluation')
+        plt.plot(range(1, 1 + args.num_train_epochs),
+                       np.asarray(train_losses), 'b-',
+                       color='blue', label='Training')
+        plt.plot(range(1, 1 + args.num_train_epochs),
+                 np.asarray(dev_losses), 'b-',
+                 color='orange', label='Evaluation')
         plt.xlabel('Epoch')
         plt.ylabel('Loss')
         plt.legend()
@@ -869,7 +842,8 @@ def main():
         dev_losses = []
         for epoch in range(args.num_train_epochs):
             dataset.set_split('dev')
-            dataloader = DataLoader(dataset, shuffle=True, batch_size=args.batch_size, collate_fn=collator)
+            dataloader = DataLoader(dataset, shuffle=True, batch_size=args.batch_size,
+                                    collate_fn=collator)
             dev_loss = evaluate(model, dataloader, criterion, device, teacher_forcing_prob=0)
             dev_losses.append(dev_loss)
             logger.info(f'Dev Loss: {dev_loss:.4f}')
@@ -881,7 +855,8 @@ def main():
         model.eval()
         model = model.to(device)
         dataset.set_split(args.inference_mode)
-        dataloader = DataLoader(dataset, batch_size=1, shuffle=False, collate_fn=collator)
+        dataloader = DataLoader(dataset, batch_size=1, shuffle=False,
+                                collate_fn=collator)
         sampler = BatchSampler(model=model,
                                src_vocab_char=vectorizer.src_vocab_char,
                                src_vocab_word=vectorizer.src_vocab_word,

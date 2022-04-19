@@ -6,9 +6,6 @@ import numpy as np
 from camel_tools.morphology.database import MorphologyDB
 from camel_tools.morphology.analyzer import Analyzer
 from camel_tools.disambig.mle import MLEDisambiguator
-# from camel_tools.calima_star.database import CalimaStarDB
-# from camel_tools.calima_star.analyzer import CalimaStarAnalyzer
-# from camel_tools.disambig.mle import MLEDisambiguator
 import torch
 
 class InputExample:
@@ -96,57 +93,57 @@ class RawDataset:
         #joint_model/D-set-train.ar.M+D-set-train.ar.F
         if first_person_only:
             if normalized:
-                return self.create_examples(os.path.join(data_dir, 'joint_model/D-set-train.arin+D-set-train.arin.normalized'),
-                                            os.path.join(data_dir, 'joint_model/D-set-train.ar.M+D-set-train.ar.F.normalized'))
+                return self.create_examples(os.path.join(data_dir, 'D-set-train.arin+D-set-train.arin.normalized'),
+                                            os.path.join(data_dir, 'D-set-train.ar.M+D-set-train.ar.F.normalized'))
             else:
-                return self.create_examples(os.path.join(data_dir, 'joint_model/D-set-train.arin+D-set-train.arin'),
-                                            os.path.join(data_dir, 'joint_model/D-set-train.ar.M+D-set-train.ar.F'))
+                return self.create_examples(os.path.join(data_dir, 'D-set-train.arin+D-set-train.arin'),
+                                            os.path.join(data_dir, 'D-set-train.ar.M+D-set-train.ar.F'))
 
         else:
             if normalized:
                 return self.create_examples(os.path.join(data_dir, ''),
                                             os.path.join(data_dir, ''))
             else:
-                return self.create_examples(os.path.join(data_dir, 'joint_model/train.arin+train.arin+train.arin+train.arin'),
-                                            os.path.join(data_dir, 'joint_model/train.ar.MM+train.ar.FM+train.ar.MF+train.ar.FF'))
+                return self.create_examples(os.path.join(data_dir, 'train.arin+train.arin+train.arin+train.arin'),
+                                            os.path.join(data_dir, 'train.ar.MM+train.ar.FM+train.ar.MF+train.ar.FF'))
 
     def get_dev_examples(self, data_dir, first_person_only=False,
                          normalized=False):
         """Reads the dev examples of the dataset"""
         if first_person_only:
             if normalized:
-                return self.create_examples(os.path.join(data_dir, 'joint_model/D-set-dev.arin+D-set-dev.arin.normalized'),
-                                            os.path.join(data_dir, 'joint_model/D-set-dev.ar.M+D-set-dev.ar.F.normalized'))
+                return self.create_examples(os.path.join(data_dir, 'D-set-dev.arin+D-set-dev.arin.normalized'),
+                                            os.path.join(data_dir, 'D-set-dev.ar.M+D-set-dev.ar.F.normalized'))
             else:
-                return self.create_examples(os.path.join(data_dir, 'joint_model/D-set-dev.arin+D-set-dev.arin'),
-                                            os.path.join(data_dir, 'joint_model/D-set-dev.ar.M+D-set-dev.ar.F'))
+                return self.create_examples(os.path.join(data_dir, 'D-set-dev.arin+D-set-dev.arin'),
+                                            os.path.join(data_dir, 'D-set-dev.ar.M+D-set-dev.ar.F'))
 
         else:
             if normalized:
                 return self.create_examples(os.path.join(data_dir, ''),
                                             os.path.join(data_dir, ''))
             else:
-                return self.create_examples(os.path.join(data_dir, 'joint_model/dev.arin+dev.arin+dev.arin+dev.arin'),
-                                            os.path.join(data_dir, 'joint_model/dev.ar.MM+dev.ar.FM+dev.ar.MF+dev.ar.FF'))
+                return self.create_examples(os.path.join(data_dir, 'dev.arin+dev.arin+dev.arin+dev.arin'),
+                                            os.path.join(data_dir, 'dev.ar.MM+dev.ar.FM+dev.ar.MF+dev.ar.FF'))
 
     def get_test_examples(self, data_dir, first_person_only=False,
                           normalized=False):
         """Reads the test examples of the dataset"""
         if first_person_only:
             if normalized:
-                return self.create_examples(os.path.join(data_dir, 'joint_model/D-set-test.arin+D-set-test.arin.normalized'),
-                                            os.path.join(data_dir, 'joint_model/D-set-test.ar.M+D-set-test.ar.F.normalized'))
+                return self.create_examples(os.path.join(data_dir, 'D-set-test.arin+D-set-test.arin.normalized'),
+                                            os.path.join(data_dir, 'D-set-test.ar.M+D-set-test.ar.F.normalized'))
             else:
-                return self.create_examples(os.path.join(data_dir, 'joint_model/D-set-test.arin+D-set-test.arin'),
-                                            os.path.join(data_dir, 'joint_model/D-set-test.ar.M+D-set-test.ar.F'))
+                return self.create_examples(os.path.join(data_dir, 'D-set-test.arin+D-set-test.arin'),
+                                            os.path.join(data_dir, 'D-set-test.ar.M+D-set-test.ar.F'))
 
         else:
             if normalized:
                 return self.create_examples(os.path.join(data_dir, ''),
                                             os.path.join(data_dir, ''))
             else:
-                return self.create_examples(os.path.join(data_dir, 'joint_model/test.arin+test.arin+test.arin+test.arin'),
-                                            os.path.join(data_dir, 'joint_model/test.ar.MM+test.ar.FM+test.ar.MF+test.ar.FF'))
+                return self.create_examples(os.path.join(data_dir, 'test.arin+test.arin+test.arin+test.arin'),
+                                            os.path.join(data_dir, 'test.ar.MM+test.ar.FM+test.ar.MF+test.ar.FF'))
 
 
 class Vocabulary:
@@ -214,7 +211,6 @@ class SeqVocabulary(Vocabulary):
                 self.sc_fm = sc_fm
                 self.sc_mf = sc_mf
                 self.sc_ff = sc_ff
-
 
         self.pad_idx = self.add_token(self.pad_token)
         self.unk_idx = self.add_token(self.unk_token)
@@ -372,11 +368,3 @@ class MorphFeaturizer:
 
         return morph_embedding_matrix
 
-def create_gender_embeddings(trg_gender_vocab):
-    """Creates one-hot vectors gender embeddings"""
-    matrix = torch.zeros((len(trg_gender_vocab), len(trg_gender_vocab)), dtype=torch.float32)
-    m_idx = trg_gender_vocab.lookup_token('M')
-    f_idx = trg_gender_vocab.lookup_token('F')
-    matrix[m_idx] = torch.tensor([1, 1e-6], dtype=torch.float32)
-    matrix[f_idx] = torch.tensor([1e-6, 1], dtype=torch.float32)
-    return matrix

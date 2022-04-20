@@ -1,0 +1,101 @@
+/scratch/ba63/miniconda3/envs/gender_rewriting/lib/python3.7/site-packages/mxnet/optimizer/optimizer.py:167: UserWarning: WARNING: New optimizer gluonnlp.optimizer.lamb.LAMB is overriding existing optimizer mxnet.optimizer.optimizer.LAMB
+  Optimizer.opt_registry[name].__name__))
+INFO:__main__:Namespace(analyze_errors=True, beam_width=None, bert_model='/scratch/ba63/gender-rewriting/mlm_lm/bert-base-arabic-camelbert-msa-mlm-88', cbr_backoff=True, cbr_ngram=2, data_dir='/home/ba63/gender-rewriting-camera-ready/data/rewrite/apgc-v2.0/', error_analysis_dir='/home/ba63/gender-rewriting/rewrite/multi-step/logs/multi_user/error_analysis/CorpusR', first_person_only=False, gender_id_model='/scratch/ba63/gender-rewriting/gender-id/CAMeLBERT_MSA/camera_ready/multi_user_with_clitics/models_f1/checkpoint-10000', inference_mode='dev', morph_db='/scratch/ba63/calima_databases/calima-msa/calima-msa-s31_0.4.2.utf8.db.copy-mod', output_dir='/home/ba63/gender-rewriting/rewrite/multi-step/logs/multi_user/rewriting/CorpusR', pick_top_mle=False, post_edit_MT=False, rbr_top_rule=False, rbr_top_tgt_rule=False, reduce_cbr_noise=True, save_cbr_model=False, seq2seq_model_path=None, top_n_best=None, use_cbr=True, use_data_augmentation=False, use_gpu=True, use_morph=False, use_rbr=False, use_seq2seq=False)
+WARNING:root:Model '/scratch/ba63/gender-rewriting/mlm_lm/bert-base-arabic-camelbert-msa-mlm-88' not recognized as an MXNet model; treating as PyTorch model
+WARNING:root:Created scorer of class 'MLMScorerPT'.
+INFO:__main__:
+
+INFO:__main__:######## MM Rewriting ########
+INFO:__main__:
+
+INFO:__main__:There are 57603 Training Examples
+INFO:__main__:There are 6647 Dev Examples
+INFO:__main__:Training CBR model for MM target
+INFO:rewriter:CBR triggers: 2259
+INFO:rewriter:Morph triggers: 0
+INFO:rewriter:RBR triggers: 0
+INFO:rewriter:Neural triggers: 0
+INFO:rewriter:Regular passes: 46998
+INFO:rewriter:Selection triggers: 480
+INFO:rewriter:===========================
+INFO:rewriter:CBR OOV: 447
+INFO:rewriter:Morph OOV: 0
+INFO:rewriter:RBR OOV: 0
+INFO:rewriter:===========================
+/scratch/ba63/miniconda3/envs/gender_rewriting/lib/python3.7/site-packages/gluonnlp/data/sampler.py:354: UserWarning: Some buckets are empty and will be removed. Unused bucket keys=[10]
+  str(unused_bucket_keys))
+INFO:__main__:
+
+INFO:__main__:######## FM Rewriting ########
+INFO:__main__:
+
+INFO:__main__:There are 57603 Training Examples
+INFO:__main__:There are 6647 Dev Examples
+INFO:__main__:Training CBR model for FM target
+INFO:rewriter:CBR triggers: 2272
+INFO:rewriter:Morph triggers: 0
+INFO:rewriter:RBR triggers: 0
+INFO:rewriter:Neural triggers: 0
+INFO:rewriter:Regular passes: 46985
+INFO:rewriter:Selection triggers: 451
+INFO:rewriter:===========================
+INFO:rewriter:CBR OOV: 472
+INFO:rewriter:Morph OOV: 0
+INFO:rewriter:RBR OOV: 0
+INFO:rewriter:===========================
+/scratch/ba63/miniconda3/envs/gender_rewriting/lib/python3.7/site-packages/gluonnlp/data/sampler.py:354: UserWarning: Some buckets are empty and will be removed. Unused bucket keys=[8]
+  str(unused_bucket_keys))
+INFO:__main__:
+
+INFO:__main__:######## MF Rewriting ########
+INFO:__main__:
+
+INFO:__main__:There are 57603 Training Examples
+INFO:__main__:There are 6647 Dev Examples
+INFO:__main__:Training CBR model for MF target
+INFO:rewriter:CBR triggers: 2251
+INFO:rewriter:Morph triggers: 0
+INFO:rewriter:RBR triggers: 0
+INFO:rewriter:Neural triggers: 0
+INFO:rewriter:Regular passes: 47006
+INFO:rewriter:Selection triggers: 704
+INFO:rewriter:===========================
+INFO:rewriter:CBR OOV: 415
+INFO:rewriter:Morph OOV: 0
+INFO:rewriter:RBR OOV: 0
+INFO:rewriter:===========================
+/scratch/ba63/miniconda3/envs/gender_rewriting/lib/python3.7/site-packages/gluonnlp/data/sampler.py:354: UserWarning: Some buckets are empty and will be removed. Unused bucket keys=[7]
+  str(unused_bucket_keys))
+/scratch/ba63/miniconda3/envs/gender_rewriting/lib/python3.7/site-packages/gluonnlp/data/sampler.py:354: UserWarning: Some buckets are empty and will be removed. Unused bucket keys=[15]
+  str(unused_bucket_keys))
+/scratch/ba63/miniconda3/envs/gender_rewriting/lib/python3.7/site-packages/gluonnlp/data/sampler.py:354: UserWarning: Some buckets are empty and will be removed. Unused bucket keys=[9]
+  str(unused_bucket_keys))
+/scratch/ba63/miniconda3/envs/gender_rewriting/lib/python3.7/site-packages/gluonnlp/data/sampler.py:354: UserWarning: Some buckets are empty and will be removed. Unused bucket keys=[13]
+  str(unused_bucket_keys))
+/scratch/ba63/miniconda3/envs/gender_rewriting/lib/python3.7/site-packages/gluonnlp/data/sampler.py:354: UserWarning: Some buckets are empty and will be removed. Unused bucket keys=[33]
+  str(unused_bucket_keys))
+/scratch/ba63/miniconda3/envs/gender_rewriting/lib/python3.7/site-packages/gluonnlp/data/sampler.py:354: UserWarning: Some buckets are empty and will be removed. Unused bucket keys=[16]
+  str(unused_bucket_keys))
+/scratch/ba63/miniconda3/envs/gender_rewriting/lib/python3.7/site-packages/gluonnlp/data/sampler.py:354: UserWarning: Some buckets are empty and will be removed. Unused bucket keys=[14]
+  str(unused_bucket_keys))
+/scratch/ba63/miniconda3/envs/gender_rewriting/lib/python3.7/site-packages/gluonnlp/data/sampler.py:354: UserWarning: Some buckets are empty and will be removed. Unused bucket keys=[17]
+  str(unused_bucket_keys))
+INFO:__main__:
+
+INFO:__main__:######## FF Rewriting ########
+INFO:__main__:
+
+INFO:__main__:There are 57603 Training Examples
+INFO:__main__:There are 6647 Dev Examples
+INFO:__main__:Training CBR model for FF target
+INFO:rewriter:CBR triggers: 2264
+INFO:rewriter:Morph triggers: 0
+INFO:rewriter:RBR triggers: 0
+INFO:rewriter:Neural triggers: 0
+INFO:rewriter:Regular passes: 46993
+INFO:rewriter:Selection triggers: 677
+INFO:rewriter:===========================
+INFO:rewriter:CBR OOV: 440
+INFO:rewriter:Morph OOV: 0
+INFO:rewriter:RBR OOV: 0
+INFO:rewriter:===========================

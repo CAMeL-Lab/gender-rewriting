@@ -1,0 +1,957 @@
+/scratch/ba63/miniconda3/envs/gender_rewriting/lib/python3.7/site-packages/mxnet/optimizer/optimizer.py:167: UserWarning: WARNING: New optimizer gluonnlp.optimizer.lamb.LAMB is overriding existing optimizer mxnet.optimizer.optimizer.LAMB
+  Optimizer.opt_registry[name].__name__))
+INFO:__main__:Namespace(analyze_errors=True, beam_width=None, bert_model='/scratch/ba63/gender-rewriting/mlm_lm/bert-base-arabic-camelbert-msa-mlm-88', cbr_backoff=False, cbr_ngram=2, data_dir='/home/ba63/gender-rewriting-camera-ready/data/rewrite/apgc-v2.0/', error_analysis_dir='/home/ba63/gender-rewriting/rewrite/multi-step/logs/multi_user/error_analysis/MorphR', first_person_only=False, gender_id_model='/scratch/ba63/gender-rewriting/gender-id/CAMeLBERT_MSA/camera_ready/multi_user_with_clitics/models_f1/checkpoint-10000', inference_mode='dev', morph_db='/scratch/ba63/calima_databases/calima-msa/calima-msa-s31_0.4.2.utf8.db.copy-mod', output_dir='/home/ba63/gender-rewriting/rewrite/multi-step/logs/multi_user/rewriting/MorphR', pick_top_mle=False, post_edit_MT=False, rbr_top_rule=False, rbr_top_tgt_rule=False, reduce_cbr_noise=False, save_cbr_model=False, seq2seq_model_path=None, top_n_best=None, use_cbr=False, use_data_augmentation=False, use_gpu=True, use_morph=True, use_rbr=False, use_seq2seq=False)
+WARNING:root:Model '/scratch/ba63/gender-rewriting/mlm_lm/bert-base-arabic-camelbert-msa-mlm-88' not recognized as an MXNet model; treating as PyTorch model
+WARNING:root:Created scorer of class 'MLMScorerPT'.
+INFO:__main__:
+
+INFO:__main__:######## MM Rewriting ########
+INFO:__main__:
+
+INFO:__main__:There are 57603 Training Examples
+INFO:__main__:There are 6647 Dev Examples
+INFO:morph_rewriter:No alternatives found for أخت with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for سيدتي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for سيدة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for إمرأة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses found for أتظنين
+INFO:morph_rewriter:No alternatives found for أمي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for أمي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses found for أتشعرين
+INFO:morph_rewriter:No analyses found for الرقيبة
+INFO:morph_rewriter:No analyses found for أتتولى
+INFO:morph_rewriter:No alternatives found for سيدة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses found for أتذكرين
+INFO:morph_rewriter:No alternatives found for إمرأة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for أنتى with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for سيدة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for سيدة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for امرأتي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for سيدة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses found for أتفهمين
+INFO:morph_rewriter:No alternatives found for جبانة with tag 1F+B and target gender 1M+B
+INFO:morph_rewriter:No analyses found for منغمسة
+INFO:morph_rewriter:No alternatives found for سيدتى with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for عمة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for أمى with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for انتن with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for سيدة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for الضابطة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for الضابطة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for احنى
+INFO:morph_rewriter:No alternatives found for أمي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses found for أتذكرين
+INFO:morph_rewriter:No alternatives found for إمرأة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for أنتى with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for سيدتي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses found for أتدركين
+INFO:morph_rewriter:No alternatives found for سيدتى with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for سيدة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for سيدتي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for أمي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for سيدة with tag 1F+B and target gender 1M+B
+INFO:morph_rewriter:No analyses found for المستذئبة
+INFO:morph_rewriter:No analyses found for أتعلمين
+INFO:morph_rewriter:No analyses found for أتعتقدين
+INFO:morph_rewriter:No analyses found for تحتاجنني
+INFO:morph_rewriter:No analyses found for أتريدين
+INFO:morph_rewriter:No alternatives found for سيدة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for أنتي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses found for وتظلن
+INFO:morph_rewriter:No alternatives found for أم with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for الأم with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for أم with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for أنتي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses found for مبتعدة
+INFO:morph_rewriter:No alternatives found for فتاة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses found for متفاجئة
+INFO:morph_rewriter:No alternatives found for وأنتن with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for كامرأة with tag 1F+B and target gender 1M+B
+INFO:morph_rewriter:No analyses found for اتعلمين
+INFO:morph_rewriter:No alternatives found for سيدتي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for سيدة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for انتي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses found for برفسورة
+INFO:morph_rewriter:No analyses found for برفسورة
+INFO:morph_rewriter:No analyses found for أتعرفين
+INFO:morph_rewriter:No analyses found for أتعرفين
+INFO:morph_rewriter:No alternatives found for أما with tag 1F+B and target gender 1M+B
+INFO:morph_rewriter:No alternatives found for أما with tag 1F+B and target gender 1M+B
+INFO:morph_rewriter:No analyses found for أتريدين
+INFO:morph_rewriter:No analyses found for أتريدين
+INFO:morph_rewriter:No alternatives found for سيدة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for النقيبة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for أمي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses found for أتعملين
+INFO:morph_rewriter:No alternatives found for فتاة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for أمي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for سيدة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses found for أعطنني
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for عنكى
+INFO:morph_rewriter:No analyses found for برنسيسة
+INFO:morph_rewriter:No analyses found for تقولن
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for أماه
+INFO:morph_rewriter:No analyses found for أجيبيني
+INFO:morph_rewriter:No alternatives found for أنتن with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses found for المحشورة
+INFO:morph_rewriter:No analyses found for أتعتقدين
+INFO:morph_rewriter:No alternatives found for سيدتي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses found for أترين
+INFO:morph_rewriter:No analyses found for أتذكرين
+INFO:morph_rewriter:No alternatives found for أنتن with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses found for تتسائلين
+INFO:morph_rewriter:No alternatives found for إمرأة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for أمي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for كأختي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for سيدة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses found for أتريدين
+INFO:morph_rewriter:No alternatives found for نساء with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for سوداء with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for انتى with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for عذراء with tag 1F+B and target gender 1M+B
+INFO:morph_rewriter:No alternatives found for سيدة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for كامرأة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for انتن with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses found for أتفهمين
+INFO:morph_rewriter:No alternatives found for أمي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses found for أتجربي
+INFO:morph_rewriter:No alternatives found for انتى with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses found for أوتعلمين
+INFO:morph_rewriter:No analyses found for أتعلمين
+INFO:morph_rewriter:No alternatives found for امرأة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for سيدة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for سيدة with tag 1F+B and target gender 1M+B
+INFO:morph_rewriter:No alternatives found for إمرأة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses found for تعنيين
+INFO:morph_rewriter:No alternatives found for انتى with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for أتعلمن
+INFO:morph_rewriter:No analyses found for أتعرفين
+INFO:morph_rewriter:No alternatives found for فتاة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for الأخت with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for سيدات with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for أنتن with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses found for أجيبيني
+INFO:morph_rewriter:No analyses found for أتعرفينها
+INFO:morph_rewriter:No analyses found for أتتذكرين
+INFO:morph_rewriter:No alternatives found for امرأة with tag 1F+B and target gender 1M+B
+INFO:morph_rewriter:No alternatives found for ملكة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses found for البروفسورة
+INFO:morph_rewriter:No analyses match the filtering criteria B+2F for بكي
+INFO:morph_rewriter:No alternatives found for امرأة with tag 1F+B and target gender 1M+B
+INFO:morph_rewriter:No alternatives found for إمرأة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for لاعقة
+INFO:morph_rewriter:No alternatives found for أمي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for أمي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses found for أتريدين
+INFO:morph_rewriter:No alternatives found for سيدتي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for سيدة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for سيدة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for امرأة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for سيدة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for سيدة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for أمي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses found for أتريدين
+INFO:morph_rewriter:No alternatives found for أمي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for سيدة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for سيدتي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for ودعونا
+INFO:morph_rewriter:No alternatives found for انتن with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for فتيات with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for اماه
+INFO:morph_rewriter:No alternatives found for سيدة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses found for أتعرفين
+INFO:morph_rewriter:No alternatives found for وتأخذيني with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for فتاة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for سيدة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for سيدتي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for قوليها with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for ضابطة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for سيدة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for انتن with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for امرأة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for سيدة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for فتاة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for فتاة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for أختك with tag 1F+B and target gender 1M+B
+INFO:morph_rewriter:No analyses found for أتتذكرين
+INFO:morph_rewriter:No analyses found for أستعترفين
+INFO:morph_rewriter:No analyses found for أتخشين
+INFO:morph_rewriter:No alternatives found for امي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses found for اتعلمين
+INFO:morph_rewriter:No alternatives found for الملكة with tag 1F+B and target gender 1M+B
+INFO:morph_rewriter:No alternatives found for الملكة with tag 1F+B and target gender 1M+B
+INFO:morph_rewriter:No alternatives found for أمها with tag 1F+B and target gender 1M+B
+INFO:morph_rewriter:No alternatives found for أمها with tag 1F+B and target gender 1M+B
+INFO:morph_rewriter:No alternatives found for إمرأة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for امرأة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for ثرثرة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for أمي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for امرأة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for أمي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses found for تلتفن
+INFO:morph_rewriter:No alternatives found for سيدة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses found for متفاجئة
+INFO:morph_rewriter:No analyses found for أتعلمين
+INFO:morph_rewriter:No analyses found for أتريدين
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for املئه
+INFO:morph_rewriter:No alternatives found for سيدتي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for سيدتي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for امرأة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for امرأة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses found for ياسيدتي
+INFO:morph_rewriter:No analyses found for ياسيدتي
+INFO:morph_rewriter:No analyses found for مرتديته
+INFO:morph_rewriter:No analyses found for أتعلمين
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for يحميكى
+INFO:morph_rewriter:No analyses found for أتعلمين
+INFO:morph_rewriter:No alternatives found for أمي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses found for جعلتمنني
+INFO:morph_rewriter:No analyses found for جعلتمنني
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for أريهم
+INFO:morph_rewriter:No alternatives found for امي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses found for اتفهمين
+INFO:morph_rewriter:No alternatives found for انتي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for سيدتي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for سيدتي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for فتاة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for فتاة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for هاجرة with tag 1F+B and target gender 1M+B
+INFO:morph_rewriter:No analyses found for أتسمين
+INFO:morph_rewriter:No analyses found for أتسمين
+INFO:morph_rewriter:No analyses found for لتتهمين
+INFO:morph_rewriter:No analyses found for متفأجئة
+INFO:morph_rewriter:No analyses found for مسؤلة
+INFO:morph_rewriter:No alternatives found for الفتيات with tag 1F+B and target gender 1M+B
+INFO:morph_rewriter:No alternatives found for سوداء with tag 1F+B and target gender 1M+B
+INFO:morph_rewriter:No alternatives found for ارملة with tag 1F+B and target gender 1M+B
+INFO:morph_rewriter:No alternatives found for زوجة with tag 1F+B and target gender 1M+B
+INFO:morph_rewriter:No analyses found for متفاجئة
+INFO:morph_rewriter:No analyses found for أتتذكرين
+INFO:morph_rewriter:No analyses found for متفاجئة
+INFO:morph_rewriter:No analyses found for متقبلة
+INFO:morph_rewriter:No analyses found for أتريدين
+INFO:morph_rewriter:No alternatives found for فتاة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for سيدة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for الملكة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses found for أتعلمين
+INFO:morph_rewriter:No alternatives found for سيدتي with tag 1F+B and target gender 1M+B
+INFO:morph_rewriter:No alternatives found for سيدتي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for سيدة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses found for أتريدين
+INFO:morph_rewriter:No alternatives found for فتيات with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for السيدة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses found for أترين
+INFO:morph_rewriter:No analyses found for أتذكرين
+INFO:morph_rewriter:No alternatives found for فتاة with tag 1F+B and target gender 1M+B
+INFO:morph_rewriter:No alternatives found for سيدة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for سيدتي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for السلحفاة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for سيدتي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for إمرأة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for سيدات with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for أمي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for سيدتي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for الأم with tag 1F+B and target gender 1M+B
+INFO:morph_rewriter:No alternatives found for سيدتي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for ساعدني
+INFO:morph_rewriter:No alternatives found for أمي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for سيدتي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for سيدتي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for امرأة with tag 1F+B and target gender 1M+B
+INFO:morph_rewriter:No alternatives found for امرأة with tag 1F+B and target gender 1M+B
+INFO:morph_rewriter:No analyses found for أترين
+INFO:morph_rewriter:No analyses found for أترين
+INFO:morph_rewriter:No alternatives found for السيدة with tag 1F+B and target gender 1M+B
+INFO:morph_rewriter:No alternatives found for السيدة with tag 1F+B and target gender 1M+B
+INFO:rewriter:CBR triggers: 0
+INFO:rewriter:Morph triggers: 2259
+INFO:rewriter:RBR triggers: 0
+INFO:rewriter:Neural triggers: 0
+INFO:rewriter:Regular passes: 46998
+INFO:rewriter:Selection triggers: 848
+INFO:rewriter:===========================
+INFO:rewriter:CBR OOV: 0
+INFO:rewriter:Morph OOV: 253
+INFO:rewriter:RBR OOV: 0
+INFO:rewriter:===========================
+/scratch/ba63/miniconda3/envs/gender_rewriting/lib/python3.7/site-packages/gluonnlp/data/sampler.py:354: UserWarning: Some buckets are empty and will be removed. Unused bucket keys=[12]
+  str(unused_bucket_keys))
+INFO:__main__:
+
+INFO:__main__:######## FM Rewriting ########
+INFO:__main__:
+
+INFO:__main__:There are 57603 Training Examples
+INFO:__main__:There are 6647 Dev Examples
+INFO:morph_rewriter:No alternatives found for أخت with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for سيدتي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for سيدة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for إمرأة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses found for أتظنين
+INFO:morph_rewriter:No alternatives found for أمي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for أمي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses found for أتشعرين
+INFO:morph_rewriter:No analyses found for الرقيبة
+INFO:morph_rewriter:No analyses found for أتتولى
+INFO:morph_rewriter:No alternatives found for سيدة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses found for أتذكرين
+INFO:morph_rewriter:No alternatives found for إمرأة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for أنتى with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for سيدة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for سيدة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for امرأتي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for سيدة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for مشتبه with tag 1M+B and target gender 1F+B
+INFO:morph_rewriter:No alternatives found for مشتبه with tag 1M+B and target gender 1F+B
+INFO:morph_rewriter:No analyses found for أتفهمين
+INFO:morph_rewriter:No alternatives found for جبان with tag 1M+B and target gender 1F+B
+INFO:morph_rewriter:No analyses found for منغمسة
+INFO:morph_rewriter:No alternatives found for سيدتى with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for عمة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for أمى with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for انتن with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for سيدة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for الضابطة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for الضابطة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for احنى
+INFO:morph_rewriter:No alternatives found for أمي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses found for أتذكرين
+INFO:morph_rewriter:No alternatives found for إمرأة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for أنتى with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for سيدتي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses found for أتدركين
+INFO:morph_rewriter:No alternatives found for سيدتى with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for سيدة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for سيدتي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for أمي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for سيدا with tag 1M+B and target gender 1F+B
+INFO:morph_rewriter:No analyses found for المستذئبة
+INFO:morph_rewriter:No analyses found for أتعلمين
+INFO:morph_rewriter:No analyses found for أتعتقدين
+INFO:morph_rewriter:No analyses found for تحتاجنني
+INFO:morph_rewriter:No analyses found for أتريدين
+INFO:morph_rewriter:No alternatives found for سيدة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for أنتي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses found for وتظلن
+INFO:morph_rewriter:No alternatives found for الرجل with tag 1M+B and target gender 1F+B
+INFO:morph_rewriter:No alternatives found for أم with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for الأم with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for أم with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for أنتي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses found for مبتعدا
+INFO:morph_rewriter:No alternatives found for فتاة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for وأنتن with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses found for اتعلمين
+INFO:morph_rewriter:No alternatives found for سيدتي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for سيدة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for انتي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses found for أتعرفين
+INFO:morph_rewriter:No alternatives found for أبا with tag 1M+B and target gender 1F+B
+INFO:morph_rewriter:No analyses found for أتعرفين
+INFO:morph_rewriter:No alternatives found for أبا with tag 1M+B and target gender 1F+B
+INFO:morph_rewriter:No analyses found for أتريدين
+INFO:morph_rewriter:No analyses found for أتريدين
+INFO:morph_rewriter:No alternatives found for سيدة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for النقيبة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for أمي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses found for أتعملين
+INFO:morph_rewriter:No alternatives found for فتاة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for أمي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for سيدة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses found for أعطنني
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for عنكى
+INFO:morph_rewriter:No analyses found for برنسيسة
+INFO:morph_rewriter:No analyses found for تقولن
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for أماه
+INFO:morph_rewriter:No analyses found for أجيبيني
+INFO:morph_rewriter:No alternatives found for أنتن with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses found for المحشورة
+INFO:morph_rewriter:No analyses found for أتعتقدين
+INFO:morph_rewriter:No alternatives found for شابا with tag 1M+B and target gender 1F+B
+INFO:morph_rewriter:No alternatives found for سيدتي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses found for أترين
+INFO:morph_rewriter:No analyses found for أتذكرين
+INFO:morph_rewriter:No alternatives found for أنتن with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses found for تتسائلين
+INFO:morph_rewriter:No alternatives found for إمرأة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for أمي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for كأختي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for سيدة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses found for أتريدين
+INFO:morph_rewriter:No alternatives found for نساء with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for سوداء with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for انتى with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for سيدة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for كامرأة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for انتن with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses found for أتفهمين
+INFO:morph_rewriter:No alternatives found for أمي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for شاب with tag 1M+B and target gender 1F+B
+INFO:morph_rewriter:No analyses found for أتجربي
+INFO:morph_rewriter:No alternatives found for انتى with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses found for أوتعلمين
+INFO:morph_rewriter:No analyses found for أتعلمين
+INFO:morph_rewriter:No alternatives found for امرأة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for سيدة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for سيد with tag 1M+B and target gender 1F+B
+INFO:morph_rewriter:No alternatives found for إمرأة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses found for تعنيين
+INFO:morph_rewriter:No alternatives found for انتى with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for أتعلمن
+INFO:morph_rewriter:No analyses found for أتعرفين
+INFO:morph_rewriter:No alternatives found for فتاة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for الأخت with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for سيدات with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for أنتن with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses found for أجيبيني
+INFO:morph_rewriter:No analyses found for أتعرفينها
+INFO:morph_rewriter:No analyses found for أتتذكرين
+INFO:morph_rewriter:No alternatives found for ملكة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses match the filtering criteria B+2F for بكي
+INFO:morph_rewriter:No alternatives found for إمرأة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for لاعقة
+INFO:morph_rewriter:No alternatives found for أمي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for أمي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses found for أتريدين
+INFO:morph_rewriter:No alternatives found for سيدتي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for كحاجب with tag 1M+B and target gender 1F+B
+INFO:morph_rewriter:No alternatives found for سيدة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for سيدة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for امرأة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for سيدة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for سيدة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for أمي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses found for أتريدين
+INFO:morph_rewriter:No alternatives found for أمي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for سيدة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for سيدتي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for ودعونا
+INFO:morph_rewriter:No alternatives found for انتن with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for فتيات with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for اماه
+INFO:morph_rewriter:No alternatives found for سيدة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses found for أتعرفين
+INFO:morph_rewriter:No alternatives found for وتأخذيني with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for فتاة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for سيدة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for سيدتي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for قوليها with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for ضابطة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for سيدة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for انتن with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for امرأة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for سيدة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for فتاة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for فتاة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for أخوك with tag 1M+B and target gender 1F+B
+INFO:morph_rewriter:No analyses found for أتتذكرين
+INFO:morph_rewriter:No analyses found for أستعترفين
+INFO:morph_rewriter:No analyses found for أتخشين
+INFO:morph_rewriter:No alternatives found for امي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses found for اتعلمين
+INFO:morph_rewriter:No alternatives found for الملك with tag 1M+B and target gender 1F+B
+INFO:morph_rewriter:No alternatives found for الملك with tag 1M+B and target gender 1F+B
+INFO:morph_rewriter:No alternatives found for إمرأة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for امرأة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for ثرثرة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for أمي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for امرأة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for أمي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses found for تلتفن
+INFO:morph_rewriter:No alternatives found for سيدة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses found for متفاجئة
+INFO:morph_rewriter:No analyses found for أتعلمين
+INFO:morph_rewriter:No analyses found for أتريدين
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for املئه
+INFO:morph_rewriter:No alternatives found for سيدتي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for سيدتي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for امرأة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for امرأة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses found for ياسيدتي
+INFO:morph_rewriter:No analyses found for ياسيدتي
+INFO:morph_rewriter:No analyses found for مرتديته
+INFO:morph_rewriter:No analyses found for أتعلمين
+INFO:morph_rewriter:No alternatives found for ليس with tag 1M+B and target gender 1F+B
+INFO:morph_rewriter:No alternatives found for ليس with tag 1M+B and target gender 1F+B
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for يحميكى
+INFO:morph_rewriter:No analyses found for أتعلمين
+INFO:morph_rewriter:No alternatives found for أمي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses found for جعلتمنني
+INFO:morph_rewriter:No analyses found for جعلتمنني
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for أريهم
+INFO:morph_rewriter:No alternatives found for امي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses found for اتفهمين
+INFO:morph_rewriter:No alternatives found for انتي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for سيدتي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for سيدتي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for فتاة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for فتاة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses found for أتسمين
+INFO:morph_rewriter:No analyses found for أتسمين
+INFO:morph_rewriter:No analyses found for لتتهمين
+INFO:morph_rewriter:No analyses found for متفأجئ
+INFO:morph_rewriter:No alternatives found for عريسا with tag 1M+B and target gender 1F+B
+INFO:morph_rewriter:No alternatives found for أسود with tag 1M+B and target gender 1F+B
+INFO:morph_rewriter:No alternatives found for زوجا with tag 1M+B and target gender 1F+B
+INFO:morph_rewriter:No analyses found for متفاجئا
+INFO:morph_rewriter:No analyses found for أتتذكرين
+INFO:morph_rewriter:No analyses found for متفاجئ
+INFO:morph_rewriter:No analyses found for متقبل
+INFO:morph_rewriter:No analyses found for أتريدين
+INFO:morph_rewriter:No alternatives found for فتاة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for سيدة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for الملكة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses found for أتعلمين
+INFO:morph_rewriter:No alternatives found for سيدتي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for سيدة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses found for أتريدين
+INFO:morph_rewriter:No alternatives found for فتيات with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for السيدة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses found for أترين
+INFO:morph_rewriter:No analyses found for أتذكرين
+INFO:morph_rewriter:No alternatives found for سيدة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for سيدتي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for السلحفاة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for سيدتي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for إمرأة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for سيدات with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for أمي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for سيدتي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for الأب with tag 1M+B and target gender 1F+B
+INFO:morph_rewriter:No alternatives found for سيدتي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for ساعدني
+INFO:morph_rewriter:No alternatives found for أمي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for سيدتي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for سيدتي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses found for أترين
+INFO:morph_rewriter:No alternatives found for احمقا with tag 1M+B and target gender 1F+B
+INFO:morph_rewriter:No analyses found for أترين
+INFO:morph_rewriter:No alternatives found for السيد with tag 1M+B and target gender 1F+B
+INFO:morph_rewriter:No alternatives found for السيد with tag 1M+B and target gender 1F+B
+INFO:rewriter:CBR triggers: 0
+INFO:rewriter:Morph triggers: 2272
+INFO:rewriter:RBR triggers: 0
+INFO:rewriter:Neural triggers: 0
+INFO:rewriter:Regular passes: 46985
+INFO:rewriter:Selection triggers: 719
+INFO:rewriter:===========================
+INFO:rewriter:CBR OOV: 0
+INFO:rewriter:Morph OOV: 245
+INFO:rewriter:RBR OOV: 0
+INFO:rewriter:===========================
+INFO:__main__:
+
+INFO:__main__:######## MF Rewriting ########
+INFO:__main__:
+
+INFO:__main__:There are 57603 Training Examples
+INFO:__main__:There are 6647 Dev Examples
+INFO:morph_rewriter:No alternatives found for أخ with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for سيدي with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for سيد with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No analyses found for أتظن
+INFO:morph_rewriter:No analyses found for أتشعر
+INFO:morph_rewriter:No alternatives found for الرقيب with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No analyses found for أتتولى
+INFO:morph_rewriter:No alternatives found for سيد with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for أتذكر with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for سيد with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for سيد with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for رجلي with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for سيد with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No analyses match the filtering criteria 2M+B for تتأخرى
+INFO:morph_rewriter:No alternatives found for أتفهم with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for جبانة with tag 1F+B and target gender 1M+B
+INFO:morph_rewriter:No analyses found for منغمسا
+INFO:morph_rewriter:No alternatives found for سيدى with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for الشاب with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for سيد with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for الضابط with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for الضابط with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for احن with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for أتذكر with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for أتحرق with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for سيدي with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for أتدرك with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for سيدى with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for عمي with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for سيد with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for سيدي with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for أتوقع with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for سيدة with tag 1F+B and target gender 1M+B
+INFO:morph_rewriter:No analyses found for المستذئب
+INFO:morph_rewriter:No alternatives found for أتعلم with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No analyses found for أتعتقد
+INFO:morph_rewriter:No analyses found for أتريد
+INFO:morph_rewriter:No analyses found for أتتذكر
+INFO:morph_rewriter:No alternatives found for سيد with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for أتذكر with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No analyses found for مبتعدة
+INFO:morph_rewriter:No analyses found for متفاجيء
+INFO:morph_rewriter:No analyses found for متفاجئة
+INFO:morph_rewriter:No alternatives found for كامرأة with tag 1F+B and target gender 1M+B
+INFO:morph_rewriter:No alternatives found for أتعلم with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for سيدي with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for سيد with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No analyses found for برفسورة
+INFO:morph_rewriter:No analyses found for برفسورة
+INFO:morph_rewriter:No alternatives found for بالنجم with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for أما with tag 1F+B and target gender 1M+B
+INFO:morph_rewriter:No alternatives found for أتعرف with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for أتعرف with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for أما with tag 1F+B and target gender 1M+B
+INFO:morph_rewriter:No analyses found for أتريد
+INFO:morph_rewriter:No analyses found for أتريد
+INFO:morph_rewriter:No alternatives found for سيد with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for النقيب with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No analyses found for أتعمل
+INFO:morph_rewriter:No alternatives found for سيد with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for أعطوني with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No analyses match the filtering criteria 2M+B for أبتاه
+INFO:morph_rewriter:No analyses found for المحشور
+INFO:morph_rewriter:No analyses found for هديء
+INFO:morph_rewriter:No analyses found for أتعتقد
+INFO:morph_rewriter:No alternatives found for سيدي with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No analyses found for أترى
+INFO:morph_rewriter:No alternatives found for أتذكر with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No analyses found for تتسائل
+INFO:morph_rewriter:No alternatives found for كأخي with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for سيد with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No analyses found for أتريد
+INFO:morph_rewriter:No alternatives found for رجال with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for أسودا with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for عذراء with tag 1F+B and target gender 1M+B
+INFO:morph_rewriter:No alternatives found for سيد with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for كرجل with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for أتفهم with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No analyses found for أتجرب
+INFO:morph_rewriter:No analyses found for أوتعلم
+INFO:morph_rewriter:No alternatives found for أتعلم with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for سيد with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for سيدة with tag 1F+B and target gender 1M+B
+INFO:morph_rewriter:No analyses found for أتعلمون
+INFO:morph_rewriter:No alternatives found for أتعرف with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for الأخ with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No analyses found for أتعرفها
+INFO:morph_rewriter:No analyses found for أتتذكر
+INFO:morph_rewriter:No alternatives found for اتواتر with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for أنت with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for امرأة with tag 1F+B and target gender 1M+B
+INFO:morph_rewriter:No alternatives found for تعجبان with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No analyses found for مخطىء
+INFO:morph_rewriter:No analyses found for البروفسورة
+INFO:morph_rewriter:No alternatives found for عمي with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for امرأة with tag 1F+B and target gender 1M+B
+INFO:morph_rewriter:No alternatives found for لاعق with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for سيدي with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for سيد with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for سيد with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for سيد with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for سيد with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for ذو with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No analyses found for أتريد
+INFO:morph_rewriter:No alternatives found for سيد with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for سيدي with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No analyses match the filtering criteria 2M+B for أبتاه
+INFO:morph_rewriter:No alternatives found for تخريب with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for سيد with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for اتعرف with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No analyses found for وتأخذني
+INFO:morph_rewriter:No alternatives found for سيد with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for سيدي with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for سيدي with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for سيدي with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for ضابط with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for سيد with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for سيد with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for الأذكى with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for الشاب with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for أختك with tag 1F+B and target gender 1M+B
+INFO:morph_rewriter:No analyses found for أتتذكر
+INFO:morph_rewriter:No alternatives found for أتخشى with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for أتعلم with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for الملكة with tag 1F+B and target gender 1M+B
+INFO:morph_rewriter:No alternatives found for الملكة with tag 1F+B and target gender 1M+B
+INFO:morph_rewriter:No alternatives found for أمها with tag 1F+B and target gender 1M+B
+INFO:morph_rewriter:No alternatives found for أمها with tag 1F+B and target gender 1M+B
+INFO:morph_rewriter:No alternatives found for سيد with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No analyses found for متفاجئ
+INFO:morph_rewriter:No alternatives found for أتعلم with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for ذو with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for انت with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No analyses found for أتريد
+INFO:morph_rewriter:No alternatives found for سيدى with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for سيدي with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for العاهر with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No analyses found for ياسيدي
+INFO:morph_rewriter:No analyses found for ياسيدي
+INFO:morph_rewriter:No alternatives found for أتعلم with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for أتعلم with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No analyses match the filtering criteria 2M+B for أبتي
+INFO:morph_rewriter:No alternatives found for اتفهم with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for سيدي with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for سيدي with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for هاجرة with tag 1F+B and target gender 1M+B
+INFO:morph_rewriter:No alternatives found for أتسمي with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for أتسمي with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No analyses found for متفأجئة
+INFO:morph_rewriter:No analyses found for مسؤلة
+INFO:morph_rewriter:No alternatives found for الفتيات with tag 1F+B and target gender 1M+B
+INFO:morph_rewriter:No alternatives found for سوداء with tag 1F+B and target gender 1M+B
+INFO:morph_rewriter:No alternatives found for ارملة with tag 1F+B and target gender 1M+B
+INFO:morph_rewriter:No alternatives found for زوجة with tag 1F+B and target gender 1M+B
+INFO:morph_rewriter:No analyses found for متفاجئة
+INFO:morph_rewriter:No analyses found for أتتذكر
+INFO:morph_rewriter:No analyses found for متفاجئة
+INFO:morph_rewriter:No analyses found for متقبلة
+INFO:morph_rewriter:No analyses found for أتريد
+INFO:morph_rewriter:No alternatives found for اهدأ with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for سيد with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for الملك with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for أتعلم with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for إهدأ with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for سيدي with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for سيدتي with tag 1F+B and target gender 1M+B
+INFO:morph_rewriter:No alternatives found for سيدي with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for سيد with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No analyses found for أتريد
+INFO:morph_rewriter:No alternatives found for الضابط with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for السيد with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No analyses found for أترى
+INFO:morph_rewriter:No alternatives found for اتذكر with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for فتاة with tag 1F+B and target gender 1M+B
+INFO:morph_rewriter:No alternatives found for سيد with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for سيدي with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No analyses match the filtering criteria 2M+B for السلحفاة
+INFO:morph_rewriter:No alternatives found for سيدي with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for اشتهيني with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for سيدي with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for الأم with tag 1F+B and target gender 1M+B
+INFO:morph_rewriter:No alternatives found for سيدي with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for حاخام with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for سيدي with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for سيدي with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for امرأة with tag 1F+B and target gender 1M+B
+INFO:morph_rewriter:No alternatives found for امرأة with tag 1F+B and target gender 1M+B
+INFO:morph_rewriter:No analyses found for أترى
+INFO:morph_rewriter:No alternatives found for احمقا with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No analyses found for أترى
+INFO:morph_rewriter:No alternatives found for السيدة with tag 1F+B and target gender 1M+B
+INFO:morph_rewriter:No alternatives found for السيدة with tag 1F+B and target gender 1M+B
+INFO:morph_rewriter:No alternatives found for سيدى with tag 2M+B and target gender 2F+B
+INFO:rewriter:CBR triggers: 0
+INFO:rewriter:Morph triggers: 2251
+INFO:rewriter:RBR triggers: 0
+INFO:rewriter:Neural triggers: 0
+INFO:rewriter:Regular passes: 47006
+INFO:rewriter:Selection triggers: 1210
+INFO:rewriter:===========================
+INFO:rewriter:CBR OOV: 0
+INFO:rewriter:Morph OOV: 193
+INFO:rewriter:RBR OOV: 0
+INFO:rewriter:===========================
+/scratch/ba63/miniconda3/envs/gender_rewriting/lib/python3.7/site-packages/gluonnlp/data/sampler.py:354: UserWarning: Some buckets are empty and will be removed. Unused bucket keys=[10]
+  str(unused_bucket_keys))
+INFO:__main__:
+
+INFO:__main__:######## FF Rewriting ########
+INFO:__main__:
+
+INFO:__main__:There are 57603 Training Examples
+INFO:__main__:There are 6647 Dev Examples
+INFO:morph_rewriter:No alternatives found for أخ with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for سيدي with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for سيد with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No analyses found for أتظن
+INFO:morph_rewriter:No analyses found for أتشعر
+INFO:morph_rewriter:No alternatives found for الرقيب with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No analyses found for أتتولى
+INFO:morph_rewriter:No alternatives found for سيد with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for أتذكر with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for سيد with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for سيد with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for رجلي with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for سيد with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for مشتبه with tag 1M+B and target gender 1F+B
+INFO:morph_rewriter:No alternatives found for مشتبه with tag 1M+B and target gender 1F+B
+INFO:morph_rewriter:No analyses match the filtering criteria 2M+B for تتأخرى
+INFO:morph_rewriter:No alternatives found for أتفهم with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for جبان with tag 1M+B and target gender 1F+B
+INFO:morph_rewriter:No analyses found for منغمسا
+INFO:morph_rewriter:No alternatives found for سيدى with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for الشاب with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for سيد with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for الضابط with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for الضابط with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for احن with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for أتذكر with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for أتحرق with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for سيدي with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for أتدرك with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for سيدى with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for عمي with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for سيد with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for سيدي with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for أتوقع with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for سيدا with tag 1M+B and target gender 1F+B
+INFO:morph_rewriter:No analyses found for المستذئب
+INFO:morph_rewriter:No alternatives found for أتعلم with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No analyses found for أتعتقد
+INFO:morph_rewriter:No analyses found for أتريد
+INFO:morph_rewriter:No analyses found for أتتذكر
+INFO:morph_rewriter:No alternatives found for سيد with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for الرجل with tag 1M+B and target gender 1F+B
+INFO:morph_rewriter:No alternatives found for أتذكر with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No analyses found for مبتعدا
+INFO:morph_rewriter:No analyses found for متفاجيء
+INFO:morph_rewriter:No alternatives found for أتعلم with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for سيدي with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for سيد with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for بالنجم with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for أبا with tag 1M+B and target gender 1F+B
+INFO:morph_rewriter:No alternatives found for أتعرف with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for أبا with tag 1M+B and target gender 1F+B
+INFO:morph_rewriter:No alternatives found for أتعرف with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No analyses found for أتريد
+INFO:morph_rewriter:No analyses found for أتريد
+INFO:morph_rewriter:No alternatives found for سيد with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for النقيب with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No analyses found for أتعمل
+INFO:morph_rewriter:No alternatives found for سيد with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for أعطوني with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No analyses match the filtering criteria 2M+B for أبتاه
+INFO:morph_rewriter:No analyses found for المحشور
+INFO:morph_rewriter:No analyses found for هديء
+INFO:morph_rewriter:No analyses found for أتعتقد
+INFO:morph_rewriter:No alternatives found for شابا with tag 1M+B and target gender 1F+B
+INFO:morph_rewriter:No alternatives found for سيدي with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No analyses found for أترى
+INFO:morph_rewriter:No alternatives found for أتذكر with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No analyses found for تتسائل
+INFO:morph_rewriter:No alternatives found for كأخي with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for سيد with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No analyses found for أتريد
+INFO:morph_rewriter:No alternatives found for رجال with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for أسودا with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for سيد with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for كرجل with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for أتفهم with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for شاب with tag 1M+B and target gender 1F+B
+INFO:morph_rewriter:No analyses found for أتجرب
+INFO:morph_rewriter:No analyses found for أوتعلم
+INFO:morph_rewriter:No alternatives found for أتعلم with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for سيد with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for سيد with tag 1M+B and target gender 1F+B
+INFO:morph_rewriter:No analyses found for أتعلمون
+INFO:morph_rewriter:No alternatives found for أتعرف with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for الأخ with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No analyses found for أتعرفها
+INFO:morph_rewriter:No analyses found for أتتذكر
+INFO:morph_rewriter:No alternatives found for اتواتر with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for أنت with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for تعجبان with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No analyses found for مخطىء
+INFO:morph_rewriter:No alternatives found for عمي with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for لاعق with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for سيدي with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for كحاجب with tag 1M+B and target gender 1F+B
+INFO:morph_rewriter:No alternatives found for سيد with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for سيد with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for سيد with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for سيد with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for ذو with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No analyses found for أتريد
+INFO:morph_rewriter:No alternatives found for سيد with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for سيدي with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No analyses match the filtering criteria 2M+B for أبتاه
+INFO:morph_rewriter:No alternatives found for تخريب with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for سيد with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for اتعرف with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No analyses found for وتأخذني
+INFO:morph_rewriter:No alternatives found for سيد with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for سيدي with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for سيدي with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for سيدي with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for ضابط with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for سيد with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for سيد with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for الأذكى with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for الشاب with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for أخوك with tag 1M+B and target gender 1F+B
+INFO:morph_rewriter:No analyses found for أتتذكر
+INFO:morph_rewriter:No alternatives found for أتخشى with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for أتعلم with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for الملك with tag 1M+B and target gender 1F+B
+INFO:morph_rewriter:No alternatives found for الملك with tag 1M+B and target gender 1F+B
+INFO:morph_rewriter:No alternatives found for سيد with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No analyses found for متفاجئ
+INFO:morph_rewriter:No alternatives found for أتعلم with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for ذو with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for انت with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No analyses found for أتريد
+INFO:morph_rewriter:No alternatives found for سيدى with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for سيدي with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for العاهر with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No analyses found for ياسيدي
+INFO:morph_rewriter:No analyses found for ياسيدي
+INFO:morph_rewriter:No alternatives found for أتعلم with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for ليس with tag 1M+B and target gender 1F+B
+INFO:morph_rewriter:No alternatives found for ليس with tag 1M+B and target gender 1F+B
+INFO:morph_rewriter:No alternatives found for أتعلم with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No analyses match the filtering criteria 2M+B for أبتي
+INFO:morph_rewriter:No alternatives found for اتفهم with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for سيدي with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for سيدي with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for أتسمي with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for أتسمي with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No analyses found for متفأجئ
+INFO:morph_rewriter:No alternatives found for عريسا with tag 1M+B and target gender 1F+B
+INFO:morph_rewriter:No alternatives found for أسود with tag 1M+B and target gender 1F+B
+INFO:morph_rewriter:No alternatives found for زوجا with tag 1M+B and target gender 1F+B
+INFO:morph_rewriter:No analyses found for متفاجئا
+INFO:morph_rewriter:No analyses found for أتتذكر
+INFO:morph_rewriter:No analyses found for متفاجئ
+INFO:morph_rewriter:No analyses found for متقبل
+INFO:morph_rewriter:No analyses found for أتريد
+INFO:morph_rewriter:No alternatives found for اهدأ with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for سيد with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for الملك with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for أتعلم with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for إهدأ with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for سيدي with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for سيدي with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for سيد with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No analyses found for أتريد
+INFO:morph_rewriter:No alternatives found for الضابط with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for السيد with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No analyses found for أترى
+INFO:morph_rewriter:No alternatives found for اتذكر with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for سيد with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for سيدي with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No analyses match the filtering criteria 2M+B for السلحفاة
+INFO:morph_rewriter:No alternatives found for سيدي with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for اشتهيني with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for سيدي with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for الأب with tag 1M+B and target gender 1F+B
+INFO:morph_rewriter:No alternatives found for سيدي with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for حاخام with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for سيدي with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for سيدي with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for احمقا with tag 1M+B and target gender 1F+B
+INFO:morph_rewriter:No analyses found for أترى
+INFO:morph_rewriter:No alternatives found for احمقا with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No analyses found for أترى
+INFO:morph_rewriter:No alternatives found for السيد with tag 1M+B and target gender 1F+B
+INFO:morph_rewriter:No alternatives found for السيد with tag 1M+B and target gender 1F+B
+INFO:morph_rewriter:No alternatives found for سيدى with tag 2M+B and target gender 2F+B
+INFO:rewriter:CBR triggers: 0
+INFO:rewriter:Morph triggers: 2264
+INFO:rewriter:RBR triggers: 0
+INFO:rewriter:Neural triggers: 0
+INFO:rewriter:Regular passes: 46993
+INFO:rewriter:Selection triggers: 1079
+INFO:rewriter:===========================
+INFO:rewriter:CBR OOV: 0
+INFO:rewriter:Morph OOV: 185
+INFO:rewriter:RBR OOV: 0
+INFO:rewriter:===========================

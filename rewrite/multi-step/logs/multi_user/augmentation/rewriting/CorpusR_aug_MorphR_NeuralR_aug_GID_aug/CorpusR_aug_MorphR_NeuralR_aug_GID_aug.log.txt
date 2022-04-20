@@ -1,0 +1,215 @@
+/scratch/ba63/miniconda3/envs/gender_rewriting/lib/python3.7/site-packages/mxnet/optimizer/optimizer.py:167: UserWarning: WARNING: New optimizer gluonnlp.optimizer.lamb.LAMB is overriding existing optimizer mxnet.optimizer.optimizer.LAMB
+  Optimizer.opt_registry[name].__name__))
+INFO:__main__:Namespace(analyze_errors=True, beam_width=10, bert_model='/scratch/ba63/gender-rewriting/mlm_lm/bert-base-arabic-camelbert-msa-mlm-88', cbr_backoff=True, cbr_ngram=2, data_dir='/home/ba63/gender-rewriting/data/rewrite/apgc-v2.0/', error_analysis_dir='/home/ba63/gender-rewriting/rewrite/multi-step/logs/multi_user/augmentation/error_analysis/CorpusR_aug_MorphR_NeuralR_aug_GID_aug', first_person_only=False, gender_id_model='/scratch/ba63/gender-rewriting/gender-id/CAMeLBERT_MSA/camera_ready/multi_user_with_clitics/augmented_models/5000/models_f1/checkpoint-55000', inference_mode='dev', morph_db='/scratch/ba63/calima_databases/calima-msa/calima-msa-s31_0.4.2.utf8.db.copy-mod', output_dir='/home/ba63/gender-rewriting/rewrite/multi-step/logs/multi_user/augmentation/rewriting/CorpusR_aug_MorphR_NeuralR_aug_GID_aug', pick_top_mle=False, post_edit_MT=False, rbr_top_rule=False, rbr_top_tgt_rule=False, reduce_cbr_noise=True, save_cbr_model=False, seq2seq_model_path='neural_rewriter/saved_models/multi_user_augmented', top_n_best=3, use_cbr=True, use_data_augmentation=True, use_gpu=True, use_morph=True, use_rbr=False, use_seq2seq=True)
+WARNING:root:Model '/scratch/ba63/gender-rewriting/mlm_lm/bert-base-arabic-camelbert-msa-mlm-88' not recognized as an MXNet model; treating as PyTorch model
+WARNING:root:Created scorer of class 'MLMScorerPT'.
+INFO:__main__:
+
+INFO:__main__:######## MM Rewriting ########
+INFO:__main__:
+
+INFO:__main__:There are 857603 Training Examples
+INFO:__main__:There are 6647 Dev Examples
+INFO:__main__:Training CBR model for MM target
+INFO:__main__:Loading the pretrained neural rewriter model
+INFO:morph_rewriter:No analyses found for منغمسة
+INFO:morph_rewriter:No analyses found for المستذئبة
+INFO:morph_rewriter:No analyses found for وتظلن
+INFO:morph_rewriter:No analyses found for الواصلات
+INFO:morph_rewriter:No analyses found for برفسورة
+INFO:morph_rewriter:No analyses found for برفسورة
+INFO:morph_rewriter:No analyses found for برنسيسة
+INFO:morph_rewriter:No analyses found for المحشورة
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for اديها
+INFO:morph_rewriter:No alternatives found for ككتلة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for ككتلة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for عذراء with tag 1F+B and target gender 1M+B
+INFO:morph_rewriter:No analyses found for أيمكنكن
+INFO:morph_rewriter:No analyses found for أتجربي
+INFO:morph_rewriter:No analyses found for البروفسورة
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for جنرالة
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for ودعونا
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for كزميل
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for أعزب
+INFO:morph_rewriter:No analyses found for أستعترفين
+INFO:morph_rewriter:No analyses found for تلتفن
+INFO:morph_rewriter:No analyses found for متفتحا
+INFO:morph_rewriter:No analyses found for مرتديته
+INFO:morph_rewriter:No analyses found for جعلتمنني
+INFO:morph_rewriter:No analyses found for جعلتمنني
+INFO:morph_rewriter:No alternatives found for هاجرة with tag 1F+B and target gender 1M+B
+INFO:morph_rewriter:No analyses found for لتتهمين
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for أحبني
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for ساعدني
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for ارجمني
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for ارجمني
+INFO:rewriter:CBR triggers: 2305
+INFO:rewriter:Morph triggers: 235
+INFO:rewriter:RBR triggers: 0
+INFO:rewriter:Neural triggers: 31
+INFO:rewriter:Regular passes: 46952
+INFO:rewriter:Selection triggers: 618
+INFO:rewriter:===========================
+INFO:rewriter:CBR OOV: 203
+INFO:rewriter:Morph OOV: 31
+INFO:rewriter:RBR OOV: 0
+INFO:rewriter:===========================
+/scratch/ba63/miniconda3/envs/gender_rewriting/lib/python3.7/site-packages/gluonnlp/data/sampler.py:354: UserWarning: Some buckets are empty and will be removed. Unused bucket keys=[12]
+  str(unused_bucket_keys))
+/scratch/ba63/miniconda3/envs/gender_rewriting/lib/python3.7/site-packages/gluonnlp/data/sampler.py:354: UserWarning: Some buckets are empty and will be removed. Unused bucket keys=[10]
+  str(unused_bucket_keys))
+INFO:__main__:
+
+INFO:__main__:######## FM Rewriting ########
+INFO:__main__:
+
+INFO:__main__:There are 857603 Training Examples
+INFO:__main__:There are 6647 Dev Examples
+INFO:__main__:Training CBR model for FM target
+INFO:__main__:Loading the pretrained neural rewriter model
+INFO:morph_rewriter:No analyses found for منغمسة
+INFO:morph_rewriter:No analyses found for المستذئبة
+INFO:morph_rewriter:No analyses found for وتظلن
+INFO:morph_rewriter:No analyses found for الواصلات
+INFO:morph_rewriter:No analyses found for برنسيسة
+INFO:morph_rewriter:No analyses found for المحشورة
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for اديها
+INFO:morph_rewriter:No alternatives found for ككتلة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for ككتلة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses found for أيمكنكن
+INFO:morph_rewriter:No analyses found for أتجربي
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for جنرالة
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for ودعونا
+INFO:morph_rewriter:No analyses found for متصافين
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for كزميل
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for أعزب
+INFO:morph_rewriter:No analyses found for أستعترفين
+INFO:morph_rewriter:No analyses found for تلتفن
+INFO:morph_rewriter:No analyses found for متفتحا
+INFO:morph_rewriter:No analyses found for مرتديته
+INFO:morph_rewriter:No analyses found for جعلتمنني
+INFO:morph_rewriter:No analyses found for جعلتمنني
+INFO:morph_rewriter:No analyses found for لتتهمين
+INFO:morph_rewriter:No analyses found for متفأجئ
+INFO:morph_rewriter:No analyses found for متقبل
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for أحبني
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for ساعدني
+INFO:morph_rewriter:No alternatives found for سابدا with tag 1M+B and target gender 1F+B
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for ارجمني
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for ارجمني
+INFO:rewriter:CBR triggers: 2304
+INFO:rewriter:Morph triggers: 221
+INFO:rewriter:RBR triggers: 0
+INFO:rewriter:Neural triggers: 30
+INFO:rewriter:Regular passes: 46953
+INFO:rewriter:Selection triggers: 598
+INFO:rewriter:===========================
+INFO:rewriter:CBR OOV: 195
+INFO:rewriter:Morph OOV: 30
+INFO:rewriter:RBR OOV: 0
+INFO:rewriter:===========================
+/scratch/ba63/miniconda3/envs/gender_rewriting/lib/python3.7/site-packages/gluonnlp/data/sampler.py:354: UserWarning: Some buckets are empty and will be removed. Unused bucket keys=[8]
+  str(unused_bucket_keys))
+INFO:__main__:
+
+INFO:__main__:######## MF Rewriting ########
+INFO:__main__:
+
+INFO:__main__:There are 857603 Training Examples
+INFO:__main__:There are 6647 Dev Examples
+INFO:__main__:Training CBR model for MF target
+INFO:__main__:Loading the pretrained neural rewriter model
+INFO:morph_rewriter:No analyses found for أتتولى
+INFO:morph_rewriter:No alternatives found for لازال with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No analyses found for التمتد
+INFO:morph_rewriter:No alternatives found for احنى with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for احن with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for وأضيفه with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No analyses found for المستذئب
+INFO:morph_rewriter:No analyses found for برفسورة
+INFO:morph_rewriter:No analyses found for برفسورة
+INFO:morph_rewriter:No alternatives found for وانجوا with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No analyses found for المحشور
+INFO:morph_rewriter:No alternatives found for ادها with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for أسودا with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for عذراء with tag 1F+B and target gender 1M+B
+INFO:morph_rewriter:No analyses found for أتجرب
+INFO:morph_rewriter:No analyses found for ياغودا
+INFO:morph_rewriter:No analyses found for البروفسورة
+INFO:morph_rewriter:No analyses match the filtering criteria B+2M for تبكي
+INFO:morph_rewriter:No analyses found for تتنه
+INFO:morph_rewriter:No alternatives found for هاجرة with tag 1F+B and target gender 1M+B
+INFO:morph_rewriter:No alternatives found for جالب with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No analyses match the filtering criteria 2M+B for السلحفاة
+INFO:morph_rewriter:No alternatives found for حاخام with tag 2M+B and target gender 2F+B
+INFO:rewriter:CBR triggers: 2287
+INFO:rewriter:Morph triggers: 147
+INFO:rewriter:RBR triggers: 0
+INFO:rewriter:Neural triggers: 23
+INFO:rewriter:Regular passes: 46970
+INFO:rewriter:Selection triggers: 1014
+INFO:rewriter:===========================
+INFO:rewriter:CBR OOV: 117
+INFO:rewriter:Morph OOV: 23
+INFO:rewriter:RBR OOV: 0
+INFO:rewriter:===========================
+/scratch/ba63/miniconda3/envs/gender_rewriting/lib/python3.7/site-packages/gluonnlp/data/sampler.py:354: UserWarning: Some buckets are empty and will be removed. Unused bucket keys=[7]
+  str(unused_bucket_keys))
+/scratch/ba63/miniconda3/envs/gender_rewriting/lib/python3.7/site-packages/gluonnlp/data/sampler.py:354: UserWarning: Some buckets are empty and will be removed. Unused bucket keys=[15]
+  str(unused_bucket_keys))
+/scratch/ba63/miniconda3/envs/gender_rewriting/lib/python3.7/site-packages/gluonnlp/data/sampler.py:354: UserWarning: Some buckets are empty and will be removed. Unused bucket keys=[9]
+  str(unused_bucket_keys))
+/scratch/ba63/miniconda3/envs/gender_rewriting/lib/python3.7/site-packages/gluonnlp/data/sampler.py:354: UserWarning: Some buckets are empty and will be removed. Unused bucket keys=[13]
+  str(unused_bucket_keys))
+/scratch/ba63/miniconda3/envs/gender_rewriting/lib/python3.7/site-packages/gluonnlp/data/sampler.py:354: UserWarning: Some buckets are empty and will be removed. Unused bucket keys=[33]
+  str(unused_bucket_keys))
+/scratch/ba63/miniconda3/envs/gender_rewriting/lib/python3.7/site-packages/gluonnlp/data/sampler.py:354: UserWarning: Some buckets are empty and will be removed. Unused bucket keys=[16]
+  str(unused_bucket_keys))
+/scratch/ba63/miniconda3/envs/gender_rewriting/lib/python3.7/site-packages/gluonnlp/data/sampler.py:354: UserWarning: Some buckets are empty and will be removed. Unused bucket keys=[14]
+  str(unused_bucket_keys))
+/scratch/ba63/miniconda3/envs/gender_rewriting/lib/python3.7/site-packages/gluonnlp/data/sampler.py:354: UserWarning: Some buckets are empty and will be removed. Unused bucket keys=[11]
+  str(unused_bucket_keys))
+/scratch/ba63/miniconda3/envs/gender_rewriting/lib/python3.7/site-packages/gluonnlp/data/sampler.py:354: UserWarning: Some buckets are empty and will be removed. Unused bucket keys=[17]
+  str(unused_bucket_keys))
+INFO:__main__:
+
+INFO:__main__:######## FF Rewriting ########
+INFO:__main__:
+
+INFO:__main__:There are 857603 Training Examples
+INFO:__main__:There are 6647 Dev Examples
+INFO:__main__:Training CBR model for FF target
+INFO:__main__:Loading the pretrained neural rewriter model
+INFO:morph_rewriter:No analyses found for أتتولى
+INFO:morph_rewriter:No alternatives found for لازال with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No analyses found for التمتد
+INFO:morph_rewriter:No alternatives found for احنى with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for احن with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for وأضيفه with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No analyses found for المستذئب
+INFO:morph_rewriter:No alternatives found for وانجوا with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No analyses found for المحشور
+INFO:morph_rewriter:No alternatives found for ادها with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for أسودا with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No analyses found for أتجرب
+INFO:morph_rewriter:No analyses found for ياغودا
+INFO:morph_rewriter:No analyses found for متصافين
+INFO:morph_rewriter:No analyses match the filtering criteria B+2M for تبكي
+INFO:morph_rewriter:No analyses found for تتنه
+INFO:morph_rewriter:No analyses found for متفأجئ
+INFO:morph_rewriter:No analyses found for متقبل
+INFO:morph_rewriter:No alternatives found for جالب with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No analyses match the filtering criteria 2M+B for السلحفاة
+INFO:morph_rewriter:No alternatives found for حاخام with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for سابدا with tag 1M+B and target gender 1F+B
+INFO:rewriter:CBR triggers: 2286
+INFO:rewriter:Morph triggers: 133
+INFO:rewriter:RBR triggers: 0
+INFO:rewriter:Neural triggers: 22
+INFO:rewriter:Regular passes: 46971
+INFO:rewriter:Selection triggers: 975
+INFO:rewriter:===========================
+INFO:rewriter:CBR OOV: 109
+INFO:rewriter:Morph OOV: 22
+INFO:rewriter:RBR OOV: 0
+INFO:rewriter:===========================

@@ -1,0 +1,587 @@
+/scratch/ba63/miniconda3/envs/gender_rewriting/lib/python3.7/site-packages/mxnet/optimizer/optimizer.py:167: UserWarning: WARNING: New optimizer gluonnlp.optimizer.lamb.LAMB is overriding existing optimizer mxnet.optimizer.optimizer.LAMB
+  Optimizer.opt_registry[name].__name__))
+INFO:__main__:Namespace(analyze_errors=True, beam_width=10, bert_model='/scratch/ba63/gender-rewriting/mlm_lm/bert-base-arabic-camelbert-msa-mlm-88', cbr_backoff=True, cbr_ngram=2, data_dir='/home/ba63/gender-rewriting/data/rewrite/apgc-v2.0/', error_analysis_dir='/home/ba63/gender-rewriting/rewrite/multi-step/logs/multi_user/augmentation/error_analysis/CorpusR_MorphR_NeuralR_aug_GID_aug_test', first_person_only=False, gender_id_model='/scratch/ba63/gender-rewriting/gender-id/CAMeLBERT_MSA/camera_ready/multi_user_with_clitics/augmented_models/5000/models_f1/checkpoint-55000', inference_mode='test', morph_db='/scratch/ba63/calima_databases/calima-msa/calima-msa-s31_0.4.2.utf8.db.copy-mod', output_dir='/home/ba63/gender-rewriting/rewrite/multi-step/logs/multi_user/augmentation/rewriting/CorpusR_MorphR_NeuralR_aug_GID_aug_test', pick_top_mle=False, post_edit_MT=False, rbr_top_rule=False, rbr_top_tgt_rule=False, reduce_cbr_noise=True, save_cbr_model=False, seq2seq_model_path='neural_rewriter/saved_models/multi_user_augmented', top_n_best=3, use_cbr=True, use_data_augmentation=False, use_gpu=True, use_morph=True, use_rbr=False, use_seq2seq=True)
+WARNING:root:Model '/scratch/ba63/gender-rewriting/mlm_lm/bert-base-arabic-camelbert-msa-mlm-88' not recognized as an MXNet model; treating as PyTorch model
+WARNING:root:Created scorer of class 'MLMScorerPT'.
+INFO:__main__:
+
+INFO:__main__:######## MM Rewriting ########
+INFO:__main__:
+
+INFO:__main__:There are 57603 Training Examples
+INFO:__main__:There are 16076 Test Examples
+INFO:__main__:Training CBR model for MM target
+INFO:__main__:Loading the pretrained neural rewriter model
+INFO:morph_rewriter:No analyses found for لتحملينني
+INFO:morph_rewriter:No analyses found for لتحملينني
+INFO:morph_rewriter:No alternatives found for إمرأتي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses found for أتطلبين
+INFO:morph_rewriter:No analyses found for الجنرالة
+INFO:morph_rewriter:No alternatives found for قوديه with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for الآخرى with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for شرطة with tag 1F+B and target gender 1M+B
+INFO:morph_rewriter:No analyses found for أتستمتعين
+INFO:morph_rewriter:No alternatives found for فصيحة with tag 1F+B and target gender 1M+B
+INFO:morph_rewriter:No analyses found for متنمرة
+INFO:morph_rewriter:No analyses found for أتفضلين
+INFO:morph_rewriter:No analyses found for الصفيحية
+INFO:morph_rewriter:No alternatives found for المعالجة with tag 1F+B and target gender 1M+B
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for لتوديعي
+INFO:morph_rewriter:No alternatives found for زوجه with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for زوجه with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses found for شرفتمنني
+INFO:morph_rewriter:No analyses found for وانتخبتمنني
+INFO:morph_rewriter:No analyses found for شرفتمنني
+INFO:morph_rewriter:No analyses found for وانتخبتمنني
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+2F for ممثلكم
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for أدعوكى
+INFO:morph_rewriter:No analyses found for استمرن
+INFO:morph_rewriter:No alternatives found for وأمي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses found for أترغبن
+INFO:morph_rewriter:No analyses match the filtering criteria 1F+B for مرتدية
+INFO:morph_rewriter:No analyses found for أتتكلمين
+INFO:morph_rewriter:No analyses match the filtering criteria 1F+B for أسفنجة
+INFO:morph_rewriter:No analyses match the filtering criteria 1F+B for أسفنجة
+INFO:morph_rewriter:No analyses match the filtering criteria 1F+B for سمسارة
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for إسديني
+INFO:morph_rewriter:No analyses found for اشيحي
+INFO:morph_rewriter:No analyses found for مخدوعة
+INFO:morph_rewriter:No analyses found for مطرودة
+INFO:morph_rewriter:No analyses found for ماشعرتيه
+INFO:morph_rewriter:No analyses found for أتمزحين
+INFO:morph_rewriter:No alternatives found for الفتاتان with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses found for فلتبطيء
+INFO:morph_rewriter:No analyses found for أتخشين
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for كالملاك
+INFO:morph_rewriter:No analyses found for إئذنن
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for الم
+INFO:morph_rewriter:No analyses found for تنحرجين
+INFO:morph_rewriter:No analyses found for أستلعبين
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for انتم
+INFO:morph_rewriter:No analyses found for يانساء
+INFO:morph_rewriter:No alternatives found for زوجة with tag 1F+B and target gender 1M+B
+INFO:morph_rewriter:No analyses found for أتسمعننها
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for الطائر
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for الاسود
+INFO:morph_rewriter:No alternatives found for كأختها with tag 1F+B and target gender 1M+B
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for وانحن
+INFO:morph_rewriter:No analyses match the filtering criteria 1F+B for قوادة
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for كفوءة
+INFO:morph_rewriter:No analyses found for متشرفة
+INFO:morph_rewriter:No analyses found for متشرفة
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for مراعية
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for مراعية
+INFO:morph_rewriter:No alternatives found for كامرأة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for كامرأة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses found for متفرغة
+INFO:morph_rewriter:No alternatives found for ضغينة with tag 1F+B and target gender 1M+B
+INFO:morph_rewriter:No analyses found for أمتفرغة
+INFO:morph_rewriter:No analyses found for أستذهبين
+INFO:morph_rewriter:No alternatives found for كامرأة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses found for متفرغة
+INFO:morph_rewriter:No analyses found for لاتسطيعي
+INFO:morph_rewriter:No analyses found for أتلعبين
+INFO:morph_rewriter:No analyses found for تدريكين
+INFO:morph_rewriter:No alternatives found for امرأه with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for زوجة with tag 1F+B and target gender 1M+B
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for يعتني
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for والديكى
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for كملاك
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for اخبرني
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for تسمعوها
+INFO:morph_rewriter:No alternatives found for أخواتي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses found for لتحدثينه
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for كالمهبل
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for الأخر
+INFO:morph_rewriter:No analyses match the filtering criteria B+2F for معكم
+INFO:morph_rewriter:No analyses found for تسخدمينه
+INFO:morph_rewriter:No analyses found for تؤذيي
+INFO:morph_rewriter:No analyses found for لتفعلينه
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for تأخرين
+INFO:morph_rewriter:No analyses found for ميتولين
+INFO:morph_rewriter:No analyses match the filtering criteria 1F+B for جنرالة
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for سيناتورة
+INFO:morph_rewriter:No analyses found for متعادية
+INFO:morph_rewriter:No analyses found for قدمتمنه
+INFO:morph_rewriter:No analyses found for ستنجوين
+INFO:morph_rewriter:No analyses found for أتشترين
+INFO:morph_rewriter:No analyses found for مستمتعة
+INFO:morph_rewriter:No analyses found for تتخلن
+INFO:morph_rewriter:No alternatives found for لتأخذيني with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for وكلتانا with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for شابتان with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for شابتان with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for خطيبتك with tag 1F+B and target gender 1M+B
+INFO:morph_rewriter:No analyses found for متفاجئه
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for معلمي
+INFO:morph_rewriter:No analyses found for ستقنتعين
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for اذهب
+INFO:morph_rewriter:No analyses found for ياحثالة
+INFO:morph_rewriter:No analyses found for ياحثالة
+INFO:morph_rewriter:No alternatives found for تآذيننا with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses found for داكية
+INFO:morph_rewriter:No alternatives found for فقوليها with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses found for أتهددينني
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for رجل
+INFO:morph_rewriter:No analyses found for تتموضعي
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for املأي
+INFO:morph_rewriter:No alternatives found for مريهم with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for أخيرأ
+INFO:morph_rewriter:No analyses found for محترقة
+INFO:morph_rewriter:No analyses found for أستشترين
+INFO:morph_rewriter:No analyses found for أتودي
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for أغمض
+INFO:morph_rewriter:No alternatives found for الساقية with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for وحيدا
+INFO:morph_rewriter:No alternatives found for وسيدتي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for شابات with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses found for اضهبى
+INFO:morph_rewriter:No alternatives found for مليكتي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for شابات with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses found for تلوميينني
+INFO:morph_rewriter:No alternatives found for شقيقته with tag 1F+B and target gender 1M+B
+INFO:morph_rewriter:No analyses found for مدبسه
+INFO:morph_rewriter:No alternatives found for بطوله with tag 1F+B and target gender 1M+B
+INFO:morph_rewriter:No alternatives found for كصبية with tag 1F+B and target gender 1M+B
+INFO:morph_rewriter:No analyses found for كمقلنسة
+INFO:morph_rewriter:No analyses match the filtering criteria B+2F for امسكنه
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for تائها
+INFO:morph_rewriter:No analyses found for يكيفكن
+INFO:morph_rewriter:No analyses found for منتشية
+INFO:morph_rewriter:No analyses found for منتشية
+INFO:rewriter:CBR triggers: 5780
+INFO:rewriter:Morph triggers: 1170
+INFO:rewriter:RBR triggers: 0
+INFO:rewriter:Neural triggers: 137
+INFO:rewriter:Regular passes: 114239
+INFO:rewriter:Selection triggers: 1650
+INFO:rewriter:===========================
+INFO:rewriter:CBR OOV: 1137
+INFO:rewriter:Morph OOV: 137
+INFO:rewriter:RBR OOV: 0
+INFO:rewriter:===========================
+/scratch/ba63/miniconda3/envs/gender_rewriting/lib/python3.7/site-packages/gluonnlp/data/sampler.py:354: UserWarning: Some buckets are empty and will be removed. Unused bucket keys=[10]
+  str(unused_bucket_keys))
+/scratch/ba63/miniconda3/envs/gender_rewriting/lib/python3.7/site-packages/gluonnlp/data/sampler.py:354: UserWarning: Some buckets are empty and will be removed. Unused bucket keys=[11]
+  str(unused_bucket_keys))
+INFO:__main__:
+
+INFO:__main__:######## FM Rewriting ########
+INFO:__main__:
+
+INFO:__main__:There are 57603 Training Examples
+INFO:__main__:There are 16076 Test Examples
+INFO:__main__:Training CBR model for FM target
+INFO:__main__:Loading the pretrained neural rewriter model
+INFO:morph_rewriter:No analyses found for لتحملينني
+INFO:morph_rewriter:No analyses found for لتحملينني
+INFO:morph_rewriter:No alternatives found for إمرأتي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses found for أتطلبين
+INFO:morph_rewriter:No alternatives found for الجنرال with tag 1M+B and target gender 1F+B
+INFO:morph_rewriter:No alternatives found for قوديه with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for الآخرى with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses found for أتستمتعين
+INFO:morph_rewriter:No alternatives found for مطرود with tag 1M+B and target gender 1F+B
+INFO:morph_rewriter:No alternatives found for مطرود with tag 1M+B and target gender 1F+B
+INFO:morph_rewriter:No analyses found for متنمرة
+INFO:morph_rewriter:No analyses found for متنمر
+INFO:morph_rewriter:No analyses found for أتفضلين
+INFO:morph_rewriter:No analyses found for الصفيحي
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for لتوديعي
+INFO:morph_rewriter:No alternatives found for زوجه with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for زوجه with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses found for شرفتمنني
+INFO:morph_rewriter:No analyses found for وانتخبتمنني
+INFO:morph_rewriter:No analyses found for شرفتمنني
+INFO:morph_rewriter:No analyses found for وانتخبتمنني
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+2F for ممثلكم
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for أدعوكى
+INFO:morph_rewriter:No analyses found for استمرن
+INFO:morph_rewriter:No alternatives found for وأمي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses found for أترغبن
+INFO:morph_rewriter:No analyses found for أتتكلمين
+INFO:morph_rewriter:No alternatives found for سمسار with tag 1M+B and target gender 1F+B
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for إسديني
+INFO:morph_rewriter:No analyses found for اشيحي
+INFO:morph_rewriter:No analyses found for مخدوع
+INFO:morph_rewriter:No alternatives found for مطرود with tag 1M+B and target gender 1F+B
+INFO:morph_rewriter:No analyses found for ماشعرتيه
+INFO:morph_rewriter:No analyses found for أتمزحين
+INFO:morph_rewriter:No alternatives found for الفتاتان with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses found for فلتبطيء
+INFO:morph_rewriter:No analyses found for أتخشين
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for كالملاك
+INFO:morph_rewriter:No analyses found for إئذنن
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for الم
+INFO:morph_rewriter:No analyses found for تنحرجين
+INFO:morph_rewriter:No analyses found for أستلعبين
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for انتم
+INFO:morph_rewriter:No analyses found for يانساء
+INFO:morph_rewriter:No alternatives found for زوجا with tag 1M+B and target gender 1F+B
+INFO:morph_rewriter:No analyses found for أتسمعننها
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for الطائر
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for الاسود
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for وانحن
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for كفوءة
+INFO:morph_rewriter:No analyses found for متشرفة
+INFO:morph_rewriter:No analyses found for متشرف
+INFO:morph_rewriter:No analyses found for متشرف
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for مراعية
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for مراعية
+INFO:morph_rewriter:No alternatives found for كامرأة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for كامرأة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses found for متفرغا
+INFO:morph_rewriter:No analyses found for أمتفرغة
+INFO:morph_rewriter:No analyses found for أستذهبين
+INFO:morph_rewriter:No alternatives found for كامرأة with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses found for متفرغة
+INFO:morph_rewriter:No analyses found for لاتسطيعي
+INFO:morph_rewriter:No analyses found for أتلعبين
+INFO:morph_rewriter:No analyses found for تدريكين
+INFO:morph_rewriter:No alternatives found for امرأه with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for يعتني
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for والديكى
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for كملاك
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for اخبرني
+INFO:morph_rewriter:No analyses found for مستثار
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for تسمعوها
+INFO:morph_rewriter:No alternatives found for أخواتي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses found for لتحدثينه
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for كالمهبل
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for الأخر
+INFO:morph_rewriter:No analyses match the filtering criteria B+2F for معكم
+INFO:morph_rewriter:No analyses found for تسخدمينه
+INFO:morph_rewriter:No analyses found for تؤذيي
+INFO:morph_rewriter:No analyses found for لتفعلينه
+INFO:morph_rewriter:No alternatives found for سحاقي with tag 1M+B and target gender 1F+B
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for تأخرين
+INFO:morph_rewriter:No analyses found for ميتولين
+INFO:morph_rewriter:No alternatives found for جنرال with tag 1M+B and target gender 1F+B
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for سيناتورة
+INFO:morph_rewriter:No alternatives found for الأنجلو with tag 1M+B and target gender 1F+B
+INFO:morph_rewriter:No analyses found for متعاديا
+INFO:morph_rewriter:No analyses found for قدمتمنه
+INFO:morph_rewriter:No analyses found for ستنجوين
+INFO:morph_rewriter:No analyses found for أتشترين
+INFO:morph_rewriter:No analyses found for مستمتعة
+INFO:morph_rewriter:No analyses found for تتخلن
+INFO:morph_rewriter:No alternatives found for لتأخذيني with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for وكلتانا with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for شابتان with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for شابتان with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for خطيبك with tag 1M+B and target gender 1F+B
+INFO:morph_rewriter:No analyses found for مرتديا
+INFO:morph_rewriter:No analyses found for متفاجئه
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for معلمي
+INFO:morph_rewriter:No analyses found for ستقنتعين
+INFO:morph_rewriter:No alternatives found for هرقل with tag 1M+B and target gender 1F+B
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for اذهب
+INFO:morph_rewriter:No analyses found for ياحثالة
+INFO:morph_rewriter:No analyses found for ياحثالة
+INFO:morph_rewriter:No alternatives found for تآذيننا with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses found for داكية
+INFO:morph_rewriter:No alternatives found for فقوليها with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for حيوان with tag 1M+B and target gender 1F+B
+INFO:morph_rewriter:No analyses found for أتهددينني
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for رجل
+INFO:morph_rewriter:No analyses found for تتموضعي
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for املأي
+INFO:morph_rewriter:No alternatives found for مريهم with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for أخيرأ
+INFO:morph_rewriter:No analyses found for محترق
+INFO:morph_rewriter:No analyses found for أستشترين
+INFO:morph_rewriter:No analyses found for أتودي
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for أغمض
+INFO:morph_rewriter:No alternatives found for الساقية with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for وحيدا
+INFO:morph_rewriter:No alternatives found for وسيدتي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for شابات with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses found for اضهبى
+INFO:morph_rewriter:No alternatives found for مليكتي with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No alternatives found for شابات with tag 2F+B and target gender 2M+B
+INFO:morph_rewriter:No analyses found for تلوميينني
+INFO:morph_rewriter:No alternatives found for شقيقه with tag 1M+B and target gender 1F+B
+INFO:morph_rewriter:No analyses found for مدبس
+INFO:morph_rewriter:No alternatives found for بطوله with tag 1M+B and target gender 1F+B
+INFO:morph_rewriter:No alternatives found for لرجل with tag 1M+B and target gender 1F+B
+INFO:morph_rewriter:No alternatives found for كصبي with tag 1M+B and target gender 1F+B
+INFO:morph_rewriter:No analyses found for بريئ
+INFO:morph_rewriter:No analyses match the filtering criteria B+2F for امسكنه
+INFO:morph_rewriter:No analyses match the filtering criteria 2F+B for تائها
+INFO:morph_rewriter:No analyses found for يكيفكن
+INFO:morph_rewriter:No analyses found for منتشي
+INFO:morph_rewriter:No analyses found for منتشي
+INFO:rewriter:CBR triggers: 5780
+INFO:rewriter:Morph triggers: 1201
+INFO:rewriter:RBR triggers: 0
+INFO:rewriter:Neural triggers: 138
+INFO:rewriter:Regular passes: 114239
+INFO:rewriter:Selection triggers: 1563
+INFO:rewriter:===========================
+INFO:rewriter:CBR OOV: 1170
+INFO:rewriter:Morph OOV: 138
+INFO:rewriter:RBR OOV: 0
+INFO:rewriter:===========================
+INFO:__main__:
+
+INFO:__main__:######## MF Rewriting ########
+INFO:__main__:
+
+INFO:__main__:There are 57603 Training Examples
+INFO:__main__:There are 16076 Test Examples
+INFO:__main__:Training CBR model for MF target
+INFO:__main__:Loading the pretrained neural rewriter model
+INFO:morph_rewriter:No analyses match the filtering criteria B+2M for تتركنا
+INFO:morph_rewriter:No alternatives found for أتطلب with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for خجلا with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No analyses found for الجنرالة
+INFO:morph_rewriter:No alternatives found for شرطة with tag 1F+B and target gender 1M+B
+INFO:morph_rewriter:No analyses found for أتستمتع
+INFO:morph_rewriter:No alternatives found for واشتري with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for فصيحة with tag 1F+B and target gender 1M+B
+INFO:morph_rewriter:No analyses match the filtering criteria 2M+B for أبتى
+INFO:morph_rewriter:No analyses found for ياللمسكين
+INFO:morph_rewriter:No alternatives found for أتفضل with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No analyses found for الصفيحية
+INFO:morph_rewriter:No alternatives found for المعالجة with tag 1F+B and target gender 1M+B
+INFO:morph_rewriter:No analyses found for انضربت
+INFO:morph_rewriter:No alternatives found for اتعنى with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No analyses found for أترغبون
+INFO:morph_rewriter:No analyses match the filtering criteria 1F+B for مرتدية
+INFO:morph_rewriter:No analyses match the filtering criteria 1F+B for أسفنجة
+INFO:morph_rewriter:No analyses match the filtering criteria 1F+B for أسفنجة
+INFO:morph_rewriter:No analyses match the filtering criteria 1F+B for سمسارة
+INFO:morph_rewriter:No alternatives found for إسدنى with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No analyses found for مخدوعة
+INFO:morph_rewriter:No analyses found for مطرودة
+INFO:morph_rewriter:No analyses found for أتمزح
+INFO:morph_rewriter:No analyses found for إئذنوا
+INFO:morph_rewriter:No analyses found for تنحرج
+INFO:morph_rewriter:No analyses found for يارجال
+INFO:morph_rewriter:No alternatives found for زوجة with tag 1F+B and target gender 1M+B
+INFO:morph_rewriter:No analyses match the filtering criteria B+2M for يكون
+INFO:morph_rewriter:No alternatives found for وابدأ with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No analyses found for أتسمعونها
+INFO:morph_rewriter:No alternatives found for الاسود with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for كأختها with tag 1F+B and target gender 1M+B
+INFO:morph_rewriter:No analyses match the filtering criteria 1F+B for قوادة
+INFO:morph_rewriter:No alternatives found for كفوء with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No analyses found for متشرفة
+INFO:morph_rewriter:No alternatives found for مراع with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for مراع with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for كرجل with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for كرجل with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for إستحم with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for ظل with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No analyses found for متفرغة
+INFO:morph_rewriter:No alternatives found for ضغينة with tag 1F+B and target gender 1M+B
+INFO:morph_rewriter:No analyses found for أمتفرغ
+INFO:morph_rewriter:No analyses found for أستذهب
+INFO:morph_rewriter:No analyses found for متفرغا
+INFO:morph_rewriter:No analyses found for لاتسطيع
+INFO:morph_rewriter:No analyses found for أتلعب
+INFO:morph_rewriter:No alternatives found for واحظى with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for زوجة with tag 1F+B and target gender 1M+B
+INFO:morph_rewriter:No analyses found for صراصيرا
+INFO:morph_rewriter:No alternatives found for وأتعلم with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No analyses found for أتظنون
+INFO:morph_rewriter:No alternatives found for أخوتي with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No analyses found for تسببو
+INFO:morph_rewriter:No analyses found for تسخدمه
+INFO:morph_rewriter:No analyses found for بعيداعني
+INFO:morph_rewriter:No analyses found for بعيداعني
+INFO:morph_rewriter:No analyses found for تخطيء
+INFO:morph_rewriter:No analyses match the filtering criteria 1F+B for جنرالة
+INFO:morph_rewriter:No alternatives found for سيناتور with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No analyses found for متعادية
+INFO:morph_rewriter:No analyses found for ياسليمان
+INFO:morph_rewriter:No analyses found for واحضرو
+INFO:morph_rewriter:No analyses found for الكولنيل
+INFO:morph_rewriter:No analyses match the filtering criteria 2M+B for ستحمينني
+INFO:morph_rewriter:No alternatives found for وإرتدى with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No analyses found for أتشتري
+INFO:morph_rewriter:No analyses found for مستمتعا
+INFO:morph_rewriter:No analyses found for أيتذكر
+INFO:morph_rewriter:No analyses found for لتأخذني
+INFO:morph_rewriter:No analyses found for تظننون
+INFO:morph_rewriter:No alternatives found for خطيبتك with tag 1F+B and target gender 1M+B
+INFO:morph_rewriter:No analyses found for متفاجئ
+INFO:morph_rewriter:No analyses found for ستقنتع
+INFO:morph_rewriter:No alternatives found for فقلها with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for أتهددني with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No analyses match the filtering criteria 2M+B for سمين
+INFO:morph_rewriter:No alternatives found for صبي with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for نجما with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No analyses found for محترقة
+INFO:morph_rewriter:No analyses found for أستشتري
+INFO:morph_rewriter:No alternatives found for أغمضي with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No analyses match the filtering criteria 2M+B for تعفين
+INFO:morph_rewriter:No alternatives found for الساقي with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for الحصان with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for وسيدي with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for ارنى with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for شقيقته with tag 1F+B and target gender 1M+B
+INFO:morph_rewriter:No analyses found for مدبسه
+INFO:morph_rewriter:No alternatives found for بطوله with tag 1F+B and target gender 1M+B
+INFO:morph_rewriter:No alternatives found for كصبية with tag 1F+B and target gender 1M+B
+INFO:morph_rewriter:No analyses found for زايقون
+INFO:morph_rewriter:No analyses found for فالتأخذ
+INFO:morph_rewriter:No analyses found for كمقلنس
+INFO:morph_rewriter:No analyses found for كمقلنسة
+INFO:morph_rewriter:No analyses found for تلاقو
+INFO:morph_rewriter:No analyses found for يكيفكم
+INFO:morph_rewriter:No analyses found for منتشية
+INFO:morph_rewriter:No analyses found for منتشية
+INFO:rewriter:CBR triggers: 5706
+INFO:rewriter:Morph triggers: 1031
+INFO:rewriter:RBR triggers: 0
+INFO:rewriter:Neural triggers: 101
+INFO:rewriter:Regular passes: 114313
+INFO:rewriter:Selection triggers: 2255
+INFO:rewriter:===========================
+INFO:rewriter:CBR OOV: 1019
+INFO:rewriter:Morph OOV: 101
+INFO:rewriter:RBR OOV: 0
+INFO:rewriter:===========================
+/scratch/ba63/miniconda3/envs/gender_rewriting/lib/python3.7/site-packages/gluonnlp/data/sampler.py:354: UserWarning: Some buckets are empty and will be removed. Unused bucket keys=[15]
+  str(unused_bucket_keys))
+/scratch/ba63/miniconda3/envs/gender_rewriting/lib/python3.7/site-packages/gluonnlp/data/sampler.py:354: UserWarning: Some buckets are empty and will be removed. Unused bucket keys=[14]
+  str(unused_bucket_keys))
+/scratch/ba63/miniconda3/envs/gender_rewriting/lib/python3.7/site-packages/gluonnlp/data/sampler.py:354: UserWarning: Some buckets are empty and will be removed. Unused bucket keys=[9]
+  str(unused_bucket_keys))
+/scratch/ba63/miniconda3/envs/gender_rewriting/lib/python3.7/site-packages/gluonnlp/data/sampler.py:354: UserWarning: Some buckets are empty and will be removed. Unused bucket keys=[18]
+  str(unused_bucket_keys))
+/scratch/ba63/miniconda3/envs/gender_rewriting/lib/python3.7/site-packages/gluonnlp/data/sampler.py:354: UserWarning: Some buckets are empty and will be removed. Unused bucket keys=[16]
+  str(unused_bucket_keys))
+/scratch/ba63/miniconda3/envs/gender_rewriting/lib/python3.7/site-packages/gluonnlp/data/sampler.py:354: UserWarning: Some buckets are empty and will be removed. Unused bucket keys=[12]
+  str(unused_bucket_keys))
+/scratch/ba63/miniconda3/envs/gender_rewriting/lib/python3.7/site-packages/gluonnlp/data/sampler.py:354: UserWarning: Some buckets are empty and will be removed. Unused bucket keys=[13]
+  str(unused_bucket_keys))
+/scratch/ba63/miniconda3/envs/gender_rewriting/lib/python3.7/site-packages/gluonnlp/data/sampler.py:354: UserWarning: Some buckets are empty and will be removed. Unused bucket keys=[8]
+  str(unused_bucket_keys))
+/scratch/ba63/miniconda3/envs/gender_rewriting/lib/python3.7/site-packages/gluonnlp/data/sampler.py:354: UserWarning: Some buckets are empty and will be removed. Unused bucket keys=[20]
+  str(unused_bucket_keys))
+/scratch/ba63/miniconda3/envs/gender_rewriting/lib/python3.7/site-packages/gluonnlp/data/sampler.py:354: UserWarning: Some buckets are empty and will be removed. Unused bucket keys=[7]
+  str(unused_bucket_keys))
+INFO:__main__:
+
+INFO:__main__:######## FF Rewriting ########
+INFO:__main__:
+
+INFO:__main__:There are 57603 Training Examples
+INFO:__main__:There are 16076 Test Examples
+INFO:__main__:Training CBR model for FF target
+INFO:__main__:Loading the pretrained neural rewriter model
+INFO:morph_rewriter:No analyses match the filtering criteria B+2M for تتركنا
+INFO:morph_rewriter:No alternatives found for أتطلب with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for خجلا with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for الجنرال with tag 1M+B and target gender 1F+B
+INFO:morph_rewriter:No analyses found for أتستمتع
+INFO:morph_rewriter:No alternatives found for واشتري with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No analyses match the filtering criteria 2M+B for أبتى
+INFO:morph_rewriter:No alternatives found for مطرود with tag 1M+B and target gender 1F+B
+INFO:morph_rewriter:No alternatives found for مطرود with tag 1M+B and target gender 1F+B
+INFO:morph_rewriter:No analyses found for متنمر
+INFO:morph_rewriter:No analyses found for ياللمسكين
+INFO:morph_rewriter:No alternatives found for أتفضل with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No analyses found for الصفيحي
+INFO:morph_rewriter:No analyses found for انضربت
+INFO:morph_rewriter:No alternatives found for اتعنى with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No analyses found for أترغبون
+INFO:morph_rewriter:No alternatives found for سمسار with tag 1M+B and target gender 1F+B
+INFO:morph_rewriter:No alternatives found for إسدنى with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No analyses found for مخدوع
+INFO:morph_rewriter:No alternatives found for مطرود with tag 1M+B and target gender 1F+B
+INFO:morph_rewriter:No analyses found for أتمزح
+INFO:morph_rewriter:No analyses found for إئذنوا
+INFO:morph_rewriter:No analyses found for تنحرج
+INFO:morph_rewriter:No analyses found for يارجال
+INFO:morph_rewriter:No alternatives found for زوجا with tag 1M+B and target gender 1F+B
+INFO:morph_rewriter:No analyses match the filtering criteria B+2M for يكون
+INFO:morph_rewriter:No alternatives found for وابدأ with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No analyses found for أتسمعونها
+INFO:morph_rewriter:No alternatives found for الاسود with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for كفوء with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No analyses found for متشرف
+INFO:morph_rewriter:No analyses found for متشرف
+INFO:morph_rewriter:No alternatives found for مراع with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for مراع with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for كرجل with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for كرجل with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for إستحم with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for ظل with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No analyses found for متفرغا
+INFO:morph_rewriter:No analyses found for أمتفرغ
+INFO:morph_rewriter:No analyses found for أستذهب
+INFO:morph_rewriter:No analyses found for متفرغا
+INFO:morph_rewriter:No analyses found for لاتسطيع
+INFO:morph_rewriter:No analyses found for أتلعب
+INFO:morph_rewriter:No alternatives found for واحظى with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No analyses found for صراصيرا
+INFO:morph_rewriter:No alternatives found for وأتعلم with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No analyses found for مستثار
+INFO:morph_rewriter:No analyses found for أتظنون
+INFO:morph_rewriter:No alternatives found for أخوتي with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No analyses found for تسببو
+INFO:morph_rewriter:No analyses found for تسخدمه
+INFO:morph_rewriter:No alternatives found for سحاقي with tag 1M+B and target gender 1F+B
+INFO:morph_rewriter:No analyses found for بعيداعني
+INFO:morph_rewriter:No analyses found for بعيداعني
+INFO:morph_rewriter:No analyses found for تخطيء
+INFO:morph_rewriter:No alternatives found for جنرال with tag 1M+B and target gender 1F+B
+INFO:morph_rewriter:No alternatives found for سيناتور with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for الأنجلو with tag 1M+B and target gender 1F+B
+INFO:morph_rewriter:No analyses found for متعاديا
+INFO:morph_rewriter:No analyses found for ياسليمان
+INFO:morph_rewriter:No analyses found for واحضرو
+INFO:morph_rewriter:No analyses found for الكولنيل
+INFO:morph_rewriter:No analyses match the filtering criteria 2M+B for ستحمينني
+INFO:morph_rewriter:No alternatives found for وإرتدى with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No analyses found for أتشتري
+INFO:morph_rewriter:No analyses found for مستمتعا
+INFO:morph_rewriter:No analyses found for أيتذكر
+INFO:morph_rewriter:No analyses found for لتأخذني
+INFO:morph_rewriter:No analyses found for تظننون
+INFO:morph_rewriter:No alternatives found for خطيبك with tag 1M+B and target gender 1F+B
+INFO:morph_rewriter:No analyses found for مرتديا
+INFO:morph_rewriter:No analyses found for متفاجئ
+INFO:morph_rewriter:No analyses found for ستقنتع
+INFO:morph_rewriter:No alternatives found for هرقل with tag 1M+B and target gender 1F+B
+INFO:morph_rewriter:No alternatives found for فقلها with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for حيوان with tag 1M+B and target gender 1F+B
+INFO:morph_rewriter:No alternatives found for أتهددني with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No analyses match the filtering criteria 2M+B for سمين
+INFO:morph_rewriter:No alternatives found for صبي with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for نجما with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No analyses found for محترق
+INFO:morph_rewriter:No analyses found for أستشتري
+INFO:morph_rewriter:No alternatives found for أغمضي with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No analyses match the filtering criteria 2M+B for تعفين
+INFO:morph_rewriter:No alternatives found for الساقي with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for الحصان with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for وسيدي with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for ارنى with tag 2M+B and target gender 2F+B
+INFO:morph_rewriter:No alternatives found for شقيقه with tag 1M+B and target gender 1F+B
+INFO:morph_rewriter:No analyses found for مدبس
+INFO:morph_rewriter:No alternatives found for بطوله with tag 1M+B and target gender 1F+B
+INFO:morph_rewriter:No alternatives found for لرجل with tag 1M+B and target gender 1F+B
+INFO:morph_rewriter:No alternatives found for كصبي with tag 1M+B and target gender 1F+B
+INFO:morph_rewriter:No analyses found for بريئ
+INFO:morph_rewriter:No analyses found for زايقون
+INFO:morph_rewriter:No analyses found for فالتأخذ
+INFO:morph_rewriter:No analyses found for كمقلنس
+INFO:morph_rewriter:No analyses found for تلاقو
+INFO:morph_rewriter:No analyses found for يكيفكم
+INFO:morph_rewriter:No analyses found for منتشي
+INFO:morph_rewriter:No analyses found for منتشي
+INFO:rewriter:CBR triggers: 5706
+INFO:rewriter:Morph triggers: 1062
+INFO:rewriter:RBR triggers: 0
+INFO:rewriter:Neural triggers: 102
+INFO:rewriter:Regular passes: 114313
+INFO:rewriter:Selection triggers: 2171
+INFO:rewriter:===========================
+INFO:rewriter:CBR OOV: 1052
+INFO:rewriter:Morph OOV: 102
+INFO:rewriter:RBR OOV: 0
+INFO:rewriter:===========================

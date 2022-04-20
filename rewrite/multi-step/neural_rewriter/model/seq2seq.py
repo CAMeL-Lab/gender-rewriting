@@ -115,7 +115,8 @@ class Decoder(nn.Module):
         # the input to the classifier is h_t + context_vector + gender_embed_dim? --> hidd_dim * 2
         self.classification_layer = nn.Linear(encoder_hidd_dim * 2
                                               + decoder_hidd_dim * num_layers
-                                              + gender_embed_dim + char_embed_dim, output_dim)
+                                              + gender_embed_dim + char_embed_dim,
+                                              output_dim)
 
         self.dropout_layer = nn.Dropout(dropout)
 
@@ -170,7 +171,8 @@ class Decoder(nn.Module):
             # concatenating decoder_h_t with context_vectors to
             # create a prediction vector
             predictions_vector = torch.cat((decoder_h_t.view(decoder_h_t.shape[1], -1),
-                                           context_vectors, embedded_seqs.squeeze(1)), dim=1)
+                                           context_vectors, embedded_seqs.squeeze(1)),
+                                           dim=1)
             # predictions_vector: [batch_size, hidd_dim + encoder_hidd_dim * 2]
 
         # Step 5: feeding the prediction vector to the fc layer
@@ -236,10 +238,13 @@ class Seq2Seq(nn.Module):
         trg_seqs_length, batch_size = trg_seqs.shape
 
         # passing the src to the encoder
-        encoder_outputs, encoder_hidd = self.encoder(char_src_seqs, word_src_seqs, src_seqs_lengths)
+        encoder_outputs, encoder_hidd = self.encoder(char_src_seqs,
+                                                     word_src_seqs,
+                                                     src_seqs_lengths)
 
         # creating attention masks
-        attention_mask = self.create_mask(char_src_seqs, self.char_src_padding_idx)
+        attention_mask = self.create_mask(char_src_seqs,
+                                          self.char_src_padding_idx)
 
         predictions = []
         decoder_attention_scores = []

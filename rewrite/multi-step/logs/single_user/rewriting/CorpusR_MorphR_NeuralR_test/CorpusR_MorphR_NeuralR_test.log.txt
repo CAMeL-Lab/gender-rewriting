@@ -1,0 +1,57 @@
+/scratch/ba63/miniconda3/envs/gender_rewriting/lib/python3.7/site-packages/mxnet/optimizer/optimizer.py:167: UserWarning: WARNING: New optimizer gluonnlp.optimizer.lamb.LAMB is overriding existing optimizer mxnet.optimizer.optimizer.LAMB
+  Optimizer.opt_registry[name].__name__))
+INFO:__main__:Namespace(analyze_errors=True, beam_width=10, bert_model='/scratch/ba63/gender-rewriting/mlm_lm/bert-base-arabic-camelbert-msa-mlm-88', cbr_backoff=True, cbr_ngram=2, data_dir='/home/ba63/gender-rewriting/data/rewrite/apgc-v1.0/', error_analysis_dir='/home/ba63/gender-rewriting/rewrite/multi-step/logs/single_user/error_analysis/CorpusR_MorphR_NeuralR_test', first_person_only=True, gender_id_model='/scratch/ba63/gender-rewriting/gender-id/CAMeLBERT_MSA/camera_ready/single_user/models_f1/checkpoint-1000/', inference_mode='test', morph_db='/scratch/ba63/calima_databases/calima-msa/calima-msa-s31_0.4.2.utf8.db.copy-mod', output_dir='/home/ba63/gender-rewriting/rewrite/multi-step/logs/single_user/rewriting/CorpusR_MorphR_NeuralR_test', pick_top_mle=False, post_edit_MT=False, rbr_top_rule=False, rbr_top_tgt_rule=False, reduce_cbr_noise=True, save_cbr_model=False, seq2seq_model_path='neural_rewriter/saved_models/single_user', top_n_best=3, use_cbr=True, use_data_augmentation=False, use_gpu=True, use_morph=True, use_rbr=False, use_seq2seq=True)
+WARNING:root:Model '/scratch/ba63/gender-rewriting/mlm_lm/bert-base-arabic-camelbert-msa-mlm-88' not recognized as an MXNet model; treating as PyTorch model
+WARNING:root:Created scorer of class 'MLMScorerPT'.
+INFO:__main__:
+
+INFO:__main__:######## M Rewriting ########
+INFO:__main__:
+
+INFO:__main__:There are 8566 Training Examples
+INFO:__main__:There are 2448 Test Examples
+INFO:__main__:Training CBR model for M target
+INFO:__main__:Loading the pretrained neural rewriter model
+INFO:morph_rewriter:No alternatives found for شقيقته with tag 1F+B and target gender 1M+B
+INFO:morph_rewriter:No analyses match the filtering criteria 1F+B for منظفة
+INFO:morph_rewriter:No analyses found for مدبسه
+INFO:morph_rewriter:No alternatives found for اما with tag 1F+B and target gender 1M+B
+INFO:morph_rewriter:No analyses found for منتشية
+INFO:rewriter:CBR triggers: 210
+INFO:rewriter:Morph triggers: 58
+INFO:rewriter:RBR triggers: 0
+INFO:rewriter:Neural triggers: 5
+INFO:rewriter:Regular passes: 17908
+INFO:rewriter:Selection triggers: 71
+INFO:rewriter:===========================
+INFO:rewriter:CBR OOV: 57
+INFO:rewriter:Morph OOV: 5
+INFO:rewriter:RBR OOV: 0
+INFO:rewriter:===========================
+INFO:__main__:
+
+INFO:__main__:######## F Rewriting ########
+INFO:__main__:
+
+INFO:__main__:There are 8566 Training Examples
+INFO:__main__:There are 2448 Test Examples
+INFO:__main__:Training CBR model for F target
+INFO:__main__:Loading the pretrained neural rewriter model
+INFO:morph_rewriter:No alternatives found for أخ with tag 1M+B and target gender 1F+B
+INFO:morph_rewriter:No alternatives found for منظف with tag 1M+B and target gender 1F+B
+INFO:morph_rewriter:No analyses found for مدبس
+INFO:morph_rewriter:No alternatives found for ابا with tag 1M+B and target gender 1F+B
+INFO:morph_rewriter:No alternatives found for صبيا with tag 1M+B and target gender 1F+B
+INFO:morph_rewriter:No analyses found for منتشي
+INFO:morph_rewriter:No analyses found for بريئ
+INFO:rewriter:CBR triggers: 211
+INFO:rewriter:Morph triggers: 71
+INFO:rewriter:RBR triggers: 0
+INFO:rewriter:Neural triggers: 7
+INFO:rewriter:Regular passes: 17907
+INFO:rewriter:Selection triggers: 74
+INFO:rewriter:===========================
+INFO:rewriter:CBR OOV: 70
+INFO:rewriter:Morph OOV: 7
+INFO:rewriter:RBR OOV: 0
+INFO:rewriter:===========================

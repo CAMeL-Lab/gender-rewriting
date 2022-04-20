@@ -1,0 +1,23 @@
+INFO:utils.data_utils:*** TRG Genders:  {'1M+B': 0, '2M+B': 1, 'B+2M': 2, '2M+2M': 3, '1M+1M': 4, 'B+1M': 5, '1M+2M': 6, 'B+2F': 7, '2M+1M': 8, 'B+1F': 9, '1F+B': 10, '1F+1F': 11, '1F+2M': 12, '2M+1F': 13, '2F+B': 14, '2F+2F': 15, '1M+2F': 16, '2F+1M': 17, '1F+2F': 18, '2F+1F': 19} ***
+INFO:__main__:Training...
+INFO:__main__:Epoch: 1
+INFO:__main__:	Train Loss: 0.1001   |   Dev Loss: 0.0892
+INFO:__main__:Epoch: 2
+INFO:__main__:	Train Loss: 0.0782   |   Dev Loss: 0.0894
+INFO:__main__:Epoch: 3
+INFO:__main__:	Train Loss: 0.0757   |   Dev Loss: 0.0920
+INFO:__main__:Epoch: 4
+INFO:__main__:	Train Loss: 0.0751   |   Dev Loss: 0.0913
+INFO:__main__:Epoch: 5
+INFO:__main__:	Train Loss: 0.0666   |   Dev Loss: 0.0878
+INFO:__main__:Epoch: 6
+INFO:__main__:	Train Loss: 0.0637   |   Dev Loss: 0.0892
+INFO:__main__:Epoch: 7
+INFO:__main__:	Train Loss: 0.0623   |   Dev Loss: 0.0879
+INFO:__main__:Epoch: 8
+INFO:__main__:	Train Loss: 0.0616   |   Dev Loss: 0.0889
+INFO:__main__:Epoch: 9
+INFO:__main__:	Train Loss: 0.0573   |   Dev Loss: 0.0893
+INFO:__main__:Epoch: 10
+INFO:__main__:	Train Loss: 0.0553   |   Dev Loss: 0.0903
+INFO:__main__:Dev loss hasn't decreased in 6 epochs. Stopping training..

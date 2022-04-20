@@ -5,11 +5,10 @@ import torch.optim as optim
 from torch.nn.utils.rnn import pad_sequence
 from torch.nn.utils import clip_grad_norm_
 from utils.data_utils import RawDataset, MorphFeaturizer
-from utils.data_utils import Vocabulary, SeqVocabulary, Vectorizer
-from utils.metrics import accuracy, accuracy_top_n
+from utils.data_utils import Vectorizer
+from utils.metrics import  accuracy_top_n
 import json
 import random
-import re
 import numpy as np
 import argparse
 from model.seq2seq import Seq2Seq
@@ -64,7 +63,8 @@ class MT_Dataset(Dataset):
 
     def save_vectorizer(self, vec_path):
         with open(vec_path, 'w') as f:
-            return json.dump(self.vectorizer.to_serializable(), f, ensure_ascii=False)
+            return json.dump(self.vectorizer.to_serializable(), f,
+                             ensure_ascii=False)
 
     def set_split(self, split):
         self.split = split
@@ -211,9 +211,12 @@ def evaluate(model, dataloader, criterion, device='cpu', teacher_forcing_prob=0)
     return epoch_loss / len(dataloader)
 
 def inference(sampler, beam_sampler, dataloader, args):
-    output_inf_file = open(args.preds_dir + '.inf', mode='w', encoding='utf8')
-    output_beam = open(args.preds_dir + '.beam.top.1', mode='w', encoding='utf8')
-    output_beam_top = open(args.preds_dir + '.beam.top.n', mode='w', encoding='utf8')
+    output_inf_file = open(args.preds_dir + '.inf', mode='w',
+                           encoding='utf8')
+    output_beam = open(args.preds_dir + '.beam.top.1', mode='w',
+                           encoding='utf8')
+    output_beam_top = open(args.preds_dir + '.beam.top.n', mode='w',
+                           encoding='utf8')
 
     greedy_stats = {}
     beam_stats = {}
@@ -284,34 +287,32 @@ def inference(sampler, beam_sampler, dataloader, args):
     output_beam.close()
 
     logger.info('*******STATS*******')
-    assert sum([greedy_stats[x] for x in greedy_stats]) == sum([beam_stats[x] for x in beam_stats])
+    assert sum([greedy_stats[x] for x in greedy_stats]) == sum([beam_stats[x]
+                for x in beam_stats])
     total_examples = sum([greedy_stats[x] for x in greedy_stats])
     logger.info(f'TOTAL EXAMPLES: {total_examples}')
     logger.info('\n')
 
-    total_correct_greedy = sum([v for k,v in greedy_stats.items() if k == 'correct'])
-    total_incorrect_greedy = sum([v for k,v in greedy_stats.items() if k == 'incorrect'])
+    total_correct_greedy = sum([v for k,v in greedy_stats.items()
+                                if k == 'correct'])
+    total_incorrect_greedy = sum([v for k,v in greedy_stats.items()
+                                if k == 'incorrect'])
 
     logger.info('Results using greedy decoding:')
-    # for x in correct_greedy:
-    #     logger.info(f'{x[0]}->{x[1]}')
-    #     logger.info(f'\tCorrect: {correct_greedy.get(x, 0)}\tIncorrect: {incorrect_greedy.get(x, 0)}')
-    # logger.info(f'--------------------------------')
-    logger.info(f'Total Correct: {total_correct_greedy}\tTotal Incorrect: {total_incorrect_greedy}')
+    logger.info(f'Total Correct: {total_correct_greedy}\t'
+                f'Total Incorrect: {total_incorrect_greedy}')
     logger.info(f'Accuracy:\t{greedy_accuracy}')
 
     logger.info('\n')
 
-    total_correct_beam = sum([v for k, v in beam_stats.items() if k == 'correct'])
-    total_incorrect_beam = sum([v for k, v in beam_stats.items() if k == 'incorrect'])
+    total_correct_beam = sum([v for k, v in beam_stats.items()
+                                if k == 'correct'])
+    total_incorrect_beam = sum([v for k, v in beam_stats.items()
+                                if k == 'incorrect'])
 
     logger.info('Results using beam decoding:')
-    # for x in correct_beam:
-    #     logger.info(f'{x[0]}->{x[1]}')
-    #     logger.info(f'\tCorrect: {correct_beam.get(x, 0)}\tIncorrect: {incorrect_beam.get(x, 0)}')
-
-    # logger.info(f'--------------------------------')
-    logger.info(f'Total Correct: {total_correct_beam}\tTotal Incorrect: {total_incorrect_beam}')
+    logger.info(f'Total Correct: {total_correct_beam}\t'
+                f'Total Incorrect: {total_incorrect_beam}')
     logger.info(f'Accuracy:\t{beam_accuracy}')
 
 def get_morph_features(args, data, word_vocab):
@@ -339,23 +340,24 @@ def main():
         "--first_person_only",
         action="store_true",
         help="To do first person only rewriting. If False, the model "
-             "defaults to multi-user rewriting"
+             "defaults to multi-user rewriting."
     )
     parser.add_argument(
         "--vectorizer_path",
         default=None,
         type=str,
-        help="The path of the saved vectorizer"
+        help="The path of the saved vectorizer."
     )
     parser.add_argument(
         "--cache_files",
         action="store_true",
-        help="Whether to cache the vocab and the vectorizer objects or not"
+        help="Whether to cache the vocab and the vectorizer objects or not."
     )
     parser.add_argument(
         "--reload_files",
         action="store_true",
-        help="Whether to reload the vocab and the vectorizer objects from a cached file"
+        help="Whether to reload the vocab and the vectorizer objects"
+             " from a cached file."
     )
     parser.add_argument(
         "--num_train_epochs",
@@ -367,25 +369,25 @@ def main():
         "--embed_dim",
         default=32,
         type=int,
-        help="The embedding dimensions of the model"
+        help="The embedding dimensions of the model."
     )
     parser.add_argument(
         "--trg_gender_embed_dim",
         default=0,
         type=int,
-        help="The embedding dimensions of the target gender"
+        help="The embedding dimensions of the target gender."
     )
     parser.add_argument(
         "--hidd_dim",
         default=64,
         type=int,
-        help="The hidden dimensions of the model"
+        help="The hidden dimensions of the model."
     )
     parser.add_argument(
         "--num_layers",
         default=1,
         type=int,
-        help="The numbers of layers of the model"
+        help="The numbers of layers of the model."
     )
     parser.add_argument(
         "--dropout",
@@ -397,7 +399,7 @@ def main():
         "--weight_decay",
         default=0.0,
         type=float,
-        help="Optimizer weight decay"
+        help="Optimizer weight decay."
     )
     parser.add_argument(
         "--learning_rate",
@@ -415,7 +417,7 @@ def main():
         "--batch_size",
         default=32,
         type=int,
-        help="Batch size per GPU/CPU"
+        help="Batch size per GPU/CPU."
     )
     parser.add_argument(
         "--use_cuda",
@@ -514,7 +516,7 @@ def main():
         "--preds_dir",
         type=str,
         default=None,
-        help="The directory to write the translations to"
+        help="The directory to write the translations to."
     )
 
     args = parser.parse_args()
@@ -622,9 +624,11 @@ def main():
             train_losses.append(train_loss)
 
             dataset.set_split('dev')
-            dataloader = DataLoader(dataset, shuffle=True, batch_size=args.batch_size,
+            dataloader = DataLoader(dataset, shuffle=True,
+                                    batch_size=args.batch_size,
                                     collate_fn=collator, drop_last=False)
-            dev_loss = evaluate(model, dataloader, criterion, device, teacher_forcing_prob=0)
+            dev_loss = evaluate(model, dataloader, criterion, device,
+                                teacher_forcing_prob=0)
             dev_losses.append(dev_loss)
 
             #save best model
@@ -636,16 +640,19 @@ def main():
             elif args.do_early_stopping:
                 patience += 1
                 if patience > 5:
-                    logger.info(f"Dev loss hasn't decreased in {patience} epochs. Stopping training..")
+                    logger.info(f"Dev loss hasn't decreased in {patience}"
+                                " epochs. Stopping training..")
                     break
 
             scheduler.step(dev_loss)
             logger.info(f'Epoch: {(epoch + 1)}')
-            logger.info(f'\tTrain Loss: {train_loss:.4f}   |   Dev Loss: {dev_loss:.4f}')
+            logger.info(f"\tTrain Loss: {train_loss:.4f}   |   Dev Loss: {dev_loss:.4f}")
 
     if args.do_train and args.visualize_loss:
-        plt.plot(range(1, 1 + args.num_train_epochs), np.asarray(train_losses), 'b-', color='blue', label='Training')
-        plt.plot(range(1, 1 + args.num_train_epochs), np.asarray(dev_losses), 'b-', color='orange', label='Evaluation')
+        plt.plot(range(1, 1 + args.num_train_epochs), np.asarray(train_losses),
+                       'b-', color='blue',label='Training')
+        plt.plot(range(1, 1 + args.num_train_epochs), np.asarray(dev_losses),
+                      'b-', color='orange', label='Evaluation')
         plt.xlabel('Epoch')
         plt.ylabel('Loss')
         plt.legend()
@@ -657,8 +664,11 @@ def main():
         dev_losses = []
         for epoch in range(args.num_train_epochs):
             dataset.set_split('dev')
-            dataloader = DataLoader(dataset, shuffle=True, batch_size=args.batch_size, collate_fn=collator)
-            dev_loss = evaluate(model, dataloader, criterion, device, teacher_forcing_prob=0)
+            dataloader = DataLoader(dataset, shuffle=True,
+                                    batch_size=args.batch_size,
+                                    collate_fn=collator)
+            dev_loss = evaluate(model, dataloader, criterion, device,
+                                teacher_forcing_prob=0)
             dev_losses.append(dev_loss)
             logger.info(f'Dev Loss: {dev_loss:.4f}')
 

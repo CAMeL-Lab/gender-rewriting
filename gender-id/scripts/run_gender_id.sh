@@ -18,20 +18,18 @@ module purge
 # GENDER ID FINE-TUNING SCRIPT
 ################################
 # export DATA_DIR=/home/ba63/gender-rewriting/data/gender-id/single_user
-# export DATA_DIR=/home/ba63/gender-rewriting/data/gender-id/multi_user/
-export DATA_DIR=/home/ba63/gender-rewriting/data/gender-id/multi_user/augmented_data
+export DATA_DIR=/home/ba63/gender-rewriting/data/gender-id/multi_user/
+# export DATA_DIR=/home/ba63/gender-rewriting/data/gender-id/multi_user/augmented_data
 export MAX_LENGTH=128
 export BERT_MODEL=/scratch/ba63/BERT_models/bert-base-arabic-camelbert-msa/
 # export OUTPUT_DIR=/scratch/ba63/gender-rewriting/gender-id/CAMeLBERT_MSA/camera_ready/single_user/models_f1
+export OUTPUT_DIR=/scratch/ba63/gender-rewriting/gender-id/CAMeLBERT_MSA/camera_ready/multi_user_with_clitics/models_f1
 export OUTPUT_DIR=/scratch/ba63/gender-rewriting/gender-id/CAMeLBERT_MSA/camera_ready/multi_user_with_clitics/augmented_models/5000/models_f1
-# export OUTPUT_DIR=/scratch/ba63/gender-rewriting/gender-id/CAMeLBERT_MSA/single_user/models_f1
 
 export BATCH_SIZE=32
-export NUM_EPOCHS=3
-# export SAVE_STEPS=500
-# export EVAL_STEPS=500
-export SAVE_STEPS=5000
-export EVAL_STEPS=5000
+export NUM_EPOCHS=10 # or 3 for augmented models
+export SAVE_STEPS=500 # or 5000 for augmented models
+export EVAL_STEPS=500 # or 5000 for augmented models
 export SEED=12345
 
 python gender_identifcation.py \

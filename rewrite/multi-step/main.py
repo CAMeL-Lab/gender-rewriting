@@ -201,8 +201,10 @@ def main():
         # Reading training data
         if args.use_data_augmentation:
             train_dataset = Dataset(src_path=os.path.join(args.data_dir,
+                                            'augmentation',
                                             'train.arin.tokens.augmented'),
                                     tgt_path=os.path.join(args.data_dir,
+                                            'augmentation',
                                             'train.ar.'+target_gender+'.tokens.augmented'))
 
         else:

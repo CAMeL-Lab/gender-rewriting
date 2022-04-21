@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH -p condo 
+#SBATCH -p nvidia -q nlp 
 # Set number of nodes to run
 #SBATCH --nodes=1
 # Set number of tasks to run
@@ -14,8 +14,8 @@
 #SBATCH -o job.%J.out
 #SBATCH -e job.%J.err
 
-export EXPERIMENT=CBR_MorphR_NeuralR_test
-export SYSTEM_HYP=logs/paper_results_with_mlm_ft_final/single_user/rewriting/$EXPERIMENT
+export EXPERIMENT=CorpusR_MorphR_NeuralR
+export SYSTEM_HYP=/home/ba63/gender-rewriting/rewrite/multi-step/logs/single_user/rewriting/$EXPERIMENT
 
 # preparing the preds
 cat $SYSTEM_HYP/arin.to.M.preds $SYSTEM_HYP/arin.to.F.preds > $SYSTEM_HYP/$EXPERIMENT.inf
@@ -25,7 +25,7 @@ python /home/ba63/gender-rewriting/rewrite/multi-step/utils/normalize.py --input
 
 
 export DATA_DIR=/home/ba63/gender-rewriting/data/m2_edits/v1.0/
-export DATA_SPLIT=test
+export DATA_SPLIT=dev
 export GOLD_DATA=norm_data/D-set-$DATA_SPLIT.ar.M+D-set-$DATA_SPLIT.ar.F.norm
 export EDITS_ANNOTATIONS=edits/$DATA_SPLIT.arin+$DATA_SPLIT.arin.to.$DATA_SPLIT.ar.M+$DATA_SPLIT.ar.F.norm
 export GOLD_ANNOTATION=$DATA_DIR/$EDITS_ANNOTATIONS

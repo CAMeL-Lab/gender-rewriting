@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH -p condo 
+#SBATCH -p nvidia -q nlp 
 # Set number of nodes to run
 #SBATCH --nodes=1
 # Set number of tasks to run
@@ -14,14 +14,8 @@
 #SBATCH -o job.%J.out
 #SBATCH -e job.%J.err
 
-export EXPERIMENT=CBR_MorphR_NeuralR_aug_id_aug_test
-export SYSTEM_HYP=logs/paper_results_with_mlm_ft_final/multi_user_with_clitics/augmentation/rewriting/$EXPERIMENT
-
-# removing last empty line from the preds files
-# sed -i '$ d' $SYSTEM_HYP/arin.to.MM.preds
-# sed -i '$ d' $SYSTEM_HYP/arin.to.FM.preds
-# sed -i '$ d' $SYSTEM_HYP/arin.to.MF.preds
-# sed -i '$ d' $SYSTEM_HYP/arin.to.FF.preds
+export EXPERIMENT=CorpusR_MorphR_NeuralR_test
+export SYSTEM_HYP=/home/ba63/gender-rewriting/rewrite/multi-step/logs/multi_user/rewriting/$EXPERIMENT
 
 # preparing the preds
 cat $SYSTEM_HYP/arin.to.MM.preds $SYSTEM_HYP/arin.to.FM.preds  $SYSTEM_HYP/arin.to.MF.preds  $SYSTEM_HYP/arin.to.FF.preds > $SYSTEM_HYP/$EXPERIMENT.inf
@@ -30,7 +24,7 @@ cat $SYSTEM_HYP/arin.to.MM.preds $SYSTEM_HYP/arin.to.FM.preds  $SYSTEM_HYP/arin.
 python /home/ba63/gender-rewriting/rewrite/multi-step/utils/normalize.py --input_file $SYSTEM_HYP/$EXPERIMENT.inf --output_file $SYSTEM_HYP/$EXPERIMENT.inf.norm
 
 
-export DATA_DIR=/scratch/ba63/Arabic-Parallel-Gender-Corpus/m2_edits/v2.0/
+export DATA_DIR=/home/ba63/gender-rewriting/data/m2_edits/v2.0
 export DATA_SPLIT=test
 export GOLD_DATA=norm_data/$DATA_SPLIT.ar.MM+$DATA_SPLIT.ar.FM+$DATA_SPLIT.ar.MF+$DATA_SPLIT.ar.FF.norm
 export EDITS_ANNOTATIONS=edits/$DATA_SPLIT.arin+$DATA_SPLIT.arin+$DATA_SPLIT.arin+$DATA_SPLIT.arin.to.$DATA_SPLIT.ar.MM+$DATA_SPLIT.ar.FM+$DATA_SPLIT.ar.MF+$DATA_SPLIT.ar.FF.norm

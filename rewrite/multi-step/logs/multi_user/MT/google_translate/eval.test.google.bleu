@@ -1,0 +1,52 @@
+Evaluation Against /home/ba63/gender-rewriting/data/m2_edits/v2.0/norm_data/MT/test.ar.MM.norm:
+{
+ "name": "BLEU",
+ "score": 13.6,
+ "signature": "nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.0.0",
+ "verbose_score": "39.7/18.8/9.5/4.8 (BP = 1.000 ratio = 1.114 hyp_len = 133649 ref_len = 120019)",
+ "nrefs": "1",
+ "case": "mixed",
+ "eff": "no",
+ "tok": "13a",
+ "smooth": "exp",
+ "version": "2.0.0"
+}
+Evaluation Against /home/ba63/gender-rewriting/data/m2_edits/v2.0/norm_data/MT/test.ar.FM.norm:
+{
+ "name": "BLEU",
+ "score": 13.2,
+ "signature": "nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.0.0",
+ "verbose_score": "39.1/18.2/9.1/4.6 (BP = 1.000 ratio = 1.114 hyp_len = 133649 ref_len = 120019)",
+ "nrefs": "1",
+ "case": "mixed",
+ "eff": "no",
+ "tok": "13a",
+ "smooth": "exp",
+ "version": "2.0.0"
+}
+Evaluation Against /home/ba63/gender-rewriting/data/m2_edits/v2.0/norm_data/MT/test.ar.MF.norm:
+{
+ "name": "BLEU",
+ "score": 11.4,
+ "signature": "nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.0.0",
+ "verbose_score": "37.3/16.2/7.7/3.6 (BP = 1.000 ratio = 1.114 hyp_len = 133649 ref_len = 120019)",
+ "nrefs": "1",
+ "case": "mixed",
+ "eff": "no",
+ "tok": "13a",
+ "smooth": "exp",
+ "version": "2.0.0"
+}
+Evaluation Against /home/ba63/gender-rewriting/data/m2_edits/v2.0/norm_data/MT/test.ar.FF.norm:
+{
+ "name": "BLEU",
+ "score": 11.0,
+ "signature": "nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.0.0",
+ "verbose_score": "36.8/15.6/7.3/3.4 (BP = 1.000 ratio = 1.114 hyp_len = 133649 ref_len = 120019)",
+ "nrefs": "1",
+ "case": "mixed",
+ "eff": "no",
+ "tok": "13a",
+ "smooth": "exp",
+ "version": "2.0.0"
+}

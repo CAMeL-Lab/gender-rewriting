@@ -13,7 +13,8 @@
 nvidia-smi
 module purge
 
-export DATA_DIR=/scratch/ba63/Arabic-Parallel-Gender-Corpus/Arabic-parallel-gender-corpus-v-2.0/data/
+export DATA_DIR=/home/ba63/gender-rewriting/data/rewrite/apgc-v2.0/joint
+
 #  --first_person_only \
 #  --add_side_constraints \
 #  --embed_trg_gender \
@@ -31,7 +32,7 @@ python main.py \
  --num_layers 2 \
  --learning_rate 5e-4 \
  --seed 21 \
- --model_path saved_models/multi_user_side_constraints_newdb_clean_train/joint+morph.pt \
+ --model_path saved_models/multi_user_side_constraints_no_drop_last/joint+morph.pt \
  --do_inference \
  --inference_mode test \
- --preds_dir logs/multi_user_side_constraints_newdb_clean_train/test.joint+morph
+ --preds_dir logs/multi_user_side_constraints_no_drop_last/test.joint+morph

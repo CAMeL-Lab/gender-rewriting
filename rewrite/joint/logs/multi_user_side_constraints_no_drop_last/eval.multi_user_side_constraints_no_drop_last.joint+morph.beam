@@ -1,6 +1,0 @@
-Precision   : 0.7927
-Recall      : 0.8044
-F_0.5       : 0.7950
-Accuracy    : 0.978477557908687
-Abs Length  : 0.015535580990296094
-BLEU        : BLEU+case.mixed+numrefs.1+smooth.exp+tok.13a+version.1.4.9 = 96.2 98.4/96.9/95.5/94.3 (BP = 0.999 ratio = 0.999 hyp_len = 479708 ref_len = 480076)

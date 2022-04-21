@@ -13,8 +13,7 @@
 nvidia-smi
 module purge
 
-export DATA_DIR=/scratch/ba63/Arabic-Parallel-Gender-Corpus/Arabic-parallel-gender-corpus-v-2.0/data/new_token_data/
-# export DATA_DIR=/scratch/ba63/Arabic-Parallel-Gender-Corpus/Arabic-parallel-gender-corpus-v-1.0/new_token_data/
+export DATA_DIR=/home/ba63/gender-rewriting/data/rewrite/apgc-v2.0/
 
 python main.py \
  --data_dir $DATA_DIR \
@@ -24,9 +23,9 @@ python main.py \
  --num_layers 2 \
  --learning_rate 5e-4 \
  --seed 21 \
- --model_path saved_models/checking/joint.pt \
+ --model_path saved_models/multi_user_augmented/joint.pt \
  --do_inference \
  --inference_mode dev \
  --beam_size 10 \
- --n_best 5 \
- --preds_dir logs/reinflection/dev.checking.joint
+ --n_best 3 \
+ --preds_dir logs/reinflection/dev.multi_user_augmented.joint

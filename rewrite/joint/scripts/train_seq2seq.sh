@@ -21,7 +21,7 @@ module purge
 #  --analyzer_db_path /scratch/ba63/calima_databases/calima-msa/calima-msa-s31_0.4.2.utf8.db.copy-mod \
 #  --morph_features_path saved_models/multi_user_side_constraints/morph_features_top_1_analyses.json \
 
-export DATA_DIR=/home/ba63/gender-rewriting-camera-ready/data/rewrite/apgc-v2.0/joint
+export DATA_DIR=/home/ba63/gender-rewriting/data/rewrite/apgc-v2.0/joint
 
 python main.py \
  --data_dir $DATA_DIR \

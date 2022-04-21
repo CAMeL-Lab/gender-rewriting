@@ -19,18 +19,17 @@ module purge
 #  --add_side_constraints \
 #  --use_morph_features \
 #  --analyzer_db_path /scratch/ba63/calima_databases/calima-msa/calima-msa-s31_0.4.2.utf8.db.copy-mod \
-#  --morph_features_path saved_models/multi_user_side_constraints_newdb_clean_train/morph_features_top_1_analyses.json \
+#  --morph_features_path saved_models/multi_user_side_constraints/morph_features_top_1_analyses.json \
 
 export DATA_DIR=/home/ba63/gender-rewriting-camera-ready/data/rewrite/apgc-v2.0/joint
 
 python main.py \
  --data_dir $DATA_DIR \
- --embed_trg_gender \
- --trg_gender_embed_dim 10 \
- --vectorizer_path saved_models/multi_user_check/vectorizer.json \
-  --use_morph_features \
+ --add_side_constraints \
+ --vectorizer_path saved_models/multi_user_side_constraints/vectorizer.json \
+ --use_morph_features \
  --analyzer_db_path /scratch/ba63/calima_databases/calima-msa/calima-msa-s31_0.4.2.utf8.db.copy-mod \
- --morph_features_path saved_models/multi_user_check/morph_features_top_1_analyses.json \
+ --morph_features_path saved_models/multi_user_side_constraints/morph_features_top_1_analyses.json \
  --cache_files \
  --num_train_epochs 50 \
  --embed_dim 128 \
@@ -44,4 +43,4 @@ python main.py \
  --dropout 0.2 \
  --clip_grad 1.0 \
  --do_early_stopping \
- --model_path saved_models/multi_user_check/joint+morph.pt
+ --model_path saved_models/multi_user_side_constraints/joint+morph.pt

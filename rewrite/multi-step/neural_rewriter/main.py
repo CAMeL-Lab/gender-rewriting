@@ -211,11 +211,11 @@ def evaluate(model, dataloader, criterion, device='cpu', teacher_forcing_prob=0)
     return epoch_loss / len(dataloader)
 
 def inference(sampler, beam_sampler, dataloader, args):
-    output_inf_file = open(args.preds_dir + '.inf', mode='w',
+    output_inf_file = open(args.preds_dir + '.inf.txt', mode='w',
                            encoding='utf8')
-    output_beam = open(args.preds_dir + '.beam.top.1', mode='w',
+    output_beam = open(args.preds_dir + '.beam.top.1.txt', mode='w',
                            encoding='utf8')
-    output_beam_top = open(args.preds_dir + '.beam.top.n', mode='w',
+    output_beam_top = open(args.preds_dir + '.beam.top.n.txt', mode='w',
                            encoding='utf8')
 
     greedy_stats = {}

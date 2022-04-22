@@ -1,4 +1,4 @@
-rewrite/multi-step/logs/* linguist-vendored
-rewrite/joint/logs/* linguist-vendored
+rewrite/multi-step/logs/* linguist-vendored=Python
+rewrite/joint/logs/* linguist-vendored=Python
 data/utils/*.ipynb linguist-language=Python
-data/* linguist-vendored
+data/* linguist-vendored=Python

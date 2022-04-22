@@ -7,10 +7,10 @@ The [scripts/run_rewriting.sh](scripts/run_rewriting.sh) script has all the para
 
 ```bash
 python main.py \
---data_dir /scratch/ba63/Arabic-Parallel-Gender-Corpus/Arabic-parallel-gender-corpus-v-2.0/data/new_token_data/ \
+--data_dir /home/ba63/gender-rewriting/data/rewrite/apgc-v2.0/ \
 --morph_db /scratch/ba63/calima_databases/calima-msa/calima-msa-s31_0.4.2.utf8.db.copy-mod \
---bert_model /scratch/ba63/mlm_lm/bert-base-arabic-camelbert-msa-mlm \
---gender_id_model /scratch/ba63/gender-rewriting/gender-id/CAMeLBERT_MSA/multi_user_with_clitics/models \
+--bert_model  /scratch/ba63/gender-rewriting/mlm_lm/bert-base-arabic-camelbert-msa-mlm-88 \
+--gender_id_model /scratch/ba63/gender-rewriting/gender-id/CAMeLBERT_MSA/camera_ready/multi_user_with_clitics/models_f1/checkpoint-10000 \
 --inference_mode dev \
 --use_cbr \
 --cbr_ngram 2 \
@@ -18,23 +18,23 @@ python main.py \
 --reduce_cbr_noise \
 --use_morph \
 --use_seq2seq \
---seq2seq_model_path neural_rewriter/saved_models \
---top_n_best 5 \
+--seq2seq_model_path neural_rewriter/saved_models/multi_user\
+--top_n_best 3 \
 --beam_width 10 \
 --use_gpu \
---output_dir logs/paper_results_with_mlm_ft_final/multi_user_with_clitics/rewriting/CBR_MorphR_NeuralR \
+--output_dir /home/ba63/gender-rewriting/rewrite/multi-step/logs/multi_user/rewriting/CorpusR_MorphR_NeuralR
 --analyze_errors \
---error_analysis_dir logs/paper_results_with_mlm_ft_final/multi_user_with_clitics/error_analysis/CBR_MorphR_NeuralR
+--error_analysis_dir /home/ba63/gender-rewriting/rewrite/multi-step/logs/multi_user/error_analysis/CorpusR_MorphR_NeuralR
 ```
 
 We also use the same script to generate gender alternatives for the first-person only version of this task (i.e., M and F). Here's an example on how to run our best system on the test set of APGC v1.0:
 
 ```bash
 python main.py \
---data_dir /scratch/ba63/Arabic-Parallel-Gender-Corpus/Arabic-parallel-gender-corpus-v-1.0/new_token_data/ \
+--data_dir /home/ba63/gender-rewriting-camera-ready/data/rewrite/apgc-v1.0/ \
 --morph_db /scratch/ba63/calima_databases/calima-msa/calima-msa-s31_0.4.2.utf8.db.copy-mod \
---bert_model /scratch/ba63/mlm_lm/bert-base-arabic-camelbert-msa-mlm \
---gender_id_model /scratch/ba63/gender-rewriting/gender-id/CAMeLBERT_MSA/single_user/models_acc \
+--bert_model /scratch/ba63/gender-rewriting/mlm_lm/bert-base-arabic-camelbert-msa-mlm-88 \
+--gender_id_model /scratch/ba63/gender-rewriting/gender-id/CAMeLBERT_MSA/camera_ready/single_user/models_f1/checkpoint-1000/ \
 --first_person_only \
 --inference_mode test \
 --use_cbr \
@@ -44,29 +44,29 @@ python main.py \
 --use_morph \
 --use_seq2seq \
 --seq2seq_model_path neural_rewriter/saved_models/single_user \
---top_n_best 5 \
+--top_n_best 3 \
 --beam_width 10 \
 --use_gpu \
---output_dir logs/paper_results_with_mlm_ft_final/single_user/rewriting/CBR_MorphR_NeuralR_test \
+--output_dir /home/ba63/gender-rewriting/rewrite/multi-step/logs/single_user/CorpusR_MorphR_NeuralR_test \
 --analyze_errors \
---error_analysis_dir logs/paper_results_with_mlm_ft_final/single_user/error_analysis/CBR_MorphR_NeuralR_test
+--error_analysis_dir /home/ba63/gender-rewriting/rewrite/multi-step/logs/single_user/CorpusR_MorphR_NeuralR_test
 ```
 
-The gender rewriting outputs and eval scores of the various systems we report on in our paper can be found in [logs/paper_results_with_mlm_ft_final/multi_user_with_clitics/rewriting/](logs/paper_results_with_mlm_ft_final/multi_user_with_clitics/rewriting/) and their corresponding error analyses can be found in [logs/paper_results_with_mlm_ft_final/multi_user_with_clitics/error_analysis/](logs/paper_results_with_mlm_ft_final/multi_user_with_clitics/error_analysis/).<br/>
+The gender rewriting outputs and eval scores of the various systems we report on in our paper can be found in [logs/multi_user/rewriting/](logs/multi_user/rewriting/) and their corresponding error analyses can be found in [logs/multi_user/error_analysis/](logs/multi_user/error_analysis/).<br/>
 
-We also did some experiments to demonstrate the effectiveness of using the fine-tuned CAMeLBERT MSA model instead of the generic one for our selection component. The gender rewriting outputs and eval scores of the experiments *without* doing any MLM fine-tuning can be found in [logs/paper_results_no_mlm_ft_final/rewriting](logs/paper_results_no_mlm_ft_final/rewriting).
+We also did some experiments to demonstrate the effectiveness of using the fine-tuned CAMeLBERT MSA model instead of the generic one for our selection component.
 
-The outputs of the first-person only task can be found in [logs/paper_results_with_mlm_ft_final/single_user/rewriting/](logs/paper_results_with_mlm_ft_final/single_user/rewriting/).
+The outputs of the first-person only task can be found in [logs/single_user/rewriting/](logs/single_user/rewriting/).
 
 ### Augmentation Experiments:
 Replecating the augmentation experiments is also straight forward and done using the [scripts/run_rewriting.sh](scripts/run_rewriting.sh) script. Here's an example on how to get the outputs of the **GID<sub>Aug</sub> + CorpusR >> MorphR >> NeuralR<sub>Aug</sub> + Selection** system on the dev set of APGC v2.0:
 
 ```bash
 python main.py \
---data_dir /scratch/ba63/Arabic-Parallel-Gender-Corpus/Arabic-parallel-gender-corpus-v-2.0/data/new_token_data/ \
+--data_dir /home/ba63/gender-rewriting/data/rewrite/apgc-v2.0/ \
 --morph_db /scratch/ba63/calima_databases/calima-msa/calima-msa-s31_0.4.2.utf8.db.copy-mod \
---bert_model /scratch/ba63/mlm_lm/bert-base-arabic-camelbert-msa-mlm \
---gender_id_model /scratch/ba63/gender-rewriting/gender-id/CAMeLBERT_MSA/multi_user_with_clitics/controlled_settings/augmented_models_3_5000_acc \
+--bert_model  /scratch/ba63/gender-rewriting/mlm_lm/bert-base-arabic-camelbert-msa-mlm-88 \
+--gender_id_model /scratch/ba63/gender-rewriting/gender-id/CAMeLBERT_MSA/camera_ready/multi_user_with_clitics/augmented_models/5000/models_f1/checkpoint-55000 \
 --inference_mode dev \
 --use_cbr \
 --cbr_ngram 2 \
@@ -74,43 +74,43 @@ python main.py \
 --reduce_cbr_noise \
 --use_morph \
 --use_seq2seq \
---seq2seq_model_path neural_rewriter/saved_models/augmented_fix \
---top_n_best 5 \
+--seq2seq_model_path neural_rewriter/saved_models/multi_user_augmented \
+--top_n_best 3 \
 --beam_width 10 \
 --use_gpu \
---output_dir logs/paper_results_with_mlm_ft_final/multi_user_with_clitics/augmentation/rewriting/CBR_MorphR_NeuralR_aug_id_aug \
+--output_dir /home/ba63/gender-rewriting/rewrite/multi-step/logs/multi_user/augmentation/rewriting/CorpusR_MorphR_NeuralR_aug_GID_aug
 --analyze_errors \
---error_analysis_dir logs/paper_results_with_mlm_ft_final/multi_user_with_clitics/augmentation/error_analysis/CBR_MorphR_NeuralR_aug_id_aug
+--error_analysis_dir /home/ba63/gender-rewriting/rewrite/multi-step/logs/multi_user/augmentation/error_analysis/CorpusR_MorphR_NeuralR_aug_GID_aug
 ```
 
-The outputs of the various systems we report on in our augmentation experiments can be found in [logs/paper_results_with_mlm_ft_final/multi_user_with_clitics/augmentation/rewriting](logs/paper_results_with_mlm_ft_final/multi_user_with_clitics/augmentation/rewriting) and their error analyses in [logs/paper_results_with_mlm_ft_final/multi_user_with_clitics/augmentation/error_analysis/](logs/paper_results_with_mlm_ft_final/multi_user_with_clitics/augmentation/error_analysis/).
+The outputs of the various systems we report on in our augmentation experiments can be found in [logs/multi_user/augmentation/rewriting](logs/multi_user/augmentation/rewriting) and their error analyses in [logs/multi_user/augmentation/error_analysis/](logs/multi_user/augmentation/error_analysis).
 
 
 ### Post-Editing Machine Translation Output:
-Getting the post-edited Google Translate output is also done using the [scripts/run_rewriting.sh](scripts/run_rewriting.sh) script. The predicted word-level labels of the Google Translate outputs are available [here](https://drive.google.com/drive/folders/1ZyOj1fb3UX527THm2_0LUGLoQyTpFYO2?usp=sharing).</br>
+Getting the post-edited Google Translate output is also done using the [scripts/run_rewriting.sh](scripts/run_rewriting.sh) script.
 Here's how to run our best augmented system (**GID<sub>Aug</sub> + CorpusR >> MorphR >> NeuralR<sub>Aug</sub> + Selection**) on the Google Translate output of the test set of APGCv2.0:
-
 ```bash
 python main.py \
---data_dir /scratch/ba63/Arabic-Parallel-Gender-Corpus/Arabic-parallel-gender-corpus-v-2.0/data/new_token_data/ \
+--data_dir /home/ba63/gender-rewriting/data/rewrite/apgc-v2.0/ \
 --morph_db /scratch/ba63/calima_databases/calima-msa/calima-msa-s31_0.4.2.utf8.db.copy-mod \
---bert_model /scratch/ba63/mlm_lm/bert-base-arabic-camelbert-msa-mlm \
---gender_id_model /scratch/ba63/gender-rewriting/gender-id/CAMeLBERT_MSA/multi_user_with_clitics/controlled_settings/augmented_models_3_5000_acc \
+--bert_model  /scratch/ba63/gender-rewriting/mlm_lm/bert-base-arabic-camelbert-msa-mlm-88 \
+--gender_id_model /scratch/ba63/gender-rewriting/gender-id/CAMeLBERT_MSA/camera_ready/multi_user_with_clitics/augmented_models/5000/models_f1/checkpoint-55000 \
 --inference_mode test \
+--post_edit_MT \
 --use_cbr \
 --cbr_ngram 2 \
 --cbr_backoff \
 --reduce_cbr_noise \
 --use_morph \
 --use_seq2seq \
---seq2seq_model_path neural_rewriter/saved_models/augmented_fix \
---top_n_best 5 \
+--seq2seq_model_path neural_rewriter/saved_models/multi_user_augmented \
+--top_n_best 3 \
 --beam_width 10 \
 --use_gpu \
---output_dir logs/paper_results_with_mlm_ft_final/multi_user_with_clitics/MT/CBR_MorphR_NeuralR_aug_id_aug_test
+--output_dir /home/ba63/gender-rewriting/rewrite/multi-step/logs/multi_user/MT/CorpusR_MorphR_NeuralR_aug_GID_aug_test
 ```
 
-The post-edited MT output for our best system can be found in [logs/paper_results_with_mlm_ft_final/multi_user_with_clitics/MT/](logs/paper_results_with_mlm_ft_final/multi_user_with_clitics/MT/)
+The post-edited MT output for our best system can be found in [logs/multi_user/MT/](logs/multi_user/MT/)
 
 ## Evaluation:
 Running the M<sup>2</sup> scorer and BLEU evaluations for gender-rewriting is done through the [scripts/run_eval.sh](scripts/run_eval.sh) script. You need to change the `EXPERIMENT` parameter to point the right outputs directory based on the system you want to evaluate.</br>

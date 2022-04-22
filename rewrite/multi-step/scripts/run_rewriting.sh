@@ -13,7 +13,7 @@
 nvidia-smi
 module purge
 
-# /home/ba63/gender-rewriting-camera-ready/data/rewrite/apgc-v1.0/
+# /home/ba63/gender-rewriting/data/rewrite/apgc-v1.0/
 # /scratch/ba63/gender-rewriting/gender-id/CAMeLBERT_MSA/camera_ready/multi_user_with_clitics/models_f1/checkpoint-10000
 # /scratch/ba63/gender-rewriting/gender-id/CAMeLBERT_MSA/camera_ready/single_user/models_f1/checkpoint-1000/
 # /scratch/ba63/gender-rewriting/gender-id/CAMeLBERT_MSA/camera_ready/multi_user_with_clitics/augmented_models/5000/models_f1/checkpoint-55000

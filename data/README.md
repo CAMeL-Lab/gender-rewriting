@@ -5,7 +5,7 @@ The data we used to train and evaluate the gender identification systems is in [
 
 [gender-id/multi_user/augmented_data](gender-id/multi_user/augmented_data) contains the augmented training data which we used in our augmentation experiments. [gender-id/multi_user/google_MT](gender-id/multi_user/google_MT) has the word-level dev and test data of the Google Translate outputs that are part of APGC v2.0 (i.e., dev.google.ar and test.google.ar).
 
-The data we used to train and evaluate word-level gender identification for the first-person only version of the task is in [gender-id/singe_user](gender-id/singe_user).
+The data we used to train and evaluate word-level gender identification for the first-person only version of the task is in [gender-id/single_user](gender-id/single_user).
 
 
 ## Gender Rewriting:
@@ -18,6 +18,7 @@ The data we used to train our out-of-context word-level neural rewriter componen
 2) Concatenated [rewrite/apgc-v2.0/train.ar.MM.tokens](rewrite/apgc-v2.0/train.ar.MM.tokens), [rewrite/apgc-v2.0/train.ar.FM.tokens](rewrite/apgc-v2.0/train.ar.FM.tokens), [rewrite/apgc-v2.0/train.ar.MF.tokens](rewrite/apgc-v2.0/train.ar.MF.tokens), and [rewrite/apgc-v2.0/train.ar.FF.tokens](rewrite/apgc-v2.0/train.ar.FF.tokens) and removed all tokens that are maked as B+B. This results in [rewrite/apgc-v2.0/nn_token_data/train.ar.MM.tokens+train.ar.FM.tokens+train.ar.MF.tokens+train.ar.FF.tokens.words](rewrite/apgc-v2.0/nn_token_data/train.ar.MM.tokens+train.ar.FM.tokens+train.ar.MF.tokens+train.ar.FF.tokens.words) and [rewrite/apgc-v2.0/nn_token_data/train.ar.MM.tokens+train.ar.FM.tokens+train.ar.MF.tokens+train.ar.FF.tokens.gender](rewrite/apgc-v2.0/nn_token_data/train.ar.MM.tokens+train.ar.FM.tokens+train.ar.MF.tokens+train.ar.FF.tokens.gender), where the .words file contains the words and .gender file contains the word-level target gender labels.</br></br>
 3) We repeated steps 2) and 3) to create the same files for the dev and test splits.
 
+The above steps are applied using the [rewrite/apgc-v2.0/nn_token_data/get_nn_data.sh](https://github.com/balhafni/gender-rewriting/blob/master/data/rewrite/apgc-v2.0/nn_token_data/get_nn_data.sh) script.
 
 ### Augmented Data:
 The training data we used in our augmentation experiments can be found in [rewrite/apgc-v2.0/augmentation](rewrite/apgc-v2.0/augmentation). The augmented training data used to train the neural rewriter model can be found in [rewrite/apgc-v2.0/augmentation/nn_token_data](rewrite/apgc-v2.0/augmentation/nn_token_data).

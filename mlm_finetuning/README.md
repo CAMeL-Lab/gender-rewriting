@@ -25,4 +25,4 @@ python run_mlm_no_trainer.py \
 --output_dir $OUTPUT_DIR
 ```
 
-The fine-tuned model CAMeLBERT MSA model is available [here](https://drive.google.com/drive/folders/1WnJXhLxexrwlCNrG8mxpY-5schKMrmp-?usp=sharing) and the data we used to fine-tuned the model is [here](https://github.com/balhafni/gender-rewriting/tree/master/data/mlm).
+The fine-tuned model CAMeLBERT MSA model is available in this [release](https://github.com/balhafni/gender-rewriting/releases/tag/gender-rewriting-models) and the data we used to fine-tuned the model is [here](https://github.com/balhafni/gender-rewriting/tree/master/data/mlm).

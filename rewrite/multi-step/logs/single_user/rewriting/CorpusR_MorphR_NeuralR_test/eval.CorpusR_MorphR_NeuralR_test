@@ -3,4 +3,15 @@ Recall      : 0.7317
 F_0.5       : 0.7743
 Accuracy    : 0.9949554210689269
 Abs Length  : 0.0
-BLEU        : BLEU+case.mixed+numrefs.1+smooth.exp+tok.13a+version.1.4.9 = 98.9 99.5/99.1/98.7/98.4 (BP = 1.000 ratio = 1.000 hyp_len = 36236 ref_len = 36236)
+BLEU        : {
+ "name": "BLEU",
+ "score": 98.9,
+ "signature": "nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.0.0",
+ "verbose_score": "99.5/99.1/98.7/98.4 (BP = 1.000 ratio = 1.000 hyp_len = 36236 ref_len = 36236)",
+ "nrefs": "1",
+ "case": "mixed",
+ "eff": "no",
+ "tok": "13a",
+ "smooth": "exp",
+ "version": "2.0.0"
+}

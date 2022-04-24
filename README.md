@@ -1,5 +1,5 @@
 # User-Centric Gender Rewriting
-This repo contains code to reproduce the results in our paper [User-Centric Gender Rewriting](https://www.aclweb.org/anthology/XXXX).
+This repo contains code and pretrained models to reproduce the results in our paper [User-Centric Gender Rewriting](https://www.aclweb.org/anthology/XXXX).
 
 
 ## Requirements:
@@ -16,15 +16,15 @@ pip install -r requirements.txt
 
 ## Experiments and Reproducibility:
 This repo is organized as follows:</br>
-1. [data](data/): includes all the data we used through out our paper to train and test various systems. These systems include the joint gender rewriting baselines, the multi-step gender rewriting models, and the gender identification components. It also includes the augmentation data we created.
+1. [data](data/): includes all the data we used through out our paper to train and test various systems. This includes the joint gender rewriting baselines, the multi-step gender rewriting models, the gender identification component, and the in-context ranking and selection system. It also includes the augmentation data we created.
 2. [gender-id](gender-id/): includes the scripts needed to fine-tune [CAMeLBERT MSA](https://huggingface.co/CAMeL-Lab/bert-base-arabic-camelbert-msa) for word-level gender identification.
-3. [m2scorer](m2scorer/): includes the m2scorer, which we use to evaluate our gender rewriting systems.
-4. [mlm_finetuning](mlm_finetuning/): includes the scripts needed to fine-tune [CAMeLBERT MSA](https://huggingface.co/CAMeL-Lab/bert-base-arabic-camelbert-msa) on the MLM task.
-5. [rewrite](rewrite/):</br>
+3. [mlm_finetuning](mlm_finetuning/): includes the scripts needed to fine-tune [CAMeLBERT MSA](https://huggingface.co/CAMeL-Lab/bert-base-arabic-camelbert-msa) using the MLM objective.
+4. [rewrite](rewrite/):</br>
    1. [joint](rewrite/joint/): includes the scripts needed to train and evaluate our sentence-level joint gender rewriting baselines.
    2. [multi-step](rewrite/multi-step/): includes the scripts needed to train and evaluate our word-level multi-step gender rewriting systems.
+5. [m2scorer](m2scorer/): includes the m2scorer, which we use to evaluate our gender rewriting systems.
 
-The fine-tuned gender identification models can be found [here](https://drive.google.com/drive/folders/1IxmvY5xrnAq5QXBhKOEK908Z7H5R7uYp?usp=sharing) and the fine-tuned CAMeLBERT MSA model can be found [here](https://drive.google.com/drive/folders/1WnJXhLxexrwlCNrG8mxpY-5schKMrmp-?usp=sharing).
+The gender identification systems and the fine-tuned CAMeLBERT MSA model we use throughout the paper are inlcuded in this [release](https://github.com/balhafni/gender-rewriting/releases/tag/gender-rewriting-models).
 
 ## License:
 This repo is available under the MIT license. See the [LICENSE](LICENSE) for more info.

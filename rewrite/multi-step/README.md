@@ -18,7 +18,7 @@ python main.py \
 --reduce_cbr_noise \
 --use_morph \
 --use_seq2seq \
---seq2seq_model_path neural_rewriter/saved_models/multi_user\
+--seq2seq_model_path neural_rewriter/saved_models/multi_user \
 --top_n_best 3 \
 --beam_width 10 \
 --use_gpu \

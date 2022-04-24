@@ -37,7 +37,7 @@ conda activate python2
 
 m2_eval=$(python /home/ba63/gender-rewriting/m2scorer/m2scorer $SYSTEM_HYP/$EXPERIMENT.inf.norm $GOLD_ANNOTATION)
 
-conda activate python3
+conda activate gender_rewriting
 
 # run accuracy evaluation
 accuracy=$(python /home/ba63/gender-rewriting/rewrite/joint/utils/metrics.py --trg_directory $TRG_GOLD_DATA --pred_directory $SYSTEM_HYP/$EXPERIMENT.inf.norm)

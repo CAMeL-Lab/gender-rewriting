@@ -33,7 +33,7 @@ conda activate python2
 
 m2_eval=$(python /home/ba63/gender-rewriting/m2scorer/m2scorer $SYSTEM_HYP $GOLD_ANNOTATION)
 
-conda activate python3
+conda activate gender_rewriting
 
 # run accuracy evaluation
 accuracy=$(python utils/metrics.py --trg_directory $TRG_GOLD_DATA --pred_directory $SYSTEM_HYP)
@@ -41,4 +41,4 @@ accuracy=$(python utils/metrics.py --trg_directory $TRG_GOLD_DATA --pred_directo
 # run BLEU evaluation
 bleu=$(sacrebleu $TRG_GOLD_DATA  -i $SYSTEM_HYP -m bleu --force)
 
-printf "%s\n%s\n%-12s%s" "$m2_eval" "$accuracy" "BLEU" ": $bleu" > $DATA_SPLIT.joint+morph.$DECODING.eval
+printf "%s\n%s\n%-12s%s" "$m2_eval" "$accuracy" "BLEU" ": $bleu" > $DATA_SPLIT.joint+morph.$DECODING.norm.eval

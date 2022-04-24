@@ -5,3 +5,4 @@ camel-tools==1.2.0
 gluonnlp
 mxnet
 mosestokenizer
+statsmodels

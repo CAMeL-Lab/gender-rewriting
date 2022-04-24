@@ -14,7 +14,7 @@
 #SBATCH -o job.%J.out
 #SBATCH -e job.%J.err
 
-export EXPERIMENT=CorpusR_MorphR_NeuralR
+export EXPERIMENT=CorpusR_MorphR_NeuralR_test
 export SYSTEM_HYP=/home/ba63/gender-rewriting/rewrite/multi-step/logs/single_user/rewriting/$EXPERIMENT
 
 # preparing the preds
@@ -25,7 +25,7 @@ python /home/ba63/gender-rewriting/rewrite/multi-step/utils/normalize.py --input
 
 
 export DATA_DIR=/home/ba63/gender-rewriting/data/m2_edits/v1.0/
-export DATA_SPLIT=dev
+export DATA_SPLIT=test
 export GOLD_DATA=norm_data/D-set-$DATA_SPLIT.ar.M+D-set-$DATA_SPLIT.ar.F.norm
 export EDITS_ANNOTATIONS=edits/$DATA_SPLIT.arin+$DATA_SPLIT.arin.to.$DATA_SPLIT.ar.M+$DATA_SPLIT.ar.F.norm
 export GOLD_ANNOTATION=$DATA_DIR/$EDITS_ANNOTATIONS
@@ -37,7 +37,7 @@ conda activate python2
 
 m2_eval=$(python /home/ba63/gender-rewriting/m2scorer/m2scorer $SYSTEM_HYP/$EXPERIMENT.inf.norm $GOLD_ANNOTATION)
 
-conda activate python3
+conda activate gender_rewriting
 
 # run accuracy evaluation
 accuracy=$(python /home/ba63/gender-rewriting/rewrite/joint/utils/metrics.py --trg_directory $TRG_GOLD_DATA --pred_directory $SYSTEM_HYP/$EXPERIMENT.inf.norm)

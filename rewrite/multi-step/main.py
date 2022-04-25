@@ -4,12 +4,10 @@ from rbr import RBR
 from morph_rewriter import MorphRewriter
 from neural_rewriter.rewriter import NeuralRewriter
 from gender_identifier import GenderIdentifier
-# from reinflector_union import GenderReinflector
 from rewriter import GenderRewriter
 from ranker import Ranker
 from utils.error_analysis import do_error_analysis
 import argparse
-from argparse import Namespace
 import os
 import logging
 import dill as pickle

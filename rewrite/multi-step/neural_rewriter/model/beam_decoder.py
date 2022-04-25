@@ -1,10 +1,7 @@
-from this import d
 from .greedy_decoder import BatchSampler
 from queue import PriorityQueue
-import operator
 import torch
 import torch.nn.functional as F
-import re
 
 class BeamSearchNode:
     """A class to represent the node during the beam search"""

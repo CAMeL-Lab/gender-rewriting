@@ -26,7 +26,8 @@ class NeuralRewriter:
             model_config = json.load(f)
 
         model = Seq2Seq(**model_config)
-        device = torch.device('cuda' if use_gpu else 'cpu')
+        device = torch.device('cuda' if use_gpu and torch.cuda.is_available()
+                              else 'cpu')
         # loading the model's state dict
         model.load_state_dict(torch.load(os.path.join(model_path, 'joint.pt'),
                                          map_location=device))

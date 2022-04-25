@@ -71,7 +71,6 @@ class MorphRewriter:
                     del ana[x]
 
             if target_word_gender != 'B' and 'gen' in ana:
-                # features['gen'] = target_word_gender[1].lower()
                 ana['gen'] = target_word_gender[1].lower()
 
             if target_clitic_gender != 'B' and 'enc0' in ana:
@@ -88,7 +87,7 @@ class MorphRewriter:
                 # delete mod to get the any option in the generator
                 if 'mod' in ana: del ana['mod']
                 gen_analyses = self.generator.generate(lemma=ana['lex'],
-                                                                feats=ana)
+                                                       feats=ana)
 
 
                 gender_alts += [dediac_ar(re['diac']) for re in gen_analyses]
@@ -97,7 +96,7 @@ class MorphRewriter:
 
         if len(gender_alts) == 0:
             logger.info(f'No alternatives found for {token} with tag {tag}'
-                         f' and target gender {target_gender}')
+                        f' and target gender {target_gender}')
 
             return None
 

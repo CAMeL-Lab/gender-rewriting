@@ -204,7 +204,8 @@ def main():
         logger.info(f'Loading the pretrained neural rewriter model')
         neuralR = NeuralRewriter.from_pretrained(model_path=args.seq2seq_model_path,
                                                  top_n_best=args.top_n_best,
-                                                 beam_width=args.beam_width)
+                                                 beam_width=args.beam_width,
+                                                 use_gpu=args.use_gpu)
     else:
         neuralR = None
 

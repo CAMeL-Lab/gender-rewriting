@@ -1,3 +1,4 @@
+from this import d
 from .greedy_decoder import BatchSampler
 from queue import PriorityQueue
 import operator
@@ -40,13 +41,14 @@ class BeamSampler(BatchSampler):
     """A subclass of BatchSampler that uses beam_search for decoding"""
     def __init__(self, model, src_vocab_char,
                  src_vocab_word, trg_vocab_char,
-                 trg_gender_vocab, beam_width=10, topk=3):
+                 trg_gender_vocab, beam_width=10, topk=3, device='cpu'):
 
         super(BeamSampler, self).__init__(model, src_vocab_char,
                                           src_vocab_word, trg_vocab_char,
                                           trg_gender_vocab)
         self.beam_width = beam_width
         self.topk = topk
+        self.device = device
 
     def beam_decode(self, token, trg_gender=None, add_side_constraints=False,
                     max_len=512):
@@ -86,14 +88,14 @@ class BeamSampler(BatchSampler):
         # vectorizing the trg gender
         if trg_gender:
             vectorized_trg_gender = self.trg_gender_vocab.lookup_token(trg_gender)
-            vectorized_trg_gender = torch.tensor([vectorized_trg_gender], dtype=torch.long)
+            vectorized_trg_gender = torch.LongTensor([vectorized_trg_gender]).to(self.device)
         else:
             vectorized_trg_gender = None
 
         # converting the lists to tensors
-        vectorized_src_token_char = torch.tensor([vectorized_src_token_char], dtype=torch.long)
-        vectorized_src_token_word = torch.tensor([vectorized_src_token_word], dtype=torch.long)
-        src_token_length = torch.tensor(src_token_length, dtype=torch.long)
+        vectorized_src_token_char = torch.LongTensor([vectorized_src_token_char]).to(self.device)
+        vectorized_src_token_word = torch.LongTensor([vectorized_src_token_word]).to(self.device)
+        src_token_length = torch.LongTensor(src_token_length)
 
 
         # passing the src token to the encoder
@@ -109,7 +111,7 @@ class BeamSampler(BatchSampler):
         decoder_hidden = encoder_h_t
         #decoder_hidden = torch.tanh(self.model.linear_map(encoder_h_t))
 
-        context_vectors = torch.zeros(1, self.model.encoder.rnn.hidden_size * 2)
+        context_vectors = torch.zeros(1, self.model.encoder.rnn.hidden_size * 2).to(self.device)
 
         # topk must be <= beam_width
         if self.topk > self.beam_width:
@@ -118,7 +120,7 @@ class BeamSampler(BatchSampler):
         decoded_batch = []
 
         # starting input to the decoder is the <s> token
-        decoder_input = torch.LongTensor([self.trg_vocab_char.sos_idx])
+        decoder_input = torch.LongTensor([self.trg_vocab_char.sos_idx]).to(self.device)
 
         # number of tokens to generate
         endnodes = []

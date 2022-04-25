@@ -193,6 +193,21 @@ def main():
     ranker = Ranker(model_name=args.bert_model,
                     use_gpu=args.use_gpu)
 
+    # Creating MorphRewriter if needed
+    if args.use_morph:
+        morphR = MorphRewriter(args.morph_db)
+    else:
+        morphR = None
+
+    # Creating NeuralRewriter if needed
+    if args.use_seq2seq:
+        logger.info(f'Loading the pretrained neural rewriter model')
+        neuralR = NeuralRewriter.from_pretrained(model_path=args.seq2seq_model_path,
+                                                 top_n_best=args.top_n_best,
+                                                 beam_width=args.beam_width)
+    else:
+        neuralR = None
+
     for target_gender in user_genders:
         logger.info('\n')
         logger.info(f'######## {target_gender} Rewriting ########')
@@ -266,19 +281,6 @@ def main():
                                         pick_top_tgt_rule=args.rbr_top_tgt_rule)
         else:
             rbr_model = None
-
-        if args.use_morph:
-            morphR = MorphRewriter(args.morph_db)
-        else:
-            morphR = None
-
-        if args.use_seq2seq:
-            logger.info(f'Loading the pretrained neural rewriter model')
-            neuralR = NeuralRewriter.from_pretrained(model_path=args.seq2seq_model_path,
-                                                     top_n_best=args.top_n_best,
-                                                     beam_width=args.beam_width)
-        else:
-            neuralR = None
 
         # Creating a rewriter
         rewriter = GenderRewriter(cbr_model=cbr_model,

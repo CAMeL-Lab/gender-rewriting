@@ -35,4 +35,4 @@ python main.py \
  --model_path saved_models/multi_user_side_constraints/joint+morph.pt \
  --do_inference \
  --inference_mode dev \
- --preds_dir logs/multi_user_side_constraint/dev.joint+morph
+ --preds_dir logs/multi_user_side_constraints/dev.joint+morph

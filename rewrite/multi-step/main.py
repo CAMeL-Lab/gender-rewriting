@@ -264,6 +264,7 @@ def main():
             cbr_model = CBR.build_model(train_dataset,
                                         ngrams=args.cbr_ngram,
                                         backoff=args.cbr_backoff)
+            logger.info(f'Done training CBR model for {target_gender} target!')
 
             if args.save_cbr_model:
                 with open(os.path.join(args.output_dir,

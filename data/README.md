@@ -10,7 +10,7 @@ The data we used to train and evaluate word-level gender identification for the 
 
 ## Gender Rewriting:
 The data we used to train our multi-step gender rewriting systems is in [rewrite/apgc-v2.0](rewrite/apgc-v2.0).<br/>
-The train.\*.tokens/dev.\*.tokens/test.\*.tokens are identical to train.\*.tokens/dev.\*.tokens/test.\*.tokens that are available with the current release of APGC v2.0. Again, the only difference is that the data we provide contains the extended word-level gender annotations (i.e., base word gender + clitic gender). The extended word-level gender annotations were obtained by using the [utils/clitic_and_form_tagger.ipynb](utils/clitic_and_form_tagger.ipynb) script.
+The train.\*.tokens/dev.\*.tokens/test.\*.tokens are identical to train.\*.tokens/dev.\*.tokens/test.\*.tokens that are available with the current release of APGC v2.0. Again, the only difference is that the data we provide contains the extended word-level gender annotations (i.e., base word gender + clitic gender), in addition to the corrected sentences mentioned above. The extended word-level gender annotations were obtained by using the [utils/clitic_and_form_tagger.ipynb](utils/clitic_and_form_tagger.ipynb) script.
 
 ### Neural Rewriter Data:
 The data we used to train our out-of-context word-level neural rewriter component is in [rewrite/apgc-v2.0/nn_token_data](rewrite/apgc-v2.0/nn_token_data). To create this data we did the following:
@@ -41,4 +41,4 @@ The data we used to train our multi-step gender rewriting system on the first-pe
 The gold M<sup>2</sup> word-level annotations which we used to evaluate our systems are in [m2_edits/](m2_edits/). The files in `m2_edits/[v1.0|v2.0]/edits/` were created by suing the [m2_edits/create_m2_edits.sh](m2_edits/create_m2_edits.sh) script.
 
 ## MLM Fine-tuning:
-We used [mlm/train.txt](mlm/train.txt) and [mlm/dev.txt](mlm/dev.txt) to fine-tune CAMeLBERT MSA on the MLM task. The train and dev data are identical to the ones train.arin and dev.arin that are available as part of APGCv2.0.
+We used [mlm/train.txt](mlm/train.txt) and [mlm/dev.txt](mlm/dev.txt) to fine-tune CAMeLBERT MSA on the MLM task. The train and dev data are identical to the ones train.arin (with the two corrected sentences mentioned above) and dev.arin that are available as part of APGCv2.0.

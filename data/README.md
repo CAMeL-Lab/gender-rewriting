@@ -1,7 +1,7 @@
 # Data:
 
 ## Gender Identification:
-The data we used to train and evaluate the gender identification systems is in [gender-id/multi_user](gender-id/multi_user). The train/dev/test.txt files are identical to train.arin.tokens/dev.arin.tokens/test.arin.tokens that are available with the current release of APGC v2.0. The only difference is that the train/dev/test.txt contain the extended word-level gender annotations (i.e., base word gender + clitic gender).
+The data we used to train and evaluate the gender identification systems is in [gender-id/multi_user](gender-id/multi_user). The train/dev/test.txt files are identical to train.arin.tokens/dev.arin.tokens/test.arin.tokens that are available with the current release of APGC v2.0. The only difference is that the train/dev/test.txt contain the extended word-level gender annotations (i.e., base word gender + clitic gender). We also corrected two sentences in the train split of APGC v2.0 (sentences with ids: B-8397.1 and C-1225.2). 
 
 [gender-id/multi_user/augmented_data](gender-id/multi_user/augmented_data) contains the augmented training data which we used in our augmentation experiments. [gender-id/multi_user/google_MT](gender-id/multi_user/google_MT) has the word-level dev and test data of the Google Translate outputs that are part of APGC v2.0 (i.e., dev.google.ar and test.google.ar).
 

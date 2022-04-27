@@ -8,9 +8,9 @@ The [scripts/run_rewriting.sh](scripts/run_rewriting.sh) script has all the para
 ```bash
 python main.py \
 --data_dir /home/ba63/gender-rewriting/data/rewrite/apgc-v2.0/ \
---morph_db /scratch/ba63/calima_databases/calima-msa/calima-msa-s31_0.4.2.utf8.db.copy-mod \
---bert_model  /scratch/ba63/gender-rewriting/mlm_lm/bert-base-arabic-camelbert-msa-mlm-88 \
---gender_id_model /scratch/ba63/gender-rewriting/gender-id/CAMeLBERT_MSA/camera_ready/multi_user_with_clitics/models_f1/checkpoint-10000 \
+--morph_db /scratch/ba63/gender-rewriting/models/calima-msa-s31_0.4.2.db \
+--bert_model /scratch/ba63/gender-rewriting/models/bert-base-camel-bert-msa-apgcv2.0 \
+--gender_id_model /scratch/ba63/gender-rewriting/models/gender-id-apgcv2.0 \
 --inference_mode dev \
 --use_cbr \
 --cbr_ngram 2 \
@@ -32,9 +32,9 @@ We also use the same script to generate gender alternatives for the first-person
 ```bash
 python main.py \
 --data_dir /home/ba63/gender-rewriting-camera-ready/data/rewrite/apgc-v1.0/ \
---morph_db /scratch/ba63/calima_databases/calima-msa/calima-msa-s31_0.4.2.utf8.db.copy-mod \
---bert_model /scratch/ba63/gender-rewriting/mlm_lm/bert-base-arabic-camelbert-msa-mlm-88 \
---gender_id_model /scratch/ba63/gender-rewriting/gender-id/CAMeLBERT_MSA/camera_ready/single_user/models_f1/checkpoint-1000/ \
+--morph_db /scratch/ba63/gender-rewriting/models/calima-msa-s31_0.4.2.db \
+--bert_model /scratch/ba63/gender-rewriting/models/bert-base-camel-bert-msa-apgcv2.0 \
+--gender_id_model /scratch/ba63/gender-rewriting/models/gender-id-apgcv1.0 \
 --first_person_only \
 --inference_mode test \
 --use_cbr \
@@ -64,9 +64,9 @@ Replecating the augmentation experiments is also straight forward and done using
 ```bash
 python main.py \
 --data_dir /home/ba63/gender-rewriting/data/rewrite/apgc-v2.0/ \
---morph_db /scratch/ba63/calima_databases/calima-msa/calima-msa-s31_0.4.2.utf8.db.copy-mod \
---bert_model  /scratch/ba63/gender-rewriting/mlm_lm/bert-base-arabic-camelbert-msa-mlm-88 \
---gender_id_model /scratch/ba63/gender-rewriting/gender-id/CAMeLBERT_MSA/camera_ready/multi_user_with_clitics/augmented_models/5000/models_f1/checkpoint-55000 \
+--morph_db /scratch/ba63/gender-rewriting/models/calima-msa-s31_0.4.2.db \
+--bert_model /scratch/ba63/gender-rewriting/models/bert-base-camel-bert-msa-apgcv2.0 \
+--gender_id_model /scratch/ba63/gender-rewriting/models/gender-id-apgcv2.0-aug \
 --inference_mode dev \
 --use_cbr \
 --cbr_ngram 2 \
@@ -92,9 +92,9 @@ Here's how to run our best augmented system (**GID<sub>Aug</sub> + CorpusR >> Mo
 ```bash
 python main.py \
 --data_dir /home/ba63/gender-rewriting/data/rewrite/apgc-v2.0/ \
---morph_db /scratch/ba63/calima_databases/calima-msa/calima-msa-s31_0.4.2.utf8.db.copy-mod \
---bert_model  /scratch/ba63/gender-rewriting/mlm_lm/bert-base-arabic-camelbert-msa-mlm-88 \
---gender_id_model /scratch/ba63/gender-rewriting/gender-id/CAMeLBERT_MSA/camera_ready/multi_user_with_clitics/augmented_models/5000/models_f1/checkpoint-55000 \
+--morph_db /scratch/ba63/gender-rewriting/models/calima-msa-s31_0.4.2.db \
+--bert_model /scratch/ba63/gender-rewriting/models/bert-base-camel-bert-msa-apgcv2.0 \
+--gender_id_model /scratch/ba63/gender-rewriting/models/gender-id-apgcv2.0-aug \
 --inference_mode test \
 --post_edit_MT \
 --use_cbr \

@@ -91,7 +91,7 @@ python main.py \
  
 ```
 
-The joint baseline Joint+Morph pretrained model can be found in [saved_models/multi_user](saved_models/multi_user). The two joint baselines that uses side constraints (i.e., joint+side constraints and joint+side constraints+morph) can be found in  [saved_models/multi_user_side_constraints](saved_models/multi_user_side_constraints).
+The joint baseline Joint+Morph pretrained model can be found in [saved_models/multi_user](saved_models/multi_user). The two joint baselines that use side constraints (i.e., joint+side constraints and joint+side constraints+morph) can be found in  [saved_models/multi_user_side_constraints](saved_models/multi_user_side_constraints).
 
 ## Infernece:
 For inference, you would need to run [scripts/inference_seq2seq.sh](scripts/inference_seq2seq.sh). Here are the inference settings we used to get the outputs of our three baseline systems:

@@ -28,3 +28,20 @@ The gender identification systems and the fine-tuned CAMeLBERT MSA model we use 
 
 ## License:
 This repo is available under the MIT license. See the [LICENSE](LICENSE) for more info.
+
+## Citation:
+
+If you find the code or data in this repo helpful, please cite [our paper](https://www.aclweb.org/anthology/XXXX):
+
+```bibtex
+@inproceedings{alhafni-etal-2022-user,
+    title = "User-Centric Gender Rewriting",
+    author = "Alhafni, Bashar  and
+      Habash, Nizar  and
+      Bouamor, Houda",
+    booktitle = "Proceedings of the 2022 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies",
+    month = jul,
+    year = "2022",
+    address = "Seattle, Washington",
+    publisher = "Association for Computational Linguistics",
+}

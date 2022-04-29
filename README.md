@@ -43,5 +43,5 @@ If you find the code or data in this repo helpful, please cite [our paper](https
     month = jul,
     year = "2022",
     address = "Seattle, Washington",
-    publisher = "Association for Computational Linguistics",
+    publisher = "Association for Computational Linguistics"
 }

@@ -1,7 +1,7 @@
 /scratch/ba63/miniconda3/envs/gender_rewriting/lib/python3.7/site-packages/mxnet/optimizer/optimizer.py:167: UserWarning: WARNING: New optimizer gluonnlp.optimizer.lamb.LAMB is overriding existing optimizer mxnet.optimizer.optimizer.LAMB
   Optimizer.opt_registry[name].__name__))
-INFO:__main__:Namespace(analyze_errors=True, beam_width=None, bert_model='/scratch/ba63/gender-rewriting/mlm_lm/bert-base-arabic-camelbert-msa-mlm-88', cbr_backoff=True, cbr_ngram=2, data_dir='/home/ba63/gender-rewriting-camera-ready/data/rewrite/apgc-v2.0/', error_analysis_dir='/home/ba63/gender-rewriting/rewrite/multi-step/logs/multi_user/error_analysis/CorpusR', first_person_only=False, gender_id_model='/scratch/ba63/gender-rewriting/gender-id/CAMeLBERT_MSA/camera_ready/multi_user_with_clitics/models_f1/checkpoint-10000', inference_mode='dev', morph_db='/scratch/ba63/calima_databases/calima-msa/calima-msa-s31_0.4.2.utf8.db.copy-mod', output_dir='/home/ba63/gender-rewriting/rewrite/multi-step/logs/multi_user/rewriting/CorpusR', pick_top_mle=False, post_edit_MT=False, rbr_top_rule=False, rbr_top_tgt_rule=False, reduce_cbr_noise=True, save_cbr_model=False, seq2seq_model_path=None, top_n_best=None, use_cbr=True, use_data_augmentation=False, use_gpu=True, use_morph=False, use_rbr=False, use_seq2seq=False)
-WARNING:root:Model '/scratch/ba63/gender-rewriting/mlm_lm/bert-base-arabic-camelbert-msa-mlm-88' not recognized as an MXNet model; treating as PyTorch model
+INFO:__main__:Namespace(analyze_errors=True, beam_width=None, bert_model='/scratch/ba63/gender-rewriting/models/bert-base-camel-bert-msa-apgcv2.1', cbr_backoff=True, cbr_ngram=2, data_dir='/home/ba63/gender-rewriting/data/rewrite/apgc-v2.1', error_analysis_dir='/home/ba63/gender-rewriting/rewrite/multi-step/logs/multi_user/error_analysis/CorpusR', first_person_only=False, gender_id_model='/scratch/ba63/gender-rewriting/models/gender-id-apgcv2.1', inference_mode='dev', morph_db='/scratch/ba63/gender-rewriting/models/calima-msa-s31_0.4.2.db', output_dir='/home/ba63/gender-rewriting/rewrite/multi-step/logs/multi_user/rewriting/CorpusR', pick_top_mle=False, post_edit_MT=False, rbr_top_rule=False, rbr_top_tgt_rule=False, reduce_cbr_noise=True, save_cbr_model=False, seq2seq_model_path=None, top_n_best=None, use_cbr=True, use_data_augmentation=False, use_gpu=True, use_morph=False, use_rbr=False, use_seq2seq=False)
+WARNING:root:Model '/scratch/ba63/gender-rewriting/models/bert-base-camel-bert-msa-apgcv2.1' not recognized as an MXNet model; treating as PyTorch model
 WARNING:root:Created scorer of class 'MLMScorerPT'.
 INFO:__main__:
 
@@ -11,6 +11,7 @@ INFO:__main__:
 INFO:__main__:There are 57603 Training Examples
 INFO:__main__:There are 6647 Dev Examples
 INFO:__main__:Training CBR model for MM target
+INFO:__main__:Done training CBR model for MM target!
 INFO:rewriter:CBR triggers: 2259
 INFO:rewriter:Morph triggers: 0
 INFO:rewriter:RBR triggers: 0
@@ -32,6 +33,7 @@ INFO:__main__:
 INFO:__main__:There are 57603 Training Examples
 INFO:__main__:There are 6647 Dev Examples
 INFO:__main__:Training CBR model for FM target
+INFO:__main__:Done training CBR model for FM target!
 INFO:rewriter:CBR triggers: 2272
 INFO:rewriter:Morph triggers: 0
 INFO:rewriter:RBR triggers: 0
@@ -53,6 +55,7 @@ INFO:__main__:
 INFO:__main__:There are 57603 Training Examples
 INFO:__main__:There are 6647 Dev Examples
 INFO:__main__:Training CBR model for MF target
+INFO:__main__:Done training CBR model for MF target!
 INFO:rewriter:CBR triggers: 2251
 INFO:rewriter:Morph triggers: 0
 INFO:rewriter:RBR triggers: 0
@@ -88,6 +91,7 @@ INFO:__main__:
 INFO:__main__:There are 57603 Training Examples
 INFO:__main__:There are 6647 Dev Examples
 INFO:__main__:Training CBR model for FF target
+INFO:__main__:Done training CBR model for FF target!
 INFO:rewriter:CBR triggers: 2264
 INFO:rewriter:Morph triggers: 0
 INFO:rewriter:RBR triggers: 0

@@ -13,13 +13,13 @@
 nvidia-smi
 module purge
 
-export DATA_DIR=/home/ba63/gender-rewriting/data/rewrite/apgc-v2.0/
-# export DATA_DIR=/home/ba63/gender-rewriting/data/rewrite/apgc-v2.0/augmentation/
+# export DATA_DIR=/home/ba63/gender-rewriting/data/rewrite/apgc-v2.1/
+export DATA_DIR=/home/ba63/gender-rewriting/data/rewrite/apgc-v2.1/augmentation/
 
 python main.py \
  --data_dir $DATA_DIR \
  --add_side_constraints \
- --vectorizer_path saved_models/multi_user/vectorizer.json \
+ --vectorizer_path saved_models/multi_user_augmented/vectorizer.json \
  --cache_files \
  --num_train_epochs 50 \
  --embed_dim 128 \
@@ -33,4 +33,4 @@ python main.py \
  --dropout 0.2 \
  --clip_grad 1.0 \
  --do_early_stopping \
- --model_path saved_models/multi_user/joint.pt
+ --model_path saved_models/multi_user_augmented/joint.pt

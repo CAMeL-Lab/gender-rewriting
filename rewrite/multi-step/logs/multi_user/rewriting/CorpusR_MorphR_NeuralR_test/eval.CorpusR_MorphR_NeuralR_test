@@ -5,7 +5,7 @@ Accuracy    : 0.990518845652339
 Abs Length  : 0.0
 BLEU        : {
  "name": "BLEU",
- "score": 98.0,
+ "score": 97.98,
  "signature": "nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.0.0",
  "verbose_score": "99.2/98.3/97.6/96.9 (BP = 1.000 ratio = 1.000 hyp_len = 480076 ref_len = 480076)",
  "nrefs": "1",

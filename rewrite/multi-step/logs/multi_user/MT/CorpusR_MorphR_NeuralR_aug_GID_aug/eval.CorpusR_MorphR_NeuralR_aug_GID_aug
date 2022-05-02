@@ -1,0 +1,52 @@
+Evaluating  /home/ba63/gender-rewriting/rewrite/multi-step/logs/multi_user/MT/CorpusR_MorphR_NeuralR_aug_GID_aug/arin.to.MM.preds.norm against /home/ba63/gender-rewriting/data/m2_edits/v2.1/norm_data/MT/dev.ar.MM.norm:
+{
+ "name": "BLEU",
+ "score": 13.84,
+ "signature": "nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.0.0",
+ "verbose_score": "40.4/19.1/9.7/4.9 (BP = 1.000 ratio = 1.108 hyp_len = 54598 ref_len = 49257)",
+ "nrefs": "1",
+ "case": "mixed",
+ "eff": "no",
+ "tok": "13a",
+ "smooth": "exp",
+ "version": "2.0.0"
+}
+Evaluating  /home/ba63/gender-rewriting/rewrite/multi-step/logs/multi_user/MT/CorpusR_MorphR_NeuralR_aug_GID_aug/arin.to.FM.preds.norm against /home/ba63/gender-rewriting/data/m2_edits/v2.1/norm_data/MT/dev.ar.FM.norm:
+{
+ "name": "BLEU",
+ "score": 13.78,
+ "signature": "nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.0.0",
+ "verbose_score": "40.3/19.1/9.7/4.8 (BP = 1.000 ratio = 1.105 hyp_len = 54449 ref_len = 49257)",
+ "nrefs": "1",
+ "case": "mixed",
+ "eff": "no",
+ "tok": "13a",
+ "smooth": "exp",
+ "version": "2.0.0"
+}
+Evaluating  /home/ba63/gender-rewriting/rewrite/multi-step/logs/multi_user/MT/CorpusR_MorphR_NeuralR_aug_GID_aug/arin.to.MF.preds.norm against /home/ba63/gender-rewriting/data/m2_edits/v2.1/norm_data/MT/dev.ar.MF.norm:
+{
+ "name": "BLEU",
+ "score": 13.41,
+ "signature": "nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.0.0",
+ "verbose_score": "40.0/18.7/9.4/4.6 (BP = 1.000 ratio = 1.099 hyp_len = 54131 ref_len = 49257)",
+ "nrefs": "1",
+ "case": "mixed",
+ "eff": "no",
+ "tok": "13a",
+ "smooth": "exp",
+ "version": "2.0.0"
+}
+Evaluating  /home/ba63/gender-rewriting/rewrite/multi-step/logs/multi_user/MT/CorpusR_MorphR_NeuralR_aug_GID_aug/arin.to.FF.preds.norm against /home/ba63/gender-rewriting/data/m2_edits/v2.1/norm_data/MT/dev.ar.FF.norm:
+{
+ "name": "BLEU",
+ "score": 13.37,
+ "signature": "nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.0.0",
+ "verbose_score": "39.9/18.7/9.3/4.6 (BP = 1.000 ratio = 1.096 hyp_len = 53982 ref_len = 49257)",
+ "nrefs": "1",
+ "case": "mixed",
+ "eff": "no",
+ "tok": "13a",
+ "smooth": "exp",
+ "version": "2.0.0"
+}

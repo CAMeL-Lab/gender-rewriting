@@ -13,7 +13,7 @@
 nvidia-smi
 module purge
 
-export DATA_DIR=/home/ba63/gender-rewriting/data/rewrite/apgc-v2.0/joint
+export DATA_DIR=/home/ba63/gender-rewriting/data/rewrite/apgc-v2.1/joint
 
 #  --first_person_only \
 #  --add_side_constraints \

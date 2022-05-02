@@ -16,7 +16,7 @@
 
 module purge
 
-export DATA_DIR=/home/ba63/gender-rewriting/data/m2_edits/v2.0
+export DATA_DIR=/home/ba63/gender-rewriting/data/m2_edits/v2.1
 export DATA_SPLIT=dev
 export DECODING=beam
 export GOLD_DATA=norm_data/$DATA_SPLIT.ar.MM+$DATA_SPLIT.ar.FM+$DATA_SPLIT.ar.MF+$DATA_SPLIT.ar.FF.norm
@@ -39,6 +39,6 @@ conda activate gender_rewriting
 accuracy=$(python utils/metrics.py --trg_directory $TRG_GOLD_DATA --pred_directory $SYSTEM_HYP)
 
 # run BLEU evaluation
-bleu=$(sacrebleu $TRG_GOLD_DATA  -i $SYSTEM_HYP -m bleu --force)
+bleu=$(sacrebleu $TRG_GOLD_DATA  -i $SYSTEM_HYP -m bleu -w 2 --force)
 
 printf "%s\n%s\n%-12s%s" "$m2_eval" "$accuracy" "BLEU" ": $bleu" > $DATA_SPLIT.joint+morph.$DECODING.norm.eval

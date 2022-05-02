@@ -328,6 +328,17 @@ ERROR Type:	Proposal
 SPEAKER TRG GEN:	F
 LISTENER TRG Type:	M
 
+SRC:		أرنبة ، أين أنت ؟
+TRG:		أرنب ، أين أنت ؟
+PRED: 		أرنبا ، أين أنت ؟
+SRC TAGS:	2F+B B+B B+B B+B B+B
+TRG TAGS:	2M+B B+B B+B B+B B+B
+PRED SRC TAGS:	2F+B B+B B+B B+B B+B
+PROPOSED BY:	CBR NA NA NA NA
+ERROR Type:	Proposal
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
 SRC:		والان سأحظى بخدمة من الفارس الشرير و أنت ستساعدين فى تنفيذ خطتي المحكمة
 TRG:		والان سأحظى بخدمة من الفارس الشرير و أنت ستساعد فى تنفيذ خطتى المحكمة
 PRED: 		والان سأحظى بخدمة من الفارس الشرير و أنت ستساعد فى تنفيذ خطتي المحكمة
@@ -389,7 +400,7 @@ PRED: 		أنني ابنة الملك
 SRC TAGS:	B+B 1M+B B+B
 TRG TAGS:	B+B 1F+B B+B
 PRED SRC TAGS:	B+B 1M+B B+B
-PROPOSED BY:	NA MorphR NA
+PROPOSED BY:	NA CBR NA
 ERROR Type:	Normalization
 SPEAKER TRG GEN:	F
 LISTENER TRG Type:	M
@@ -477,7 +488,7 @@ PRED: 		( آندي ) ، هل أبدو عجوزة ليكون لي ابن في ا�
 SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
 TRG TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
 PRED SRC TAGS:	B+B B+B B+B B+B B+B B+B 1M+B B+B B+B B+B B+B B+B B+B
-PROPOSED BY:	NA NA NA NA NA NA MorphR NA NA NA NA NA NA
+PROPOSED BY:	NA NA NA NA NA NA CBR NA NA NA NA NA NA
 ERROR Type:	Tagging
 SPEAKER TRG GEN:	F
 LISTENER TRG Type:	M
@@ -2622,7 +2633,7 @@ PRED: 		- تعرف ، أنا آبياتها .
 SRC TAGS:	B+B 2F+B B+B B+B 1M+B B+B
 TRG TAGS:	B+B 2M+B B+B B+B 1F+B B+B
 PRED SRC TAGS:	B+B 2F+B B+B B+B 1M+B B+B
-PROPOSED BY:	NA CBR NA NA MorphR NA
+PROPOSED BY:	NA CBR NA NA CBR NA
 ERROR Type:	Proposal
 SPEAKER TRG GEN:	F
 LISTENER TRG Type:	M
@@ -2633,7 +2644,7 @@ PRED: 		- تعرف ، أنا آبياتها .
 SRC TAGS:	B+B 2M+B B+B B+B 1M+B B+B
 TRG TAGS:	B+B 2M+B B+B B+B 1F+B B+B
 PRED SRC TAGS:	B+B 2M+B B+B B+B 1M+B B+B
-PROPOSED BY:	NA NA NA NA MorphR NA
+PROPOSED BY:	NA NA NA NA CBR NA
 ERROR Type:	Proposal
 SPEAKER TRG GEN:	F
 LISTENER TRG Type:	M
@@ -3476,11 +3487,11 @@ LISTENER TRG Type:	M
 
 SRC:		سأكون عريسا أصلع
 TRG:		سأكون عروسة صلعاء
-PRED: 		سأكون عريسة اصلعي
+PRED: 		سأكون عريسة صلعاء
 SRC TAGS:	B+B 1M+B 1M+B
 TRG TAGS:	B+B 1F+B 1F+B
 PRED SRC TAGS:	B+B 1M+B 1M+B
-PROPOSED BY:	NA CBR MorphR
+PROPOSED BY:	NA CBR CBR
 ERROR Type:	Proposal
 SPEAKER TRG GEN:	F
 LISTENER TRG Type:	M
@@ -4234,4 +4245,4 @@ SPEAKER TRG GEN:	F
 LISTENER TRG Type:	M
 
 ==========================
-Counter({'CBR': 51, 'MorphR': 8, 'neuralR': 2})
+Counter({'CBR': 54, 'MorphR': 5, 'neuralR': 2})

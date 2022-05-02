@@ -1430,12 +1430,12 @@ LISTENER TRG Type:	M
 
 SRC:		ليس إن كنت سوداء . .
 TRG:		ليس إن كنت أسودا . .
-PRED: 		ليس إن كنت اسودا . .
+PRED: 		ليس إن كنت أسدا . .
 SRC TAGS:	B+B B+B B+B 2F+B B+B B+B
 TRG TAGS:	B+B B+B B+B 2M+B B+B B+B
 PRED SRC TAGS:	B+B B+B B+B 2F+B B+B B+B
 PROPOSED BY:	NA NA NA neuralR NA NA
-ERROR Type:	Normalization
+ERROR Type:	Proposal
 SPEAKER TRG GEN:	F
 LISTENER TRG Type:	M
 
@@ -1518,7 +1518,7 @@ LISTENER TRG Type:	M
 
 SRC:		أنا شاب رأس مالي في ظل إقتصاد منهار رأيت فرصة وذهبت إليها
 TRG:		أنا شابة رأس مالية في ظل إقتصاد منهار رأيت فرصة وذهبت إليها
-PRED: 		أنا شاب رأس مالي في ظل إقتصاد منهار رأيت فرصة وذهبت إليها
+PRED: 		أنا شابة رأس مالي في ظل إقتصاد منهار رأيت فرصة وذهبت إليها
 SRC TAGS:	B+B 1M+B B+B 1M+B B+B B+B B+B B+B B+B B+B B+B B+B
 TRG TAGS:	B+B 1F+B B+B 1F+B B+B B+B B+B B+B B+B B+B B+B B+B
 PRED SRC TAGS:	B+B 1M+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
@@ -2112,7 +2112,7 @@ LISTENER TRG Type:	M
 
 SRC:		كحاجب ، فإن ذلك شغلي مساندة القانون
 TRG:		كحاجبة ، فإن ذلك شغلي مساندة القانون
-PRED: 		كحاجب ، فإن ذلك شغلي مساندة القانون
+PRED: 		كحاجية ، فإن ذلك شغلي مساندة القانون
 SRC TAGS:	1M+B B+B B+B B+B B+B B+B B+B
 TRG TAGS:	1F+B B+B B+B B+B B+B B+B B+B
 PRED SRC TAGS:	1M+B B+B B+B B+B B+B B+B B+B
@@ -2772,7 +2772,7 @@ LISTENER TRG Type:	M
 
 SRC:		سونيا ) وستجعلكن تلتفن حول اصبعها )
 TRG:		سونيا ) وستجعلكم تلتفون حول اصبعها )
-PRED: 		سونيا ) وستجعلكم تلتفن حول اصبعها )
+PRED: 		سونيا ) وستجعلكم تلتفنوا حول اصبعها )
 SRC TAGS:	B+B B+B B+2F 2F+B B+B B+B B+B
 TRG TAGS:	B+B B+B B+2M 2M+B B+B B+B B+B
 PRED SRC TAGS:	B+B B+B B+2F 2F+B B+B B+B B+B
@@ -3162,7 +3162,7 @@ SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+
 TRG TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B 2M+B
 PRED SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B 2F+B
 PROPOSED BY:	NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA neuralR
-ERROR Type:	Selection
+ERROR Type:	Proposal
 SPEAKER TRG GEN:	F
 LISTENER TRG Type:	M
 
@@ -3421,7 +3421,7 @@ LISTENER TRG Type:	M
 
 SRC:		أي حق لديك لتتهمين دائما ؟
 TRG:		أي حق لديك لتتهم دائما ؟
-PRED: 		أي حق لديك لتتهمين دائما ؟
+PRED: 		أي حق لديك لتتهمي دائما ؟
 SRC TAGS:	B+B B+B B+B 2F+B B+B B+B
 TRG TAGS:	B+B B+B B+B 2M+B B+B B+B
 PRED SRC TAGS:	B+B B+B B+B 2F+B B+B B+B
@@ -3471,6 +3471,17 @@ TRG TAGS:	B+B B+B 1F+B B+B B+B B+B B+B B+B B+B
 PRED SRC TAGS:	B+B B+B 1M+B B+B B+B B+B 2F+B B+B B+B
 PROPOSED BY:	NA NA CBR NA NA NA CBR NA NA
 ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	M
+
+SRC:		أنا متفأجئ أن لا يعمل مهبل من قبعات القنينة .
+TRG:		أنا متفأجئة أن لا يعمل مهبل من قبعات القنينة .
+PRED: 		أنا متفاجئة أن لا يعمل مهبل من قبعات القنينة .
+SRC TAGS:	B+B 1M+B B+B B+B B+B B+B B+B B+B B+B B+B
+TRG TAGS:	B+B 1F+B B+B B+B B+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B 1M+B B+B B+B B+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA neuralR NA NA NA NA NA NA NA NA
+ERROR Type:	Normalization
 SPEAKER TRG GEN:	F
 LISTENER TRG Type:	M
 
@@ -3971,7 +3982,7 @@ LISTENER TRG Type:	M
 
 SRC:		أيتها السلحفاة ، أعطيني هذا عندما تنتهين .
 TRG:		أيها السلحفاة ، اعطني هذا عندما تنتهي .
-PRED: 		أيها السلحفى ، أعطني هذا عندما تنتهي .
+PRED: 		أيها السلحفي ، أعطني هذا عندما تنتهي .
 SRC TAGS:	2F+B B+B B+B 2F+B B+B B+B 2F+B B+B
 TRG TAGS:	2M+B B+B B+B 2M+B B+B B+B 2M+B B+B
 PRED SRC TAGS:	2F+B 2F+B B+B 2F+B B+B B+B 2F+B B+B
@@ -4081,7 +4092,7 @@ LISTENER TRG Type:	M
 
 SRC:		أعتذر لعدم كوني الأب . المفترض أن أكونه
 TRG:		أعتذر لعدم كوني الأم . المفترض أن أكونها
-PRED: 		أعتذر لعدم كوني الأب . المفترض أن أكونه
+PRED: 		أعتذر لعدم كوني الأم . المفترض أن أكونه
 SRC TAGS:	B+B B+B B+B 1M+B B+B B+B B+B B+1M
 TRG TAGS:	B+B B+B B+B 1F+B B+B B+B B+B B+1F
 PRED SRC TAGS:	B+B B+B B+B 1M+B B+B B+B B+B B+B
@@ -4267,4 +4278,4 @@ SPEAKER TRG GEN:	F
 LISTENER TRG Type:	M
 
 ==========================
-Counter({'CBR': 40, 'MorphR': 9, 'neuralR': 4})
+Counter({'CBR': 40, 'MorphR': 9, 'neuralR': 6})

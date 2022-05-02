@@ -1287,12 +1287,12 @@ LISTENER TRG Type:	M
 
 SRC:		ليس إن كنت سوداء . .
 TRG:		ليس إن كنت أسودا . .
-PRED: 		ليس إن كنت اسودا . .
+PRED: 		ليس إن كنت أسدا . .
 SRC TAGS:	B+B B+B B+B 2F+B B+B B+B
 TRG TAGS:	B+B B+B B+B 2M+B B+B B+B
 PRED SRC TAGS:	B+B B+B B+B 2F+B B+B B+B
 PROPOSED BY:	NA NA NA neuralR NA NA
-ERROR Type:	Normalization
+ERROR Type:	Proposal
 SPEAKER TRG GEN:	M
 LISTENER TRG Type:	M
 
@@ -2596,7 +2596,7 @@ LISTENER TRG Type:	M
 
 SRC:		سونيا ) وستجعلكن تلتفن حول اصبعها )
 TRG:		سونيا ) وستجعلكم تلتفون حول اصبعها )
-PRED: 		سونيا ) وستجعلكم تلتفن حول اصبعها )
+PRED: 		سونيا ) وستجعلكم تلتفنوا حول اصبعها )
 SRC TAGS:	B+B B+B B+2F 2F+B B+B B+B B+B
 TRG TAGS:	B+B B+B B+2M 2M+B B+B B+B B+B
 PRED SRC TAGS:	B+B B+B B+2F 2F+B B+B B+B B+B
@@ -2964,7 +2964,7 @@ SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+
 TRG TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B 2M+B
 PRED SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B 2F+B
 PROPOSED BY:	NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA neuralR
-ERROR Type:	Selection
+ERROR Type:	Proposal
 SPEAKER TRG GEN:	M
 LISTENER TRG Type:	M
 
@@ -3234,7 +3234,7 @@ LISTENER TRG Type:	M
 
 SRC:		أي حق لديك لتتهمين دائما ؟
 TRG:		أي حق لديك لتتهم دائما ؟
-PRED: 		أي حق لديك لتتهمين دائما ؟
+PRED: 		أي حق لديك لتتهمي دائما ؟
 SRC TAGS:	B+B B+B B+B 2F+B B+B B+B
 TRG TAGS:	B+B B+B B+B 2M+B B+B B+B
 PRED SRC TAGS:	B+B B+B B+B 2F+B B+B B+B
@@ -3806,7 +3806,7 @@ LISTENER TRG Type:	M
 
 SRC:		أيتها السلحفاة ، أعطيني هذا عندما تنتهين .
 TRG:		أيها السلحفاة ، اعطني هذا عندما تنتهي .
-PRED: 		أيها السلحفى ، أعطني هذا عندما تنتهي .
+PRED: 		أيها السلحفي ، أعطني هذا عندما تنتهي .
 SRC TAGS:	2F+B B+B B+B 2F+B B+B B+B 2F+B B+B
 TRG TAGS:	2M+B B+B B+B 2M+B B+B B+B 2M+B B+B
 PRED SRC TAGS:	2F+B 2F+B B+B 2F+B B+B B+B 2F+B B+B
@@ -4124,4 +4124,4 @@ SPEAKER TRG GEN:	M
 LISTENER TRG Type:	M
 
 ==========================
-Counter({'CBR': 65, 'MorphR': 7, 'neuralR': 5})
+Counter({'CBR': 65, 'MorphR': 7, 'neuralR': 7})

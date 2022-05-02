@@ -642,7 +642,7 @@ PRED: 		أنني ابنة الملك
 SRC TAGS:	B+B 1M+B B+B
 TRG TAGS:	B+B 1F+B B+B
 PRED SRC TAGS:	B+B 1M+B B+B
-PROPOSED BY:	NA MorphR NA
+PROPOSED BY:	NA CBR NA
 ERROR Type:	Normalization
 SPEAKER TRG GEN:	F
 LISTENER TRG Type:	F
@@ -803,11 +803,11 @@ LISTENER TRG Type:	F
 
 SRC:		أتحرق لرؤيته من الداخل
 TRG:		أتحرق لرؤيته من الداخل
-PRED: 		أتحرقين لرؤيته من الداخل
+PRED: 		أتحرقي لرؤيته من الداخل
 SRC TAGS:	B+B B+B B+B B+B
 TRG TAGS:	B+B B+B B+B B+B
 PRED SRC TAGS:	2M+B B+B B+B B+B
-PROPOSED BY:	neuralR NA NA NA
+PROPOSED BY:	CBR NA NA NA
 ERROR Type:	Tagging
 SPEAKER TRG GEN:	F
 LISTENER TRG Type:	F
@@ -829,7 +829,7 @@ PRED: 		( آندي ) ، هل أبدو عجوزة ليكون لي ابن في ا�
 SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
 TRG TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
 PRED SRC TAGS:	B+B B+B B+B B+B B+B B+B 1M+B B+B B+B B+B B+B B+B B+B
-PROPOSED BY:	NA NA NA NA NA NA MorphR NA NA NA NA NA NA
+PROPOSED BY:	NA NA NA NA NA NA CBR NA NA NA NA NA NA
 ERROR Type:	Tagging
 SPEAKER TRG GEN:	F
 LISTENER TRG Type:	F
@@ -1060,7 +1060,7 @@ PRED: 		يبدو لي انكما انتما الاثنتان الوحيدتان 
 SRC TAGS:	B+B B+B B+B B+B 2M+B 2M+B 2M+B 2M+B B+B B+B B+B B+B
 TRG TAGS:	B+B B+B B+B B+B 2F+B 2F+B 2F+B 2F+B B+B B+B B+B B+B
 PRED SRC TAGS:	B+B B+B B+B B+B 2M+B 2M+B 2M+B B+B B+B B+B B+B B+B
-PROPOSED BY:	NA NA NA NA CBR MorphR CBR NA NA NA NA NA
+PROPOSED BY:	NA NA NA NA CBR CBR CBR NA NA NA NA NA
 ERROR Type:	Tagging
 SPEAKER TRG GEN:	F
 LISTENER TRG Type:	F
@@ -1379,7 +1379,7 @@ PRED: 		بعضكن قد يجد نفسها غير قادرا على التوفي�
 SRC TAGS:	B+2M B+B 2M+B B+2M B+B 2M+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
 TRG TAGS:	B+2F B+B 2F+B B+2F B+B 2F+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
 PRED SRC TAGS:	B+2M B+B B+B B+2M B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
-PROPOSED BY:	CBR NA NA MorphR NA NA NA NA NA NA NA NA NA NA NA NA NA NA
+PROPOSED BY:	CBR NA NA CBR NA NA NA NA NA NA NA NA NA NA NA NA NA NA
 ERROR Type:	Tagging
 SPEAKER TRG GEN:	F
 LISTENER TRG Type:	F
@@ -2248,7 +2248,7 @@ PRED: 		لذا اجري بأقصى سرعتك .
 SRC TAGS:	B+B 2M+B B+B B+B B+B
 TRG TAGS:	B+B 2F+B B+B B+B B+B
 PRED SRC TAGS:	B+B 2M+B B+B B+B B+B
-PROPOSED BY:	NA MorphR NA NA NA
+PROPOSED BY:	NA CBR NA NA NA
 ERROR Type:	Normalization
 SPEAKER TRG GEN:	F
 LISTENER TRG Type:	F
@@ -3243,6 +3243,17 @@ ERROR Type:	Proposal
 SPEAKER TRG GEN:	F
 LISTENER TRG Type:	F
 
+SRC:		- لن تنجي
+TRG:		- لن تنجي
+PRED: 		- لن تنجين
+SRC TAGS:	B+B B+B 2F+B
+TRG TAGS:	B+B B+B 2F+B
+PRED SRC TAGS:	B+B B+B 2M+B
+PROPOSED BY:	NA NA CBR
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	F
+
 SRC:		إنه لا يستطيع الكذب ، أنت قلتها بنفسك توا .
 TRG:		إنه لا يستطيع الكذب ، أنت قلتيها بنفسك توا .
 PRED: 		إنه لا يستطيع الكذب ، أنت قلتها بنفسك توا .
@@ -3293,7 +3304,7 @@ PRED: 		جدتي ، ماذا تظنين نفسك فاعلة انزلي هنا ا
 SRC TAGS:	2M+B B+B B+B 2M+B B+B 2M+B 2M+B B+B B+B B+B
 TRG TAGS:	2F+B B+B B+B 2F+B B+B 2F+B 2F+B B+B B+B B+B
 PRED SRC TAGS:	2M+B B+B B+B 2M+B B+B 2M+B 2M+B B+B B+B B+B
-PROPOSED BY:	MorphR NA NA CBR NA CBR CBR NA NA NA
+PROPOSED BY:	CBR NA NA CBR NA CBR CBR NA NA NA
 ERROR Type:	Normalization
 SPEAKER TRG GEN:	F
 LISTENER TRG Type:	F
@@ -3755,7 +3766,7 @@ PRED: 		لذا تفضلي أن تخريبين مسرح جريمة لكي تتم�
 SRC TAGS:	B+B 2M+B B+B B+B B+B B+B B+B 2M+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
 TRG TAGS:	B+B 2F+B B+B B+B B+B B+B B+B 2F+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
 PRED SRC TAGS:	B+B 2M+B B+B 2M+B B+B B+B B+B 2M+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
-PROPOSED BY:	NA CBR NA neuralR NA NA NA CBR NA NA NA NA NA NA NA NA NA NA NA NA NA NA
+PROPOSED BY:	NA CBR NA CBR NA NA NA CBR NA NA NA NA NA NA NA NA NA NA NA NA NA NA
 ERROR Type:	Tagging
 SPEAKER TRG GEN:	F
 LISTENER TRG Type:	F
@@ -4266,17 +4277,6 @@ ERROR Type:	Selection
 SPEAKER TRG GEN:	F
 LISTENER TRG Type:	F
 
-SRC:		. . . . . . ابي انني
-TRG:		. . . . . . امي انني
-PRED: 		. . . . . . آبية انني
-SRC TAGS:	B+B B+B B+B B+B B+B B+B 2M+B B+B
-TRG TAGS:	B+B B+B B+B B+B B+B B+B 2F+B B+B
-PRED SRC TAGS:	B+B B+B B+B B+B B+B B+B 2M+B B+B
-PROPOSED BY:	NA NA NA NA NA NA MorphR NA
-ERROR Type:	Proposal
-SPEAKER TRG GEN:	F
-LISTENER TRG Type:	F
-
 SRC:		كوني أتعلم من هذا ؟
 TRG:		كوني اتعلمين من هذا ؟
 PRED: 		كونية أتعلمين من هذا ؟
@@ -4338,7 +4338,7 @@ PRED: 		- تعرفي ، أنا آبياتها .
 SRC TAGS:	B+B 2F+B B+B B+B 1M+B B+B
 TRG TAGS:	B+B 2F+B B+B B+B 1F+B B+B
 PRED SRC TAGS:	B+B 2F+B B+B B+B 1M+B B+B
-PROPOSED BY:	NA NA NA NA MorphR NA
+PROPOSED BY:	NA NA NA NA CBR NA
 ERROR Type:	Proposal
 SPEAKER TRG GEN:	F
 LISTENER TRG Type:	F
@@ -4360,7 +4360,7 @@ PRED: 		- تعرفين ، أنا آبياتها .
 SRC TAGS:	B+B 2M+B B+B B+B 1M+B B+B
 TRG TAGS:	B+B 2F+B B+B B+B 1F+B B+B
 PRED SRC TAGS:	B+B 2M+B B+B B+B 1M+B B+B
-PROPOSED BY:	NA CBR NA NA MorphR NA
+PROPOSED BY:	NA CBR NA NA CBR NA
 ERROR Type:	Proposal
 SPEAKER TRG GEN:	F
 LISTENER TRG Type:	F
@@ -5687,11 +5687,11 @@ LISTENER TRG Type:	F
 
 SRC:		سأكون عريسا أصلع
 TRG:		سأكون عروسة صلعاء
-PRED: 		سأكون عريسة اصلعي
+PRED: 		سأكون عريسة صلعاء
 SRC TAGS:	B+B 1M+B 1M+B
 TRG TAGS:	B+B 1F+B 1F+B
 PRED SRC TAGS:	B+B 1M+B 1M+B
-PROPOSED BY:	NA CBR MorphR
+PROPOSED BY:	NA CBR CBR
 ERROR Type:	Proposal
 SPEAKER TRG GEN:	F
 LISTENER TRG Type:	F
@@ -6544,4 +6544,4 @@ SPEAKER TRG GEN:	F
 LISTENER TRG Type:	F
 
 ==========================
-Counter({'CBR': 80, 'MorphR': 10, 'neuralR': 3})
+Counter({'CBR': 82, 'MorphR': 6, 'neuralR': 3})

@@ -295,6 +295,17 @@ ERROR Type:	Proposal
 SPEAKER TRG GEN:	M
 LISTENER TRG Type:	M
 
+SRC:		أرنبة ، أين أنت ؟
+TRG:		أرنب ، أين أنت ؟
+PRED: 		أرنبا ، أين أنت ؟
+SRC TAGS:	2F+B B+B B+B B+B B+B
+TRG TAGS:	2M+B B+B B+B B+B B+B
+PRED SRC TAGS:	2F+B B+B B+B B+B B+B
+PROPOSED BY:	CBR NA NA NA NA
+ERROR Type:	Proposal
+SPEAKER TRG GEN:	M
+LISTENER TRG Type:	M
+
 SRC:		والان سأحظى بخدمة من الفارس الشرير و أنت ستساعدين فى تنفيذ خطتي المحكمة
 TRG:		والان سأحظى بخدمة من الفارس الشرير و أنت ستساعد فى تنفيذ خطتى المحكمة
 PRED: 		والان سأحظى بخدمة من الفارس الشرير و أنت ستساعد فى تنفيذ خطتي المحكمة
@@ -1941,6 +1952,17 @@ SRC TAGS:	2F+B B+B B+B B+B B+B B+B B+B
 TRG TAGS:	2M+B B+B B+B B+B B+B B+B B+B
 PRED SRC TAGS:	2F+B B+B B+B B+B B+B B+B B+B
 PROPOSED BY:	MorphR NA NA NA NA NA NA
+ERROR Type:	Proposal
+SPEAKER TRG GEN:	M
+LISTENER TRG Type:	M
+
+SRC:		من المثير أن تكوني مجرمة ، أليس كذلك ؟
+TRG:		من المثير أن تكون مجرما ، أليس كذلك ؟
+PRED: 		من المثير أن تكون مجرم ، أليس كذلك ؟
+SRC TAGS:	B+B B+B B+B 2F+B 2F+B B+B B+B B+B B+B
+TRG TAGS:	B+B B+B B+B 2M+B 2M+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B 2F+B 2F+B B+B B+B B+B B+B
+PROPOSED BY:	NA NA NA CBR CBR NA NA NA NA
 ERROR Type:	Proposal
 SPEAKER TRG GEN:	M
 LISTENER TRG Type:	M
@@ -3634,7 +3656,7 @@ PRED: 		لا أريد أن تكون قدماي في أول يوم كزعيم ل�
 SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
 TRG TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
 PRED SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B B+B 1F+B B+B B+B
-PROPOSED BY:	NA NA NA NA NA NA NA NA MorphR NA NA
+PROPOSED BY:	NA NA NA NA NA NA NA NA CBR NA NA
 ERROR Type:	Tagging
 SPEAKER TRG GEN:	M
 LISTENER TRG Type:	M
@@ -4102,4 +4124,4 @@ SPEAKER TRG GEN:	M
 LISTENER TRG Type:	M
 
 ==========================
-Counter({'CBR': 87, 'MorphR': 6, 'neuralR': 2})
+Counter({'CBR': 89, 'MorphR': 6, 'neuralR': 2})

@@ -654,7 +654,7 @@ SRC TAGS:	B+B B+B 2M+B B+B B+B B+B B+B B+B B+B B+B
 TRG TAGS:	B+B B+B 2F+B B+B B+B B+B B+B B+B B+B B+B
 PRED SRC TAGS:	B+B B+B 2M+B B+B B+B B+B B+B B+B B+B B+B
 PROPOSED BY:	NA NA neuralR NA NA NA NA NA NA NA
-ERROR Type:	Proposal
+ERROR Type:	Selection
 SPEAKER TRG GEN:	F
 LISTENER TRG Type:	F
 
@@ -886,6 +886,17 @@ TRG TAGS:	B+B B+B 2F+B
 PRED SRC TAGS:	B+B B+B 2M+B
 PROPOSED BY:	NA NA CBR
 ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	F
+
+SRC:		يمكن أن يحدث ذلك ، أتوقع ؟
+TRG:		يمكن أن يحدث ذلك ، أتوقع ؟
+PRED: 		يمكن أن يحدث ذلك ، أتوقعين ؟
+SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B
+TRG TAGS:	B+B B+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B B+B B+B B+B B+B 2M+B B+B
+PROPOSED BY:	NA NA NA NA NA neuralR NA
+ERROR Type:	Tagging
 SPEAKER TRG GEN:	F
 LISTENER TRG Type:	F
 
@@ -2310,12 +2321,12 @@ LISTENER TRG Type:	F
 
 SRC:		ليس إن كنت أسودا . .
 TRG:		ليس إن كنت سوداء . .
-PRED: 		ليس إن كنت سسودا . .
+PRED: 		ليس إن كنت سودا . .
 SRC TAGS:	B+B B+B B+B 2M+B B+B B+B
 TRG TAGS:	B+B B+B B+B 2F+B B+B B+B
 PRED SRC TAGS:	B+B B+B B+B 2M+B B+B B+B
 PROPOSED BY:	NA NA NA neuralR NA NA
-ERROR Type:	Proposal
+ERROR Type:	Selection
 SPEAKER TRG GEN:	F
 LISTENER TRG Type:	F
 
@@ -2442,7 +2453,7 @@ LISTENER TRG Type:	F
 
 SRC:		أنا شاب رأس مالي في ظل إقتصاد منهار رأيت فرصة وذهبت إليها
 TRG:		أنا شابة رأس مالية في ظل إقتصاد منهار رأيت فرصة وذهبت إليها
-PRED: 		أنا شاب رأس مالي في ظل إقتصاد منهار رأيت فرصة وذهبت إليها
+PRED: 		أنا شابة رأس مالي في ظل إقتصاد منهار رأيت فرصة وذهبت إليها
 SRC TAGS:	B+B 1M+B B+B 1M+B B+B B+B B+B B+B B+B B+B B+B B+B
 TRG TAGS:	B+B 1F+B B+B 1F+B B+B B+B B+B B+B B+B B+B B+B B+B
 PRED SRC TAGS:	B+B 1M+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
@@ -2470,17 +2481,6 @@ TRG TAGS:	B+2F B+B B+B B+B B+B B+B B+B B+2F B+B
 PRED SRC TAGS:	B+B B+B B+B B+B B+B B+B B+B B+2M B+B
 PROPOSED BY:	NA NA NA NA NA NA NA CBR NA
 ERROR Type:	Tagging
-SPEAKER TRG GEN:	F
-LISTENER TRG Type:	F
-
-SRC:		أنا سأجرب ، أتجرب أنت أبضا ؟
-TRG:		أنا سأجرب ، أتجربي أنت أبضا ؟
-PRED: 		أنا سأجرب ، أتجرب أنت أبضا ؟
-SRC TAGS:	B+B B+B B+B 2M+B B+B B+B B+B
-TRG TAGS:	B+B B+B B+B 2F+B B+B B+B B+B
-PRED SRC TAGS:	B+B B+B B+B 2M+B B+B B+B B+B
-PROPOSED BY:	NA NA NA neuralR NA NA NA
-ERROR Type:	Selection
 SPEAKER TRG GEN:	F
 LISTENER TRG Type:	F
 
@@ -2858,6 +2858,17 @@ ERROR Type:	Tagging
 SPEAKER TRG GEN:	F
 LISTENER TRG Type:	F
 
+SRC:		اتواتر إلى مكتبي
+TRG:		اتواتر إلى مكتبي
+PRED: 		اتواتري إلى مكتبي
+SRC TAGS:	B+B B+B B+B
+TRG TAGS:	B+B B+B B+B
+PRED SRC TAGS:	2M+B B+B B+B
+PROPOSED BY:	neuralR NA NA
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	F
+
 SRC:		لا تقلق .
 TRG:		لا تقلقى .
 PRED: 		لا تقلقي .
@@ -2981,7 +2992,7 @@ LISTENER TRG Type:	F
 
 SRC:		وأنا واثق أنكم لو تعرفتم على ( كولين ) تعجبان به بقدر ما أفعل .
 TRG:		وأنا واثقة أنكن لو تعرفتن على ( كولين ) تعجبان به بقدر ما أفعل .
-PRED: 		وأنا واثقة أنكن لو تعرفتن على ( كولين ) تعجبين به بقدر ما أفعل .
+PRED: 		وأنا واثقة أنكن لو تعرفتن على ( كولين ) تعجبتن به بقدر ما أفعل .
 SRC TAGS:	B+B 1M+B B+2M B+B 2M+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
 TRG TAGS:	B+B 1F+B B+2F B+B 2F+B B+B B+B B+B B+B B+B B+B B+B B+B B+B B+B
 PRED SRC TAGS:	B+B 1M+B B+2M B+B 2M+B B+B B+B B+B B+B 2M+B B+B B+B B+B B+B B+B
@@ -3377,7 +3388,7 @@ LISTENER TRG Type:	F
 
 SRC:		كحاجب ، فإن ذلك شغلي مساندة القانون
 TRG:		كحاجبة ، فإن ذلك شغلي مساندة القانون
-PRED: 		كحاجب ، فإن ذلك شغلي مساندة القانون
+PRED: 		كحاجية ، فإن ذلك شغلي مساندة القانون
 SRC TAGS:	1M+B B+B B+B B+B B+B B+B B+B
 TRG TAGS:	1F+B B+B B+B B+B B+B B+B B+B
 PRED SRC TAGS:	1M+B B+B B+B B+B B+B B+B B+B
@@ -5399,17 +5410,6 @@ ERROR Type:	Selection
 SPEAKER TRG GEN:	F
 LISTENER TRG Type:	F
 
-SRC:		أنا بمنتصف عمل ما ، اتفهم ؟
-TRG:		أنا بمنتصف عمل ما ، اتفهمين ؟
-PRED: 		أنا بمنتصف عمل ما ، اتفهم ؟
-SRC TAGS:	B+B B+B B+B B+B B+B 2M+B B+B
-TRG TAGS:	B+B B+B B+B B+B B+B 2F+B B+B
-PRED SRC TAGS:	B+B B+B B+B B+B B+B 2M+B B+B
-PROPOSED BY:	NA NA NA NA NA neuralR NA
-ERROR Type:	Selection
-SPEAKER TRG GEN:	F
-LISTENER TRG Type:	F
-
 SRC:		لقد حاولت ، لكن ليست تلك النقطة الاساسية ، انني قلق . . كما تعلم ان ، أنت تعلم . .
 TRG:		لقد حاولت ، لكن ليست تلك النقطة الاساسية ، انني قلقة . . كما تعلمين ان ، انتي تعلمين . .
 PRED: 		لقد حاولت ، لكن ليست تلك النقطة الاساسية ، انني قلقة . . كما تعلمين ان ، أنت تعلمين . .
@@ -5637,6 +5637,17 @@ SRC TAGS:	B+B B+B B+B B+B B+B 1M+B B+B B+B B+B
 TRG TAGS:	B+B B+B B+B B+B B+B 1F+B B+B B+B B+B
 PRED SRC TAGS:	B+B B+B B+B B+B B+B 1M+B B+B B+B B+B
 PROPOSED BY:	NA NA NA NA NA MorphR NA NA NA
+ERROR Type:	Normalization
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	F
+
+SRC:		أنا متفأجئ أن لا يعمل مهبل من قبعات القنينة .
+TRG:		أنا متفأجئة أن لا يعمل مهبل من قبعات القنينة .
+PRED: 		أنا متفاجئة أن لا يعمل مهبل من قبعات القنينة .
+SRC TAGS:	B+B 1M+B B+B B+B B+B B+B B+B B+B B+B B+B
+TRG TAGS:	B+B 1F+B B+B B+B B+B B+B B+B B+B B+B B+B
+PRED SRC TAGS:	B+B 1M+B B+B B+B B+B B+B B+B B+B B+B B+B
+PROPOSED BY:	NA neuralR NA NA NA NA NA NA NA NA
 ERROR Type:	Normalization
 SPEAKER TRG GEN:	F
 LISTENER TRG Type:	F
@@ -6292,7 +6303,7 @@ LISTENER TRG Type:	F
 
 SRC:		أعتذر لعدم كوني الأب . المفترض أن أكونه
 TRG:		أعتذر لعدم كوني الأم . المفترض أن أكونها
-PRED: 		أعتذر لعدم كوني الأب . المفترض أن أكونه
+PRED: 		أعتذر لعدم كوني الأم . المفترض أن أكونه
 SRC TAGS:	B+B B+B B+B 1M+B B+B B+B B+B B+1M
 TRG TAGS:	B+B B+B B+B 1F+B B+B B+B B+B B+1F
 PRED SRC TAGS:	B+B B+B B+B 1M+B B+B B+B B+B B+B
@@ -6466,6 +6477,17 @@ ERROR Type:	Proposal
 SPEAKER TRG GEN:	F
 LISTENER TRG Type:	F
 
+SRC:		أترى . . . مازلت احمقا
+TRG:		أترين . . . مازلت حمقاء
+PRED: 		أترين . . . مازلت امقاء
+SRC TAGS:	2M+B B+B B+B B+B B+B 1M+B
+TRG TAGS:	2F+B B+B B+B B+B B+B 1F+B
+PRED SRC TAGS:	2M+B B+B B+B B+B B+B 2M+B
+PROPOSED BY:	CBR NA NA NA NA neuralR
+ERROR Type:	Tagging
+SPEAKER TRG GEN:	F
+LISTENER TRG Type:	F
+
 SRC:		و أنا ، تسميني السيد رقيق ؟
 TRG:		و أنا ، تسمينني السيدة رقيقة ؟
 PRED: 		و أنا ، تسميني السيدة رقيقة ؟
@@ -6533,4 +6555,4 @@ SPEAKER TRG GEN:	F
 LISTENER TRG Type:	F
 
 ==========================
-Counter({'CBR': 49, 'MorphR': 17, 'neuralR': 5})
+Counter({'CBR': 49, 'MorphR': 17, 'neuralR': 3})

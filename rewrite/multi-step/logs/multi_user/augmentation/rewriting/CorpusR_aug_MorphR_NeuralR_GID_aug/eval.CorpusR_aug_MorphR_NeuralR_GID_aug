@@ -1,11 +1,11 @@
-Precision   : 0.8795
-Recall      : 0.8730
-F_0.5       : 0.8782
-Accuracy    : 0.991211091844846
+Precision   : 0.8841
+Recall      : 0.8689
+F_0.5       : 0.8810
+Accuracy    : 0.9912901748134246
 Abs Length  : 0.0
 BLEU        : {
  "name": "BLEU",
- "score": 98.1,
+ "score": 98.06,
  "signature": "nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.0.0",
  "verbose_score": "99.2/98.4/97.7/97.0 (BP = 1.000 ratio = 1.000 hyp_len = 197028 ref_len = 197028)",
  "nrefs": "1",

@@ -14,8 +14,8 @@
 #SBATCH -o job.%J.out
 #SBATCH -e job.%J.err
 
-export EXPERIMENT=CorpusR_MorphR_NeuralR_test
-export SYSTEM_HYP=/home/ba63/gender-rewriting/rewrite/multi-step/logs/multi_user/rewriting/$EXPERIMENT
+export EXPERIMENT=CorpusR_MorphR_NeuralR_aug_GID_aug_test
+export SYSTEM_HYP=/home/ba63/gender-rewriting/rewrite/multi-step/logs/multi_user/augmentation/rewriting/$EXPERIMENT
 
 # preparing the preds
 cat $SYSTEM_HYP/arin.to.MM.preds $SYSTEM_HYP/arin.to.FM.preds  $SYSTEM_HYP/arin.to.MF.preds  $SYSTEM_HYP/arin.to.FF.preds > $SYSTEM_HYP/$EXPERIMENT.inf
@@ -24,7 +24,7 @@ cat $SYSTEM_HYP/arin.to.MM.preds $SYSTEM_HYP/arin.to.FM.preds  $SYSTEM_HYP/arin.
 python /home/ba63/gender-rewriting/rewrite/multi-step/utils/normalize.py --input_file $SYSTEM_HYP/$EXPERIMENT.inf --output_file $SYSTEM_HYP/$EXPERIMENT.inf.norm
 
 
-export DATA_DIR=/home/ba63/gender-rewriting/data/m2_edits/v2.0
+export DATA_DIR=/home/ba63/gender-rewriting/data/m2_edits/v2.1
 export DATA_SPLIT=test
 export GOLD_DATA=norm_data/$DATA_SPLIT.ar.MM+$DATA_SPLIT.ar.FM+$DATA_SPLIT.ar.MF+$DATA_SPLIT.ar.FF.norm
 export EDITS_ANNOTATIONS=edits/$DATA_SPLIT.arin+$DATA_SPLIT.arin+$DATA_SPLIT.arin+$DATA_SPLIT.arin.to.$DATA_SPLIT.ar.MM+$DATA_SPLIT.ar.FM+$DATA_SPLIT.ar.MF+$DATA_SPLIT.ar.FF.norm
@@ -43,7 +43,7 @@ conda activate gender_rewriting
 accuracy=$(python /home/ba63/gender-rewriting/rewrite/joint/utils/metrics.py --trg_directory $TRG_GOLD_DATA --pred_directory $SYSTEM_HYP/$EXPERIMENT.inf.norm)
 
 # run BLEU evaluation
-bleu=$(sacrebleu $TRG_GOLD_DATA  -i $SYSTEM_HYP/$EXPERIMENT.inf.norm -m bleu --force)
+bleu=$(sacrebleu $TRG_GOLD_DATA  -i $SYSTEM_HYP/$EXPERIMENT.inf.norm -m bleu -w 2 --force)
 
 printf "%s\n%s\n%-12s%s" "$m2_eval" "$accuracy" "BLEU" ": $bleu" > eval.$EXPERIMENT
 

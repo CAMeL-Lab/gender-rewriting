@@ -43,7 +43,7 @@ conda activate gender_rewriting
 accuracy=$(python /home/ba63/gender-rewriting/rewrite/joint/utils/metrics.py --trg_directory $TRG_GOLD_DATA --pred_directory $SYSTEM_HYP/$EXPERIMENT.inf.norm)
 
 # run BLEU evaluation
-bleu=$(sacrebleu $TRG_GOLD_DATA  -i $SYSTEM_HYP/$EXPERIMENT.inf.norm -m bleu --force)
+bleu=$(sacrebleu $TRG_GOLD_DATA  -i $SYSTEM_HYP/$EXPERIMENT.inf.norm -m bleu -w 2 --force)
 
 printf "%s\n%s\n%-12s%s" "$m2_eval" "$accuracy" "BLEU" ": $bleu" > eval.$EXPERIMENT
 

@@ -20,7 +20,7 @@ module purge
 export DATA_DIR=/home/ba63/gender-rewriting/data/gender-id/multi_user
 export MAX_LENGTH=128
 # export OUTPUT_DIR=/scratch/ba63/gender-rewriting/gender-id/CAMeLBERT_MSA/camera_ready/multi_user_with_clitics/models_f1/checkpoint-10000
-export OUTPUT_DIR=/scratch/ba63/gender-rewriting/gender-id/CAMeLBERT_MSA/camera_ready/multi_user_with_clitics/augmented_models/5000/models_f1/checkpoint-55000
+export OUTPUT_DIR=/scratch/ba63/gender-rewriting/gender-id/CAMeLBERT_MSA/camera_ready/multi_user_with_clitics/augmented_models/5000/models_f1_final/checkpoint-65000
 export BATCH_SIZE=32
 export SEED=12345
 

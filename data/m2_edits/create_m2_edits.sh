@@ -24,11 +24,11 @@ if [ "$1" = "v1.0" ]; then
     done
 
 
-elif [ "$1" = "v2.0" ]; then
-    export DATA_DIR=v2.0/norm_data_check/
-    export EDITS_DIR=v2.0/edits_check
+elif [ "$1" = "v2.1" ]; then
+    export DATA_DIR=v2.1/norm_data_check/
+    export EDITS_DIR=v2.1/edits_check
 
-    printf "Creating M2 Edits for APGC v2.0:\n"
+    printf "Creating M2 Edits for APGC v2.1:\n"
 
     # m2 edits annotations
     for split in dev test
@@ -46,5 +46,5 @@ elif [ "$1" = "v2.0" ]; then
     done
 
 else
-    printf "APGC version not found: Please choose v1.0 or v2.0!\n"
+    printf "APGC version not found: Please choose v1.0 or v2.1!\n"
 fi

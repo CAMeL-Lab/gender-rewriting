@@ -16,7 +16,7 @@
 
 
 export EXPERIMENT=CBR_MorphR_NeuralR_id_aug
-export CHECKPOINTS=/scratch/ba63/gender-rewriting/gender-id/CAMeLBERT_MSA/camera_ready/multi_user_with_clitics/augmented_models/5000/models_f1
+export CHECKPOINTS=/scratch/ba63/gender-rewriting/gender-id/CAMeLBERT_MSA/camera_ready/multi_user_with_clitics/augmented_models/5000/models_f1_final
 for SYSTEM_HYP in $CHECKPOINTS/checkpoint*
 do
     echo $SYSTEM_HYP

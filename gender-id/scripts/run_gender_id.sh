@@ -24,7 +24,7 @@ export MAX_LENGTH=128
 export BERT_MODEL=/scratch/ba63/BERT_models/bert-base-arabic-camelbert-msa/
 # export OUTPUT_DIR=/scratch/ba63/gender-rewriting/gender-id/CAMeLBERT_MSA/camera_ready/single_user/models_f1
 export OUTPUT_DIR=/scratch/ba63/gender-rewriting/gender-id/CAMeLBERT_MSA/camera_ready/multi_user_with_clitics/models_f1
-export OUTPUT_DIR=/scratch/ba63/gender-rewriting/gender-id/CAMeLBERT_MSA/camera_ready/multi_user_with_clitics/augmented_models/5000/models_f1
+# export OUTPUT_DIR=/scratch/ba63/gender-rewriting/gender-id/CAMeLBERT_MSA/camera_ready/multi_user_with_clitics/augmented_models/5000/models_f1_final
 
 export BATCH_SIZE=32
 export NUM_EPOCHS=10 # or 3 for augmented models

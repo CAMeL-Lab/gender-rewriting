@@ -13,7 +13,8 @@
 nvidia-smi
 module purge
 
-export DATA_DIR=/home/ba63/gender-rewriting/data/rewrite/apgc-v2.0/
+# export DATA_DIR=/home/ba63/gender-rewriting/data/rewrite/apgc-v2.1
+export DATA_DIR=/home/ba63/gender-rewriting/data/rewrite/apgc-v2.1/augmentation
 
 python main.py \
  --data_dir $DATA_DIR \

@@ -2,7 +2,7 @@
 
 For the in-context selection step of our multi-step pipeline, we use [CAMeLBERT MSA](https://huggingface.co/CAMeL-Lab/bert-base-arabic-camelbert-msa) to compute the pseudo-log likelihood scores of the generated candidate sentences.</br>
 
-We found that fine-tuning CAMeLBERT MSA as a MLM on the training split of APGCv2.0 yields better results. To run the fine-tuning:
+We found that fine-tuning CAMeLBERT MSA as a MLM on the training split of APGCv2.1 yields better results. To run the fine-tuning:
 
 ```bash
 

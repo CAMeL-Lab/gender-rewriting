@@ -14,31 +14,31 @@ The train.\*.tokens/dev.\*.tokens/test.\*.tokens are identical to train.\*.token
 
 ### Neural Rewriter Data:
 The data we used to train our out-of-context word-level neural rewriter component is in [rewrite/apgc-v2.1/nn_token_data](rewrite/apgc-v2.1/nn_token_data). To create this data we did the following:
-1) Duplicated [rewrite/apgc-v2.0/train.arin.tokens](rewrite/apgc-v2.0/train.arin.tokens) four times and removed all the tokens that are marked as B+B. This results in [rewrite/apgc-v2.0/nn_token_data/train.arin.tokens+train.arin.tokens+train.arin.tokens+train.arin.tokens.words](rewrite/apgc-v2.0/nn_token_data/train.arin.tokens+train.arin.tokens+train.arin.tokens+train.arin.tokens.words)</br></br>
-2) Concatenated [rewrite/apgc-v2.0/train.ar.MM.tokens](rewrite/apgc-v2.0/train.ar.MM.tokens), [rewrite/apgc-v2.0/train.ar.FM.tokens](rewrite/apgc-v2.0/train.ar.FM.tokens), [rewrite/apgc-v2.0/train.ar.MF.tokens](rewrite/apgc-v2.0/train.ar.MF.tokens), and [rewrite/apgc-v2.0/train.ar.FF.tokens](rewrite/apgc-v2.0/train.ar.FF.tokens) and removed all tokens that are maked as B+B. This results in [rewrite/apgc-v2.0/nn_token_data/train.ar.MM.tokens+train.ar.FM.tokens+train.ar.MF.tokens+train.ar.FF.tokens.words](rewrite/apgc-v2.0/nn_token_data/train.ar.MM.tokens+train.ar.FM.tokens+train.ar.MF.tokens+train.ar.FF.tokens.words) and [rewrite/apgc-v2.0/nn_token_data/train.ar.MM.tokens+train.ar.FM.tokens+train.ar.MF.tokens+train.ar.FF.tokens.gender](rewrite/apgc-v2.0/nn_token_data/train.ar.MM.tokens+train.ar.FM.tokens+train.ar.MF.tokens+train.ar.FF.tokens.gender), where the .words file contains the words and .gender file contains the word-level target gender labels.</br></br>
+1) Duplicated [rewrite/apgc-v2.1/train.arin.tokens](rewrite/apgc-v2.1/train.arin.tokens) four times and removed all the tokens that are marked as B+B. This results in [rewrite/apgc-v2.1/nn_token_data/train.arin.tokens+train.arin.tokens+train.arin.tokens+train.arin.tokens.words](rewrite/apgc-v2.1/nn_token_data/train.arin.tokens+train.arin.tokens+train.arin.tokens+train.arin.tokens.words)</br></br>
+2) Concatenated [rewrite/apgc-v2.1/train.ar.MM.tokens](rewrite/apgc-v2.1/train.ar.MM.tokens), [rewrite/apgc-v2.1/train.ar.FM.tokens](rewrite/apgc-v2.1/train.ar.FM.tokens), [rewrite/apgc-v2.1/train.ar.MF.tokens](rewrite/apgc-v2.1/train.ar.MF.tokens), and [rewrite/apgc-v2.1/train.ar.FF.tokens](rewrite/apgc-v2.1/train.ar.FF.tokens) and removed all tokens that are maked as B+B. This results in [rewrite/apgc-v2.1/nn_token_data/train.ar.MM.tokens+train.ar.FM.tokens+train.ar.MF.tokens+train.ar.FF.tokens.words](rewrite/apgc-v2.1/nn_token_data/train.ar.MM.tokens+train.ar.FM.tokens+train.ar.MF.tokens+train.ar.FF.tokens.words) and [rewrite/apgc-v2.1/nn_token_data/train.ar.MM.tokens+train.ar.FM.tokens+train.ar.MF.tokens+train.ar.FF.tokens.gender](rewrite/apgc-v2.1/nn_token_data/train.ar.MM.tokens+train.ar.FM.tokens+train.ar.MF.tokens+train.ar.FF.tokens.gender), where the .words file contains the words and .gender file contains the word-level target gender labels.</br></br>
 3) We repeated steps 2) and 3) to create the same files for the dev and test splits.
 
-The above steps are applied using the [rewrite/apgc-v2.0/nn_token_data/get_nn_data.sh](https://github.com/balhafni/gender-rewriting/blob/master/data/rewrite/apgc-v2.0/nn_token_data/get_nn_data.sh) script.
+The above steps are applied using the [rewrite/apgc-v2.1/nn_token_data/get_nn_data.sh](https://github.com/balhafni/gender-rewriting/blob/master/data/rewrite/apgc-v2.1/nn_token_data/get_nn_data.sh) script.
 
 ### Augmented Data:
-The training data we used in our augmentation experiments can be found in [rewrite/apgc-v2.0/augmentation](rewrite/apgc-v2.0/augmentation). The augmented training data used to train the neural rewriter model can be found in [rewrite/apgc-v2.0/augmentation/nn_token_data](rewrite/apgc-v2.0/augmentation/nn_token_data).
+The training data we used in our augmentation experiments can be found in [rewrite/apgc-v2.1/augmentation](rewrite/apgc-v2.1/augmentation). The augmented training data used to train the neural rewriter model can be found in [rewrite/apgc-v2.1/augmentation/nn_token_data](rewrite/apgc-v2.1/augmentation/nn_token_data).
 
 ### Google Translate Data:
-The word-level data of the Google Translate outputs which we used in our post-editing experiments are in [rewrite/apgc-v2.0/google_MT](rewrite/apgc-v2.0/google_MT).
+The word-level data of the Google Translate outputs which we used in our post-editing experiments are in [rewrite/apgc-v2.1/google_MT](rewrite/apgc-v2.1/google_MT).
 
 ### Joint Baselines Data:
-The data we used to train our sentence-level joint baseline rewriting models are in [rewrite/apgc-v2.0/joint](rewrite/apgc-v2.0/joint). This data was created as follows:
-1) Duplicated the train.arin file that is part of APGC v2.0 four times to create [rewrite/apgc-v2.0/joint/train.arin+train.arin+train.arin+train.arin](rewrite/apgc-v2.0/joint/train.arin+train.arin+train.arin+train.arin).<br/><br/>
-2) Concatenated train.ar.MM, train.ar.FM, train.ar.MF, and train.ar.FF that are part of APGC v2.0 to create [rewrite/apgc-v2.0/joint/train.ar.MM+train.ar.FM+train.ar.MF+train.ar.FF](rewrite/apgc-v2.0/joint/train.ar.MM+train.ar.FM+train.ar.MF+train.ar.FF).<br/><br/>
+The data we used to train our sentence-level joint baseline rewriting models are in [rewrite/apgc-v2.1/joint](rewrite/apgc-v2.1/joint). This data was created as follows:
+1) Duplicated the train.arin file that is part of APGC v2.1 four times to create [rewrite/apgc-v2.1/joint/train.arin+train.arin+train.arin+train.arin](rewrite/apgc-v2.1/joint/train.arin+train.arin+train.arin+train.arin).<br/><br/>
+2) Concatenated train.ar.MM, train.ar.FM, train.ar.MF, and train.ar.FF that are part of APGC v2.1 to create [rewrite/apgc-v2.1/joint/train.ar.MM+train.ar.FM+train.ar.MF+train.ar.FF](rewrite/apgc-v2.1/joint/train.ar.MM+train.ar.FM+train.ar.MF+train.ar.FF).<br/><br/>
 3) We repeated steps 2) and 3) to create the same files for the dev and test splits.
 
-The .gender files contain the target genders we are modeling (i.e., MM, FM, MF, and FF). The .label files contain the sentence-level labels that are part of APGC v2.0.
+The .gender files contain the target genders we are modeling (i.e., MM, FM, MF, and FF). The .label files contain the sentence-level labels that are part of APGC v2.1.
 
 
 The data we used to train our multi-step gender rewriting system on the first-person only version of the task can be found in [rewrite/apgc-v1.0](rewrite/apgc-v1.0).
 
 ## M<sup>2</sup> Scorer Edits:
-The gold M<sup>2</sup> word-level annotations which we used to evaluate our systems are in [m2_edits/](m2_edits/). The files in `m2_edits/[v1.0|v2.0]/edits/` were created by suing the [m2_edits/create_m2_edits.sh](m2_edits/create_m2_edits.sh) script.
+The gold M<sup>2</sup> word-level annotations which we used to evaluate our systems are in [m2_edits/](m2_edits/). The files in `m2_edits/[v1.0|v2.1]/edits/` were created by suing the [m2_edits/create_m2_edits.sh](m2_edits/create_m2_edits.sh) script.
 
 ## MLM Fine-tuning:
-We used [mlm/train.txt](mlm/train.txt) and [mlm/dev.txt](mlm/dev.txt) to fine-tune CAMeLBERT MSA on the MLM task. The train and dev data are identical to the ones train.arin (with the two corrected sentences mentioned above) and dev.arin that are available as part of APGCv2.0.
+We used [mlm/train.txt](mlm/train.txt) and [mlm/dev.txt](mlm/dev.txt) to fine-tune CAMeLBERT MSA on the MLM task. The train and dev data are identical to the ones train.arin (with the two corrected sentences mentioned above) and dev.arin that are available as part of APGCv2.1.

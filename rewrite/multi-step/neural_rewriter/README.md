@@ -1,10 +1,10 @@
 # Out-of-Context Neural Rewriter:
 
-The data we use to train and evaluate the Neural Rewriter (NeuralR) model can be found [here](https://github.com/balhafni/gender-rewriting/tree/master/data/rewrite/apgc-v2.0/nn_token_data). The augmented data we used to train the NeuralR model is [here](https://github.com/balhafni/gender-rewriting/tree/master/data/rewrite/apgc-v2.0/augmentation/nn_token_data).
+The data we use to train and evaluate the Neural Rewriter (NeuralR) model can be found [here](https://github.com/balhafni/gender-rewriting/tree/master/data/rewrite/apgc-v2.1/nn_token_data). The augmented data we used to train the NeuralR model is [here](https://github.com/balhafni/gender-rewriting/tree/master/data/rewrite/apgc-v2.1/augmentation/nn_token_data).
 To train the NeuralR model we describe in our paper, you would need to run [scripts/train_seq2seq.sh](scripts/train_seq2seq.sh). Here are the settings we used to train the model: <br/>
 
 ```bash
-export DATA_DIR=/home/ba63/gender-rewriting/data/rewrite/apgc-v2.0/
+export DATA_DIR=/home/ba63/gender-rewriting/data/rewrite/apgc-v2.1/
 
 python main.py \
  --data_dir $DATA_DIR \
@@ -33,7 +33,7 @@ The pretrained NeuralR model can be found in [saved_models/multi_user](saved_mod
 For inference, you would need to run [scripts/inference_seq2seq.sh](scripts/inference_seq2seq.sh). Although the NeuralR system was used to do inference as part of the multi-step model as a back-off mode, here are the inference settings that could be used to get the 3-best hypotheses:
 
 ```bash
-export DATA_DIR=/home/ba63/gender-rewriting/data/rewrite/apgc-v2.0/
+export DATA_DIR=/home/ba63/gender-rewriting/data/rewrite/apgc-v2.1/
 
 python main.py \
  --data_dir $DATA_DIR \

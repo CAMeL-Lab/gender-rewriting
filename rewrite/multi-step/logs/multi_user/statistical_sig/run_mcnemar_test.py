@@ -69,8 +69,8 @@ if __name__ == '__main__':
     result = mcnemar(contingency_table, exact=True)
 
     # summarize the findings
-    print(f'Statistics:  {result.statistic: .2f}')
-    print(f'P-value:     {result.pvalue: .3f}')
+    print(f'Statistics:  {result.statistic: .5f}')
+    print(f'P-value:     {result.pvalue: .5f}')
 
     # interpret the p-value
     if result.pvalue > args.alpha:

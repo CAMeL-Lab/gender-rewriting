@@ -7,10 +7,10 @@ The [scripts/run_rewriting.sh](scripts/run_rewriting.sh) script has all the para
 
 ```bash
 python main.py \
---data_dir /home/ba63/gender-rewriting/data/rewrite/apgc-v2.0/ \
+--data_dir /home/ba63/gender-rewriting/data/rewrite/apgc-v2.1/ \
 --morph_db /scratch/ba63/gender-rewriting/models/calima-msa-s31_0.4.2.db \
---bert_model /scratch/ba63/gender-rewriting/models/bert-base-camel-bert-msa-apgcv2.0 \
---gender_id_model /scratch/ba63/gender-rewriting/models/gender-id-apgcv2.0 \
+--bert_model /scratch/ba63/gender-rewriting/models/bert-base-camel-bert-msa-apgcv2.1 \
+--gender_id_model /scratch/ba63/gender-rewriting/models/gender-id-apgcv2.1 \
 --inference_mode dev \
 --use_cbr \
 --cbr_ngram 2 \
@@ -33,7 +33,7 @@ We also use the same script to generate gender alternatives for the first-person
 python main.py \
 --data_dir /home/ba63/gender-rewriting-camera-ready/data/rewrite/apgc-v1.0/ \
 --morph_db /scratch/ba63/gender-rewriting/models/calima-msa-s31_0.4.2.db \
---bert_model /scratch/ba63/gender-rewriting/models/bert-base-camel-bert-msa-apgcv2.0 \
+--bert_model /scratch/ba63/gender-rewriting/models/bert-base-camel-bert-msa-apgcv2.1 \
 --gender_id_model /scratch/ba63/gender-rewriting/models/gender-id-apgcv1.0 \
 --first_person_only \
 --inference_mode test \
@@ -59,14 +59,14 @@ We also did some experiments to demonstrate the effectiveness of using the fine-
 The outputs of the first-person only task can be found in [logs/single_user/rewriting/](logs/single_user/rewriting/).
 
 ### Augmentation Experiments:
-Replecating the augmentation experiments is also straight forward and done using the [scripts/run_rewriting.sh](scripts/run_rewriting.sh) script. Here's an example on how to get the outputs of the **GID<sub>Aug</sub> + CorpusR >> MorphR >> NeuralR<sub>Aug</sub> + Selection** system on the dev set of APGC v2.0:
+Replecating the augmentation experiments is also straight forward and done using the [scripts/run_rewriting.sh](scripts/run_rewriting.sh) script. Here's an example on how to get the outputs of the **GID<sub>Aug</sub> + CorpusR >> MorphR >> NeuralR<sub>Aug</sub> + Selection** system on the dev set of APGC v2.1:
 
 ```bash
 python main.py \
---data_dir /home/ba63/gender-rewriting/data/rewrite/apgc-v2.0/ \
+--data_dir /home/ba63/gender-rewriting/data/rewrite/apgc-v2.1/ \
 --morph_db /scratch/ba63/gender-rewriting/models/calima-msa-s31_0.4.2.db \
---bert_model /scratch/ba63/gender-rewriting/models/bert-base-camel-bert-msa-apgcv2.0 \
---gender_id_model /scratch/ba63/gender-rewriting/models/gender-id-apgcv2.0-aug \
+--bert_model /scratch/ba63/gender-rewriting/models/bert-base-camel-bert-msa-apgcv2.1 \
+--gender_id_model /scratch/ba63/gender-rewriting/models/gender-id-apgcv2.1-aug \
 --inference_mode dev \
 --use_cbr \
 --cbr_ngram 2 \
@@ -88,13 +88,13 @@ The outputs of the various systems we report on in our augmentation experiments 
 
 ### Post-Editing Machine Translation Output:
 Getting the post-edited Google Translate output is also done using the [scripts/run_rewriting.sh](scripts/run_rewriting.sh) script.
-Here's how to run our best augmented system (**GID<sub>Aug</sub> + CorpusR >> MorphR >> NeuralR<sub>Aug</sub> + Selection**) on the Google Translate output of the test set of APGCv2.0:
+Here's how to run our best augmented system (**GID<sub>Aug</sub> + CorpusR >> MorphR >> NeuralR<sub>Aug</sub> + Selection**) on the Google Translate output of the test set of APGCv2.1:
 ```bash
 python main.py \
---data_dir /home/ba63/gender-rewriting/data/rewrite/apgc-v2.0/ \
+--data_dir /home/ba63/gender-rewriting/data/rewrite/apgc-v2.1/ \
 --morph_db /scratch/ba63/gender-rewriting/models/calima-msa-s31_0.4.2.db \
---bert_model /scratch/ba63/gender-rewriting/models/bert-base-camel-bert-msa-apgcv2.0 \
---gender_id_model /scratch/ba63/gender-rewriting/models/gender-id-apgcv2.0-aug \
+--bert_model /scratch/ba63/gender-rewriting/models/bert-base-camel-bert-msa-apgcv2.1 \
+--gender_id_model /scratch/ba63/gender-rewriting/models/gender-id-apgcv2.1-aug \
 --inference_mode test \
 --post_edit_MT \
 --use_cbr \
@@ -115,5 +115,5 @@ The post-edited MT output for our best system can be found in [logs/multi_user/M
 ## Evaluation:
 Running the M<sup>2</sup> scorer and BLEU evaluations for gender-rewriting is done through the [scripts/run_eval.sh](scripts/run_eval.sh) script. You need to change the `EXPERIMENT` parameter to point the right outputs directory based on the system you want to evaluate.</br>
 
-For the post-editing MT experiments, we run BLEU evaluation across the four target corpora (i.e., MM, FM, MF, FF) of APGCv2.0. This is done through the [scripts/bleu_eval.sh](scripts/bleu_eval.sh) script.
+For the post-editing MT experiments, we run BLEU evaluation across the four target corpora (i.e., MM, FM, MF, FF) of APGCv2.1. This is done through the [scripts/bleu_eval.sh](scripts/bleu_eval.sh) script.
 

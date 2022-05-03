@@ -1,13 +1,13 @@
 # Joint Gender Rewriting Baseline:
 
 
-The data we use to train and evaluate the joint baselines can be found [here](https://github.com/balhafni/gender-rewriting/tree/master/data/rewrite/apgc-v2.0/joint). 
+The data we use to train and evaluate the joint baselines can be found [here](https://github.com/balhafni/gender-rewriting/tree/master/data/rewrite/apgc-v2.1/joint). 
 To train the various joint baseline gender rewriting models we describe in our paper, you would need to run [scripts/train_seq2seq.sh](scripts/train_seq2seq.sh). Here are the settings we used to train the three variants of the joint baselines we present in our paper: <br/>
 
 ### Joint+Morph:
 
 ```bash
-export DATA_DIR=/home/ba63/gender-rewriting/data/rewrite/apgc-v2.0/joint
+export DATA_DIR=/home/ba63/gender-rewriting/data/rewrite/apgc-v2.1/joint
 
 python main.py \
  --data_dir $DATA_DIR \
@@ -37,7 +37,7 @@ python main.py \
 ### Joint+Side Constraints:
 
 ```bash
-export DATA_DIR=/home/ba63/gender-rewriting/data/rewrite/apgc-v2.0/joint
+export DATA_DIR=/home/ba63/gender-rewriting/data/rewrite/apgc-v2.1/joint
 
 python main.py \
  --data_dir $DATA_DIR \
@@ -65,7 +65,7 @@ python main.py \
 ### Joint+Side Constraints+Morph:
 
 ```bash
-export DATA_DIR=/home/ba63/gender-rewriting/data/rewrite/apgc-v2.0/joint
+export DATA_DIR=/home/ba63/gender-rewriting/data/rewrite/apgc-v2.1/joint
 
 python main.py \
  --data_dir $DATA_DIR \
@@ -98,7 +98,7 @@ For inference, you would need to run [scripts/inference_seq2seq.sh](scripts/infe
 
 ### Joint+Morph:
 ```bash
-export DATA_DIR=/home/ba63/gender-rewriting/data/rewrite/apgc-v2.0/joint
+export DATA_DIR=/home/ba63/gender-rewriting/data/rewrite/apgc-v2.1/joint
 
 python main.py \
  --data_dir $DATA_DIR \
@@ -119,7 +119,7 @@ python main.py \
  
  ### Joint+Side Constraints:
 ```bash
-export DATA_DIR=/home/ba63/gender-rewriting/data/rewrite/apgc-v2.0/joint
+export DATA_DIR=/home/ba63/gender-rewriting/data/rewrite/apgc-v2.1/joint
 
 python main.py \
  --data_dir $DATA_DIR \
@@ -138,7 +138,7 @@ python main.py \
  
 ### Joint+Side Constraints+Morph:
 ```bash
-export DATA_DIR=/home/ba63/gender-rewriting/data/rewrite/apgc-v2.0/joint
+export DATA_DIR=/home/ba63/gender-rewriting/data/rewrite/apgc-v2.1/joint
 
 python main.py \
  --data_dir $DATA_DIR \

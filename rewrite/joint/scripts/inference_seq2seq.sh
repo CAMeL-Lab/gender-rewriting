@@ -20,13 +20,13 @@ export DATA_DIR=/home/ba63/gender-rewriting/data/rewrite/apgc-v2.1/joint
 #  --embed_trg_gender \
 #  --trg_gender_embed_dim 10 \
 #  --use_morph_features 
-#  --analyzer_db_path /scratch/ba63/calima_databases/calima-msa/calima-msa-s31_0.4.2.utf8.db.copy-mod \
+#  --analyzer_db_path /scratch/ba63/gender-rewriting/models/calima-msa-s31_0.4.2.db \
 
 python main.py \
  --data_dir $DATA_DIR \
  --add_side_constraints \
  --use_morph_features \
- --analyzer_db_path /scratch/ba63/calima_databases/calima-msa/calima-msa-s31_0.4.2.utf8.db.copy-mod \
+ --analyzer_db_path /scratch/ba63/gender-rewriting/models/calima-msa-s31_0.4.2.db \
  --embed_dim 128 \
  --hidd_dim 256 \
  --num_layers 2 \

@@ -18,7 +18,7 @@ module purge
 #  --first_person_only \
 #  --add_side_constraints \
 #  --use_morph_features \
-#  --analyzer_db_path /scratch/ba63/calima_databases/calima-msa/calima-msa-s31_0.4.2.utf8.db.copy-mod \
+#  --analyzer_db_path /scratch/ba63/gender-rewriting/models/calima-msa-s31_0.4.2.db \
 #  --morph_features_path saved_models/multi_user_side_constraints/morph_features_top_1_analyses.json \
 
 export DATA_DIR=/home/ba63/gender-rewriting/data/rewrite/apgc-v2.1/joint
@@ -28,7 +28,7 @@ python main.py \
  --add_side_constraints \
  --vectorizer_path saved_models/multi_user_side_constraints/vectorizer.json \
  --use_morph_features \
- --analyzer_db_path /scratch/ba63/calima_databases/calima-msa/calima-msa-s31_0.4.2.utf8.db.copy-mod \
+ --analyzer_db_path /scratch/ba63/gender-rewriting/models/calima-msa-s31_0.4.2.db \
  --morph_features_path saved_models/multi_user_side_constraints/morph_features_top_1_analyses.json \
  --cache_files \
  --num_train_epochs 50 \

@@ -1,5 +1,5 @@
 # User-Centric Gender Rewriting
-This repo contains code and pretrained models to reproduce the results in our paper [User-Centric Gender Rewriting](https://www.aclweb.org/anthology/XXXX).
+This repo contains code and pretrained models to reproduce the results in our paper [User-Centric Gender Rewriting](https://arxiv.org/pdf/2205.02211.pdf).
 
 
 ## Requirements:

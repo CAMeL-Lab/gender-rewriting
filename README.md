@@ -42,7 +42,9 @@ If you find the code or data in this repo helpful, please cite [our paper](https
     booktitle = "Proceedings of the 2022 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies",
     month = jul,
     year = "2022",
-    address = "Seattle, Washington",
-    publisher = "Association for Computational Linguistics"
+    address = "Seattle, United States",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2022.naacl-main.46",
+    pages = "618--631",
+    abstract = "In this paper, we define the task of gender rewriting in contexts involving two users (I and/or You) {--} first and second grammatical persons with independent grammatical gender preferences. We focus on Arabic, a gender-marking morphologically rich language. We develop a multi-step system that combines the positive aspects of both rule-based and neural rewriting models. Our results successfully demonstrate the viability of this approach on a recently created corpus for Arabic gender rewriting, achieving 88.42 M2 F0.5 on a blind test set. Our proposed system improves over previous work on the first-person-only version of this task, by 3.05 absolute increase in M2 F0.5. We demonstrate a use case of our gender rewriting system by using it to post-edit the output of a commercial MT system to provide personalized outputs based on the users{'} grammatical gender preferences. We make our code, data, and pretrained models publicly available.",
 }
-

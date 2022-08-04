@@ -31,7 +31,7 @@ This repo is available under the MIT license. See the [LICENSE](LICENSE) for mor
 
 ## Citation:
 
-If you find the code or data in this repo helpful, please cite [our paper](https://www.aclweb.org/anthology/XXXX):
+If you find the code or data in this repo helpful, please cite [our paper](https://arxiv.org/pdf/2205.02211.pdf):
 
 ```bibtex
 @inproceedings{alhafni-etal-2022-user,
